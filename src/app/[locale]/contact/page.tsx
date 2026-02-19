@@ -1,14 +1,41 @@
 "use client";
 
+import { useState, type FormEvent } from "react";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { Mail, MapPin, ArrowRight } from "lucide-react";
+import { Mail, MapPin, ArrowRight, CheckCircle } from "lucide-react";
 import { SectionHeading } from "@/components/SectionHeading";
 
 const inquiryKeys = ["partnerships", "investment", "grants", "feedback", "media"] as const;
 
 export default function ContactPage() {
   const t = useTranslations("contact");
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(false);
+
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setError(false);
+
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    try {
+      const res = await fetch("https://formspree.io/f/xdkodznp", {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" },
+      });
+      if (res.ok) {
+        setSubmitted(true);
+        form.reset();
+      } else {
+        setError(true);
+      }
+    } catch {
+      setError(true);
+    }
+  }
 
   return (
     <>
@@ -106,10 +133,20 @@ export default function ContactPage() {
               className="lg:col-span-3"
             >
               <form
-                action="https://formspree.io/f/placeholder"
-                method="POST"
+                onSubmit={handleSubmit}
                 className="bg-meyng-card rounded-2xl border border-meyng-border p-8 space-y-6"
               >
+                {submitted && (
+                  <div className="flex items-center gap-3 p-4 rounded-lg bg-green-500/10 border border-green-500/30 text-green-400 text-sm">
+                    <CheckCircle className="w-5 h-5 flex-shrink-0" />
+                    {t("formSuccess")}
+                  </div>
+                )}
+                {error && (
+                  <div className="p-4 rounded-lg bg-red-500/10 border border-red-500/30 text-red-400 text-sm">
+                    {t("formError")}
+                  </div>
+                )}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
                     <label

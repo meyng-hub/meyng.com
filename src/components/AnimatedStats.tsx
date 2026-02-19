@@ -11,21 +11,24 @@ interface Stat {
 }
 
 function AnimatedNumber({ value, suffix }: { value: number; suffix: string }) {
-  const [displayValue, setDisplayValue] = useState(0);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const [displayValue, setDisplayValue] = useState(value);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   useEffect(() => {
-    if (!isInView) return;
+    if (!isInView || hasAnimated) return;
 
+    setDisplayValue(0);
     const controls = animate(0, value, {
       duration: 2,
       ease: "easeOut",
       onUpdate: (v) => setDisplayValue(Math.round(v)),
+      onComplete: () => setHasAnimated(true),
     });
 
     return () => controls.stop();
-  }, [isInView, value]);
+  }, [isInView, value, hasAnimated]);
 
   return (
     <span ref={ref} className="tabular-nums">

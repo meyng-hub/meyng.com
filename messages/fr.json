@@ -75,6 +75,7 @@
       "description": "Un portail collaboratif conçu pour les ONG et municipalités afin de gérer des projets, suivre les résultats et améliorer les rapports d'impact. ConnectZ utilise l'IA pour agréger les données de sources multiples, générer des rapports automatisés et fournir des insights actionnables pour une meilleure prise de décision.",
       "features": ["Tableau de bord centralisé", "Rapports d'impact générés par l'IA", "Outils de collaboration multi-parties prenantes", "Visualisation de données et analyses", "Suivi des subventions et gestion des donateurs"]
     },
+    "visit": "Visiter {name}",
     "ctaTitle": "Intéressé par un partenariat produit ?",
     "ctaDescription": "Nous recherchons toujours des partenaires, collaborateurs et organisations qui partagent notre vision d'utiliser l'IA pour créer un impact réel là où ça compte le plus.",
     "ctaButton": "Nous contacter"
@@ -139,6 +140,13 @@
       "title": "Communauté",
       "description": "Nous croyons au pouvoir de la collaboration. Nos produits sont construits avec et pour les communautés qu'ils servent, pas juste à leur sujet."
     },
+    "teamLabel": "L'équipe",
+    "teamTitle": "Qui nous sommes",
+    "founder": {
+      "name": "Meyng Wete",
+      "role": "Fondateur & PDG",
+      "bio": "Ingénieur logiciel et entrepreneur passionné par l'utilisation de l'IA pour résoudre des problèmes concrets pour les communautés mal desservies. Né en République centrafricaine et basé à Paris, Meyng a fondé MEYNG avec une conviction simple : l'IA doit être une force d'équité, pas d'exclusion."
+    },
     "journeyLabel": "Notre parcours",
     "journeyTitle": "Construire pas à pas",
     "founded": {
@@ -194,7 +202,9 @@
     "formMessage": "Message",
     "formMessagePlaceholder": "Décrivez votre demande...",
     "formSubmit": "Envoyer le message",
-    "formResponseTime": "Nous répondons généralement sous 24 à 48 heures."
+    "formResponseTime": "Nous répondons généralement sous 24 à 48 heures.",
+    "formSuccess": "Merci ! Votre message a été envoyé. Nous vous répondrons sous 24 à 48 heures.",
+    "formError": "Une erreur s'est produite. Veuillez réessayer ou nous écrire directement à contact@meyng.com."
   },
   "footer": {
     "description": "Nous construisons des produits IA qui se battent pour l'accessibilité — comblant les lacunes en langue, éducation, durabilité alimentaire et développement communautaire pour ceux qu'on laisse pour compte.",

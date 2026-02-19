@@ -75,6 +75,7 @@
       "description": "A collaborative portal designed for NGOs and municipalities to manage projects, track outcomes, and improve impact reporting. ConnectZ uses AI to aggregate data from multiple sources, generate automated reports, and provide actionable insights for better decision-making and donor engagement.",
       "features": ["Centralized project dashboard", "AI-generated impact reports", "Multi-stakeholder collaboration tools", "Data visualization and analytics", "Grant and donor management tracking"]
     },
+    "visit": "Visit {name}",
     "ctaTitle": "Interested in partnering on a product?",
     "ctaDescription": "We are always looking for partners, collaborators, and organizations who share our vision of using AI to create real-world impact where it matters most.",
     "ctaButton": "Get in Touch"
@@ -139,6 +140,13 @@
       "title": "Community",
       "description": "We believe in the power of collaboration. Our products are built with and for the communities they serve, not just about them."
     },
+    "teamLabel": "The Team",
+    "teamTitle": "Who We Are",
+    "founder": {
+      "name": "Meyng Wete",
+      "role": "Founder & CEO",
+      "bio": "Software engineer and entrepreneur passionate about using AI to solve real-world problems for underserved communities. Born in the Central African Republic and based in Paris, Meyng founded MEYNG with a simple belief: AI should be a force for equity, not exclusion."
+    },
     "journeyLabel": "Our Journey",
     "journeyTitle": "Building Step by Step",
     "founded": {
@@ -194,7 +202,9 @@
     "formMessage": "Message",
     "formMessagePlaceholder": "Tell us about your inquiry...",
     "formSubmit": "Send Message",
-    "formResponseTime": "We typically respond within 24-48 hours."
+    "formResponseTime": "We typically respond within 24-48 hours.",
+    "formSuccess": "Thank you! Your message has been sent. We'll get back to you within 24-48 hours.",
+    "formError": "Something went wrong. Please try again or email us directly at contact@meyng.com."
   },
   "footer": {
     "description": "Building AI-driven products that fight for accessibility — bridging gaps in language, education, food sustainability, and community development for those left behind.",

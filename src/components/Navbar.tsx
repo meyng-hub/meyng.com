@@ -30,6 +30,7 @@ function LanguageSwitcher() {
 
 export function Navbar() {
   const t = useTranslations("nav");
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -39,6 +40,11 @@ export function Navbar() {
     { href: "/about" as const, label: t("about") },
     { href: "/contact" as const, label: t("contact") },
   ];
+
+  function isActive(href: string) {
+    if (href === "/") return pathname === "/";
+    return pathname.startsWith(href);
+  }
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -74,7 +80,11 @@ export function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-meyng-silver hover:text-meyng-purple transition-colors duration-200 text-sm font-medium tracking-wide uppercase"
+                className={`transition-colors duration-200 text-sm font-medium tracking-wide uppercase ${
+                  isActive(link.href)
+                    ? "text-meyng-purple"
+                    : "text-meyng-silver hover:text-meyng-purple"
+                }`}
               >
                 {link.label}
               </Link>
@@ -118,7 +128,11 @@ export function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="block text-meyng-silver hover:text-meyng-purple transition-colors text-base"
+                  className={`block transition-colors text-base ${
+                    isActive(link.href)
+                      ? "text-meyng-purple font-medium"
+                      : "text-meyng-silver hover:text-meyng-purple"
+                  }`}
                 >
                   {link.label}
                 </Link>

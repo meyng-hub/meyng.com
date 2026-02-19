@@ -139,7 +139,7 @@ export default function ProductsPage() {
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 text-meyng-purple hover:text-meyng-light transition-colors text-sm font-medium"
                       >
-                        Visit {product.name}
+                        {t("products.visit", { name: product.name })}
                         <ExternalLink className="w-3.5 h-3.5" />
                       </a>
                     )}

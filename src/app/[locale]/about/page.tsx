@@ -11,6 +11,8 @@ import {
   Lightbulb,
   Shield,
   Users,
+  Code2,
+  Globe,
 } from "lucide-react";
 import { SectionHeading } from "@/components/SectionHeading";
 
@@ -115,6 +117,55 @@ export default function AboutPage() {
                 </motion.div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      <div className="section-divider max-w-4xl mx-auto" />
+
+      {/* Team / Founder */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <SectionHeading
+            label={t("teamLabel")}
+            title={t("teamTitle")}
+          />
+
+          <div className="max-w-2xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="bg-meyng-card rounded-2xl border border-meyng-border p-8 md:p-10 text-center"
+            >
+              {/* Avatar placeholder */}
+              <div className="w-24 h-24 rounded-full bg-gradient-to-br from-meyng-purple to-meyng-deep mx-auto mb-6 flex items-center justify-center">
+                <span className="text-3xl font-bold text-white">MW</span>
+              </div>
+
+              <h3 className="text-xl font-bold text-meyng-light mb-1">
+                {t("founder.name")}
+              </h3>
+              <p className="text-meyng-purple text-sm font-medium mb-4">
+                {t("founder.role")}
+              </p>
+              <p className="text-meyng-silver text-sm leading-relaxed max-w-lg mx-auto mb-6">
+                {t("founder.bio")}
+              </p>
+
+              <div className="flex items-center justify-center gap-4">
+                <div className="flex items-center gap-2 text-meyng-silver/70 text-xs">
+                  <Code2 className="w-4 h-4" />
+                  <span>Software Engineer</span>
+                </div>
+                <div className="w-1 h-1 rounded-full bg-meyng-silver/30" />
+                <div className="flex items-center gap-2 text-meyng-silver/70 text-xs">
+                  <Globe className="w-4 h-4" />
+                  <span>Paris, France</span>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
