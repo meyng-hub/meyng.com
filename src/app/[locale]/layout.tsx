@@ -60,6 +60,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: t("title"),
       description: t("ogDescription"),
     },
+    icons: {
+      icon: "/favicon.png",
+    },
     robots: { index: true, follow: true },
     alternates: {
       canonical: `https://meyng.com/${locale}`,
