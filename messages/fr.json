@@ -1,0 +1,205 @@
+{
+  "metadata": {
+    "title": "MEYNG | L'IA qui compte",
+    "titleTemplate": "%s | MEYNG",
+    "description": "MEYNG conçoit des produits basés sur l'IA qui se battent pour l'accessibilité — comblant les lacunes en matière de langue, d'éducation, de durabilité alimentaire et de développement communautaire pour les communautés mal desservies dans le monde.",
+    "ogDescription": "Nous construisons des produits IA qui se battent pour l'accessibilité — pour ceux qui sont laissés pour compte."
+  },
+  "nav": {
+    "home": "Accueil",
+    "products": "Produits",
+    "about": "À propos",
+    "contact": "Contact",
+    "getInTouch": "Nous contacter"
+  },
+  "hero": {
+    "badge": "L'IA qui compte",
+    "title": "Nous construisons l'IA pour",
+    "titleHighlight": "ceux qu'on oublie",
+    "description": "Nous nous battons pour l'accessibilité. Nous créons des produits IA qui comblent les lacunes en langue, éducation, durabilité et développement communautaire — là où l'accès est limité et l'impact est le plus grand.",
+    "cta1": "Découvrir nos produits",
+    "cta2": "Notre mission"
+  },
+  "stats": {
+    "products": "Produits IA",
+    "industries": "Secteurs",
+    "lives": "Vies impactées",
+    "partners": "Partenaires"
+  },
+  "homeProducts": {
+    "sectionLabel": "Ce que nous construisons",
+    "sectionTitle": "Des produits IA pour un impact réel",
+    "sectionDescription": "Chaque produit s'attaque à une barrière spécifique qui empêche les communautés d'atteindre leur potentiel — propulsé par l'intelligence artificielle de pointe."
+  },
+  "products": {
+    "sectionLabel": "Nos produits",
+    "sectionTitle": "Des solutions IA conçues pour l'impact",
+    "sectionDescription": "De la préservation des langues en danger à la réduction du gaspillage alimentaire, chaque produit que nous construisons s'attaque à une barrière réelle qui empêche les communautés mal desservies d'atteindre leur potentiel.",
+    "sangoai": {
+      "tagline": "Plateforme linguistique propulsée par l'IA",
+      "description": "Traduction en temps réel, IA conversationnelle et apprentissage interactif des langues pour le sango — au service de plus de 5 millions de locuteurs en République centrafricaine.",
+      "features": ["Traduction IA multilingue", "Assistant conversationnel", "Apprentissage interactif avec quiz", "API REST pour développeurs"]
+    },
+    "sangoaiFull": {
+      "tagline": "L'IA pour la langue sango",
+      "description": "La première plateforme linguistique propulsée par l'IA pour le sango, la langue nationale de la République centrafricaine parlée par plus de 5 millions de personnes. SangoAI offre la traduction en temps réel, un chat IA conversationnel, un apprentissage interactif avec quiz et flashcards, et une API pour les intégrations tierces.",
+      "features": ["Traduction français-sango et anglais-sango", "Assistant IA parlant couramment le sango", "Apprentissage interactif avec quiz et vocabulaire", "API REST pour l'intégration", "Application Web Progressive (PWA)"]
+    },
+    "kobetrack": {
+      "tagline": "Réduire le gaspillage alimentaire avec l'IA",
+      "description": "Une application mobile qui utilise l'IA pour aider les ménages et les entreprises à suivre leurs inventaires de produits frais, prédire les dates de péremption et réduire le gaspillage avec des notifications intelligentes.",
+      "features": ["Prédictions IA des dates de péremption", "Suivi intelligent des inventaires", "Analyses de réduction du gaspillage", "Suggestions de recettes pour les produits bientôt périmés"]
+    },
+    "kobetrackFull": {
+      "tagline": "Réduire le gaspillage alimentaire avec l'IA",
+      "description": "Une application mobile qui utilise l'IA pour aider les ménages, restaurants et petites entreprises à suivre et gérer leurs inventaires de produits frais. KobeTrack utilise des prédictions intelligentes de péremption et des notifications pour réduire le gaspillage, économiser de l'argent et promouvoir une consommation durable.",
+      "features": ["Prédictions IA des dates de péremption", "Gestion intelligente des inventaires", "Analyses et insights de réduction du gaspillage", "Suggestions de recettes basées sur les produits bientôt périmés", "Scan de codes-barres pour saisie rapide"]
+    },
+    "endara": {
+      "tagline": "L'apprentissage par SMS pour tous",
+      "description": "Une plateforme d'apprentissage par SMS propulsée par l'IA, conçue pour les étudiants sans accès internet. Une éducation de qualité via la messagerie texte — sans smartphone ni forfait data.",
+      "features": ["Fonctionne sur tout téléphone basique via SMS", "Progression personnalisée par l'IA", "Quiz interactifs par texte", "Aucun internet requis"]
+    },
+    "endaraFull": {
+      "tagline": "L'apprentissage par SMS pour tous",
+      "description": "Une plateforme d'apprentissage par SMS innovante conçue pour apporter une éducation de qualité aux étudiants sans accès internet. eNdara utilise l'IA pour personnaliser les leçons, s'adapter à la progression des étudiants et fournir des évaluations interactives entièrement par messagerie texte — sans smartphone ni forfait data.",
+      "features": ["Fonctionne sur tout téléphone basique via SMS", "Progression personnalisée par l'IA", "Quiz interactifs par messages texte", "Support multilingue incluant les langues locales", "Hors-ligne d'abord : aucun internet requis"]
+    },
+    "connectz": {
+      "tagline": "Gestion de projets intelligente pour les ONG",
+      "description": "Un portail collaboratif pour les ONG et municipalités afin de gérer des projets, suivre les résultats et améliorer les rapports d'impact avec des analyses et insights générés par l'IA.",
+      "features": ["Tableau de bord centralisé", "Rapports d'impact générés par l'IA", "Collaboration multi-parties prenantes", "Suivi des subventions et donateurs"]
+    },
+    "connectzFull": {
+      "tagline": "Gestion de projets intelligente pour les ONG",
+      "description": "Un portail collaboratif conçu pour les ONG et municipalités afin de gérer des projets, suivre les résultats et améliorer les rapports d'impact. ConnectZ utilise l'IA pour agréger les données de sources multiples, générer des rapports automatisés et fournir des insights actionnables pour une meilleure prise de décision.",
+      "features": ["Tableau de bord centralisé", "Rapports d'impact générés par l'IA", "Outils de collaboration multi-parties prenantes", "Visualisation de données et analyses", "Suivi des subventions et gestion des donateurs"]
+    },
+    "ctaTitle": "Intéressé par un partenariat produit ?",
+    "ctaDescription": "Nous recherchons toujours des partenaires, collaborateurs et organisations qui partagent notre vision d'utiliser l'IA pour créer un impact réel là où ça compte le plus.",
+    "ctaButton": "Nous contacter"
+  },
+  "common": {
+    "live": "En ligne",
+    "inDevelopment": "En développement",
+    "comingSoon": "Bientôt disponible"
+  },
+  "api": {
+    "label": "API Développeur",
+    "title": "Conçu pour les développeurs",
+    "description": "Intégrez nos capacités IA directement dans vos applications. L'API REST de SangoAI vous donne accès à la traduction et au traitement linguistique de pointe — avec des endpoints simples, documentés et une tarification prévisible.",
+    "cta": "En savoir plus"
+  },
+  "values": {
+    "sectionLabel": "Notre approche",
+    "sectionTitle": "Construits différemment",
+    "sectionDescription": "Nous ne construisons pas juste de la technologie. Nous construisons des solutions pour les personnes et communautés que l'industrie tech ignore.",
+    "aiFirst": {
+      "title": "IA d'abord",
+      "description": "Chaque produit que nous construisons exploite l'intelligence artificielle pour résoudre de vrais problèmes pour des personnes trop souvent ignorées par la technologie."
+    },
+    "accessibilityFirst": {
+      "title": "Accessibilité d'abord",
+      "description": "Nous concevons pour les contraintes les plus difficiles d'abord — pas d'internet, pas de smartphone, pas de littératie. Si ça marche là, ça marche partout."
+    },
+    "impactDriven": {
+      "title": "Guidés par l'impact",
+      "description": "Nous mesurons le succès non pas en téléchargements, mais en barrières supprimées, communautés renforcées et vies significativement améliorées."
+    }
+  },
+  "cta": {
+    "title": "Prêt à construire quelque chose",
+    "titleHighlight": "qui compte ?",
+    "description": "Que vous soyez partenaire, investisseur ou organisation qui se bat pour l'accessibilité — nous serions ravis d'échanger avec vous.",
+    "button": "Nous contacter"
+  },
+  "about": {
+    "sectionLabel": "À propos de MEYNG",
+    "sectionTitle": "L'IA qui se bat pour l'accessibilité",
+    "sectionDescription": "Nous sommes une entreprise IA dédiée à la construction de produits qui comblent les lacunes en langue, éducation, durabilité et développement communautaire — pour ceux qu'on laisse pour compte.",
+    "missionTitle": "Notre mission",
+    "missionDescription": "Exploiter la puissance de l'intelligence artificielle pour créer des produits accessibles et impactants qui comblent les lacunes en préservation linguistique, accès à l'éducation, durabilité alimentaire et développement communautaire — partout où l'accès est limité et l'impact est le plus grand. Nous croyons que l'IA doit être une force d'équité, pas d'exclusion.",
+    "visionTitle": "Notre vision",
+    "visionDescription": "Un avenir où chaque communauté mal desservie a accès à des outils propulsés par l'IA qui améliorent leur quotidien — que ce soit communiquer dans leur langue maternelle, apprendre sans accès internet, réduire le gaspillage alimentaire ou gérer des projets communautaires avec des insights basés sur les données.",
+    "valuesLabel": "Ce qui nous anime",
+    "valuesTitle": "Nos valeurs fondamentales",
+    "innovation": {
+      "title": "Innovation",
+      "description": "Nous repoussons les limites de ce que l'IA peut accomplir, en particulier pour les marchés mal desservis et les communautés que la tech traditionnelle ignore."
+    },
+    "socialImpact": {
+      "title": "Impact social",
+      "description": "La technologie doit servir les gens. Chaque produit que nous construisons est mesuré par sa capacité à créer un changement positif et significatif dans des vies réelles."
+    },
+    "accessibility": {
+      "title": "Accessibilité d'abord",
+      "description": "Nous concevons pour les contraintes les plus difficiles d'abord — pas d'internet, pas de smartphone, pas de littératie. Si ça marche là, ça marche partout."
+    },
+    "community": {
+      "title": "Communauté",
+      "description": "Nous croyons au pouvoir de la collaboration. Nos produits sont construits avec et pour les communautés qu'ils servent, pas juste à leur sujet."
+    },
+    "journeyLabel": "Notre parcours",
+    "journeyTitle": "Construire pas à pas",
+    "founded": {
+      "year": "2023",
+      "title": "Création de MEYNG",
+      "description": "Fondée avec la mission de construire des produits IA qui se battent pour l'accessibilité — pour ceux qu'on laisse pour compte."
+    },
+    "sangoaiLaunch": {
+      "year": "2026",
+      "title": "Lancement de SangoAI",
+      "description": "Première plateforme linguistique propulsée par l'IA pour le sango, au service de plus de 5M de locuteurs en République centrafricaine."
+    },
+    "kobetrackEndara": {
+      "year": "2026",
+      "title": "KobeTrack & eNdara",
+      "description": "Début du développement des plateformes de réduction du gaspillage alimentaire et d'éducation par SMS — s'attaquant à la durabilité et à l'accès à l'apprentissage."
+    },
+    "expanding": {
+      "year": "2026",
+      "title": "Expansion de l'impact",
+      "description": "ConnectZ en développement. Poursuite de subventions et partenariats pour une expansion mondiale et atteindre plus de communautés mal desservies."
+    },
+    "ctaTitle": "Rejoignez-nous dans cette aventure",
+    "ctaDescription": "Nous recherchons des partenaires, investisseurs et talents qui partagent notre passion pour l'utilisation de l'IA au service de l'accessibilité et d'un impact durable et significatif.",
+    "ctaButton": "Discutons"
+  },
+  "contact": {
+    "sectionLabel": "Contact",
+    "sectionTitle": "Échangeons",
+    "sectionDescription": "Vous avez une question, une idée de partenariat ou souhaitez en savoir plus sur ce que nous construisons ? Nous serions ravis de vous entendre.",
+    "getInTouch": "Nous contacter",
+    "contactIntro": "Que vous soyez investisseur, partenaire, ONG ou simplement curieux de notre travail, contactez-nous. Nous répondons à chaque message.",
+    "email": "Email",
+    "location": "Localisation",
+    "locationValue": "Paris, France",
+    "openTo": "Nous sommes ouverts à :",
+    "partnerships": "Partenariats & collaborations",
+    "investment": "Demandes d'investissement",
+    "grants": "Subventions & opportunités de financement",
+    "feedback": "Retours sur les produits",
+    "media": "Médias & presse",
+    "formName": "Nom",
+    "formNamePlaceholder": "Votre nom",
+    "formEmail": "Email",
+    "formEmailPlaceholder": "vous@exemple.com",
+    "formSubject": "Sujet",
+    "subjectGeneral": "Demande générale",
+    "subjectPartnership": "Partenariat",
+    "subjectInvestment": "Investissement",
+    "subjectGrant": "Subvention / Financement",
+    "subjectProduct": "Retour produit",
+    "subjectMedia": "Médias / Presse",
+    "formMessage": "Message",
+    "formMessagePlaceholder": "Décrivez votre demande...",
+    "formSubmit": "Envoyer le message",
+    "formResponseTime": "Nous répondons généralement sous 24 à 48 heures."
+  },
+  "footer": {
+    "description": "Nous construisons des produits IA qui se battent pour l'accessibilité — comblant les lacunes en langue, éducation, durabilité alimentaire et développement communautaire pour ceux qu'on laisse pour compte.",
+    "navigate": "Navigation",
+    "products": "Produits",
+    "copyright": "MEYNG. Tous droits réservés."
+  }
+}

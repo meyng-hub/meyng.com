@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import {
   Languages,
   Leaf,
@@ -23,93 +24,17 @@ import { SMSConversation } from "@/components/SMSConversation";
 import { DashboardMockup } from "@/components/DashboardMockup";
 import { APIShowcase } from "@/components/APIShowcase";
 
-const products = [
-  {
-    icon: Languages,
-    name: "SangoAI",
-    tagline: "AI-Powered Language Platform",
-    description:
-      "Real-time translation, conversational AI, and interactive language learning for the Sango language — serving over 5 million speakers in the Central African Republic.",
-    features: [
-      "Multi-language AI translation",
-      "Conversational chat assistant",
-      "Interactive learning with quizzes",
-      "Developer REST API",
-    ],
-    status: "Live" as const,
-    url: "https://sangoai.sbs",
-    demo: "translation",
-  },
-  {
-    icon: Leaf,
-    name: "KobeTrack",
-    tagline: "Reducing Food Waste with AI",
-    description:
-      "A mobile app that uses AI to help households and businesses track fresh product inventories, predict expiry dates, and reduce food waste with smart notifications.",
-    features: [
-      "AI-powered expiry predictions",
-      "Smart inventory tracking",
-      "Waste reduction insights",
-      "Recipe suggestions for expiring items",
-    ],
-    status: "In Development" as const,
-    url: null,
-    demo: "phone",
-  },
-  {
-    icon: BookOpen,
-    name: "eNdara",
-    tagline: "SMS-Based Learning for All",
-    description:
-      "An AI-powered SMS learning platform designed for students without internet access. Quality education delivered through basic text messaging — no smartphone or data plan needed.",
-    features: [
-      "Works on any basic phone via SMS",
-      "AI-personalized lesson progression",
-      "Interactive quizzes via text",
-      "Zero internet required",
-    ],
-    status: "In Development" as const,
-    url: null,
-    demo: "sms",
-  },
-  {
-    icon: Users,
-    name: "ConnectZ",
-    tagline: "Smarter Project Management for NGOs",
-    description:
-      "A collaborative portal for NGOs and municipalities to manage projects, track outcomes, and improve impact reporting with AI-generated insights and automated analytics.",
-    features: [
-      "Centralized project dashboard",
-      "AI-generated impact reports",
-      "Multi-stakeholder collaboration",
-      "Grant and donor tracking",
-    ],
-    status: "Coming Soon" as const,
-    url: null,
-    demo: "dashboard",
-  },
+const productKeys = ["sangoai", "kobetrack", "endara", "connectz"] as const;
+
+const productMeta = [
+  { icon: Languages, name: "SangoAI", url: "https://sangoai.sbs", demo: "translation", statusKey: "live" },
+  { icon: Leaf, name: "KobeTrack", url: null, demo: "phone", statusKey: "inDevelopment" },
+  { icon: BookOpen, name: "eNdara", url: null, demo: "sms", statusKey: "inDevelopment" },
+  { icon: Users, name: "ConnectZ", url: null, demo: "dashboard", statusKey: "comingSoon" },
 ];
 
-const values = [
-  {
-    icon: Sparkles,
-    title: "AI-First",
-    description:
-      "Every product we build harnesses artificial intelligence to solve real problems for people who are too often overlooked by technology.",
-  },
-  {
-    icon: Shield,
-    title: "Accessibility-First",
-    description:
-      "We design for the hardest constraints first — no internet, no smartphone, no literacy. If it works there, it works everywhere.",
-  },
-  {
-    icon: Zap,
-    title: "Impact-Driven",
-    description:
-      "We measure success not in downloads, but in barriers removed, communities empowered, and lives meaningfully improved.",
-  },
-];
+const valueKeys = ["aiFirst", "accessibilityFirst", "impactDriven"] as const;
+const valueIcons = [Sparkles, Shield, Zap];
 
 function ProductDemo({ type }: { type: string }) {
   switch (type) {
@@ -127,6 +52,22 @@ function ProductDemo({ type }: { type: string }) {
 }
 
 export default function Home() {
+  const t = useTranslations();
+
+  const products = productMeta.map((meta, i) => ({
+    ...meta,
+    tagline: t(`products.${productKeys[i]}.tagline`),
+    description: t(`products.${productKeys[i]}.description`),
+    features: [0, 1, 2, 3].map((j) => t(`products.${productKeys[i]}.features.${j}`)),
+    status: t(`common.${meta.statusKey}`),
+  }));
+
+  const statusColorMap: Record<string, string> = {
+    live: "bg-green-500/20 text-green-400 border-green-500/30",
+    inDevelopment: "bg-meyng-purple/20 text-meyng-purple border-meyng-purple/30",
+    comingSoon: "bg-amber-500/20 text-amber-400 border-amber-500/30",
+  };
+
   return (
     <>
       {/* ============ HERO ============ */}
@@ -144,7 +85,7 @@ export default function Home() {
           >
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-meyng-deep/30 border border-meyng-purple/20 text-meyng-purple text-sm font-medium mb-8">
               <Sparkles className="w-4 h-4" />
-              AI That Matters
+              {t("hero.badge")}
             </span>
           </motion.div>
 
@@ -154,8 +95,8 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.15 }}
             className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight"
           >
-            We build AI for{" "}
-            <span className="gradient-text">those left behind</span>
+            {t("hero.title")}{" "}
+            <span className="gradient-text">{t("hero.titleHighlight")}</span>
           </motion.h1>
 
           <motion.p
@@ -164,9 +105,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="mt-6 text-lg md:text-xl text-meyng-silver max-w-2xl mx-auto leading-relaxed"
           >
-            We fight for accessibility. We build AI products that bridge gaps in
-            language, education, sustainability, and community development —
-            where access is limited and impact is greatest.
+            {t("hero.description")}
           </motion.p>
 
           <motion.div
@@ -179,14 +118,14 @@ export default function Home() {
               href="/products"
               className="group px-8 py-4 bg-meyng-purple hover:bg-meyng-deep text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-xl hover:shadow-meyng-purple/20 flex items-center gap-2"
             >
-              Explore Our Products
+              {t("hero.cta1")}
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
               href="/about"
               className="px-8 py-4 border border-meyng-border hover:border-meyng-purple/50 text-meyng-light font-semibold rounded-xl transition-all duration-300"
             >
-              Our Mission
+              {t("hero.cta2")}
             </Link>
           </motion.div>
         </div>
@@ -220,21 +159,16 @@ export default function Home() {
         <div className="absolute inset-0 dot-grid opacity-20" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
           <SectionHeading
-            label="What We Build"
-            title="AI Products for Real Impact"
-            description="Each product tackles a specific barrier that keeps communities from reaching their potential — powered by cutting-edge artificial intelligence."
+            label={t("homeProducts.sectionLabel")}
+            title={t("homeProducts.sectionTitle")}
+            description={t("homeProducts.sectionDescription")}
           />
 
           <div className="space-y-24 lg:space-y-32">
             {products.map((product, i) => {
               const Icon = product.icon;
               const isEven = i % 2 === 1;
-              const statusColor =
-                product.status === "Live"
-                  ? "bg-green-500/20 text-green-400 border-green-500/30"
-                  : product.status === "In Development"
-                    ? "bg-meyng-purple/20 text-meyng-purple border-meyng-purple/30"
-                    : "bg-amber-500/20 text-amber-400 border-amber-500/30";
+              const statusColor = statusColorMap[productMeta[i].statusKey];
 
               return (
                 <motion.div
@@ -291,7 +225,7 @@ export default function Home() {
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 text-meyng-purple hover:text-meyng-light transition-colors text-sm font-medium"
                       >
-                        Visit {product.name}
+                        {t("products.sangoai.tagline") ? `Visit ${product.name}` : product.name}
                         <ExternalLink className="w-3.5 h-3.5" />
                       </a>
                     )}
@@ -324,23 +258,20 @@ export default function Home() {
                 <div className="flex items-center gap-2 mb-4">
                   <Code className="w-5 h-5 text-meyng-purple" />
                   <span className="text-meyng-purple text-sm font-semibold uppercase tracking-widest">
-                    Developer API
+                    {t("api.label")}
                   </span>
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold text-meyng-light mb-4">
-                  Built for developers
+                  {t("api.title")}
                 </h2>
                 <p className="text-meyng-silver leading-relaxed mb-6">
-                  Integrate our AI capabilities directly into your applications.
-                  SangoAI&apos;s REST API gives you access to state-of-the-art
-                  translation and language processing — with simple, documented
-                  endpoints and predictable pricing.
+                  {t("api.description")}
                 </p>
                 <Link
                   href="/products"
                   className="inline-flex items-center gap-2 text-meyng-purple hover:text-meyng-light transition-colors font-medium"
                 >
-                  Learn more
+                  {t("api.cta")}
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </motion.div>
@@ -358,17 +289,17 @@ export default function Home() {
       <section className="py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <SectionHeading
-            label="Our Approach"
-            title="Built Different"
-            description="We don't just build technology. We build solutions for the people and communities that the tech industry overlooks."
+            label={t("values.sectionLabel")}
+            title={t("values.sectionTitle")}
+            description={t("values.sectionDescription")}
           />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {values.map((value, i) => {
-              const Icon = value.icon;
+            {valueKeys.map((key, i) => {
+              const Icon = valueIcons[i];
               return (
                 <motion.div
-                  key={value.title}
+                  key={key}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-50px" }}
@@ -379,10 +310,10 @@ export default function Home() {
                     <Icon className="w-8 h-8 text-meyng-purple" />
                   </div>
                   <h3 className="text-xl font-bold text-meyng-light mb-3">
-                    {value.title}
+                    {t(`values.${key}.title`)}
                   </h3>
                   <p className="text-meyng-silver text-sm leading-relaxed">
-                    {value.description}
+                    {t(`values.${key}.description`)}
                   </p>
                 </motion.div>
               );
@@ -404,18 +335,17 @@ export default function Home() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-meyng-light mb-6">
-              Ready to build something{" "}
-              <span className="gradient-text">that matters?</span>
+              {t("cta.title")}{" "}
+              <span className="gradient-text">{t("cta.titleHighlight")}</span>
             </h2>
             <p className="text-meyng-silver text-lg mb-10 max-w-xl mx-auto">
-              Whether you are a partner, investor, or organization fighting for
-              accessibility — we would love to hear from you.
+              {t("cta.description")}
             </p>
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 px-10 py-4 bg-meyng-purple hover:bg-meyng-deep text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-xl hover:shadow-meyng-purple/20"
             >
-              Contact Us
+              {t("cta.button")}
               <ArrowRight className="w-4 h-4" />
             </Link>
           </motion.div>

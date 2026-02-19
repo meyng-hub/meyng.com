@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import {
   ArrowRight,
   Target,
@@ -13,61 +14,14 @@ import {
 } from "lucide-react";
 import { SectionHeading } from "@/components/SectionHeading";
 
-const coreValues = [
-  {
-    icon: Lightbulb,
-    title: "Innovation",
-    description:
-      "We push the boundaries of what AI can achieve, especially for underserved markets and communities that traditional tech overlooks.",
-  },
-  {
-    icon: Heart,
-    title: "Social Impact",
-    description:
-      "Technology must serve people. Every product we build is measured by its ability to create meaningful, positive change in real lives.",
-  },
-  {
-    icon: Shield,
-    title: "Accessibility-First",
-    description:
-      "We design for the hardest constraints first — no internet, no smartphone, no literacy. If it works there, it works everywhere.",
-  },
-  {
-    icon: Users,
-    title: "Community",
-    description:
-      "We believe in the power of collaboration. Our products are built with and for the communities they serve, not just about them.",
-  },
-];
+const valueKeys = ["innovation", "socialImpact", "accessibility", "community"] as const;
+const valueIcons = [Lightbulb, Heart, Shield, Users];
 
-const milestones = [
-  {
-    year: "2023",
-    title: "MEYNG Founded",
-    description:
-      "Established with a mission to build AI products that fight for accessibility — for those left behind.",
-  },
-  {
-    year: "2026",
-    title: "SangoAI Launched",
-    description:
-      "First AI-powered language platform for Sango goes live, serving 5M+ speakers in the Central African Republic.",
-  },
-  {
-    year: "2026",
-    title: "KobeTrack & eNdara",
-    description:
-      "Development begins on food waste reduction and SMS-based education platforms — tackling sustainability and learning access.",
-  },
-  {
-    year: "2026",
-    title: "Expanding Impact",
-    description:
-      "ConnectZ in development. Pursuing grants and partnerships to scale globally and reach more underserved communities.",
-  },
-];
+const milestoneKeys = ["founded", "sangoaiLaunch", "kobetrackEndara", "expanding"] as const;
 
 export default function AboutPage() {
+  const t = useTranslations("about");
+
   return (
     <>
       {/* Hero */}
@@ -75,9 +29,9 @@ export default function AboutPage() {
         <div className="absolute inset-0 dot-grid opacity-20" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
           <SectionHeading
-            label="About MEYNG"
-            title="AI That Fights for Accessibility"
-            description="We are an AI company dedicated to building products that bridge gaps in language, education, sustainability, and community development — for those left behind."
+            label={t("sectionLabel")}
+            title={t("sectionTitle")}
+            description={t("sectionDescription")}
           />
         </div>
       </section>
@@ -97,15 +51,10 @@ export default function AboutPage() {
                 <Target className="w-7 h-7 text-meyng-purple" />
               </div>
               <h3 className="text-2xl font-bold text-meyng-light mb-4">
-                Our Mission
+                {t("missionTitle")}
               </h3>
               <p className="text-meyng-silver leading-relaxed">
-                To harness the power of artificial intelligence to create
-                accessible, impactful products that bridge gaps in language
-                preservation, education access, food sustainability, and
-                community development — wherever access is limited and impact is
-                greatest. We believe AI should be a force for equity, not
-                exclusion.
+                {t("missionDescription")}
               </p>
             </motion.div>
 
@@ -120,14 +69,10 @@ export default function AboutPage() {
                 <Eye className="w-7 h-7 text-meyng-purple" />
               </div>
               <h3 className="text-2xl font-bold text-meyng-light mb-4">
-                Our Vision
+                {t("visionTitle")}
               </h3>
               <p className="text-meyng-silver leading-relaxed">
-                A future where every underserved community has access to
-                AI-powered tools that enhance their daily lives — whether it is
-                communicating in their native language, learning without internet
-                access, reducing food waste, or managing community projects with
-                data-driven insights.
+                {t("visionDescription")}
               </p>
             </motion.div>
           </div>
@@ -140,16 +85,16 @@ export default function AboutPage() {
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <SectionHeading
-            label="What Drives Us"
-            title="Our Core Values"
+            label={t("valuesLabel")}
+            title={t("valuesTitle")}
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {coreValues.map((value, i) => {
-              const Icon = value.icon;
+            {valueKeys.map((key, i) => {
+              const Icon = valueIcons[i];
               return (
                 <motion.div
-                  key={value.title}
+                  key={key}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -161,10 +106,10 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <h3 className="text-lg font-bold text-meyng-light mb-2">
-                      {value.title}
+                      {t(`${key}.title`)}
                     </h3>
                     <p className="text-meyng-silver text-sm leading-relaxed">
-                      {value.description}
+                      {t(`${key}.description`)}
                     </p>
                   </div>
                 </motion.div>
@@ -180,17 +125,17 @@ export default function AboutPage() {
       <section className="py-24">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <SectionHeading
-            label="Our Journey"
-            title="Building Step by Step"
+            label={t("journeyLabel")}
+            title={t("journeyTitle")}
           />
 
           <div className="relative">
             {/* Vertical line */}
             <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-meyng-purple via-meyng-deep to-transparent" />
 
-            {milestones.map((milestone, i) => (
+            {milestoneKeys.map((key, i) => (
               <motion.div
-                key={`${milestone.year}-${milestone.title}`}
+                key={key}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -211,13 +156,13 @@ export default function AboutPage() {
                   }`}
                 >
                   <span className="text-meyng-purple text-sm font-semibold">
-                    {milestone.year}
+                    {t(`${key}.year`)}
                   </span>
                   <h3 className="text-lg font-bold text-meyng-light mt-1">
-                    {milestone.title}
+                    {t(`${key}.title`)}
                   </h3>
                   <p className="text-meyng-silver text-sm mt-2 leading-relaxed">
-                    {milestone.description}
+                    {t(`${key}.description`)}
                   </p>
                 </div>
               </motion.div>
@@ -238,18 +183,16 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-meyng-light mb-6">
-              Join us on this journey
+              {t("ctaTitle")}
             </h2>
             <p className="text-meyng-silver text-lg mb-10 max-w-xl mx-auto">
-              We are looking for partners, investors, and talented individuals
-              who share our passion for using AI to fight for accessibility and
-              create meaningful, lasting impact.
+              {t("ctaDescription")}
             </p>
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 px-10 py-4 bg-meyng-purple hover:bg-meyng-deep text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-xl hover:shadow-meyng-purple/20"
             >
-              Let&apos;s Talk
+              {t("ctaButton")}
               <ArrowRight className="w-4 h-4" />
             </Link>
           </motion.div>

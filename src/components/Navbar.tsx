@@ -1,21 +1,44 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { useTranslations, useLocale } from "next-intl";
+import { Link, usePathname, useRouter } from "@/i18n/navigation";
 
-const links = [
-  { href: "/", label: "Home" },
-  { href: "/products", label: "Products" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
-];
+function LanguageSwitcher() {
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
+
+  function switchLocale() {
+    const newLocale = locale === "en" ? "fr" : "en";
+    router.replace(pathname, { locale: newLocale });
+  }
+
+  return (
+    <button
+      onClick={switchLocale}
+      className="px-3 py-1.5 rounded-lg border border-meyng-border text-meyng-silver hover:text-meyng-purple hover:border-meyng-purple/50 transition-colors text-sm font-medium"
+      aria-label={locale === "en" ? "Passer en français" : "Switch to English"}
+    >
+      {locale === "en" ? "FR" : "EN"}
+    </button>
+  );
+}
 
 export function Navbar() {
+  const t = useTranslations("nav");
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  const links = [
+    { href: "/" as const, label: t("home") },
+    { href: "/products" as const, label: t("products") },
+    { href: "/about" as const, label: t("about") },
+    { href: "/contact" as const, label: t("contact") },
+  ];
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -58,13 +81,14 @@ export function Navbar() {
             ))}
           </div>
 
-          {/* CTA */}
-          <div className="hidden md:block">
+          {/* CTA + Language Switcher */}
+          <div className="hidden md:flex items-center gap-4">
+            <LanguageSwitcher />
             <Link
               href="/contact"
               className="px-6 py-2.5 bg-meyng-purple hover:bg-meyng-deep text-white text-sm font-semibold rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-meyng-purple/25"
             >
-              Get in Touch
+              {t("getInTouch")}
             </Link>
           </div>
 
@@ -99,13 +123,16 @@ export function Navbar() {
                   {link.label}
                 </Link>
               ))}
-              <Link
-                href="/contact"
-                onClick={() => setIsOpen(false)}
-                className="block w-full text-center px-6 py-3 bg-meyng-purple text-white font-semibold rounded-lg mt-4"
-              >
-                Get in Touch
-              </Link>
+              <div className="flex items-center gap-4 mt-4">
+                <LanguageSwitcher />
+                <Link
+                  href="/contact"
+                  onClick={() => setIsOpen(false)}
+                  className="flex-1 text-center px-6 py-3 bg-meyng-purple text-white font-semibold rounded-lg"
+                >
+                  {t("getInTouch")}
+                </Link>
+              </div>
             </div>
           </motion.div>
         )}

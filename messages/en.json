@@ -1,0 +1,205 @@
+{
+  "metadata": {
+    "title": "MEYNG | AI That Matters",
+    "titleTemplate": "%s | MEYNG",
+    "description": "MEYNG builds AI-driven products that fight for accessibility — bridging gaps in language, education, food sustainability, and community development for underserved communities worldwide.",
+    "ogDescription": "We build AI products that fight for accessibility — for those left behind."
+  },
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "about": "About",
+    "contact": "Contact",
+    "getInTouch": "Get in Touch"
+  },
+  "hero": {
+    "badge": "AI That Matters",
+    "title": "We build AI for",
+    "titleHighlight": "those left behind",
+    "description": "We fight for accessibility. We build AI products that bridge gaps in language, education, sustainability, and community development — where access is limited and impact is greatest.",
+    "cta1": "Explore Our Products",
+    "cta2": "Our Mission"
+  },
+  "stats": {
+    "products": "AI Products",
+    "industries": "Industries",
+    "lives": "Lives Impacted",
+    "partners": "Partners"
+  },
+  "homeProducts": {
+    "sectionLabel": "What We Build",
+    "sectionTitle": "AI Products for Real Impact",
+    "sectionDescription": "Each product tackles a specific barrier that keeps communities from reaching their potential — powered by cutting-edge artificial intelligence."
+  },
+  "products": {
+    "sectionLabel": "Our Products",
+    "sectionTitle": "AI Solutions Built for Impact",
+    "sectionDescription": "From preserving endangered languages to reducing food waste, every product we build addresses a real barrier that keeps underserved communities from reaching their potential.",
+    "sangoai": {
+      "tagline": "AI-Powered Language Platform",
+      "description": "Real-time translation, conversational AI, and interactive language learning for the Sango language — serving over 5 million speakers in the Central African Republic.",
+      "features": ["Multi-language AI translation", "Conversational chat assistant", "Interactive learning with quizzes", "Developer REST API"]
+    },
+    "sangoaiFull": {
+      "tagline": "AI for the Sango Language",
+      "description": "The first AI-powered language platform for Sango, the national language of the Central African Republic spoken by over 5 million people. SangoAI provides real-time translation, conversational AI chat, interactive language learning with quizzes and flashcards, and a developer API for third-party integrations.",
+      "features": ["French-Sango and English-Sango translation", "AI chat assistant fluent in Sango", "Interactive learning with quizzes and vocabulary", "Developer REST API for integration", "Progressive Web App (PWA) support"]
+    },
+    "kobetrack": {
+      "tagline": "Reducing Food Waste with AI",
+      "description": "A mobile app that uses AI to help households and businesses track fresh product inventories, predict expiry dates, and reduce food waste with smart notifications.",
+      "features": ["AI-powered expiry predictions", "Smart inventory tracking", "Waste reduction insights", "Recipe suggestions for expiring items"]
+    },
+    "kobetrackFull": {
+      "tagline": "Reducing Food Waste with AI",
+      "description": "A mobile application that leverages AI to help households, restaurants, and small businesses track and manage their fresh product inventories. KobeTrack uses intelligent expiry predictions and smart notifications to reduce food waste, save money, and promote sustainable consumption habits.",
+      "features": ["AI-powered expiry date predictions", "Smart inventory management", "Waste reduction analytics and insights", "Recipe suggestions based on expiring items", "Barcode scanning for quick product entry"]
+    },
+    "endara": {
+      "tagline": "SMS-Based Learning for All",
+      "description": "An AI-powered SMS learning platform designed for students without internet access. Quality education delivered through basic text messaging — no smartphone or data plan needed.",
+      "features": ["Works on any basic phone via SMS", "AI-personalized lesson progression", "Interactive quizzes via text", "Zero internet required"]
+    },
+    "endaraFull": {
+      "tagline": "SMS-Based Learning for All",
+      "description": "An innovative SMS-based learning platform designed to bring quality education to students and learners who lack internet access. eNdara uses AI to personalize lesson delivery, adapt to student progress, and provide interactive assessments entirely through basic text messaging — no smartphone or data plan needed.",
+      "features": ["Works on any basic phone via SMS", "AI-personalized lesson progression", "Interactive quizzes via text messages", "Multi-language support including local languages", "Offline-first: zero internet required"]
+    },
+    "connectz": {
+      "tagline": "Smarter Project Management for NGOs",
+      "description": "A collaborative portal for NGOs and municipalities to manage projects, track outcomes, and improve impact reporting with AI-generated insights and automated analytics.",
+      "features": ["Centralized project dashboard", "AI-generated impact reports", "Multi-stakeholder collaboration", "Grant and donor tracking"]
+    },
+    "connectzFull": {
+      "tagline": "Smarter Project Management for NGOs",
+      "description": "A collaborative portal designed for NGOs and municipalities to manage projects, track outcomes, and improve impact reporting. ConnectZ uses AI to aggregate data from multiple sources, generate automated reports, and provide actionable insights for better decision-making and donor engagement.",
+      "features": ["Centralized project dashboard", "AI-generated impact reports", "Multi-stakeholder collaboration tools", "Data visualization and analytics", "Grant and donor management tracking"]
+    },
+    "ctaTitle": "Interested in partnering on a product?",
+    "ctaDescription": "We are always looking for partners, collaborators, and organizations who share our vision of using AI to create real-world impact where it matters most.",
+    "ctaButton": "Get in Touch"
+  },
+  "common": {
+    "live": "Live",
+    "inDevelopment": "In Development",
+    "comingSoon": "Coming Soon"
+  },
+  "api": {
+    "label": "Developer API",
+    "title": "Built for developers",
+    "description": "Integrate our AI capabilities directly into your applications. SangoAI's REST API gives you access to state-of-the-art translation and language processing — with simple, documented endpoints and predictable pricing.",
+    "cta": "Learn more"
+  },
+  "values": {
+    "sectionLabel": "Our Approach",
+    "sectionTitle": "Built Different",
+    "sectionDescription": "We don't just build technology. We build solutions for the people and communities that the tech industry overlooks.",
+    "aiFirst": {
+      "title": "AI-First",
+      "description": "Every product we build harnesses artificial intelligence to solve real problems for people who are too often overlooked by technology."
+    },
+    "accessibilityFirst": {
+      "title": "Accessibility-First",
+      "description": "We design for the hardest constraints first — no internet, no smartphone, no literacy. If it works there, it works everywhere."
+    },
+    "impactDriven": {
+      "title": "Impact-Driven",
+      "description": "We measure success not in downloads, but in barriers removed, communities empowered, and lives meaningfully improved."
+    }
+  },
+  "cta": {
+    "title": "Ready to build something",
+    "titleHighlight": "that matters?",
+    "description": "Whether you are a partner, investor, or organization fighting for accessibility — we would love to hear from you.",
+    "button": "Contact Us"
+  },
+  "about": {
+    "sectionLabel": "About MEYNG",
+    "sectionTitle": "AI That Fights for Accessibility",
+    "sectionDescription": "We are an AI company dedicated to building products that bridge gaps in language, education, sustainability, and community development — for those left behind.",
+    "missionTitle": "Our Mission",
+    "missionDescription": "To harness the power of artificial intelligence to create accessible, impactful products that bridge gaps in language preservation, education access, food sustainability, and community development — wherever access is limited and impact is greatest. We believe AI should be a force for equity, not exclusion.",
+    "visionTitle": "Our Vision",
+    "visionDescription": "A future where every underserved community has access to AI-powered tools that enhance their daily lives — whether it is communicating in their native language, learning without internet access, reducing food waste, or managing community projects with data-driven insights.",
+    "valuesLabel": "What Drives Us",
+    "valuesTitle": "Our Core Values",
+    "innovation": {
+      "title": "Innovation",
+      "description": "We push the boundaries of what AI can achieve, especially for underserved markets and communities that traditional tech overlooks."
+    },
+    "socialImpact": {
+      "title": "Social Impact",
+      "description": "Technology must serve people. Every product we build is measured by its ability to create meaningful, positive change in real lives."
+    },
+    "accessibility": {
+      "title": "Accessibility-First",
+      "description": "We design for the hardest constraints first — no internet, no smartphone, no literacy. If it works there, it works everywhere."
+    },
+    "community": {
+      "title": "Community",
+      "description": "We believe in the power of collaboration. Our products are built with and for the communities they serve, not just about them."
+    },
+    "journeyLabel": "Our Journey",
+    "journeyTitle": "Building Step by Step",
+    "founded": {
+      "year": "2023",
+      "title": "MEYNG Founded",
+      "description": "Established with a mission to build AI products that fight for accessibility — for those left behind."
+    },
+    "sangoaiLaunch": {
+      "year": "2026",
+      "title": "SangoAI Launched",
+      "description": "First AI-powered language platform for Sango goes live, serving 5M+ speakers in the Central African Republic."
+    },
+    "kobetrackEndara": {
+      "year": "2026",
+      "title": "KobeTrack & eNdara",
+      "description": "Development begins on food waste reduction and SMS-based education platforms — tackling sustainability and learning access."
+    },
+    "expanding": {
+      "year": "2026",
+      "title": "Expanding Impact",
+      "description": "ConnectZ in development. Pursuing grants and partnerships to scale globally and reach more underserved communities."
+    },
+    "ctaTitle": "Join us on this journey",
+    "ctaDescription": "We are looking for partners, investors, and talented individuals who share our passion for using AI to fight for accessibility and create meaningful, lasting impact.",
+    "ctaButton": "Let's Talk"
+  },
+  "contact": {
+    "sectionLabel": "Contact",
+    "sectionTitle": "Let's Connect",
+    "sectionDescription": "Have a question, partnership idea, or want to learn more about what we're building? We'd love to hear from you.",
+    "getInTouch": "Get in Touch",
+    "contactIntro": "Whether you are an investor, partner, NGO, or simply curious about our work, reach out. We respond to every message.",
+    "email": "Email",
+    "location": "Location",
+    "locationValue": "Paris, France",
+    "openTo": "We are open to:",
+    "partnerships": "Partnerships & collaborations",
+    "investment": "Investment inquiries",
+    "grants": "Grant & funding opportunities",
+    "feedback": "Product feedback",
+    "media": "Media & press inquiries",
+    "formName": "Name",
+    "formNamePlaceholder": "Your name",
+    "formEmail": "Email",
+    "formEmailPlaceholder": "you@example.com",
+    "formSubject": "Subject",
+    "subjectGeneral": "General Inquiry",
+    "subjectPartnership": "Partnership",
+    "subjectInvestment": "Investment",
+    "subjectGrant": "Grant / Funding",
+    "subjectProduct": "Product Feedback",
+    "subjectMedia": "Media / Press",
+    "formMessage": "Message",
+    "formMessagePlaceholder": "Tell us about your inquiry...",
+    "formSubmit": "Send Message",
+    "formResponseTime": "We typically respond within 24-48 hours."
+  },
+  "footer": {
+    "description": "Building AI-driven products that fight for accessibility — bridging gaps in language, education, food sustainability, and community development for those left behind.",
+    "navigate": "Navigate",
+    "products": "Products",
+    "copyright": "MEYNG. All rights reserved."
+  }
+}

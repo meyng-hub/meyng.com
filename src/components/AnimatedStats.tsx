@@ -1,20 +1,14 @@
 "use client";
 
-import { motion, useInView, useMotionValue, useTransform, animate } from "framer-motion";
+import { motion, useInView, animate } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 
 interface Stat {
   value: number;
   suffix: string;
   label: string;
 }
-
-const stats: Stat[] = [
-  { value: 4, suffix: "", label: "AI Products" },
-  { value: 3, suffix: "", label: "Industries" },
-  { value: 5, suffix: "M+", label: "Lives Impacted" },
-  { value: 10, suffix: "+", label: "Partners" },
-];
 
 function AnimatedNumber({ value, suffix }: { value: number; suffix: string }) {
   const [displayValue, setDisplayValue] = useState(0);
@@ -42,8 +36,16 @@ function AnimatedNumber({ value, suffix }: { value: number; suffix: string }) {
 }
 
 export function AnimatedStats() {
+  const t = useTranslations("stats");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
+
+  const stats: Stat[] = [
+    { value: 4, suffix: "", label: t("products") },
+    { value: 3, suffix: "", label: t("industries") },
+    { value: 5, suffix: "M+", label: t("lives") },
+    { value: 10, suffix: "+", label: t("partners") },
+  ];
 
   return (
     <motion.div

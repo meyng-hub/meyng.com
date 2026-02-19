@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import {
   Languages,
   Leaf,
@@ -11,81 +12,18 @@ import {
   ExternalLink,
 } from "lucide-react";
 import { SectionHeading } from "@/components/SectionHeading";
-import { ProductCard } from "@/components/ProductCard";
 import { TranslationDemo } from "@/components/TranslationDemo";
 import { PhoneMockup } from "@/components/PhoneMockup";
 import { SMSConversation } from "@/components/SMSConversation";
 import { DashboardMockup } from "@/components/DashboardMockup";
 
-const products = [
-  {
-    icon: Languages,
-    name: "SangoAI",
-    tagline: "AI for the Sango Language",
-    description:
-      "The first AI-powered language platform for Sango, the national language of the Central African Republic spoken by over 5 million people. SangoAI provides real-time translation, conversational AI chat, interactive language learning with quizzes and flashcards, and a developer API for third-party integrations.",
-    features: [
-      "French-Sango and English-Sango translation",
-      "AI chat assistant fluent in Sango",
-      "Interactive learning with quizzes and vocabulary",
-      "Developer REST API for integration",
-      "Progressive Web App (PWA) support",
-    ],
-    status: "Live" as const,
-    url: "https://sangoai.sbs",
-    demo: "translation",
-  },
-  {
-    icon: Leaf,
-    name: "KobeTrack",
-    tagline: "Reducing Food Waste with AI",
-    description:
-      "A mobile application that leverages AI to help households, restaurants, and small businesses track and manage their fresh product inventories. KobeTrack uses intelligent expiry predictions and smart notifications to reduce food waste, save money, and promote sustainable consumption habits.",
-    features: [
-      "AI-powered expiry date predictions",
-      "Smart inventory management",
-      "Waste reduction analytics and insights",
-      "Recipe suggestions based on expiring items",
-      "Barcode scanning for quick product entry",
-    ],
-    status: "In Development" as const,
-    url: null,
-    demo: "phone",
-  },
-  {
-    icon: BookOpen,
-    name: "eNdara",
-    tagline: "SMS-Based Learning for All",
-    description:
-      "An innovative SMS-based learning platform designed to bring quality education to students and learners who lack internet access. eNdara uses AI to personalize lesson delivery, adapt to student progress, and provide interactive assessments entirely through basic text messaging — no smartphone or data plan needed.",
-    features: [
-      "Works on any basic phone via SMS",
-      "AI-personalized lesson progression",
-      "Interactive quizzes via text messages",
-      "Multi-language support including local languages",
-      "Offline-first: zero internet required",
-    ],
-    status: "In Development" as const,
-    url: null,
-    demo: "sms",
-  },
-  {
-    icon: Users,
-    name: "ConnectZ",
-    tagline: "Smarter Project Management for NGOs",
-    description:
-      "A collaborative portal designed for NGOs and municipalities to manage projects, track outcomes, and improve impact reporting. ConnectZ uses AI to aggregate data from multiple sources, generate automated reports, and provide actionable insights for better decision-making and donor engagement.",
-    features: [
-      "Centralized project dashboard",
-      "AI-generated impact reports",
-      "Multi-stakeholder collaboration tools",
-      "Data visualization and analytics",
-      "Grant and donor management tracking",
-    ],
-    status: "Coming Soon" as const,
-    url: null,
-    demo: "dashboard",
-  },
+const productKeys = ["sangoai", "kobetrack", "endara", "connectz"] as const;
+
+const productMeta = [
+  { icon: Languages, name: "SangoAI", url: "https://sangoai.sbs", demo: "translation", statusKey: "live" },
+  { icon: Leaf, name: "KobeTrack", url: null, demo: "phone", statusKey: "inDevelopment" },
+  { icon: BookOpen, name: "eNdara", url: null, demo: "sms", statusKey: "inDevelopment" },
+  { icon: Users, name: "ConnectZ", url: null, demo: "dashboard", statusKey: "comingSoon" },
 ];
 
 function ProductDemoPreview({ type }: { type: string }) {
@@ -104,6 +42,25 @@ function ProductDemoPreview({ type }: { type: string }) {
 }
 
 export default function ProductsPage() {
+  const t = useTranslations();
+
+  const statusColorMap: Record<string, string> = {
+    live: "bg-green-500/20 text-green-400 border-green-500/30",
+    inDevelopment: "bg-meyng-purple/20 text-meyng-purple border-meyng-purple/30",
+    comingSoon: "bg-amber-500/20 text-amber-400 border-amber-500/30",
+  };
+
+  const products = productMeta.map((meta, i) => ({
+    ...meta,
+    tagline: t(`products.${productKeys[i]}Full.tagline`),
+    description: t(`products.${productKeys[i]}Full.description`),
+    features: Array.from(
+      { length: i === 0 || i === 1 || i === 2 || i === 3 ? 5 : 4 },
+      (_, j) => t(`products.${productKeys[i]}Full.features.${j}`)
+    ),
+    status: t(`common.${meta.statusKey}`),
+  }));
+
   return (
     <>
       {/* Hero */}
@@ -111,9 +68,9 @@ export default function ProductsPage() {
         <div className="absolute inset-0 dot-grid opacity-20" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
           <SectionHeading
-            label="Our Products"
-            title="AI Solutions Built for Impact"
-            description="From preserving endangered languages to reducing food waste, every product we build addresses a real barrier that keeps underserved communities from reaching their potential."
+            label={t("products.sectionLabel")}
+            title={t("products.sectionTitle")}
+            description={t("products.sectionDescription")}
           />
         </div>
       </section>
@@ -125,12 +82,7 @@ export default function ProductsPage() {
             {products.map((product, i) => {
               const Icon = product.icon;
               const isEven = i % 2 === 1;
-              const statusColor =
-                product.status === "Live"
-                  ? "bg-green-500/20 text-green-400 border-green-500/30"
-                  : product.status === "In Development"
-                    ? "bg-meyng-purple/20 text-meyng-purple border-meyng-purple/30"
-                    : "bg-amber-500/20 text-amber-400 border-amber-500/30";
+              const statusColor = statusColorMap[productMeta[i].statusKey];
 
               return (
                 <motion.div
@@ -216,18 +168,16 @@ export default function ProductsPage() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-meyng-light mb-6">
-              Interested in partnering on a product?
+              {t("products.ctaTitle")}
             </h2>
             <p className="text-meyng-silver text-lg mb-10 max-w-xl mx-auto">
-              We are always looking for partners, collaborators, and
-              organizations who share our vision of using AI to create real-world
-              impact where it matters most.
+              {t("products.ctaDescription")}
             </p>
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 px-10 py-4 bg-meyng-purple hover:bg-meyng-deep text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-xl hover:shadow-meyng-purple/20"
             >
-              Get in Touch
+              {t("products.ctaButton")}
               <ArrowRight className="w-4 h-4" />
             </Link>
           </motion.div>
