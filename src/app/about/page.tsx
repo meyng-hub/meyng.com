@@ -42,19 +42,19 @@ const coreValues = [
 
 const milestones = [
   {
-    year: "2024",
+    year: "2023",
     title: "MEYNG Founded",
     description:
       "Established with a mission to build AI products that fight for accessibility — for those left behind.",
   },
   {
-    year: "2025",
+    year: "2026",
     title: "SangoAI Launched",
     description:
       "First AI-powered language platform for Sango goes live, serving 5M+ speakers in the Central African Republic.",
   },
   {
-    year: "2025",
+    year: "2026",
     title: "KobeTrack & eNdara",
     description:
       "Development begins on food waste reduction and SMS-based education platforms — tackling sustainability and learning access.",
