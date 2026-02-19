@@ -28,9 +28,9 @@ const coreValues = [
   },
   {
     icon: Shield,
-    title: "Trust & Integrity",
+    title: "Accessibility-First",
     description:
-      "We build transparent, responsible AI. Our users and partners trust us because we prioritize ethical practices and data privacy.",
+      "We design for the hardest constraints first — no internet, no smartphone, no literacy. If it works there, it works everywhere.",
   },
   {
     icon: Users,
@@ -45,25 +45,25 @@ const milestones = [
     year: "2024",
     title: "MEYNG Founded",
     description:
-      "Established with a mission to build AI-driven products for the African continent.",
+      "Established with a mission to build AI products that fight for accessibility — for those left behind.",
   },
   {
     year: "2025",
     title: "SangoAI Launched",
     description:
-      "First AI-powered language platform for Sango goes live, serving 5M+ speakers.",
+      "First AI-powered language platform for Sango goes live, serving 5M+ speakers in the Central African Republic.",
   },
   {
     year: "2025",
     title: "KobeTrack & eNdara",
     description:
-      "Development begins on food waste reduction and SMS-based education platforms.",
+      "Development begins on food waste reduction and SMS-based education platforms — tackling sustainability and learning access.",
   },
   {
     year: "2026",
     title: "Expanding Impact",
     description:
-      "ConnectZ in development. Pursuing grants and partnerships to scale across Africa.",
+      "ConnectZ in development. Pursuing grants and partnerships to scale globally and reach more underserved communities.",
   },
 ];
 
@@ -76,8 +76,8 @@ export default function AboutPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
           <SectionHeading
             label="About MEYNG"
-            title="AI for Africa, Built in Africa"
-            description="We are a technology company dedicated to building artificial intelligence products that address the unique challenges of the African continent."
+            title="AI That Fights for Accessibility"
+            description="We are an AI company dedicated to building products that bridge gaps in language, education, sustainability, and community development — for those left behind."
           />
         </div>
       </section>
@@ -103,8 +103,9 @@ export default function AboutPage() {
                 To harness the power of artificial intelligence to create
                 accessible, impactful products that bridge gaps in language
                 preservation, education access, food sustainability, and
-                community development across Africa. We believe AI should be a
-                force for equity, not exclusion.
+                community development — wherever access is limited and impact is
+                greatest. We believe AI should be a force for equity, not
+                exclusion.
               </p>
             </motion.div>
 
@@ -122,8 +123,8 @@ export default function AboutPage() {
                 Our Vision
               </h3>
               <p className="text-meyng-silver leading-relaxed">
-                A future where every African community has access to
-                AI-powered tools that enhance their daily lives, whether it is
+                A future where every underserved community has access to
+                AI-powered tools that enhance their daily lives — whether it is
                 communicating in their native language, learning without internet
                 access, reducing food waste, or managing community projects with
                 data-driven insights.
@@ -241,7 +242,8 @@ export default function AboutPage() {
             </h2>
             <p className="text-meyng-silver text-lg mb-10 max-w-xl mx-auto">
               We are looking for partners, investors, and talented individuals
-              who share our passion for using AI to create real impact in Africa.
+              who share our passion for using AI to fight for accessibility and
+              create meaningful, lasting impact.
             </p>
             <Link
               href="/contact"

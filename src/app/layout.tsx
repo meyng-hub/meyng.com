@@ -18,25 +18,27 @@ const questrial = Questrial({
 
 export const metadata: Metadata = {
   title: {
-    default: "MEYNG | AI-Powered Solutions for Africa",
+    default: "MEYNG | AI That Matters",
     template: "%s | MEYNG",
   },
   description:
-    "MEYNG builds AI-driven products that bridge gaps in language, education, food sustainability, and community development across Africa.",
+    "MEYNG builds AI-driven products that fight for accessibility — bridging gaps in language, education, food sustainability, and community development for underserved communities worldwide.",
   keywords: [
     "MEYNG",
     "AI",
-    "Africa",
+    "accessibility",
+    "impact",
     "SangoAI",
     "language technology",
     "food waste",
     "education",
     "NGO",
+    "global",
   ],
   openGraph: {
-    title: "MEYNG | AI-Powered Solutions for Africa",
+    title: "MEYNG | AI That Matters",
     description:
-      "Building AI products that create real impact across the African continent.",
+      "We build AI products that fight for accessibility — for those left behind.",
     url: "https://meyng.com",
     siteName: "MEYNG",
     locale: "en_US",
@@ -44,9 +46,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "MEYNG | AI-Powered Solutions for Africa",
+    title: "MEYNG | AI That Matters",
     description:
-      "Building AI products that create real impact across the African continent.",
+      "We build AI products that fight for accessibility — for those left behind.",
   },
   robots: {
     index: true,

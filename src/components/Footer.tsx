@@ -16,9 +16,9 @@ export function Footer() {
               className="h-10 w-auto mb-4"
             />
             <p className="text-meyng-silver text-sm leading-relaxed max-w-md">
-              Building AI-driven products that bridge gaps in language,
-              education, food sustainability, and community development across
-              Africa.
+              Building AI-driven products that fight for accessibility —
+              bridging gaps in language, education, food sustainability, and
+              community development for those left behind.
             </p>
           </div>
 
