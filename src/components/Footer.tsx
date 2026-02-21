@@ -58,7 +58,7 @@ export function Footer() {
               {t("footer.products")}
             </h4>
             <ul className="space-y-3">
-              {["SangoAI", "KobeTrack", "eNdara", "ConnectZ"].map(
+              {["SangoAI", "Obêtrack", "eNdara", "ConnectZ"].map(
                 (product) => (
                   <li key={product}>
                     <Link
@@ -70,6 +70,29 @@ export function Footer() {
                   </li>
                 )
               )}
+            </ul>
+
+            {/* Legal */}
+            <h4 className="text-meyng-light font-semibold mb-4 mt-8 text-sm uppercase tracking-wider">
+              {t("footer.legal")}
+            </h4>
+            <ul className="space-y-3">
+              <li>
+                <Link
+                  href="/privacy"
+                  className="text-meyng-silver hover:text-meyng-purple transition-colors text-sm"
+                >
+                  {t("footer.privacy")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/terms"
+                  className="text-meyng-silver hover:text-meyng-purple transition-colors text-sm"
+                >
+                  {t("footer.terms")}
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

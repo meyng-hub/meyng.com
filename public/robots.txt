@@ -1,0 +1,5 @@
+# https://meyng.com
+User-agent: *
+Allow: /
+
+Sitemap: https://meyng.com/sitemap.xml

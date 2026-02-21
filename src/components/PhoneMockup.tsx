@@ -57,7 +57,7 @@ export function PhoneMockup() {
           <div className="px-4 pt-2 pb-3">
             <div className="flex items-center gap-2 mb-1">
               <Leaf className="w-4 h-4 text-green-400" />
-              <span className="text-meyng-light text-sm font-bold">KobeTrack</span>
+              <span className="text-meyng-light text-sm font-bold">Obêtrack</span>
             </div>
             <p className="text-meyng-silver/60 text-[10px]">Your fresh inventory</p>
           </div>

@@ -45,14 +45,14 @@
       "description": "The first AI-powered language platform for Sango, the national language of the Central African Republic spoken by over 5 million people. SangoAI provides real-time translation, conversational AI chat, interactive language learning with quizzes and flashcards, and a developer API for third-party integrations.",
       "features": ["French-Sango and English-Sango translation", "AI chat assistant fluent in Sango", "Interactive learning with quizzes and vocabulary", "Developer REST API for integration", "Progressive Web App (PWA) support"]
     },
-    "kobetrack": {
+    "obetrack": {
       "tagline": "Reducing Food Waste with AI",
       "description": "A mobile app that uses AI to help households and businesses track fresh product inventories, predict expiry dates, and reduce food waste with smart notifications.",
       "features": ["AI-powered expiry predictions", "Smart inventory tracking", "Waste reduction insights", "Recipe suggestions for expiring items"]
     },
-    "kobetrackFull": {
+    "obetrackFull": {
       "tagline": "Reducing Food Waste with AI",
-      "description": "A mobile application that leverages AI to help households, restaurants, and small businesses track and manage their fresh product inventories. KobeTrack uses intelligent expiry predictions and smart notifications to reduce food waste, save money, and promote sustainable consumption habits.",
+      "description": "A mobile application that leverages AI to help households, restaurants, and small businesses track and manage their fresh product inventories. Obêtrack uses intelligent expiry predictions and smart notifications to reduce food waste, save money, and promote sustainable consumption habits.",
       "features": ["AI-powered expiry date predictions", "Smart inventory management", "Waste reduction analytics and insights", "Recipe suggestions based on expiring items", "Barcode scanning for quick product entry"]
     },
     "endara": {
@@ -159,9 +159,9 @@
       "title": "SangoAI Launched",
       "description": "First AI-powered language platform for Sango goes live, serving 5M+ speakers in the Central African Republic."
     },
-    "kobetrackEndara": {
+    "obetrackEndara": {
       "year": "2026",
-      "title": "KobeTrack & eNdara",
+      "title": "Obêtrack & eNdara",
       "description": "Development begins on food waste reduction and SMS-based education platforms — tackling sustainability and learning access."
     },
     "expanding": {
@@ -202,14 +202,70 @@
     "formMessage": "Message",
     "formMessagePlaceholder": "Tell us about your inquiry...",
     "formSubmit": "Send Message",
+    "formSending": "Sending...",
     "formResponseTime": "We typically respond within 24-48 hours.",
     "formSuccess": "Thank you! Your message has been sent. We'll get back to you within 24-48 hours.",
     "formError": "Something went wrong. Please try again or email us directly at contact@meyng.com."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you are looking for does not exist or has been moved. Let us help you find your way.",
+    "backHome": "Back to Home",
+    "contact": "Contact Us"
+  },
+  "privacy": {
+    "sectionLabel": "Legal",
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: February 2026",
+    "intro": "MEYNG (\"we\", \"us\", or \"our\") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website meyng.com.",
+    "collectTitle": "Information We Collect",
+    "collectDescription": "We may collect the following types of information:",
+    "collectItems": ["Contact information (name, email address) when you submit our contact form", "Usage data such as pages visited, time on site, and referring URL via analytics tools", "Technical information such as browser type, device type, and IP address"],
+    "useTitle": "How We Use Your Information",
+    "useDescription": "We use the information we collect to:",
+    "useItems": ["Respond to your inquiries and messages", "Improve our website and services", "Communicate with you about our products and updates", "Comply with legal obligations"],
+    "sharingTitle": "Information Sharing",
+    "sharingDescription": "We do not sell, trade, or rent your personal information to third parties. We may share information with trusted service providers who assist us in operating our website (e.g., Formspree for contact form processing, Vercel for hosting), subject to confidentiality agreements.",
+    "cookiesTitle": "Cookies",
+    "cookiesDescription": "Our website may use cookies to enhance your browsing experience. You can configure your browser to refuse cookies, though some features may not function properly.",
+    "securityTitle": "Data Security",
+    "securityDescription": "We implement reasonable security measures to protect your personal information. However, no method of transmission over the internet is 100% secure.",
+    "rightsTitle": "Your Rights",
+    "rightsDescription": "Under applicable data protection laws (including GDPR), you have the right to access, correct, delete, or restrict the processing of your personal data. To exercise these rights, contact us at contact@meyng.com.",
+    "contactTitle": "Contact Us",
+    "contactDescription": "If you have any questions about this Privacy Policy, please contact us at contact@meyng.com."
+  },
+  "terms": {
+    "sectionLabel": "Legal",
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated: February 2026",
+    "intro": "Please read these Terms of Service (\"Terms\") carefully before using the website meyng.com operated by MEYNG (\"we\", \"us\", or \"our\").",
+    "acceptanceTitle": "Acceptance of Terms",
+    "acceptanceDescription": "By accessing or using our website, you agree to be bound by these Terms. If you do not agree, please do not use our website.",
+    "useTitle": "Use of Website",
+    "useDescription": "You agree to use this website only for lawful purposes and in a manner that does not infringe on the rights of others or restrict their use of the site.",
+    "ipTitle": "Intellectual Property",
+    "ipDescription": "All content on this website, including text, graphics, logos, and software, is the property of MEYNG or its licensors and is protected by intellectual property laws. You may not reproduce, distribute, or create derivative works without our prior written consent.",
+    "productsTitle": "Products and Services",
+    "productsDescription": "Information about our products (SangoAI, Obêtrack, eNdara, ConnectZ) is provided for informational purposes. Product features, availability, and pricing are subject to change without notice.",
+    "disclaimerTitle": "Disclaimer",
+    "disclaimerDescription": "This website is provided \"as is\" without warranties of any kind. We do not guarantee that the website will be uninterrupted, error-free, or free of harmful components.",
+    "liabilityTitle": "Limitation of Liability",
+    "liabilityDescription": "To the maximum extent permitted by law, MEYNG shall not be liable for any indirect, incidental, or consequential damages arising from your use of this website.",
+    "governingTitle": "Governing Law",
+    "governingDescription": "These Terms are governed by the laws of France. Any disputes shall be subject to the exclusive jurisdiction of the courts of Paris, France.",
+    "changesTitle": "Changes to Terms",
+    "changesDescription": "We reserve the right to modify these Terms at any time. Continued use of the website after changes constitutes acceptance of the new Terms.",
+    "contactTitle": "Contact Us",
+    "contactDescription": "If you have any questions about these Terms, please contact us at contact@meyng.com."
   },
   "footer": {
     "description": "Building AI-driven products that fight for accessibility — bridging gaps in language, education, food sustainability, and community development for those left behind.",
     "navigate": "Navigate",
     "products": "Products",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
     "copyright": "MEYNG. All rights reserved."
   }
 }

@@ -107,6 +107,7 @@ export function Navbar() {
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden text-meyng-light"
             aria-label="Toggle menu"
+            aria-expanded={isOpen}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>

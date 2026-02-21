@@ -19,7 +19,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 const valueKeys = ["innovation", "socialImpact", "accessibility", "community"] as const;
 const valueIcons = [Lightbulb, Heart, Shield, Users];
 
-const milestoneKeys = ["founded", "sangoaiLaunch", "kobetrackEndara", "expanding"] as const;
+const milestoneKeys = ["founded", "sangoaiLaunch", "obetrackEndara", "expanding"] as const;
 
 export default function AboutPage() {
   const t = useTranslations("about");

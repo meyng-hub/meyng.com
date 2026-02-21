@@ -17,11 +17,11 @@ import { PhoneMockup } from "@/components/PhoneMockup";
 import { SMSConversation } from "@/components/SMSConversation";
 import { DashboardMockup } from "@/components/DashboardMockup";
 
-const productKeys = ["sangoai", "kobetrack", "endara", "connectz"] as const;
+const productKeys = ["sangoai", "obetrack", "endara", "connectz"] as const;
 
 const productMeta = [
   { icon: Languages, name: "SangoAI", url: "https://sangoai.sbs", demo: "translation", statusKey: "live" },
-  { icon: Leaf, name: "KobeTrack", url: null, demo: "phone", statusKey: "inDevelopment" },
+  { icon: Leaf, name: "Obêtrack", url: null, demo: "phone", statusKey: "inDevelopment" },
   { icon: BookOpen, name: "eNdara", url: null, demo: "sms", statusKey: "inDevelopment" },
   { icon: Users, name: "ConnectZ", url: null, demo: "dashboard", statusKey: "comingSoon" },
 ];

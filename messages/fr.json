@@ -45,14 +45,14 @@
       "description": "La première plateforme linguistique propulsée par l'IA pour le sango, la langue nationale de la République centrafricaine parlée par plus de 5 millions de personnes. SangoAI offre la traduction en temps réel, un chat IA conversationnel, un apprentissage interactif avec quiz et flashcards, et une API pour les intégrations tierces.",
       "features": ["Traduction français-sango et anglais-sango", "Assistant IA parlant couramment le sango", "Apprentissage interactif avec quiz et vocabulaire", "API REST pour l'intégration", "Application Web Progressive (PWA)"]
     },
-    "kobetrack": {
+    "obetrack": {
       "tagline": "Réduire le gaspillage alimentaire avec l'IA",
       "description": "Une application mobile qui utilise l'IA pour aider les ménages et les entreprises à suivre leurs inventaires de produits frais, prédire les dates de péremption et réduire le gaspillage avec des notifications intelligentes.",
       "features": ["Prédictions IA des dates de péremption", "Suivi intelligent des inventaires", "Analyses de réduction du gaspillage", "Suggestions de recettes pour les produits bientôt périmés"]
     },
-    "kobetrackFull": {
+    "obetrackFull": {
       "tagline": "Réduire le gaspillage alimentaire avec l'IA",
-      "description": "Une application mobile qui utilise l'IA pour aider les ménages, restaurants et petites entreprises à suivre et gérer leurs inventaires de produits frais. KobeTrack utilise des prédictions intelligentes de péremption et des notifications pour réduire le gaspillage, économiser de l'argent et promouvoir une consommation durable.",
+      "description": "Une application mobile qui utilise l'IA pour aider les ménages, restaurants et petites entreprises à suivre et gérer leurs inventaires de produits frais. Obêtrack utilise des prédictions intelligentes de péremption et des notifications pour réduire le gaspillage, économiser de l'argent et promouvoir une consommation durable.",
       "features": ["Prédictions IA des dates de péremption", "Gestion intelligente des inventaires", "Analyses et insights de réduction du gaspillage", "Suggestions de recettes basées sur les produits bientôt périmés", "Scan de codes-barres pour saisie rapide"]
     },
     "endara": {
@@ -159,9 +159,9 @@
       "title": "Lancement de SangoAI",
       "description": "Première plateforme linguistique propulsée par l'IA pour le sango, au service de plus de 5M de locuteurs en République centrafricaine."
     },
-    "kobetrackEndara": {
+    "obetrackEndara": {
       "year": "2026",
-      "title": "KobeTrack & eNdara",
+      "title": "Obêtrack & eNdara",
       "description": "Début du développement des plateformes de réduction du gaspillage alimentaire et d'éducation par SMS — s'attaquant à la durabilité et à l'accès à l'apprentissage."
     },
     "expanding": {
@@ -202,14 +202,70 @@
     "formMessage": "Message",
     "formMessagePlaceholder": "Décrivez votre demande...",
     "formSubmit": "Envoyer le message",
+    "formSending": "Envoi en cours...",
     "formResponseTime": "Nous répondons généralement sous 24 à 48 heures.",
     "formSuccess": "Merci ! Votre message a été envoyé. Nous vous répondrons sous 24 à 48 heures.",
     "formError": "Une erreur s'est produite. Veuillez réessayer ou nous écrire directement à contact@meyng.com."
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "description": "La page que vous recherchez n'existe pas ou a été déplacée. Laissez-nous vous aider à trouver votre chemin.",
+    "backHome": "Retour à l'accueil",
+    "contact": "Nous contacter"
+  },
+  "privacy": {
+    "sectionLabel": "Légal",
+    "title": "Politique de confidentialité",
+    "lastUpdated": "Dernière mise à jour : février 2026",
+    "intro": "MEYNG (« nous » ou « notre ») s'engage à protéger votre vie privée. Cette politique de confidentialité explique comment nous collectons, utilisons et protégeons vos informations lorsque vous visitez notre site web meyng.com.",
+    "collectTitle": "Informations collectées",
+    "collectDescription": "Nous pouvons collecter les types d'informations suivants :",
+    "collectItems": ["Coordonnées (nom, adresse e-mail) lorsque vous soumettez notre formulaire de contact", "Données d'utilisation telles que les pages visitées, le temps passé sur le site et l'URL de provenance via des outils d'analyse", "Informations techniques telles que le type de navigateur, le type d'appareil et l'adresse IP"],
+    "useTitle": "Utilisation de vos informations",
+    "useDescription": "Nous utilisons les informations collectées pour :",
+    "useItems": ["Répondre à vos demandes et messages", "Améliorer notre site web et nos services", "Communiquer avec vous au sujet de nos produits et mises à jour", "Respecter nos obligations légales"],
+    "sharingTitle": "Partage des informations",
+    "sharingDescription": "Nous ne vendons, n'échangeons ni ne louons vos informations personnelles à des tiers. Nous pouvons partager des informations avec des prestataires de confiance qui nous aident à exploiter notre site web (par ex. Formspree pour le traitement du formulaire de contact, Vercel pour l'hébergement), sous réserve d'accords de confidentialité.",
+    "cookiesTitle": "Cookies",
+    "cookiesDescription": "Notre site web peut utiliser des cookies pour améliorer votre expérience de navigation. Vous pouvez configurer votre navigateur pour refuser les cookies, bien que certaines fonctionnalités puissent ne pas fonctionner correctement.",
+    "securityTitle": "Sécurité des données",
+    "securityDescription": "Nous mettons en œuvre des mesures de sécurité raisonnables pour protéger vos informations personnelles. Cependant, aucune méthode de transmission sur Internet n'est sécurisée à 100 %.",
+    "rightsTitle": "Vos droits",
+    "rightsDescription": "En vertu des lois applicables en matière de protection des données (y compris le RGPD), vous avez le droit d'accéder, de corriger, de supprimer ou de limiter le traitement de vos données personnelles. Pour exercer ces droits, contactez-nous à contact@meyng.com.",
+    "contactTitle": "Nous contacter",
+    "contactDescription": "Si vous avez des questions concernant cette politique de confidentialité, veuillez nous contacter à contact@meyng.com."
+  },
+  "terms": {
+    "sectionLabel": "Légal",
+    "title": "Conditions d'utilisation",
+    "lastUpdated": "Dernière mise à jour : février 2026",
+    "intro": "Veuillez lire attentivement ces Conditions d'utilisation (« Conditions ») avant d'utiliser le site web meyng.com exploité par MEYNG (« nous » ou « notre »).",
+    "acceptanceTitle": "Acceptation des conditions",
+    "acceptanceDescription": "En accédant ou en utilisant notre site web, vous acceptez d'être lié par ces Conditions. Si vous n'êtes pas d'accord, veuillez ne pas utiliser notre site web.",
+    "useTitle": "Utilisation du site",
+    "useDescription": "Vous acceptez d'utiliser ce site web uniquement à des fins légales et d'une manière qui ne porte pas atteinte aux droits d'autrui ni ne restreint leur utilisation du site.",
+    "ipTitle": "Propriété intellectuelle",
+    "ipDescription": "Tout le contenu de ce site web, y compris les textes, graphiques, logos et logiciels, est la propriété de MEYNG ou de ses concédants et est protégé par les lois sur la propriété intellectuelle. Vous ne pouvez pas reproduire, distribuer ou créer des œuvres dérivées sans notre consentement écrit préalable.",
+    "productsTitle": "Produits et services",
+    "productsDescription": "Les informations sur nos produits (SangoAI, Obêtrack, eNdara, ConnectZ) sont fournies à titre informatif. Les fonctionnalités, la disponibilité et les tarifs des produits sont susceptibles de changer sans préavis.",
+    "disclaimerTitle": "Avertissement",
+    "disclaimerDescription": "Ce site web est fourni « tel quel » sans garantie d'aucune sorte. Nous ne garantissons pas que le site web sera ininterrompu, exempt d'erreurs ou de composants nuisibles.",
+    "liabilityTitle": "Limitation de responsabilité",
+    "liabilityDescription": "Dans les limites autorisées par la loi, MEYNG ne sera pas responsable des dommages indirects, accessoires ou consécutifs résultant de votre utilisation de ce site web.",
+    "governingTitle": "Droit applicable",
+    "governingDescription": "Ces Conditions sont régies par le droit français. Tout litige sera soumis à la compétence exclusive des tribunaux de Paris, France.",
+    "changesTitle": "Modifications des conditions",
+    "changesDescription": "Nous nous réservons le droit de modifier ces Conditions à tout moment. L'utilisation continue du site web après les modifications constitue l'acceptation des nouvelles Conditions.",
+    "contactTitle": "Nous contacter",
+    "contactDescription": "Si vous avez des questions concernant ces Conditions, veuillez nous contacter à contact@meyng.com."
   },
   "footer": {
     "description": "Nous construisons des produits IA qui se battent pour l'accessibilité — comblant les lacunes en langue, éducation, durabilité alimentaire et développement communautaire pour ceux qu'on laisse pour compte.",
     "navigate": "Navigation",
     "products": "Produits",
+    "legal": "Légal",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
     "copyright": "MEYNG. Tous droits réservés."
   }
 }
