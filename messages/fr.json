@@ -2,8 +2,8 @@
   "metadata": {
     "title": "MEYNG | L'IA qui compte",
     "titleTemplate": "%s | MEYNG",
-    "description": "MEYNG conçoit des produits basés sur l'IA qui se battent pour l'accessibilité — comblant les lacunes en matière de langue, d'éducation, de durabilité alimentaire et de développement communautaire pour les communautés mal desservies dans le monde.",
-    "ogDescription": "Nous construisons des produits IA qui se battent pour l'accessibilité — pour ceux qui sont laissés pour compte."
+    "description": "MEYNG conçoit des solutions IA accessibles à tous — en langue, éducation, durabilité alimentaire et développement communautaire, partout dans le monde.",
+    "ogDescription": "Nous créons des solutions IA accessibles à tous — en langue, éducation, durabilité et développement communautaire."
   },
   "nav": {
     "home": "Accueil",
@@ -16,7 +16,7 @@
     "badge": "L'IA qui compte",
     "title": "Nous créons des solutions IA",
     "titleHighlight": "accessibles à tous",
-    "description": "Nous nous battons pour l'accessibilité. Nous créons des produits IA qui comblent les lacunes en langue, éducation, durabilité et développement communautaire — là où l'accès est limité et l'impact est le plus grand.",
+    "description": "Nous concevons des produits IA qui rendent la technologie accessible en langue, éducation, durabilité et développement communautaire — là où l'impact est le plus grand.",
     "cta1": "Découvrir nos produits",
     "cta2": "Notre mission"
   },
@@ -34,7 +34,7 @@
   "products": {
     "sectionLabel": "Nos produits",
     "sectionTitle": "Des solutions IA conçues pour l'impact",
-    "sectionDescription": "De la préservation des langues en danger à la réduction du gaspillage alimentaire, chaque produit que nous construisons s'attaque à une barrière réelle qui empêche les communautés mal desservies d'atteindre leur potentiel.",
+    "sectionDescription": "De la préservation des langues à la réduction du gaspillage alimentaire, chaque produit que nous construisons ouvre de nouvelles possibilités pour les communautés qui en ont le plus besoin.",
     "sangoai": {
       "tagline": "Plateforme linguistique propulsée par l'IA",
       "description": "Traduction en temps réel, IA conversationnelle et apprentissage interactif des langues pour le sango — au service de plus de 5 millions de locuteurs en République centrafricaine.",
@@ -94,10 +94,10 @@
   "values": {
     "sectionLabel": "Notre approche",
     "sectionTitle": "Construits différemment",
-    "sectionDescription": "Nous ne construisons pas juste de la technologie. Nous construisons des solutions pour les personnes et communautés que l'industrie tech ignore.",
+    "sectionDescription": "Nous ne construisons pas juste de la technologie. Nous créons des solutions concrètes pour les personnes et communautés que la technologie n'a pas encore atteintes.",
     "aiFirst": {
       "title": "IA d'abord",
-      "description": "Chaque produit que nous construisons exploite l'intelligence artificielle pour résoudre de vrais problèmes pour des personnes trop souvent ignorées par la technologie."
+      "description": "Chaque produit que nous construisons exploite l'intelligence artificielle pour résoudre de vrais problèmes et rendre la technologie accessible à ceux qui n'y ont pas encore accès."
     },
     "accessibilityFirst": {
       "title": "Accessibilité d'abord",
@@ -111,22 +111,22 @@
   "cta": {
     "title": "Prêt à construire quelque chose",
     "titleHighlight": "qui compte ?",
-    "description": "Que vous soyez partenaire, investisseur ou organisation qui se bat pour l'accessibilité — nous serions ravis d'échanger avec vous.",
+    "description": "Que vous soyez partenaire, investisseur ou organisation engagée pour l'accessibilité — nous serions ravis d'échanger avec vous.",
     "button": "Nous contacter"
   },
   "about": {
     "sectionLabel": "À propos de MEYNG",
-    "sectionTitle": "L'IA qui se bat pour l'accessibilité",
-    "sectionDescription": "Nous sommes une entreprise IA dédiée à la construction de produits qui comblent les lacunes en langue, éducation, durabilité et développement communautaire — pour ceux qu'on laisse pour compte.",
+    "sectionTitle": "L'IA accessible à tous",
+    "sectionDescription": "Nous sommes une entreprise IA dédiée à la création de solutions en langue, éducation, durabilité et développement communautaire — pour que chacun puisse bénéficier de la technologie.",
     "missionTitle": "Notre mission",
-    "missionDescription": "Exploiter la puissance de l'intelligence artificielle pour créer des produits accessibles et impactants qui comblent les lacunes en préservation linguistique, accès à l'éducation, durabilité alimentaire et développement communautaire — partout où l'accès est limité et l'impact est le plus grand. Nous croyons que l'IA doit être une force d'équité, pas d'exclusion.",
+    "missionDescription": "Mettre la puissance de l'intelligence artificielle au service de tous — en créant des produits concrets pour la préservation linguistique, l'accès à l'éducation, la durabilité alimentaire et le développement communautaire. Nous croyons que l'IA doit être une force d'inclusion et d'équité.",
     "visionTitle": "Notre vision",
-    "visionDescription": "Un avenir où chaque communauté mal desservie a accès à des outils propulsés par l'IA qui améliorent leur quotidien — que ce soit communiquer dans leur langue maternelle, apprendre sans accès internet, réduire le gaspillage alimentaire ou gérer des projets communautaires avec des insights basés sur les données.",
+    "visionDescription": "Un avenir où chaque communauté a accès à des outils propulsés par l'IA qui améliorent son quotidien — que ce soit communiquer dans sa langue maternelle, apprendre sans accès internet, réduire le gaspillage alimentaire ou piloter des projets communautaires grâce aux données.",
     "valuesLabel": "Ce qui nous anime",
     "valuesTitle": "Nos valeurs fondamentales",
     "innovation": {
       "title": "Innovation",
-      "description": "Nous repoussons les limites de ce que l'IA peut accomplir, en particulier pour les marchés mal desservis et les communautés que la tech traditionnelle ignore."
+      "description": "Nous repoussons les limites de ce que l'IA peut accomplir, en particulier pour les marchés et communautés que la technologie n'a pas encore atteints."
     },
     "socialImpact": {
       "title": "Impact social",
@@ -145,14 +145,14 @@
     "founder": {
       "name": "Michel Wen",
       "role": "Fondateur & PDG",
-      "bio": "Ingénieur logiciel et entrepreneur passionné par l'utilisation de l'IA pour résoudre des problèmes concrets pour les communautés mal desservies. Basé à Paris, Michel a fondé MEYNG avec une conviction simple : l'IA doit être une force d'équité, pas d'exclusion."
+      "bio": "Ingénieur logiciel et entrepreneur passionné par l'utilisation de l'IA pour résoudre des problèmes concrets et rendre la technologie accessible à tous. Basé à Paris, Michel a fondé MEYNG avec une conviction simple : l'IA doit être une force d'inclusion et d'équité."
     },
     "journeyLabel": "Notre parcours",
     "journeyTitle": "Construire pas à pas",
     "founded": {
       "year": "2023",
       "title": "Création de MEYNG",
-      "description": "Fondée avec la mission de construire des produits IA qui se battent pour l'accessibilité — pour ceux qu'on laisse pour compte."
+      "description": "Fondée avec la mission de créer des solutions IA accessibles à tous — en langue, éducation, durabilité et développement communautaire."
     },
     "sangoaiLaunch": {
       "year": "2026",
@@ -167,7 +167,7 @@
     "expanding": {
       "year": "2026",
       "title": "Expansion de l'impact",
-      "description": "ConnectZ en développement. Poursuite de subventions et partenariats pour une expansion mondiale et atteindre plus de communautés mal desservies."
+      "description": "ConnectZ en développement. Poursuite de subventions et partenariats pour une expansion mondiale et rendre nos solutions accessibles à encore plus de communautés."
     },
     "ctaTitle": "Rejoignez-nous dans cette aventure",
     "ctaDescription": "Nous recherchons des partenaires, investisseurs et talents qui partagent notre passion pour l'utilisation de l'IA au service de l'accessibilité et d'un impact durable et significatif.",
@@ -260,7 +260,7 @@
     "contactDescription": "Si vous avez des questions concernant ces Conditions, veuillez nous contacter à contact@meyng.com."
   },
   "footer": {
-    "description": "Nous construisons des produits IA qui se battent pour l'accessibilité — comblant les lacunes en langue, éducation, durabilité alimentaire et développement communautaire pour ceux qu'on laisse pour compte.",
+    "description": "Nous créons des solutions IA accessibles à tous — en langue, éducation, durabilité alimentaire et développement communautaire, partout dans le monde.",
     "navigate": "Navigation",
     "products": "Produits",
     "legal": "Légal",
