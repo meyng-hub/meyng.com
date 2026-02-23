@@ -66,7 +66,7 @@ export function Navbar() {
           <Link href="/" className="flex items-center gap-3">
             <Image
               src="/images/logo-full.png"
-              alt="MEYNG"
+              alt="MEYNG — AI-powered accessibility products"
               width={140}
               height={50}
               className="h-10 w-auto"

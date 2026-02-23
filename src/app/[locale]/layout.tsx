@@ -30,6 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "metadata" });
 
   return {
+    metadataBase: new URL("https://meyng.com"),
     title: {
       default: t("title"),
       template: t("titleTemplate"),
@@ -54,11 +55,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName: "MEYNG",
       locale: locale === "fr" ? "fr_FR" : "en_US",
       type: "website",
+      images: [
+        {
+          url: `https://meyng.com/${locale}/opengraph-image`,
+          width: 1200,
+          height: 630,
+          alt: "MEYNG — AI That Matters",
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title: t("title"),
       description: t("ogDescription"),
+      images: [`https://meyng.com/${locale}/twitter-image`],
     },
     icons: {
       icon: "/favicon.png",

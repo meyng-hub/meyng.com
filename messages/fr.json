@@ -23,8 +23,8 @@
   "stats": {
     "products": "Produits IA",
     "industries": "Secteurs",
-    "lives": "Vies impactées",
-    "partners": "Partenaires"
+    "lives": "Utilisateurs cibles",
+    "countries": "Pays"
   },
   "homeProducts": {
     "sectionLabel": "Ce que nous construisons",

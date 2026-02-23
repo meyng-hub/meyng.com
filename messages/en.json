@@ -23,8 +23,8 @@
   "stats": {
     "products": "AI Products",
     "industries": "Industries",
-    "lives": "Lives Impacted",
-    "partners": "Partners"
+    "lives": "Target Users",
+    "countries": "Countries"
   },
   "homeProducts": {
     "sectionLabel": "What We Build",

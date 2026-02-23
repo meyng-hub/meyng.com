@@ -23,7 +23,7 @@ export function Footer() {
           <div className="md:col-span-2">
             <Image
               src="/images/logo-full.png"
-              alt="MEYNG"
+              alt="MEYNG — AI-powered accessibility products"
               width={120}
               height={44}
               className="h-10 w-auto mb-4"
