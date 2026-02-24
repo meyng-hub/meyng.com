@@ -22,13 +22,13 @@ echo "=========================================="
 echo ""
 
 # Step 1: Build
-echo -e "${YELLOW}[1/4] Building...${NC}"
+echo -e "${YELLOW}[1/5] Building...${NC}"
 npm run build
-echo -e "${GREEN}[1/4] Build passed${NC}"
+echo -e "${GREEN}[1/5] Build passed${NC}"
 echo ""
 
 # Step 2: Start production server
-echo -e "${YELLOW}[2/4] Starting production server on port $PORT...${NC}"
+echo -e "${YELLOW}[2/5] Starting production server on port $PORT...${NC}"
 npx next start -p "$PORT" &>/dev/null &
 SERVER_PID=$!
 
@@ -38,17 +38,38 @@ for i in {1..15}; do
     break
   fi
   if [ $i -eq 15 ]; then
-    echo -e "${RED}[2/4] Server failed to start within 15 seconds${NC}"
+    echo -e "${RED}[2/5] Server failed to start within 15 seconds${NC}"
     kill $SERVER_PID 2>/dev/null
     exit 1
   fi
   sleep 1
 done
-echo -e "${GREEN}[2/4] Server running${NC}"
+echo -e "${GREEN}[2/5] Server running${NC}"
 echo ""
 
-# Step 3: Test all pages
-echo -e "${YELLOW}[3/4] Testing all pages...${NC}"
+# Step 3: Validate inline scripts (catches env var corruption)
+echo -e "${YELLOW}[3/5] Validating inline scripts...${NC}"
+SCRIPT_CONTENT=$(curl -s "http://localhost:$PORT/en" | python3 -c "
+import sys
+html = sys.stdin.read()
+idx = html.find('window.dataLayer=')
+if idx >= 0:
+    start = html.rfind('<script>', 0, idx) + 8
+    end = html.find('</script>', idx)
+    script = html[start:end]
+    if '\\n' in script or '\\r' in script:
+        print('FAIL: inline script contains newline characters')
+        sys.exit(1)
+    else:
+        print('OK')
+else:
+    print('SKIP: no GA script found (NEXT_PUBLIC_GA_ID not set)')
+" 2>/dev/null)
+echo -e "  ${GREEN}✓${NC} Inline scripts: $SCRIPT_CONTENT"
+echo ""
+
+# Step 4: Test all pages
+echo -e "${YELLOW}[4/5] Testing all pages...${NC}"
 FAILED=0
 PAGES=(
   "/en"
@@ -72,7 +93,7 @@ for page in "${PAGES[@]}"; do
   fi
 done
 
-# Step 4: Cleanup
+# Step 5: Cleanup
 kill $SERVER_PID 2>/dev/null
 wait $SERVER_PID 2>/dev/null
 echo ""

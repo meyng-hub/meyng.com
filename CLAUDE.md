@@ -15,7 +15,7 @@ Corporate website for MEYNG, an AI company building accessibility products for u
 - **Animations**: Framer Motion 12 (respects `prefers-reduced-motion` via MotionConfig)
 - **i18n**: next-intl 4.8.3 (EN/FR locales)
 - **Icons**: Lucide React
-- **Analytics**: Google Analytics 4 (G-FFEZSWMXDJ)
+- **Analytics**: Google Analytics 4 (G-FFEZSWMXDJ) — server-rendered `<script>` tags (NOT next/script)
 - **Hosting**: Vercel
 - **Node**: 24.x on Vercel, local dev on 22.x
 
@@ -44,7 +44,7 @@ cd C:/meyng-website && npx vercel deploy --prod --yes
 
 | Variable | Purpose |
 |---|---|
-| `NEXT_PUBLIC_GA_ID` | Google Analytics 4 Measurement ID |
+| `NEXT_PUBLIC_GA_ID` | Google Analytics 4 Measurement ID (**must not have trailing whitespace/newline**) |
 | `NEXT_PUBLIC_FORMSPREE_URL` | Contact form endpoint (fallback hardcoded) |
 
 ## Project Structure
@@ -72,7 +72,7 @@ meyng-website/
 │   │   ├── Navbar.tsx          # Fixed nav with mobile menu
 │   │   ├── Footer.tsx          # Site footer with nav links
 │   │   ├── BackToTop.tsx       # Floating scroll-to-top button
-│   │   ├── GoogleAnalytics.tsx # GA4 script injection
+│   │   ├── GoogleAnalytics.tsx # GA4 server-rendered script tags
 │   │   ├── ParticleField.tsx   # Canvas particle animation (hero bg)
 │   │   ├── AnimatedStats.tsx   # Counter animation for stats
 │   │   ├── SectionHeading.tsx  # Reusable section header
@@ -157,6 +157,32 @@ navigation.ts  → createNavigation(routing) — type-safe Link, useRouter
 --color-meyng-light: #E9E9E9      /* Primary text */
 ```
 
+### Google Analytics (IMPORTANT — DO NOT USE next/script)
+
+GA is injected via **plain server-rendered `<script>` tags** in `GoogleAnalytics.tsx` (a server component). This is intentional — `next/script` and `@next/third-parties/google` both cause a `SyntaxError: Failed to execute 'appendChild' on 'Node'` during hydration in Next.js 16 (known framework issue).
+
+```tsx
+// GoogleAnalytics.tsx — server component, NO "use client"
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID?.trim(); // .trim() is critical!
+
+export function GoogleAnalytics() {
+  if (!GA_ID) return null;
+  return (
+    <>
+      <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
+      <script dangerouslySetInnerHTML={{
+        __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${GA_ID}');`,
+      }} />
+    </>
+  );
+}
+```
+
+**Rules**:
+- **Never use `next/script`** or `@next/third-parties/google` for GA — causes hydration SyntaxError
+- **Always `.trim()` env vars** before interpolating into inline `<script>` — Vercel env vars can have trailing newlines that break JS string literals
+- Component renders in `layout.tsx` before `<Providers>` — it's a server component, not a client component
+
 ### Animation Pattern
 
 All animated components use Framer Motion with this pattern:
@@ -207,7 +233,9 @@ curl -s -L -o /dev/null -w "%{http_code}" https://www.meyng.com/fr  # Must be 20
 
 **General rule**: When moving a provider from a server component into a client component wrapper, audit ALL props that may rely on server-side context inference. Pass them explicitly.
 
-### Feb 2026 — next/script appendChild SyntaxError in Next.js 16
+### Feb 2026 — Google Analytics SyntaxError (two-part incident)
+
+**Part 1 — `next/script` appendChild SyntaxError**
 
 **What happened**: Browser console showed `SyntaxError: Failed to execute 'appendChild' on 'Node': Invalid or unexpected token` from a Next.js chunk file. Appeared even in incognito mode.
 
@@ -215,4 +243,19 @@ curl -s -L -o /dev/null -w "%{http_code}" https://www.meyng.com/fr  # Must be 20
 
 **Fix**: Replaced `@next/third-parties/google` with plain `<script>` tags in the server component (`GoogleAnalytics.tsx`). These are rendered directly into the HTML during SSR — no client-side `appendChild` at all.
 
-**General rule**: For analytics and tracking scripts, prefer server-rendered `<script>` tags over `next/script` in App Router. Plain `<script>` tags in server components are rendered into the HTML during SSR and avoid hydration-related script injection issues.
+**Part 2 — Trailing newline in env var**
+
+**What happened**: After fixing Part 1, the console still showed `SyntaxError: Invalid or unexpected token` at `en:2` — a different error (no `appendChild` mention). Line 2 of the inline script was `');`.
+
+**Root cause**: The `NEXT_PUBLIC_GA_ID` environment variable on Vercel had a **trailing newline character** (`G-FFEZSWMXDJ\n`). When interpolated into the inline `<script>` via template literal, it produced a raw newline inside a single-quoted JavaScript string — which is a SyntaxError:
+```javascript
+// Line 1: gtag('config','G-FFEZSWMXDJ    ← unterminated string
+// Line 2: ');                             ← SyntaxError: Invalid or unexpected token
+```
+
+**Fix**: Added `.trim()`: `const GA_ID = process.env.NEXT_PUBLIC_GA_ID?.trim();`
+
+**General rules**:
+1. For analytics/tracking scripts, prefer server-rendered `<script>` tags over `next/script` in App Router
+2. **Always `.trim()` environment variables** before interpolating into inline JavaScript — Vercel env vars can have trailing whitespace/newlines
+3. When debugging inline script SyntaxErrors, use `repr()` or hex dump to reveal invisible characters
