@@ -205,7 +205,12 @@
     "formSending": "Envoi en cours...",
     "formResponseTime": "Nous répondons généralement sous 24 à 48 heures.",
     "formSuccess": "Merci ! Votre message a été envoyé. Nous vous répondrons sous 24 à 48 heures.",
-    "formError": "Une erreur s'est produite. Veuillez réessayer ou nous écrire directement à contact@meyng.com."
+    "formError": "Une erreur s'est produite. Veuillez réessayer ou nous écrire directement à contact@meyng.com.",
+    "validationNameRequired": "Veuillez entrer votre nom",
+    "validationEmailRequired": "Veuillez entrer votre adresse email",
+    "validationEmailInvalid": "Veuillez entrer une adresse email valide",
+    "validationMessageRequired": "Veuillez entrer un message",
+    "validationMessageMinLength": "Le message doit contenir au moins 10 caractères"
   },
   "notFound": {
     "title": "Page introuvable",
@@ -258,6 +263,11 @@
     "changesDescription": "Nous nous réservons le droit de modifier ces Conditions à tout moment. L'utilisation continue du site web après les modifications constitue l'acceptation des nouvelles Conditions.",
     "contactTitle": "Nous contacter",
     "contactDescription": "Si vous avez des questions concernant ces Conditions, veuillez nous contacter à contact@meyng.com."
+  },
+  "accessibility": {
+    "skipToContent": "Aller au contenu principal",
+    "backToTop": "Retour en haut",
+    "scrollDown": "Défiler vers le bas pour explorer"
   },
   "footer": {
     "description": "Nous créons des solutions IA accessibles à tous — en langue, éducation, durabilité alimentaire et développement communautaire, partout dans le monde.",

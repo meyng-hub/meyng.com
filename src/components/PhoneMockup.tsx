@@ -40,7 +40,7 @@ export function PhoneMockup() {
       className="relative w-full max-w-[280px] mx-auto"
     >
       {/* Phone frame */}
-      <div className="rounded-[2.5rem] border-2 border-meyng-border bg-meyng-card p-2 shadow-2xl shadow-meyng-purple/10">
+      <div className="rounded-[2.5rem] border-2 border-meyng-border bg-meyng-card p-2 shadow-2xl shadow-meyng-purple/10 transition-all duration-300 hover:shadow-meyng-purple/20 hover:border-meyng-purple/20">
         {/* Inner screen */}
         <div className="rounded-[2rem] bg-meyng-dark overflow-hidden">
           {/* Status bar */}
@@ -108,7 +108,7 @@ export function PhoneMockup() {
         <motion.div
           initial={{ opacity: 0, y: -10, scale: 0.9 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
-          className="absolute -top-4 -right-4 bg-meyng-card border border-amber-500/30 rounded-xl p-3 shadow-lg shadow-amber-500/10 max-w-[200px]"
+          className="absolute -top-4 right-0 sm:-right-4 bg-meyng-card border border-amber-500/30 rounded-xl p-3 shadow-lg shadow-amber-500/10 max-w-[200px]"
         >
           <div className="flex items-start gap-2">
             <Bell className="w-3.5 h-3.5 text-amber-400 mt-0.5 flex-shrink-0" />

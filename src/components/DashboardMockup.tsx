@@ -31,7 +31,7 @@ export function DashboardMockup() {
       className="relative w-full max-w-lg mx-auto"
     >
       {/* Dashboard frame */}
-      <div className="rounded-xl border border-meyng-border bg-meyng-card overflow-hidden shadow-2xl shadow-meyng-purple/10">
+      <div className="rounded-xl border border-meyng-border bg-meyng-card overflow-hidden shadow-2xl shadow-meyng-purple/10 transition-all duration-300 hover:shadow-meyng-purple/20 hover:border-meyng-purple/30">
         {/* Title bar */}
         <div className="flex items-center gap-2 px-4 py-3 bg-meyng-dark border-b border-meyng-border">
           <div className="flex gap-1.5">
@@ -42,9 +42,16 @@ export function DashboardMockup() {
           <span className="text-meyng-silver/50 text-xs ml-2 font-mono">connectz.app/dashboard</span>
         </div>
 
+        {/* Mobile horizontal icon bar (replaces sidebar on small screens) */}
+        <div className="flex sm:hidden items-center gap-3 px-4 py-2 bg-meyng-dark/80 border-b border-meyng-border">
+          <BarChart3 className="w-3.5 h-3.5 text-meyng-purple" />
+          <Users className="w-3.5 h-3.5 text-meyng-silver/30" />
+          <FolderOpen className="w-3.5 h-3.5 text-meyng-silver/30" />
+        </div>
+
         <div className="flex">
-          {/* Sidebar */}
-          <div className="w-10 bg-meyng-dark/80 border-r border-meyng-border py-4 flex flex-col items-center gap-4">
+          {/* Sidebar (hidden on mobile) */}
+          <div className="hidden sm:flex w-10 bg-meyng-dark/80 border-r border-meyng-border py-4 flex-col items-center gap-4">
             <BarChart3 className="w-4 h-4 text-meyng-purple" />
             <Users className="w-4 h-4 text-meyng-silver/30" />
             <FolderOpen className="w-4 h-4 text-meyng-silver/30" />

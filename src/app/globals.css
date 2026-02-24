@@ -5,6 +5,7 @@
   --color-foreground: #E9E9E9;
   --color-meyng-deep: #28208C;
   --color-meyng-purple: #7065EF;
+  --color-meyng-purple-a11y: #8B80FF;
   --color-meyng-silver: #C4C4C4;
   --color-meyng-light: #E9E9E9;
   --color-meyng-dark: #0A0A0A;
@@ -14,8 +15,34 @@
   --font-body: var(--font-questrial);
 }
 
-html {
-  scroll-behavior: smooth;
+/* Smooth scroll only when user has no motion preference */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Global focus-visible styles for keyboard navigation */
+:focus-visible {
+  outline: 2px solid var(--color-meyng-purple);
+  outline-offset: 2px;
+}
+
+/* Suppress focus outline for mouse/touch clicks */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Reduced motion: disable animations and transitions */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 body {

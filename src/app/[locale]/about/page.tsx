@@ -241,7 +241,7 @@ export default function AboutPage() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-10 py-4 bg-meyng-purple hover:bg-meyng-deep text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-xl hover:shadow-meyng-purple/20"
+              className="inline-flex items-center gap-2 px-10 py-4 bg-meyng-purple hover:bg-meyng-deep active:scale-[0.98] text-white font-semibold rounded-xl transition-all duration-200 shadow-lg shadow-meyng-purple/25 hover:shadow-xl hover:shadow-meyng-purple/30"
             >
               {t("ctaButton")}
               <ArrowRight className="w-4 h-4" />

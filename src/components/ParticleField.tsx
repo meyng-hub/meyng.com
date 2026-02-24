@@ -1,11 +1,20 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { useReducedMotion } from "framer-motion";
 
 export function ParticleField() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const prefersReduced = useReducedMotion();
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isMounted || prefersReduced) return;
+
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -23,6 +32,11 @@ export function ParticleField() {
     resize();
     window.addEventListener("resize", resize);
 
+    // Responsive particle count and connection distance
+    const screenWidth = window.innerWidth;
+    const count = screenWidth < 768 ? 25 : screenWidth < 1024 ? 45 : 80;
+    const connectionDist = screenWidth < 768 ? 80 : 120;
+
     interface Particle {
       x: number;
       y: number;
@@ -36,7 +50,6 @@ export function ParticleField() {
     }
 
     const particles: Particle[] = [];
-    const count = 80;
     const w = canvas.offsetWidth;
     const h = canvas.offsetHeight;
 
@@ -84,11 +97,11 @@ export function ParticleField() {
           const dy = particles[i].y - particles[j].y;
           const dist = Math.sqrt(dx * dx + dy * dy);
 
-          if (dist < 120) {
+          if (dist < connectionDist) {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(40, 32, 140, ${0.15 * (1 - dist / 120)})`;
+            ctx.strokeStyle = `rgba(40, 32, 140, ${0.15 * (1 - dist / connectionDist)})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }
@@ -104,13 +117,17 @@ export function ParticleField() {
       cancelAnimationFrame(animationId);
       window.removeEventListener("resize", resize);
     };
-  }, []);
+  }, [isMounted, prefersReduced]);
+
+  // If reduced motion preferred, render nothing (hero gradient provides visual backdrop)
+  if (prefersReduced) return null;
 
   return (
     <canvas
       ref={canvasRef}
       className="absolute inset-0 w-full h-full pointer-events-none"
       style={{ opacity: 0.6 }}
+      aria-hidden="true"
     />
   );
 }

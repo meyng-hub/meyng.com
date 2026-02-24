@@ -205,7 +205,12 @@
     "formSending": "Sending...",
     "formResponseTime": "We typically respond within 24-48 hours.",
     "formSuccess": "Thank you! Your message has been sent. We'll get back to you within 24-48 hours.",
-    "formError": "Something went wrong. Please try again or email us directly at contact@meyng.com."
+    "formError": "Something went wrong. Please try again or email us directly at contact@meyng.com.",
+    "validationNameRequired": "Please enter your name",
+    "validationEmailRequired": "Please enter your email address",
+    "validationEmailInvalid": "Please enter a valid email address",
+    "validationMessageRequired": "Please enter a message",
+    "validationMessageMinLength": "Message must be at least 10 characters"
   },
   "notFound": {
     "title": "Page not found",
@@ -258,6 +263,11 @@
     "changesDescription": "We reserve the right to modify these Terms at any time. Continued use of the website after changes constitutes acceptance of the new Terms.",
     "contactTitle": "Contact Us",
     "contactDescription": "If you have any questions about these Terms, please contact us at contact@meyng.com."
+  },
+  "accessibility": {
+    "skipToContent": "Skip to main content",
+    "backToTop": "Back to top",
+    "scrollDown": "Scroll down to explore"
   },
   "footer": {
     "description": "Building AI-driven products that fight for accessibility — bridging gaps in language, education, food sustainability, and community development for those left behind.",

@@ -43,7 +43,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-meyng-silver hover:text-meyng-purple transition-colors text-sm"
+                    className="text-meyng-silver hover:text-meyng-purple transition-colors text-sm underline-offset-4 hover:underline"
                   >
                     {link.label}
                   </Link>
@@ -63,7 +63,7 @@ export function Footer() {
                   <li key={product}>
                     <Link
                       href="/products"
-                      className="text-meyng-silver hover:text-meyng-purple transition-colors text-sm"
+                      className="text-meyng-silver hover:text-meyng-purple transition-colors text-sm underline-offset-4 hover:underline"
                     >
                       {product}
                     </Link>
@@ -80,7 +80,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/privacy"
-                  className="text-meyng-silver hover:text-meyng-purple transition-colors text-sm"
+                  className="text-meyng-silver hover:text-meyng-purple transition-colors text-sm underline-offset-4 hover:underline"
                 >
                   {t("footer.privacy")}
                 </Link>
@@ -88,7 +88,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/terms"
-                  className="text-meyng-silver hover:text-meyng-purple transition-colors text-sm"
+                  className="text-meyng-silver hover:text-meyng-purple transition-colors text-sm underline-offset-4 hover:underline"
                 >
                   {t("footer.terms")}
                 </Link>

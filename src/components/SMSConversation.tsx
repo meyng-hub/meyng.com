@@ -53,7 +53,7 @@ export function SMSConversation() {
       className="relative w-full max-w-[300px] mx-auto"
     >
       {/* Phone frame */}
-      <div className="rounded-2xl border border-meyng-border bg-meyng-card overflow-hidden shadow-2xl shadow-meyng-purple/10">
+      <div className="rounded-2xl border border-meyng-border bg-meyng-card overflow-hidden shadow-2xl shadow-meyng-purple/10 transition-all duration-300 hover:shadow-meyng-purple/20 hover:border-meyng-purple/30">
         {/* Header */}
         <div className="flex items-center justify-between px-4 py-3 bg-meyng-deep/40 border-b border-meyng-border">
           <div>

@@ -61,7 +61,7 @@ export function APIShowcase() {
       className="w-full max-w-2xl mx-auto"
     >
       {/* Terminal window */}
-      <div className="rounded-xl border border-meyng-border bg-meyng-card overflow-hidden shadow-2xl shadow-meyng-purple/10">
+      <div className="rounded-xl border border-meyng-border bg-meyng-card overflow-hidden shadow-2xl shadow-meyng-purple/10 transition-all duration-300 hover:shadow-meyng-purple/20 hover:border-meyng-purple/30">
         {/* Title bar */}
         <div className="flex items-center justify-between px-4 py-3 bg-meyng-dark border-b border-meyng-border">
           <div className="flex items-center gap-2">

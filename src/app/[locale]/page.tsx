@@ -116,14 +116,14 @@ export default function Home() {
           >
             <Link
               href="/products"
-              className="group px-8 py-4 bg-meyng-purple hover:bg-meyng-deep text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-xl hover:shadow-meyng-purple/20 flex items-center gap-2"
+              className="group w-full sm:w-auto px-8 py-4 bg-meyng-purple hover:bg-meyng-deep active:scale-[0.98] text-white font-semibold rounded-xl transition-all duration-200 shadow-lg shadow-meyng-purple/25 hover:shadow-xl hover:shadow-meyng-purple/30 flex items-center justify-center gap-2"
             >
               {t("hero.cta1")}
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
               href="/about"
-              className="px-8 py-4 border border-meyng-border hover:border-meyng-purple/50 text-meyng-light font-semibold rounded-xl transition-all duration-300"
+              className="w-full sm:w-auto text-center px-8 py-4 border border-meyng-border hover:border-meyng-purple/50 hover:bg-meyng-purple/5 active:scale-[0.98] text-meyng-light font-semibold rounded-xl transition-all duration-200"
             >
               {t("hero.cta2")}
             </Link>
@@ -164,7 +164,7 @@ export default function Home() {
             description={t("homeProducts.sectionDescription")}
           />
 
-          <div className="space-y-24 lg:space-y-32">
+          <div className="space-y-16 md:space-y-24 lg:space-y-32">
             {products.map((product, i) => {
               const Icon = product.icon;
               const isEven = i % 2 === 1;
@@ -177,7 +177,7 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.7 }}
-                  className={`flex flex-col ${isEven ? "lg:flex-row-reverse" : "lg:flex-row"} items-center gap-12 lg:gap-16`}
+                  className={`flex flex-col ${isEven ? "lg:flex-row-reverse" : "lg:flex-row"} items-center gap-8 lg:gap-16`}
                 >
                   {/* Text side */}
                   <div className="flex-1 w-full">
@@ -302,9 +302,10 @@ export default function Home() {
                   key={key}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
+                  whileHover={{ y: -4 }}
                   viewport={{ once: true, margin: "-50px" }}
                   transition={{ duration: 0.5, delay: i * 0.15 }}
-                  className="text-center"
+                  className="text-center cursor-default"
                 >
                   <div className="w-16 h-16 rounded-2xl bg-meyng-deep/30 border border-meyng-purple/20 flex items-center justify-center mx-auto mb-6">
                     <Icon className="w-8 h-8 text-meyng-purple" />
@@ -343,7 +344,7 @@ export default function Home() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-10 py-4 bg-meyng-purple hover:bg-meyng-deep text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-xl hover:shadow-meyng-purple/20"
+              className="inline-flex items-center gap-2 px-10 py-4 bg-meyng-purple hover:bg-meyng-deep active:scale-[0.98] text-white font-semibold rounded-xl transition-all duration-200 shadow-lg shadow-meyng-purple/25 hover:shadow-xl hover:shadow-meyng-purple/30"
             >
               {t("cta.button")}
               <ArrowRight className="w-4 h-4" />

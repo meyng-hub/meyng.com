@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { Montserrat, Questrial } from "next/font/google";
-import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { BackToTop } from "@/components/BackToTop";
+import { Providers } from "@/components/Providers";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 
 const montserrat = Montserrat({
@@ -99,16 +100,28 @@ export default async function RootLayout({ children, params }: Props) {
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className="scroll-smooth">
+    <html lang={locale}>
       <body
         className={`${montserrat.variable} ${questrial.variable} antialiased bg-meyng-dark text-meyng-light`}
       >
+        {/* Skip-to-content link for keyboard navigation */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-meyng-purple focus:text-white focus:rounded-lg focus:text-sm focus:font-medium"
+        >
+          {locale === "fr"
+            ? "Aller au contenu principal"
+            : "Skip to main content"}
+        </a>
         <GoogleAnalytics />
-        <NextIntlClientProvider messages={messages}>
+        <Providers messages={messages}>
           <Navbar />
-          <main>{children}</main>
+          <main id="main-content" role="main">
+            {children}
+          </main>
           <Footer />
-        </NextIntlClientProvider>
+          <BackToTop />
+        </Providers>
       </body>
     </html>
   );

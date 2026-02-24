@@ -48,9 +48,26 @@ export function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Close on Escape key
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setIsOpen(false);
+    };
+    if (isOpen) document.addEventListener("keydown", handleEscape);
+    return () => document.removeEventListener("keydown", handleEscape);
+  }, [isOpen]);
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
 
   return (
     <nav
@@ -96,7 +113,7 @@ export function Navbar() {
             <LanguageSwitcher />
             <Link
               href="/contact"
-              className="px-6 py-2.5 bg-meyng-purple hover:bg-meyng-deep text-white text-sm font-semibold rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-meyng-purple/25"
+              className="px-6 py-2.5 bg-meyng-purple hover:bg-meyng-deep active:scale-[0.98] text-white text-sm font-semibold rounded-lg transition-all duration-200 shadow-lg shadow-meyng-purple/25 hover:shadow-xl hover:shadow-meyng-purple/30"
             >
               {t("getInTouch")}
             </Link>
@@ -105,7 +122,7 @@ export function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-meyng-light"
+            className="md:hidden text-meyng-light p-2 -mr-2 rounded-lg"
             aria-label="Toggle menu"
             aria-expanded={isOpen}
           >
@@ -117,39 +134,51 @@ export function Navbar() {
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-meyng-dark/95 backdrop-blur-xl border-b border-meyng-border"
-          >
-            <div className="px-6 py-4 space-y-4">
-              {links.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className={`block transition-colors text-base ${
-                    isActive(link.href)
-                      ? "text-meyng-purple font-medium"
-                      : "text-meyng-silver hover:text-meyng-purple"
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              ))}
-              <div className="flex items-center gap-4 mt-4">
-                <LanguageSwitcher />
-                <Link
-                  href="/contact"
-                  onClick={() => setIsOpen(false)}
-                  className="flex-1 text-center px-6 py-3 bg-meyng-purple text-white font-semibold rounded-lg"
-                >
-                  {t("getInTouch")}
-                </Link>
+          <>
+            {/* Backdrop overlay */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 bg-black/50 md:hidden"
+              style={{ top: "80px" }}
+              onClick={() => setIsOpen(false)}
+              aria-hidden="true"
+            />
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              className="md:hidden bg-meyng-dark/95 backdrop-blur-xl border-b border-meyng-border relative z-10"
+            >
+              <div className="px-6 py-4 space-y-1">
+                {links.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className={`block py-3 px-3 rounded-lg transition-colors text-base ${
+                      isActive(link.href)
+                        ? "text-meyng-purple font-medium bg-meyng-purple/10"
+                        : "text-meyng-silver hover:text-meyng-purple active:bg-meyng-purple/5"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+                <div className="flex items-center gap-4 pt-4">
+                  <LanguageSwitcher />
+                  <Link
+                    href="/contact"
+                    onClick={() => setIsOpen(false)}
+                    className="flex-1 text-center px-6 py-3 bg-meyng-purple active:scale-[0.98] text-white font-semibold rounded-lg transition-transform"
+                  >
+                    {t("getInTouch")}
+                  </Link>
+                </div>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </nav>

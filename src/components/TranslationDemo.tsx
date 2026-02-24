@@ -88,10 +88,10 @@ export function TranslationDemo() {
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.6 }}
-      className="relative w-full max-w-md mx-auto"
+      className="relative w-full max-w-sm sm:max-w-md mx-auto"
     >
       {/* Browser frame */}
-      <div className="rounded-xl border border-meyng-border bg-meyng-card overflow-hidden shadow-2xl shadow-meyng-purple/10">
+      <div className="rounded-xl border border-meyng-border bg-meyng-card overflow-hidden shadow-2xl shadow-meyng-purple/10 transition-all duration-300 hover:shadow-meyng-purple/20 hover:border-meyng-purple/30">
         {/* Title bar */}
         <div className="flex items-center gap-2 px-4 py-3 bg-meyng-dark border-b border-meyng-border">
           <div className="flex gap-1.5">
