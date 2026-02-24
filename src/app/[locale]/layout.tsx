@@ -7,6 +7,7 @@ import { routing } from "@/i18n/routing";
 import "../globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -102,6 +103,7 @@ export default async function RootLayout({ children, params }: Props) {
       <body
         className={`${montserrat.variable} ${questrial.variable} antialiased bg-meyng-dark text-meyng-light`}
       >
+        <GoogleAnalytics />
         <NextIntlClientProvider messages={messages}>
           <Navbar />
           <main>{children}</main>
