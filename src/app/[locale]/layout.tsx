@@ -114,7 +114,7 @@ export default async function RootLayout({ children, params }: Props) {
             : "Skip to main content"}
         </a>
         <GoogleAnalytics />
-        <Providers messages={messages}>
+        <Providers locale={locale} messages={messages}>
           <Navbar />
           <main id="main-content" role="main">
             {children}
