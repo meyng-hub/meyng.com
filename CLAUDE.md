@@ -206,3 +206,13 @@ curl -s -L -o /dev/null -w "%{http_code}" https://www.meyng.com/fr  # Must be 20
 **Prevention**: Always test with `npm run start` + `curl` before deploying. `npm run build` passes even when SSR will fail at runtime.
 
 **General rule**: When moving a provider from a server component into a client component wrapper, audit ALL props that may rely on server-side context inference. Pass them explicitly.
+
+### Feb 2026 — next/script appendChild SyntaxError in Next.js 16
+
+**What happened**: Browser console showed `SyntaxError: Failed to execute 'appendChild' on 'Node': Invalid or unexpected token` from a Next.js chunk file. Appeared even in incognito mode.
+
+**Root cause**: `next/script` with `afterInteractive` strategy (default) dynamically creates `<script>` elements and calls `document.body.appendChild()` during React hydration. This triggers a SyntaxError in Next.js 15+/16 — a known framework issue. The `@next/third-parties/google` GoogleAnalytics component uses `next/script` internally, so it has the same problem.
+
+**Fix**: Replaced `@next/third-parties/google` with plain `<script>` tags in the server component (`GoogleAnalytics.tsx`). These are rendered directly into the HTML during SSR — no client-side `appendChild` at all.
+
+**General rule**: For analytics and tracking scripts, prefer server-rendered `<script>` tags over `next/script` in App Router. Plain `<script>` tags in server components are rendered into the HTML during SSR and avoid hydration-related script injection issues.
