@@ -230,7 +230,7 @@
     "useDescription": "Nous utilisons les informations collectées pour :",
     "useItems": ["Répondre à vos demandes et messages", "Améliorer notre site web et nos services", "Communiquer avec vous au sujet de nos produits et mises à jour", "Respecter nos obligations légales"],
     "sharingTitle": "Partage des informations",
-    "sharingDescription": "Nous ne vendons, n'échangeons ni ne louons vos informations personnelles à des tiers. Nous pouvons partager des informations avec des prestataires de confiance qui nous aident à exploiter notre site web (par ex. Formspree pour le traitement du formulaire de contact, Vercel pour l'hébergement), sous réserve d'accords de confidentialité.",
+    "sharingDescription": "Nous ne vendons, n'échangeons ni ne louons vos informations personnelles à des tiers. Nous pouvons partager des informations avec des prestataires tiers de confiance qui nous aident pour les opérations du site web, le traitement des formulaires et l'hébergement, sous réserve d'accords de confidentialité.",
     "cookiesTitle": "Cookies",
     "cookiesDescription": "Notre site web peut utiliser des cookies pour améliorer votre expérience de navigation. Vous pouvez configurer votre navigateur pour refuser les cookies, bien que certaines fonctionnalités puissent ne pas fonctionner correctement.",
     "securityTitle": "Sécurité des données",

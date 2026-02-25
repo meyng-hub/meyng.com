@@ -230,7 +230,7 @@
     "useDescription": "We use the information we collect to:",
     "useItems": ["Respond to your inquiries and messages", "Improve our website and services", "Communicate with you about our products and updates", "Comply with legal obligations"],
     "sharingTitle": "Information Sharing",
-    "sharingDescription": "We do not sell, trade, or rent your personal information to third parties. We may share information with trusted service providers who assist us in operating our website (e.g., Formspree for contact form processing, Vercel for hosting), subject to confidentiality agreements.",
+    "sharingDescription": "We do not sell, trade, or rent your personal information to third parties. We may share information with trusted third-party service providers who assist us with website operations, form processing, and hosting, subject to confidentiality agreements.",
     "cookiesTitle": "Cookies",
     "cookiesDescription": "Our website may use cookies to enhance your browsing experience. You can configure your browser to refuse cookies, though some features may not function properly.",
     "securityTitle": "Data Security",
