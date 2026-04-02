@@ -22,9 +22,9 @@
   },
   "stats": {
     "products": "Produits IA",
-    "industries": "Secteurs",
-    "lives": "Utilisateurs cibles",
-    "countries": "Pays"
+    "industries": "Domaines",
+    "lives": "Locuteurs sango",
+    "countries": "Produits en ligne"
   },
   "homeProducts": {
     "sectionLabel": "Ce que nous construisons",
@@ -37,7 +37,7 @@
     "sectionDescription": "De la préservation des langues à la réduction du gaspillage alimentaire, chaque produit que nous construisons ouvre de nouvelles possibilités pour les communautés qui en ont le plus besoin.",
     "sangoai": {
       "tagline": "Plateforme linguistique propulsée par l'IA",
-      "description": "Traduction en temps réel, IA conversationnelle et apprentissage interactif des langues pour le sango — au service de plus de 5 millions de locuteurs en République centrafricaine.",
+      "description": "Traduction en temps réel, IA conversationnelle et apprentissage interactif des langues pour le sango — parlé par plus de 5 millions de personnes en République centrafricaine.",
       "features": ["Traduction IA multilingue", "Assistant conversationnel", "Apprentissage interactif avec quiz", "API REST pour développeurs"]
     },
     "sangoaiFull": {
@@ -56,14 +56,14 @@
       "features": ["Prédictions IA des dates de péremption", "Gestion intelligente des inventaires", "Analyses et insights de réduction du gaspillage", "Suggestions de recettes basées sur les produits bientôt périmés", "Scan de codes-barres pour saisie rapide"]
     },
     "endara": {
-      "tagline": "L'apprentissage par SMS pour tous",
-      "description": "Une plateforme d'apprentissage par SMS propulsée par l'IA, conçue pour les étudiants sans accès internet. Une éducation de qualité via la messagerie texte — sans smartphone ni forfait data.",
-      "features": ["Fonctionne sur tout téléphone basique via SMS", "Progression personnalisée par l'IA", "Quiz interactifs par texte", "Aucun internet requis"]
+      "tagline": "Plateforme d'apprentissage en ligne gratuite",
+      "description": "Plateforme d'apprentissage en ligne gratuite proposant des cours en sciences, compétences professionnelles et langues pour les étudiants centrafricains.",
+      "features": ["Cours académiques et ressources pédagogiques", "Formation en compétences professionnelles", "Ressources d'apprentissage des langues", "Gratuit et accessible à tous"]
     },
     "endaraFull": {
-      "tagline": "L'apprentissage par SMS pour tous",
-      "description": "Une plateforme d'apprentissage par SMS innovante conçue pour apporter une éducation de qualité aux étudiants sans accès internet. eNdara utilise l'IA pour personnaliser les leçons, s'adapter à la progression des étudiants et fournir des évaluations interactives entièrement par messagerie texte — sans smartphone ni forfait data.",
-      "features": ["Fonctionne sur tout téléphone basique via SMS", "Progression personnalisée par l'IA", "Quiz interactifs par messages texte", "Support multilingue incluant les langues locales", "Hors-ligne d'abord : aucun internet requis"]
+      "tagline": "Plateforme d'apprentissage en ligne gratuite",
+      "description": "Une plateforme d'apprentissage en ligne gratuite proposant des cours en sciences, compétences professionnelles et langues pour les étudiants centrafricains. eNdara fournit une éducation accessible via une plateforme Moodle, rendant des ressources pédagogiques de qualité disponibles pour les étudiants et apprenants en République centrafricaine.",
+      "features": ["Cours académiques et ressources pédagogiques", "Formation en compétences professionnelles", "Ressources d'apprentissage des langues", "Système de gestion d'apprentissage Moodle", "Gratuit et accessible à tous"]
     },
     "connectz": {
       "tagline": "Gestion de projets intelligente pour les ONG",
@@ -83,7 +83,8 @@
   "common": {
     "live": "En ligne",
     "inDevelopment": "En développement",
-    "comingSoon": "Bientôt disponible"
+    "comingSoon": "Bientôt disponible",
+    "inResearch": "En recherche"
   },
   "api": {
     "label": "API Développeur",
@@ -94,10 +95,10 @@
   "values": {
     "sectionLabel": "Notre approche",
     "sectionTitle": "Construits différemment",
-    "sectionDescription": "Nous ne construisons pas juste de la technologie. Nous créons des solutions concrètes pour les personnes et communautés que la technologie n'a pas encore atteintes.",
+    "sectionDescription": "Nous ne construisons pas juste de la technologie. Nous créons des solutions IA pour les communautés et marchés où l'accès compte le plus et l'impact est le plus grand.",
     "aiFirst": {
       "title": "IA d'abord",
-      "description": "Chaque produit que nous construisons exploite l'intelligence artificielle pour résoudre de vrais problèmes et rendre la technologie accessible à ceux qui n'y ont pas encore accès."
+      "description": "Chaque produit que nous construisons exploite l'intelligence artificielle pour résoudre de vrais problèmes — en étendant l'accès aux communautés et marchés où la technologie peut faire la plus grande différence."
     },
     "accessibilityFirst": {
       "title": "Accessibilité d'abord",
@@ -117,7 +118,7 @@
   "about": {
     "sectionLabel": "À propos de MEYNG",
     "sectionTitle": "L'IA accessible à tous",
-    "sectionDescription": "Nous sommes une entreprise IA dédiée à la création de solutions en langue, éducation, durabilité et développement communautaire — pour que chacun puisse bénéficier de la technologie.",
+    "sectionDescription": "Nous sommes une entreprise IA dédiée à la création de solutions en langue, éducation, durabilité et développement communautaire — en étendant la portée de l'IA à chaque communauté.",
     "missionTitle": "Notre mission",
     "missionDescription": "Mettre la puissance de l'intelligence artificielle au service de tous — en créant des produits concrets pour la préservation linguistique, l'accès à l'éducation, la durabilité alimentaire et le développement communautaire. Nous croyons que l'IA doit être une force d'inclusion et d'équité.",
     "visionTitle": "Notre vision",
@@ -126,7 +127,7 @@
     "valuesTitle": "Nos valeurs fondamentales",
     "innovation": {
       "title": "Innovation",
-      "description": "Nous repoussons les limites de ce que l'IA peut accomplir, en particulier pour les marchés et communautés que la technologie n'a pas encore atteints."
+      "description": "Nous repoussons les limites de ce que l'IA peut accomplir, en particulier dans les marchés émergents et communautés où la prochaine vague d'innovation commence."
     },
     "socialImpact": {
       "title": "Impact social",
@@ -157,18 +158,20 @@
     "sangoaiLaunch": {
       "year": "2026",
       "title": "Lancement de SangoAI",
-      "description": "Première plateforme linguistique propulsée par l'IA pour le sango, au service de plus de 5M de locuteurs en République centrafricaine."
+      "description": "Première plateforme linguistique propulsée par l'IA pour le sango, rendant le sango accessible au monde numérique."
     },
     "obetrackEndara": {
       "year": "2026",
       "title": "Obêtrack & eNdara",
-      "description": "Début du développement des plateformes de réduction du gaspillage alimentaire et d'éducation par SMS — s'attaquant à la durabilité et à l'accès à l'apprentissage."
+      "description": "La plateforme d'apprentissage eNdara est en ligne. Début du développement d'Ob\u00EAtrack pour la réduction du gaspillage alimentaire — s'attaquant à la durabilité et à l'accès à l'éducation."
     },
     "expanding": {
       "year": "2026",
       "title": "Expansion de l'impact",
-      "description": "ConnectZ en développement. Poursuite de subventions et partenariats pour une expansion mondiale et rendre nos solutions accessibles à encore plus de communautés."
+      "description": "ConnectZ en phase de recherche. Poursuite de subventions et partenariats pour accroître notre impact et rendre nos solutions accessibles à encore plus de communautés."
     },
+    "founderJobTitle": "Ing\u00e9nieur logiciel",
+    "founderLocation": "Paris, France",
     "ctaTitle": "Rejoignez-nous dans cette aventure",
     "ctaDescription": "Nous recherchons des partenaires, investisseurs et talents qui partagent notre passion pour l'utilisation de l'IA au service de l'accessibilité et d'un impact durable et significatif.",
     "ctaButton": "Discutons"
@@ -211,6 +214,13 @@
     "validationEmailInvalid": "Veuillez entrer une adresse email valide",
     "validationMessageRequired": "Veuillez entrer un message",
     "validationMessageMinLength": "Le message doit contenir au moins 10 caractères"
+  },
+  "error": {
+    "oops": "Oups",
+    "title": "Une erreur s'est produite",
+    "description": "Une erreur inattendue s'est produite. Veuillez r\u00e9essayer ou retourner \u00e0 la page d'accueil.",
+    "tryAgain": "R\u00e9essayer",
+    "backHome": "Retour \u00e0 l'accueil"
   },
   "notFound": {
     "title": "Page introuvable",

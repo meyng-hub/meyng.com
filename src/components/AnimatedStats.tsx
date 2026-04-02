@@ -44,10 +44,10 @@ export function AnimatedStats() {
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   const stats: Stat[] = [
-    { value: 4, suffix: "", label: t("products") },
+    { value: 2, suffix: "", label: t("products") },
     { value: 3, suffix: "", label: t("industries") },
     { value: 5, suffix: "M+", label: t("lives") },
-    { value: 3, suffix: "+", label: t("countries") },
+    { value: 2, suffix: "", label: t("countries") },
   ];
 
   return (

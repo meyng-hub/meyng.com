@@ -2,8 +2,8 @@
   "metadata": {
     "title": "MEYNG | AI That Matters",
     "titleTemplate": "%s | MEYNG",
-    "description": "MEYNG builds AI-driven products that fight for accessibility — bridging gaps in language, education, food sustainability, and community development for underserved communities worldwide.",
-    "ogDescription": "We build AI products that fight for accessibility — for those left behind."
+    "description": "MEYNG builds AI-driven products that expand access — bridging gaps in language, education, food sustainability, and community development for communities worldwide.",
+    "ogDescription": "We build AI products that expand access — in language, education, sustainability, and community development."
   },
   "nav": {
     "home": "Home",
@@ -15,16 +15,16 @@
   "hero": {
     "badge": "AI That Matters",
     "title": "We build AI for",
-    "titleHighlight": "those left behind",
+    "titleHighlight": "everyone, everywhere",
     "description": "We fight for accessibility. We build AI products that bridge gaps in language, education, sustainability, and community development — where access is limited and impact is greatest.",
     "cta1": "Explore Our Products",
     "cta2": "Our Mission"
   },
   "stats": {
     "products": "AI Products",
-    "industries": "Industries",
-    "lives": "Target Users",
-    "countries": "Countries"
+    "industries": "Focus Areas",
+    "lives": "Sango Speakers",
+    "countries": "Products Live"
   },
   "homeProducts": {
     "sectionLabel": "What We Build",
@@ -37,7 +37,7 @@
     "sectionDescription": "From preserving endangered languages to reducing food waste, every product we build addresses a real barrier that keeps underserved communities from reaching their potential.",
     "sangoai": {
       "tagline": "AI-Powered Language Platform",
-      "description": "Real-time translation, conversational AI, and interactive language learning for the Sango language — serving over 5 million speakers in the Central African Republic.",
+      "description": "Real-time translation, conversational AI, and interactive language learning for the Sango language — spoken by over 5 million people in the Central African Republic.",
       "features": ["Multi-language AI translation", "Conversational chat assistant", "Interactive learning with quizzes", "Developer REST API"]
     },
     "sangoaiFull": {
@@ -56,14 +56,14 @@
       "features": ["AI-powered expiry date predictions", "Smart inventory management", "Waste reduction analytics and insights", "Recipe suggestions based on expiring items", "Barcode scanning for quick product entry"]
     },
     "endara": {
-      "tagline": "SMS-Based Learning for All",
-      "description": "An AI-powered SMS learning platform designed for students without internet access. Quality education delivered through basic text messaging — no smartphone or data plan needed.",
-      "features": ["Works on any basic phone via SMS", "AI-personalized lesson progression", "Interactive quizzes via text", "Zero internet required"]
+      "tagline": "Free Online Learning Platform",
+      "description": "Free online learning platform offering courses in academics, professional skills, and languages for Central African students.",
+      "features": ["Academic courses and study materials", "Professional skills training", "Language learning resources", "Free and accessible to all"]
     },
     "endaraFull": {
-      "tagline": "SMS-Based Learning for All",
-      "description": "An innovative SMS-based learning platform designed to bring quality education to students and learners who lack internet access. eNdara uses AI to personalize lesson delivery, adapt to student progress, and provide interactive assessments entirely through basic text messaging — no smartphone or data plan needed.",
-      "features": ["Works on any basic phone via SMS", "AI-personalized lesson progression", "Interactive quizzes via text messages", "Multi-language support including local languages", "Offline-first: zero internet required"]
+      "tagline": "Free Online Learning Platform",
+      "description": "A free online learning platform offering courses in academics, professional skills, and languages for Central African students. eNdara provides accessible education through a Moodle-based platform, making quality learning materials available to students and learners across the Central African Republic.",
+      "features": ["Academic courses and study materials", "Professional skills training", "Language learning resources", "Moodle-based learning management system", "Free and accessible to all"]
     },
     "connectz": {
       "tagline": "Smarter Project Management for NGOs",
@@ -83,7 +83,8 @@
   "common": {
     "live": "Live",
     "inDevelopment": "In Development",
-    "comingSoon": "Coming Soon"
+    "comingSoon": "Coming Soon",
+    "inResearch": "In Research"
   },
   "api": {
     "label": "Developer API",
@@ -94,10 +95,10 @@
   "values": {
     "sectionLabel": "Our Approach",
     "sectionTitle": "Built Different",
-    "sectionDescription": "We don't just build technology. We build solutions for the people and communities that the tech industry overlooks.",
+    "sectionDescription": "We don't just build technology. We build AI solutions for communities and markets where access matters most and impact is greatest.",
     "aiFirst": {
       "title": "AI-First",
-      "description": "Every product we build harnesses artificial intelligence to solve real problems for people who are too often overlooked by technology."
+      "description": "Every product we build harnesses artificial intelligence to solve real problems — expanding access to communities and markets where technology can make the greatest difference."
     },
     "accessibilityFirst": {
       "title": "Accessibility-First",
@@ -117,16 +118,16 @@
   "about": {
     "sectionLabel": "About MEYNG",
     "sectionTitle": "AI That Fights for Accessibility",
-    "sectionDescription": "We are an AI company dedicated to building products that bridge gaps in language, education, sustainability, and community development — for those left behind.",
+    "sectionDescription": "We are an AI company dedicated to building products that bridge gaps in language, education, sustainability, and community development — extending AI's reach to every community.",
     "missionTitle": "Our Mission",
-    "missionDescription": "To harness the power of artificial intelligence to create accessible, impactful products that bridge gaps in language preservation, education access, food sustainability, and community development — wherever access is limited and impact is greatest. We believe AI should be a force for equity, not exclusion.",
+    "missionDescription": "To harness the power of artificial intelligence to create accessible, impactful products that bridge gaps in language preservation, education access, food sustainability, and community development — wherever access is limited and impact is greatest. We believe AI should be a force for equity and inclusion.",
     "visionTitle": "Our Vision",
     "visionDescription": "A future where every underserved community has access to AI-powered tools that enhance their daily lives — whether it is communicating in their native language, learning without internet access, reducing food waste, or managing community projects with data-driven insights.",
     "valuesLabel": "What Drives Us",
     "valuesTitle": "Our Core Values",
     "innovation": {
       "title": "Innovation",
-      "description": "We push the boundaries of what AI can achieve, especially for underserved markets and communities that traditional tech overlooks."
+      "description": "We push the boundaries of what AI can achieve, especially in emerging markets and communities where the next wave of innovation begins."
     },
     "socialImpact": {
       "title": "Social Impact",
@@ -152,23 +153,25 @@
     "founded": {
       "year": "2023",
       "title": "MEYNG Founded",
-      "description": "Established with a mission to build AI products that fight for accessibility — for those left behind."
+      "description": "Established with a mission to build AI products that expand access — where technology can make the greatest difference."
     },
     "sangoaiLaunch": {
       "year": "2026",
       "title": "SangoAI Launched",
-      "description": "First AI-powered language platform for Sango goes live, serving 5M+ speakers in the Central African Republic."
+      "description": "First AI-powered language platform for Sango goes live, making Sango accessible to the digital world."
     },
     "obetrackEndara": {
       "year": "2026",
       "title": "Obêtrack & eNdara",
-      "description": "Development begins on food waste reduction and SMS-based education platforms — tackling sustainability and learning access."
+      "description": "eNdara learning platform goes live. Development begins on Ob\u00EAtrack food waste reduction app — tackling sustainability and education access."
     },
     "expanding": {
       "year": "2026",
       "title": "Expanding Impact",
-      "description": "ConnectZ in development. Pursuing grants and partnerships to scale globally and reach more underserved communities."
+      "description": "ConnectZ in early research. Pursuing grants and partnerships to grow our impact and reach more underserved communities."
     },
+    "founderJobTitle": "Software Engineer",
+    "founderLocation": "Paris, France",
     "ctaTitle": "Join us on this journey",
     "ctaDescription": "We are looking for partners, investors, and talented individuals who share our passion for using AI to fight for accessibility and create meaningful, lasting impact.",
     "ctaButton": "Let's Talk"
@@ -211,6 +214,13 @@
     "validationEmailInvalid": "Please enter a valid email address",
     "validationMessageRequired": "Please enter a message",
     "validationMessageMinLength": "Message must be at least 10 characters"
+  },
+  "error": {
+    "oops": "Oops",
+    "title": "Something went wrong",
+    "description": "An unexpected error occurred. Please try again or return to the homepage.",
+    "tryAgain": "Try Again",
+    "backHome": "Back to Home"
   },
   "notFound": {
     "title": "Page not found",
@@ -270,7 +280,7 @@
     "scrollDown": "Scroll down to explore"
   },
   "footer": {
-    "description": "Building AI-driven products that fight for accessibility — bridging gaps in language, education, food sustainability, and community development for those left behind.",
+    "description": "Building AI-driven products that expand access — bridging gaps in language, education, food sustainability, and community development for every community.",
     "navigate": "Navigate",
     "products": "Products",
     "legal": "Legal",
