@@ -46,14 +46,14 @@
       "features": ["French-Sango and English-Sango translation", "AI chat assistant fluent in Sango", "Interactive learning with quizzes and vocabulary", "Developer REST API for integration", "Progressive Web App (PWA) support"]
     },
     "obetrack": {
-      "tagline": "Reducing Food Waste with AI",
-      "description": "A mobile app that uses AI to help households and businesses track fresh product inventories, predict expiry dates, and reduce food waste with smart notifications.",
-      "features": ["AI-powered expiry predictions", "Smart inventory tracking", "Waste reduction insights", "Recipe suggestions for expiring items"]
+      "tagline": "AI-Powered Food Waste Prevention",
+      "description": "A smart PWA that uses AI-powered food recognition and barcode scanning to track your inventory, predict expiry dates, generate recipes from expiring items, and help households and businesses cut food waste.",
+      "features": ["AI food recognition & barcode scanning", "Smart expiry predictions & alerts", "AI recipe generation from expiring items", "Waste analytics & EU compliance reporting"]
     },
     "obetrackFull": {
-      "tagline": "Reducing Food Waste with AI",
-      "description": "A mobile application that leverages AI to help households, restaurants, and small businesses track and manage their fresh product inventories. Obêtrack uses intelligent expiry predictions and smart notifications to reduce food waste, save money, and promote sustainable consumption habits.",
-      "features": ["AI-powered expiry date predictions", "Smart inventory management", "Waste reduction analytics and insights", "Recipe suggestions based on expiring items", "Barcode scanning for quick product entry"]
+      "tagline": "AI-Powered Food Waste Prevention",
+      "description": "A progressive web app that combines AI-powered food recognition, barcode scanning, and smart expiry predictions to help households, restaurants, and businesses eliminate food waste. Obêtrack generates recipes from items nearing expiry, provides waste prediction analytics, and supports EU food waste compliance reporting — turning sustainability into savings.",
+      "features": ["AI-powered food recognition from photos", "Barcode scanning for instant product entry", "Smart expiry date predictions & push alerts", "AI recipe generation from expiring ingredients", "Waste prediction analytics & dashboards", "EU food waste compliance reporting"]
     },
     "endara": {
       "tagline": "Free Online Learning Platform",

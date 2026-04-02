@@ -46,14 +46,14 @@
       "features": ["Traduction français-sango et anglais-sango", "Assistant IA parlant couramment le sango", "Apprentissage interactif avec quiz et vocabulaire", "API REST pour l'intégration", "Application Web Progressive (PWA)"]
     },
     "obetrack": {
-      "tagline": "Réduire le gaspillage alimentaire avec l'IA",
-      "description": "Une application mobile qui utilise l'IA pour aider les ménages et les entreprises à suivre leurs inventaires de produits frais, prédire les dates de péremption et réduire le gaspillage avec des notifications intelligentes.",
-      "features": ["Prédictions IA des dates de péremption", "Suivi intelligent des inventaires", "Analyses de réduction du gaspillage", "Suggestions de recettes pour les produits bientôt périmés"]
+      "tagline": "Prevention du gaspillage alimentaire par l'IA",
+      "description": "Une application web intelligente qui utilise la reconnaissance alimentaire par IA et le scan de codes-barres pour suivre vos stocks, predire les dates de peremption, generer des recettes a partir des produits bientot perimes et aider menages et entreprises a reduire le gaspillage.",
+      "features": ["Reconnaissance alimentaire IA & scan codes-barres", "Predictions intelligentes de peremption & alertes", "Generation de recettes IA a partir des produits bientot perimes", "Analyses du gaspillage & conformite UE"]
     },
     "obetrackFull": {
-      "tagline": "Réduire le gaspillage alimentaire avec l'IA",
-      "description": "Une application mobile qui utilise l'IA pour aider les ménages, restaurants et petites entreprises à suivre et gérer leurs inventaires de produits frais. Obêtrack utilise des prédictions intelligentes de péremption et des notifications pour réduire le gaspillage, économiser de l'argent et promouvoir une consommation durable.",
-      "features": ["Prédictions IA des dates de péremption", "Gestion intelligente des inventaires", "Analyses et insights de réduction du gaspillage", "Suggestions de recettes basées sur les produits bientôt périmés", "Scan de codes-barres pour saisie rapide"]
+      "tagline": "Prevention du gaspillage alimentaire par l'IA",
+      "description": "Une application web progressive qui combine reconnaissance alimentaire par IA, scan de codes-barres et predictions intelligentes de peremption pour aider menages, restaurants et entreprises a eliminer le gaspillage alimentaire. Obetrack genere des recettes a partir des ingredients bientot perimes, fournit des analyses predictives du gaspillage et prend en charge le reporting de conformite UE — transformant la durabilite en economies.",
+      "features": ["Reconnaissance alimentaire par IA a partir de photos", "Scan de codes-barres pour saisie instantanee", "Predictions intelligentes de peremption & alertes push", "Generation de recettes IA a partir des ingredients bientot perimes", "Analyses predictives du gaspillage & tableaux de bord", "Reporting de conformite UE sur le gaspillage alimentaire"]
     },
     "endara": {
       "tagline": "Plateforme d'apprentissage en ligne gratuite",

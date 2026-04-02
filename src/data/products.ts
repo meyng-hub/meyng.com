@@ -29,7 +29,7 @@ export const productMeta: ProductMeta[] = [
   {
     icon: Leaf,
     name: "Ob\u00EAtrack",
-    url: null,
+    url: "https://obetrack.com",
     demo: "phone",
     statusKey: "inDevelopment",
   },
