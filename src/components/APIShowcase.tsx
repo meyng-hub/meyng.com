@@ -16,7 +16,7 @@ const jsonResponse = `{
   "confidence": 0.97,
   "source_lang": "en",
   "target_lang": "sg",
-  "model": "sango-v2"
+  "model": "claude-sonnet-4"
 }`;
 
 export function APIShowcase() {

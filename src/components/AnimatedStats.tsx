@@ -47,7 +47,7 @@ export function AnimatedStats() {
     { value: 2, suffix: "", label: t("products") },
     { value: 3, suffix: "", label: t("industries") },
     { value: 5, suffix: "M+", label: t("lives") },
-    { value: 2, suffix: "", label: t("countries") },
+    { value: 3, suffix: "", label: t("countries") },
   ];
 
   return (

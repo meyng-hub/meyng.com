@@ -13,3 +13,11 @@ export function XIcon({ className }: { className?: string }) {
     </svg>
   );
 }
+
+export function HuggingFaceIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm-.5 3.5a1 1 0 110 2 1 1 0 010-2zm3 0a1 1 0 110 2 1 1 0 010-2zM8.5 9c.828 0 1.5.895 1.5 2s-.672 2-1.5 2S7 12.105 7 11s.672-2 1.5-2zm7 0c.828 0 1.5.895 1.5 2s-.672 2-1.5 2-1.5-.895-1.5-2 .672-2 1.5-2zM12 17.5c-2.33 0-4.3-1.06-5.2-2.5h10.4c-.9 1.44-2.87 2.5-5.2 2.5z" />
+    </svg>
+  );
+}

@@ -24,7 +24,7 @@
     "products": "Produits IA",
     "industries": "Domaines",
     "lives": "Locuteurs sango",
-    "countries": "Produits en ligne"
+    "countries": "Publications open source"
   },
   "homeProducts": {
     "sectionLabel": "Ce que nous construisons",
@@ -37,13 +37,13 @@
     "sectionDescription": "De la préservation des langues à la réduction du gaspillage alimentaire, chaque produit que nous construisons ouvre de nouvelles possibilités pour les communautés qui en ont le plus besoin.",
     "sangoai": {
       "tagline": "Plateforme linguistique propulsée par l'IA",
-      "description": "Traduction en temps réel, IA conversationnelle et apprentissage interactif des langues pour le sango — parlé par plus de 5 millions de personnes en République centrafricaine.",
-      "features": ["Traduction IA multilingue", "Assistant conversationnel", "Apprentissage interactif avec quiz", "API REST pour développeurs"]
+      "description": "Traduction en temps réel, IA conversationnelle et apprentissage ludique du sango — propulsé par Claude Sonnet 4 et notre toolkit NLP open source, avec 643+ mots de vocabulaire.",
+      "features": ["Traduction IA multilingue", "Chat conversationnel (Claude Sonnet 4)", "Apprentissage ludique avec XP et niveaux", "Toolkit NLP et dataset open source"]
     },
     "sangoaiFull": {
       "tagline": "L'IA pour la langue sango",
-      "description": "La première plateforme linguistique propulsée par l'IA pour le sango, la langue nationale de la République centrafricaine parlée par plus de 5 millions de personnes. SangoAI offre la traduction en temps réel, un chat IA conversationnel, un apprentissage interactif avec quiz et flashcards, et une API pour les intégrations tierces.",
-      "features": ["Traduction français-sango et anglais-sango", "Assistant IA parlant couramment le sango", "Apprentissage interactif avec quiz et vocabulaire", "API REST pour l'intégration", "Application Web Progressive (PWA)"]
+      "description": "La première plateforme linguistique propulsée par l'IA pour le sango, la langue nationale de la République centrafricaine parlée par plus de 5 millions de personnes. SangoAI offre la traduction en temps réel propulsée par Claude Sonnet 4, un chat IA conversationnel, un apprentissage ludique avec XP, niveaux, combos et défis quotidiens, et une API développeur — soutenu par notre modèle et dataset sango open source publiés sur HuggingFace.",
+      "features": ["Traduction français-sango et anglais-sango", "Assistant IA propulsé par Claude Sonnet 4", "Apprentissage ludique avec XP, niveaux et défis quotidiens", "643+ mots de vocabulaire trilingues", "Toolkit NLP open source (@meyng/sango-nlp)", "API REST pour développeurs", "Application Web Progressive (PWA)"]
     },
     "obetrack": {
       "tagline": "Prevention du gaspillage alimentaire par l'IA",
@@ -56,14 +56,14 @@
       "features": ["Reconnaissance alimentaire par IA a partir de photos", "Scan de codes-barres pour saisie instantanee", "Predictions intelligentes de peremption & alertes push", "Generation de recettes IA a partir des ingredients bientot perimes", "Analyses predictives du gaspillage & tableaux de bord", "Reporting de conformite UE sur le gaspillage alimentaire"]
     },
     "endara": {
-      "tagline": "Plateforme d'apprentissage en ligne gratuite",
-      "description": "Plateforme d'apprentissage en ligne gratuite proposant des cours en sciences, compétences professionnelles et langues pour les étudiants centrafricains.",
-      "features": ["Cours académiques et ressources pédagogiques", "Formation en compétences professionnelles", "Ressources d'apprentissage des langues", "Gratuit et accessible à tous"]
+      "tagline": "Plateforme d'apprentissage gratuite avec accès SMS",
+      "description": "Plateforme d'apprentissage gratuite proposant des cours en sciences, compétences professionnelles et langues pour les étudiants centrafricains — avec un système d'apprentissage par SMS pour les zones sans internet.",
+      "features": ["Cours académiques et ressources pédagogiques", "Leçons de vocabulaire par SMS", "Ressources d'apprentissage des langues", "Gratuit et accessible à tous"]
     },
     "endaraFull": {
-      "tagline": "Plateforme d'apprentissage en ligne gratuite",
-      "description": "Une plateforme d'apprentissage en ligne gratuite proposant des cours en sciences, compétences professionnelles et langues pour les étudiants centrafricains. eNdara fournit une éducation accessible via une plateforme Moodle, rendant des ressources pédagogiques de qualité disponibles pour les étudiants et apprenants en République centrafricaine.",
-      "features": ["Cours académiques et ressources pédagogiques", "Formation en compétences professionnelles", "Ressources d'apprentissage des langues", "Système de gestion d'apprentissage Moodle", "Gratuit et accessible à tous"]
+      "tagline": "Plateforme d'apprentissage gratuite avec accès SMS",
+      "description": "Une plateforme d'apprentissage gratuite proposant des cours en sciences, compétences professionnelles et langues pour les étudiants centrafricains. eNdara inclut un système d'apprentissage par SMS (via Africa's Talking) avec un moteur de leçons et correspondance approximative, apportant des leçons de vocabulaire aux apprenants disposant d'un simple téléphone mobile — sans internet.",
+      "features": ["Cours académiques et ressources pédagogiques", "Leçons de vocabulaire par SMS via Africa's Talking", "Moteur de leçons avec correspondance approximative", "Ressources d'apprentissage des langues", "Système de gestion d'apprentissage Moodle", "Gratuit et accessible à tous"]
     },
     "connectz": {
       "tagline": "Gestion de projets intelligente pour les ONG",
@@ -158,17 +158,17 @@
     "sangoaiLaunch": {
       "year": "2026",
       "title": "Lancement de SangoAI",
-      "description": "Première plateforme linguistique propulsée par l'IA pour le sango, rendant le sango accessible au monde numérique."
+      "description": "Première plateforme linguistique propulsée par l'IA pour le sango. Publication du premier modèle et dataset sango open source sur HuggingFace."
     },
     "obetrackEndara": {
       "year": "2026",
-      "title": "Obêtrack & eNdara",
-      "description": "La plateforme d'apprentissage eNdara est en ligne. Début du développement d'Ob\u00EAtrack pour la réduction du gaspillage alimentaire — s'attaquant à la durabilité et à l'accès à l'éducation."
+      "title": "Ob\u00EAtrack & eNdara",
+      "description": "La plateforme eNdara est en ligne avec leçons par SMS. Début du développement d'Ob\u00EAtrack. MEYNG officiellement immatriculée (SIRET : 97936105200017)."
     },
     "expanding": {
       "year": "2026",
-      "title": "Expansion de l'impact",
-      "description": "ConnectZ en phase de recherche. Poursuite de subventions et partenariats pour accroître notre impact et rendre nos solutions accessibles à encore plus de communautés."
+      "title": "Open source et expansion",
+      "description": "Publication du toolkit NLP sango, du modèle IA et du dataset sur HuggingFace. ConnectZ en phase de recherche. Poursuite de subventions et partenariats."
     },
     "founderJobTitle": "Ing\u00e9nieur logiciel",
     "founderLocation": "Paris, France",

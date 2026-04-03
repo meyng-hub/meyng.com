@@ -163,11 +163,11 @@ Building NLP for Sango exposed problems that you simply do not encounter when wo
 
 The toolkit and dataset are foundations. Here is what we are working toward:
 
-**Fine-tuning a small language model.** Not GPT-scale -- a focused model trained on Sango translation pairs that can handle the specific patterns of Sango-French-English trilingual text. The dataset is small, but techniques like few-shot learning and data augmentation can stretch it further than you might expect.
+**Fine-tuning a small language model.** We published our first Sango language model, [MEYNG/sango-tinyllama-lora](https://huggingface.co/MEYNG/sango-tinyllama-lora), on HuggingFace -- a LoRA fine-tune trained on our Sango translation pairs. It is not GPT-scale, but a focused model that handles the specific patterns of Sango-French-English trilingual text. We are continuing to improve it as our dataset grows.
 
 **Crowdsourcing native speaker audio.** Our language learning platform at sangoai.sbs currently disables its pronunciation feature in production because it was using French text-to-speech as a proxy for Sango -- which teaches incorrect pronunciation. We need recordings from native speakers for each vocabulary entry. This is a community effort, not a technical one.
 
-**SMS-based learning.** In the Central African Republic, smartphone penetration is low but basic mobile phone ownership is widespread. An SMS-based interface for vocabulary learning and translation would reach communities that a web app never will. The NLP toolkit is designed to run server-side precisely because we anticipated this use case -- the processing happens where the compute is, not on the client device.
+**SMS-based learning.** We built an SMS learning pipeline using Africa's Talking, with a lesson engine and fuzzy matching. In the Central African Republic, smartphone penetration is low but basic mobile phone ownership is widespread. This SMS interface for vocabulary learning reaches communities that a web app never will. The NLP toolkit runs server-side precisely because we anticipated this use case -- the processing happens where the compute is, not on the client device.
 
 ## Try it
 

@@ -24,7 +24,7 @@
     "products": "AI Products",
     "industries": "Focus Areas",
     "lives": "Sango Speakers",
-    "countries": "Products Live"
+    "countries": "Open-Source Releases"
   },
   "homeProducts": {
     "sectionLabel": "What We Build",
@@ -37,13 +37,13 @@
     "sectionDescription": "From preserving endangered languages to reducing food waste, every product we build addresses a real barrier that keeps underserved communities from reaching their potential.",
     "sangoai": {
       "tagline": "AI-Powered Language Platform",
-      "description": "Real-time translation, conversational AI, and interactive language learning for the Sango language — spoken by over 5 million people in the Central African Republic.",
-      "features": ["Multi-language AI translation", "Conversational chat assistant", "Interactive learning with quizzes", "Developer REST API"]
+      "description": "Real-time translation, conversational AI, and gamified language learning for Sango — powered by Claude Sonnet 4 and our open-source Sango NLP toolkit, with 643+ vocabulary words.",
+      "features": ["Multi-language AI translation", "Conversational chat (Claude Sonnet 4)", "Gamified learning with XP and levels", "Open-source NLP toolkit and dataset"]
     },
     "sangoaiFull": {
       "tagline": "AI for the Sango Language",
-      "description": "The first AI-powered language platform for Sango, the national language of the Central African Republic spoken by over 5 million people. SangoAI provides real-time translation, conversational AI chat, interactive language learning with quizzes and flashcards, and a developer API for third-party integrations.",
-      "features": ["French-Sango and English-Sango translation", "AI chat assistant fluent in Sango", "Interactive learning with quizzes and vocabulary", "Developer REST API for integration", "Progressive Web App (PWA) support"]
+      "description": "The first AI-powered language platform for Sango, the national language of the Central African Republic spoken by over 5 million people. SangoAI provides real-time translation powered by Claude Sonnet 4, conversational AI chat, gamified language learning with XP, levels, combos, and daily challenges, and a developer API — backed by our open-source Sango language model and dataset published on HuggingFace.",
+      "features": ["French-Sango and English-Sango translation", "AI chat assistant powered by Claude Sonnet 4", "Gamified learning with XP, levels, and daily challenges", "643+ trilingual vocabulary words", "Open-source NLP toolkit (@meyng/sango-nlp)", "Developer REST API", "Progressive Web App (PWA)"]
     },
     "obetrack": {
       "tagline": "AI-Powered Food Waste Prevention",
@@ -56,14 +56,14 @@
       "features": ["AI-powered food recognition from photos", "Barcode scanning for instant product entry", "Smart expiry date predictions & push alerts", "AI recipe generation from expiring ingredients", "Waste prediction analytics & dashboards", "EU food waste compliance reporting"]
     },
     "endara": {
-      "tagline": "Free Online Learning Platform",
-      "description": "Free online learning platform offering courses in academics, professional skills, and languages for Central African students.",
-      "features": ["Academic courses and study materials", "Professional skills training", "Language learning resources", "Free and accessible to all"]
+      "tagline": "Free Learning Platform with SMS Access",
+      "description": "Free learning platform offering courses in academics, professional skills, and languages for Central African students — with an SMS-based learning pipeline for areas without internet.",
+      "features": ["Academic courses and study materials", "SMS-based vocabulary lessons", "Language learning resources", "Free and accessible to all"]
     },
     "endaraFull": {
-      "tagline": "Free Online Learning Platform",
-      "description": "A free online learning platform offering courses in academics, professional skills, and languages for Central African students. eNdara provides accessible education through a Moodle-based platform, making quality learning materials available to students and learners across the Central African Republic.",
-      "features": ["Academic courses and study materials", "Professional skills training", "Language learning resources", "Moodle-based learning management system", "Free and accessible to all"]
+      "tagline": "Free Learning Platform with SMS Access",
+      "description": "A free learning platform offering courses in academics, professional skills, and languages for Central African students. eNdara includes an SMS-based learning pipeline (via Africa's Talking) with a lesson engine and fuzzy matching, bringing vocabulary lessons to learners with only a basic mobile phone — no internet required.",
+      "features": ["Academic courses and study materials", "SMS-based vocabulary lessons via Africa's Talking", "Lesson engine with fuzzy matching", "Language learning resources", "Moodle-based learning management system", "Free and accessible to all"]
     },
     "connectz": {
       "tagline": "Smarter Project Management for NGOs",
@@ -158,17 +158,17 @@
     "sangoaiLaunch": {
       "year": "2026",
       "title": "SangoAI Launched",
-      "description": "First AI-powered language platform for Sango goes live, making Sango accessible to the digital world."
+      "description": "First AI-powered language platform for Sango goes live. Published first open-source Sango language model and dataset on HuggingFace."
     },
     "obetrackEndara": {
       "year": "2026",
-      "title": "Obêtrack & eNdara",
-      "description": "eNdara learning platform goes live. Development begins on Ob\u00EAtrack food waste reduction app — tackling sustainability and education access."
+      "title": "Ob\u00EAtrack & eNdara",
+      "description": "eNdara learning platform goes live with SMS-based lessons. Development begins on Ob\u00EAtrack food waste reduction app. MEYNG officially registered (SIRET: 97936105200017)."
     },
     "expanding": {
       "year": "2026",
-      "title": "Expanding Impact",
-      "description": "ConnectZ in early research. Pursuing grants and partnerships to grow our impact and reach more underserved communities."
+      "title": "Open Source & Expanding Impact",
+      "description": "Published open-source Sango NLP toolkit, AI model, and dataset on HuggingFace. ConnectZ in early research. Pursuing grants and partnerships."
     },
     "founderJobTitle": "Software Engineer",
     "founderLocation": "Paris, France",

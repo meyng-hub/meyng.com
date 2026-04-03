@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { LinkedInIcon, XIcon } from "@/components/SocialIcons";
+import { LinkedInIcon, XIcon, HuggingFaceIcon } from "@/components/SocialIcons";
 
 export function Footer() {
   const t = useTranslations();
@@ -121,6 +121,15 @@ export function Footer() {
               aria-label="X (Twitter)"
             >
               <XIcon className="w-5 h-5" />
+            </a>
+            <a
+              href="https://huggingface.co/MEYNG"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-meyng-silver/60 hover:text-meyng-purple transition-colors"
+              aria-label="HuggingFace"
+            >
+              <HuggingFaceIcon className="w-5 h-5" />
             </a>
             <Link
               href="/contact"
