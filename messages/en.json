@@ -38,42 +38,90 @@
     "sangoai": {
       "tagline": "AI-Powered Language Platform",
       "description": "Real-time translation, conversational AI, and gamified language learning for Sango — powered by Claude Sonnet 4 and our open-source Sango NLP toolkit, with 643+ vocabulary words.",
-      "features": ["Multi-language AI translation", "Conversational chat (Claude Sonnet 4)", "Gamified learning with XP and levels", "Open-source NLP toolkit and dataset"]
+      "features": [
+        "Multi-language AI translation",
+        "Conversational chat (Claude Sonnet 4)",
+        "Gamified learning with XP and levels",
+        "Open-source NLP toolkit and dataset"
+      ]
     },
     "sangoaiFull": {
       "tagline": "AI for the Sango Language",
       "description": "The first AI-powered language platform for Sango, the national language of the Central African Republic spoken by over 5 million people. SangoAI provides real-time translation powered by Claude Sonnet 4, conversational AI chat, gamified language learning with XP, levels, combos, and daily challenges, and a developer API — backed by our open-source Sango language model and dataset published on HuggingFace.",
-      "features": ["French-Sango and English-Sango translation", "AI chat assistant powered by Claude Sonnet 4", "Gamified learning with XP, levels, and daily challenges", "643+ trilingual vocabulary words", "Open-source NLP toolkit (@meyng/sango-nlp)", "Developer REST API", "Progressive Web App (PWA)"]
+      "features": [
+        "French-Sango and English-Sango translation",
+        "AI chat assistant powered by Claude Sonnet 4",
+        "Gamified learning with XP, levels, and daily challenges",
+        "643+ trilingual vocabulary words",
+        "Open-source NLP toolkit (@meyng/sango-nlp)",
+        "Developer REST API",
+        "Progressive Web App (PWA)"
+      ]
     },
     "obetrack": {
       "tagline": "AI-Powered Food Waste Prevention",
       "description": "A smart PWA that uses AI-powered food recognition and barcode scanning to track your inventory, predict expiry dates, generate recipes from expiring items, and help households and businesses cut food waste.",
-      "features": ["AI food recognition & barcode scanning", "Smart expiry predictions & alerts", "AI recipe generation from expiring items", "Waste analytics & EU compliance reporting"]
+      "features": [
+        "AI food recognition & barcode scanning",
+        "Smart expiry predictions & alerts",
+        "AI recipe generation from expiring items",
+        "Waste analytics & EU compliance reporting"
+      ]
     },
     "obetrackFull": {
       "tagline": "AI-Powered Food Waste Prevention",
       "description": "A progressive web app that combines AI-powered food recognition, barcode scanning, and smart expiry predictions to help households, restaurants, and businesses eliminate food waste. Obêtrack generates recipes from items nearing expiry, provides waste prediction analytics, and supports EU food waste compliance reporting — turning sustainability into savings.",
-      "features": ["AI-powered food recognition from photos", "Barcode scanning for instant product entry", "Smart expiry date predictions & push alerts", "AI recipe generation from expiring ingredients", "Waste prediction analytics & dashboards", "EU food waste compliance reporting"]
+      "features": [
+        "AI-powered food recognition from photos",
+        "Barcode scanning for instant product entry",
+        "Smart expiry date predictions & push alerts",
+        "AI recipe generation from expiring ingredients",
+        "Waste prediction analytics & dashboards",
+        "EU food waste compliance reporting"
+      ]
     },
     "endara": {
       "tagline": "Free Learning Platform with SMS Access",
       "description": "Free learning platform offering courses in academics, professional skills, and languages for Central African students — with an SMS-based learning pipeline for areas without internet.",
-      "features": ["Academic courses and study materials", "SMS-based vocabulary lessons", "Language learning resources", "Free and accessible to all"]
+      "features": [
+        "Academic courses and study materials",
+        "SMS-based vocabulary lessons",
+        "Language learning resources",
+        "Free and accessible to all"
+      ]
     },
     "endaraFull": {
       "tagline": "Free Learning Platform with SMS Access",
       "description": "A free learning platform offering courses in academics, professional skills, and languages for Central African students. eNdara includes an SMS-based learning pipeline (via Africa's Talking) with a lesson engine and fuzzy matching, bringing vocabulary lessons to learners with only a basic mobile phone — no internet required.",
-      "features": ["Academic courses and study materials", "SMS-based vocabulary lessons via Africa's Talking", "Lesson engine with fuzzy matching", "Language learning resources", "Moodle-based learning management system", "Free and accessible to all"]
+      "features": [
+        "Academic courses and study materials",
+        "SMS-based vocabulary lessons via Africa's Talking",
+        "Lesson engine with fuzzy matching",
+        "Language learning resources",
+        "Moodle-based learning management system",
+        "Free and accessible to all"
+      ]
     },
     "connectz": {
       "tagline": "Smarter Project Management for NGOs",
       "description": "A collaborative portal for NGOs and municipalities to manage projects, track outcomes, and improve impact reporting with AI-generated insights and automated analytics.",
-      "features": ["Centralized project dashboard", "AI-generated impact reports", "Multi-stakeholder collaboration", "Grant and donor tracking"]
+      "features": [
+        "Centralized project dashboard",
+        "AI-generated impact reports",
+        "Multi-stakeholder collaboration",
+        "Grant and donor tracking"
+      ]
     },
     "connectzFull": {
       "tagline": "Smarter Project Management for NGOs",
       "description": "A collaborative portal designed for NGOs and municipalities to manage projects, track outcomes, and improve impact reporting. ConnectZ uses AI to aggregate data from multiple sources, generate automated reports, and provide actionable insights for better decision-making and donor engagement.",
-      "features": ["Centralized project dashboard", "AI-generated impact reports", "Multi-stakeholder collaboration tools", "Data visualization and analytics", "Grant and donor management tracking"]
+      "features": [
+        "Centralized project dashboard",
+        "AI-generated impact reports",
+        "Multi-stakeholder collaboration tools",
+        "Data visualization and analytics",
+        "Grant and donor management tracking"
+      ]
     },
     "visit": "Visit {name}",
     "ctaTitle": "Interested in partnering on a product?",
@@ -235,10 +283,19 @@
     "intro": "MEYNG (\"we\", \"us\", or \"our\") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website meyng.com.",
     "collectTitle": "Information We Collect",
     "collectDescription": "We may collect the following types of information:",
-    "collectItems": ["Contact information (name, email address) when you submit our contact form", "Usage data such as pages visited, time on site, and referring URL via analytics tools", "Technical information such as browser type, device type, and IP address"],
+    "collectItems": [
+      "Contact information (name, email address) when you submit our contact form",
+      "Usage data such as pages visited, time on site, and referring URL via analytics tools",
+      "Technical information such as browser type, device type, and IP address"
+    ],
     "useTitle": "How We Use Your Information",
     "useDescription": "We use the information we collect to:",
-    "useItems": ["Respond to your inquiries and messages", "Improve our website and services", "Communicate with you about our products and updates", "Comply with legal obligations"],
+    "useItems": [
+      "Respond to your inquiries and messages",
+      "Improve our website and services",
+      "Communicate with you about our products and updates",
+      "Comply with legal obligations"
+    ],
     "sharingTitle": "Information Sharing",
     "sharingDescription": "We do not sell, trade, or rent your personal information to third parties. We may share information with trusted third-party service providers who assist us with website operations, form processing, and hosting, subject to confidentiality agreements.",
     "cookiesTitle": "Cookies",
@@ -278,6 +335,12 @@
     "skipToContent": "Skip to main content",
     "backToTop": "Back to top",
     "scrollDown": "Scroll down to explore"
+  },
+  "cookies": {
+    "title": "We use cookies",
+    "description": "We use cookies and Google Analytics to understand how our site is used and improve the experience. No personal data is sold or shared with third parties.",
+    "accept": "Accept",
+    "decline": "Decline"
   },
   "footer": {
     "description": "Building AI-driven products that expand access — bridging gaps in language, education, food sustainability, and community development for every community.",

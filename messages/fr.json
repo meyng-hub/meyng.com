@@ -38,42 +38,90 @@
     "sangoai": {
       "tagline": "Plateforme linguistique propulsée par l'IA",
       "description": "Traduction en temps réel, IA conversationnelle et apprentissage ludique du sango — propulsé par Claude Sonnet 4 et notre toolkit NLP open source, avec 643+ mots de vocabulaire.",
-      "features": ["Traduction IA multilingue", "Chat conversationnel (Claude Sonnet 4)", "Apprentissage ludique avec XP et niveaux", "Toolkit NLP et dataset open source"]
+      "features": [
+        "Traduction IA multilingue",
+        "Chat conversationnel (Claude Sonnet 4)",
+        "Apprentissage ludique avec XP et niveaux",
+        "Toolkit NLP et dataset open source"
+      ]
     },
     "sangoaiFull": {
       "tagline": "L'IA pour la langue sango",
       "description": "La première plateforme linguistique propulsée par l'IA pour le sango, la langue nationale de la République centrafricaine parlée par plus de 5 millions de personnes. SangoAI offre la traduction en temps réel propulsée par Claude Sonnet 4, un chat IA conversationnel, un apprentissage ludique avec XP, niveaux, combos et défis quotidiens, et une API développeur — soutenu par notre modèle et dataset sango open source publiés sur HuggingFace.",
-      "features": ["Traduction français-sango et anglais-sango", "Assistant IA propulsé par Claude Sonnet 4", "Apprentissage ludique avec XP, niveaux et défis quotidiens", "643+ mots de vocabulaire trilingues", "Toolkit NLP open source (@meyng/sango-nlp)", "API REST pour développeurs", "Application Web Progressive (PWA)"]
+      "features": [
+        "Traduction français-sango et anglais-sango",
+        "Assistant IA propulsé par Claude Sonnet 4",
+        "Apprentissage ludique avec XP, niveaux et défis quotidiens",
+        "643+ mots de vocabulaire trilingues",
+        "Toolkit NLP open source (@meyng/sango-nlp)",
+        "API REST pour développeurs",
+        "Application Web Progressive (PWA)"
+      ]
     },
     "obetrack": {
-      "tagline": "Prevention du gaspillage alimentaire par l'IA",
-      "description": "Une application web intelligente qui utilise la reconnaissance alimentaire par IA et le scan de codes-barres pour suivre vos stocks, predire les dates de peremption, generer des recettes a partir des produits bientot perimes et aider menages et entreprises a reduire le gaspillage.",
-      "features": ["Reconnaissance alimentaire IA & scan codes-barres", "Predictions intelligentes de peremption & alertes", "Generation de recettes IA a partir des produits bientot perimes", "Analyses du gaspillage & conformite UE"]
+      "tagline": "Prévention du gaspillage alimentaire par l'IA",
+      "description": "Une application web intelligente qui utilise la reconnaissance alimentaire par IA et le scan de codes-barres pour suivre vos stocks, prédire les dates de péremption, générer des recettes à partir des produits bientôt périmés et aider ménages et entreprises à réduire le gaspillage.",
+      "features": [
+        "Reconnaissance alimentaire IA & scan codes-barres",
+        "Prédictions intelligentes de péremption & alertes",
+        "Génération de recettes IA à partir des produits bientôt périmés",
+        "Analyses du gaspillage & conformité UE"
+      ]
     },
     "obetrackFull": {
-      "tagline": "Prevention du gaspillage alimentaire par l'IA",
-      "description": "Une application web progressive qui combine reconnaissance alimentaire par IA, scan de codes-barres et predictions intelligentes de peremption pour aider menages, restaurants et entreprises a eliminer le gaspillage alimentaire. Obetrack genere des recettes a partir des ingredients bientot perimes, fournit des analyses predictives du gaspillage et prend en charge le reporting de conformite UE — transformant la durabilite en economies.",
-      "features": ["Reconnaissance alimentaire par IA a partir de photos", "Scan de codes-barres pour saisie instantanee", "Predictions intelligentes de peremption & alertes push", "Generation de recettes IA a partir des ingredients bientot perimes", "Analyses predictives du gaspillage & tableaux de bord", "Reporting de conformite UE sur le gaspillage alimentaire"]
+      "tagline": "Prévention du gaspillage alimentaire par l'IA",
+      "description": "Une application web progressive qui combine reconnaissance alimentaire par IA, scan de codes-barres et prédictions intelligentes de péremption pour aider ménages, restaurants et entreprises à éliminer le gaspillage alimentaire. Obêtrack génère des recettes à partir des ingrédients bientôt périmés, fournit des analyses prédictives du gaspillage et prend en charge le reporting de conformité UE — transformant la durabilité en économies.",
+      "features": [
+        "Reconnaissance alimentaire par IA à partir de photos",
+        "Scan de codes-barres pour saisie instantanée",
+        "Prédictions intelligentes de péremption & alertes push",
+        "Génération de recettes IA à partir des ingrédients bientôt périmés",
+        "Analyses prédictives du gaspillage & tableaux de bord",
+        "Reporting de conformité UE sur le gaspillage alimentaire"
+      ]
     },
     "endara": {
       "tagline": "Plateforme d'apprentissage gratuite avec accès SMS",
       "description": "Plateforme d'apprentissage gratuite proposant des cours en sciences, compétences professionnelles et langues pour les étudiants centrafricains — avec un système d'apprentissage par SMS pour les zones sans internet.",
-      "features": ["Cours académiques et ressources pédagogiques", "Leçons de vocabulaire par SMS", "Ressources d'apprentissage des langues", "Gratuit et accessible à tous"]
+      "features": [
+        "Cours académiques et ressources pédagogiques",
+        "Leçons de vocabulaire par SMS",
+        "Ressources d'apprentissage des langues",
+        "Gratuit et accessible à tous"
+      ]
     },
     "endaraFull": {
       "tagline": "Plateforme d'apprentissage gratuite avec accès SMS",
       "description": "Une plateforme d'apprentissage gratuite proposant des cours en sciences, compétences professionnelles et langues pour les étudiants centrafricains. eNdara inclut un système d'apprentissage par SMS (via Africa's Talking) avec un moteur de leçons et correspondance approximative, apportant des leçons de vocabulaire aux apprenants disposant d'un simple téléphone mobile — sans internet.",
-      "features": ["Cours académiques et ressources pédagogiques", "Leçons de vocabulaire par SMS via Africa's Talking", "Moteur de leçons avec correspondance approximative", "Ressources d'apprentissage des langues", "Système de gestion d'apprentissage Moodle", "Gratuit et accessible à tous"]
+      "features": [
+        "Cours académiques et ressources pédagogiques",
+        "Leçons de vocabulaire par SMS via Africa's Talking",
+        "Moteur de leçons avec correspondance approximative",
+        "Ressources d'apprentissage des langues",
+        "Système de gestion d'apprentissage Moodle",
+        "Gratuit et accessible à tous"
+      ]
     },
     "connectz": {
       "tagline": "Gestion de projets intelligente pour les ONG",
       "description": "Un portail collaboratif pour les ONG et municipalités afin de gérer des projets, suivre les résultats et améliorer les rapports d'impact avec des analyses et insights générés par l'IA.",
-      "features": ["Tableau de bord centralisé", "Rapports d'impact générés par l'IA", "Collaboration multi-parties prenantes", "Suivi des subventions et donateurs"]
+      "features": [
+        "Tableau de bord centralisé",
+        "Rapports d'impact générés par l'IA",
+        "Collaboration multi-parties prenantes",
+        "Suivi des subventions et donateurs"
+      ]
     },
     "connectzFull": {
       "tagline": "Gestion de projets intelligente pour les ONG",
       "description": "Un portail collaboratif conçu pour les ONG et municipalités afin de gérer des projets, suivre les résultats et améliorer les rapports d'impact. ConnectZ utilise l'IA pour agréger les données de sources multiples, générer des rapports automatisés et fournir des insights actionnables pour une meilleure prise de décision.",
-      "features": ["Tableau de bord centralisé", "Rapports d'impact générés par l'IA", "Outils de collaboration multi-parties prenantes", "Visualisation de données et analyses", "Suivi des subventions et gestion des donateurs"]
+      "features": [
+        "Tableau de bord centralisé",
+        "Rapports d'impact générés par l'IA",
+        "Outils de collaboration multi-parties prenantes",
+        "Visualisation de données et analyses",
+        "Suivi des subventions et gestion des donateurs"
+      ]
     },
     "visit": "Visiter {name}",
     "ctaTitle": "Intéressé par un partenariat produit ?",
@@ -235,10 +283,19 @@
     "intro": "MEYNG (« nous » ou « notre ») s'engage à protéger votre vie privée. Cette politique de confidentialité explique comment nous collectons, utilisons et protégeons vos informations lorsque vous visitez notre site web meyng.com.",
     "collectTitle": "Informations collectées",
     "collectDescription": "Nous pouvons collecter les types d'informations suivants :",
-    "collectItems": ["Coordonnées (nom, adresse e-mail) lorsque vous soumettez notre formulaire de contact", "Données d'utilisation telles que les pages visitées, le temps passé sur le site et l'URL de provenance via des outils d'analyse", "Informations techniques telles que le type de navigateur, le type d'appareil et l'adresse IP"],
+    "collectItems": [
+      "Coordonnées (nom, adresse e-mail) lorsque vous soumettez notre formulaire de contact",
+      "Données d'utilisation telles que les pages visitées, le temps passé sur le site et l'URL de provenance via des outils d'analyse",
+      "Informations techniques telles que le type de navigateur, le type d'appareil et l'adresse IP"
+    ],
     "useTitle": "Utilisation de vos informations",
     "useDescription": "Nous utilisons les informations collectées pour :",
-    "useItems": ["Répondre à vos demandes et messages", "Améliorer notre site web et nos services", "Communiquer avec vous au sujet de nos produits et mises à jour", "Respecter nos obligations légales"],
+    "useItems": [
+      "Répondre à vos demandes et messages",
+      "Améliorer notre site web et nos services",
+      "Communiquer avec vous au sujet de nos produits et mises à jour",
+      "Respecter nos obligations légales"
+    ],
     "sharingTitle": "Partage des informations",
     "sharingDescription": "Nous ne vendons, n'échangeons ni ne louons vos informations personnelles à des tiers. Nous pouvons partager des informations avec des prestataires tiers de confiance qui nous aident pour les opérations du site web, le traitement des formulaires et l'hébergement, sous réserve d'accords de confidentialité.",
     "cookiesTitle": "Cookies",
@@ -278,6 +335,12 @@
     "skipToContent": "Aller au contenu principal",
     "backToTop": "Retour en haut",
     "scrollDown": "Défiler vers le bas pour explorer"
+  },
+  "cookies": {
+    "title": "Nous utilisons des cookies",
+    "description": "Nous utilisons des cookies et Google Analytics pour comprendre l'utilisation de notre site et améliorer l'expérience. Aucune donnée personnelle n'est vendue ni partagée avec des tiers.",
+    "accept": "Accepter",
+    "decline": "Refuser"
   },
   "footer": {
     "description": "Nous créons des solutions IA accessibles à tous — en langue, éducation, durabilité alimentaire et développement communautaire, partout dans le monde.",

@@ -9,6 +9,7 @@ import { Footer } from "@/components/Footer";
 import { BackToTop } from "@/components/BackToTop";
 import { Providers } from "@/components/Providers";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
+import { CookieConsent } from "@/components/CookieConsent";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -114,6 +115,59 @@ export default async function RootLayout({ children, params }: Props) {
             : "Skip to main content"}
         </a>
         <GoogleAnalytics />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "MEYNG",
+              url: "https://meyng.com",
+              logo: "https://meyng.com/favicon.png",
+              description:
+                "MEYNG builds AI-driven products that expand access in language, education, food sustainability, and community development.",
+              founder: {
+                "@type": "Person",
+                name: "Michel WENEZOUI",
+                jobTitle: "Founder & CEO",
+              },
+              sameAs: [
+                "https://github.com/meyng-hub",
+                "https://huggingface.co/MEYNG",
+              ],
+              contactPoint: {
+                "@type": "ContactPoint",
+                email: "contact@meyng.com",
+                contactType: "customer service",
+              },
+              makesOffer: [
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "SoftwareApplication",
+                    name: "SangoAI",
+                    url: "https://sangoai.sbs",
+                    applicationCategory: "EducationalApplication",
+                    operatingSystem: "Web",
+                    description:
+                      "AI-powered language platform for Sango with translation, chat, and gamified learning.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "SoftwareApplication",
+                    name: "Ob\u00eatrack",
+                    applicationCategory: "LifestyleApplication",
+                    operatingSystem: "Web",
+                    description:
+                      "AI-powered food waste prevention app with expiry prediction and recipe generation.",
+                  },
+                },
+              ],
+            }),
+          }}
+        />
         <Providers locale={locale} messages={messages}>
           <Navbar />
           <main id="main-content" role="main">
@@ -121,6 +175,7 @@ export default async function RootLayout({ children, params }: Props) {
           </main>
           <Footer />
           <BackToTop />
+          <CookieConsent />
         </Providers>
       </body>
     </html>
