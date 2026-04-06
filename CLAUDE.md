@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-Corporate website for MEYNG, an AI company building accessibility products for underserved communities. Showcases 4 products (SangoAI, Obetrack, eNdara, ConnectZ) with bilingual content (EN/FR).
+Corporate website for MEYNG, an AI company building accessibility products for underserved communities. Showcases 4 products (SangoAI, Obêtrack, eNdara, ConnectZ) with bilingual content (EN/FR). SangoAI, Obêtrack, and eNdara are live; ConnectZ is in research.
 
 **Live site**: https://meyng.com
 **Repo**: https://github.com/meyng-hub/meyng.com
@@ -15,7 +15,7 @@ Corporate website for MEYNG, an AI company building accessibility products for u
 - **Animations**: Framer Motion 12 (respects `prefers-reduced-motion` via MotionConfig)
 - **i18n**: next-intl 4.8.3 (EN/FR locales)
 - **Icons**: Lucide React
-- **Analytics**: Google Analytics 4 (G-FFEZSWMXDJ) — server-rendered `<script>` tags (NOT next/script)
+- **Analytics**: Google Analytics 4 (G-FFEZSWMXDJ) — server-rendered `<script>` tags (NOT next/script), consent mode v2 (GDPR)
 - **Hosting**: Vercel
 - **Node**: 24.x on Vercel, local dev on 22.x
 
@@ -42,10 +42,10 @@ cd C:/meyng-website && npx vercel deploy --prod --yes
 
 ### Environment Variables (Vercel Dashboard)
 
-| Variable | Purpose |
-|---|---|
-| `NEXT_PUBLIC_GA_ID` | Google Analytics 4 Measurement ID (**must not have trailing whitespace/newline**) |
-| `NEXT_PUBLIC_FORMSPREE_URL` | Contact form endpoint (fallback hardcoded) |
+| Variable                    | Purpose                                                                           |
+| --------------------------- | --------------------------------------------------------------------------------- |
+| `NEXT_PUBLIC_GA_ID`         | Google Analytics 4 Measurement ID (**must not have trailing whitespace/newline**) |
+| `NEXT_PUBLIC_FORMSPREE_URL` | Contact form endpoint (fallback hardcoded)                                        |
 
 ## Project Structure
 
@@ -72,7 +72,8 @@ meyng-website/
 │   │   ├── Navbar.tsx          # Fixed nav with mobile menu
 │   │   ├── Footer.tsx          # Site footer with nav links
 │   │   ├── BackToTop.tsx       # Floating scroll-to-top button
-│   │   ├── GoogleAnalytics.tsx # GA4 server-rendered script tags
+│   │   ├── GoogleAnalytics.tsx # GA4 server-rendered script tags + consent mode v2
+│   │   ├── CookieConsent.tsx  # GDPR cookie consent banner (localStorage)
 │   │   ├── ParticleField.tsx   # Canvas particle animation (hero bg)
 │   │   ├── AnimatedStats.tsx   # Counter animation for stats
 │   │   ├── SectionHeading.tsx  # Reusable section header
@@ -132,7 +133,7 @@ navigation.ts  → createNavigation(routing) — type-safe Link, useRouter
 - Use `useTranslations("namespace")` in client components
 - Use `getTranslations({ locale, namespace })` in server components
 - All translation keys are in `messages/en.json` and `messages/fr.json`
-- Namespaces: `metadata`, `nav`, `hero`, `stats`, `homeProducts`, `products`, `common`, `api`, `values`, `cta`, `about`, `contact`, `notFound`, `privacy`, `terms`, `accessibility`, `footer`
+- Namespaces: `metadata`, `nav`, `hero`, `stats`, `homeProducts`, `products`, `common`, `api`, `values`, `cta`, `about`, `contact`, `notFound`, `privacy`, `terms`, `accessibility`, `cookies`, `footer`
 
 ### Accessibility Features
 
@@ -147,14 +148,12 @@ navigation.ts  → createNavigation(routing) — type-safe Link, useRouter
 ### Design Tokens (globals.css)
 
 ```css
---color-meyng-purple: #7065EF     /* Primary brand */
---color-meyng-purple-a11y: #8B80FF /* WCAG AA accessible variant */
---color-meyng-deep: #28208C       /* Dark purple */
---color-meyng-dark: #0A0A0A       /* Background */
---color-meyng-card: #111111       /* Card background */
---color-meyng-border: #1a1a2e     /* Borders */
---color-meyng-silver: #C4C4C4     /* Secondary text */
---color-meyng-light: #E9E9E9      /* Primary text */
+--color-meyng-purple: #7065ef /* Primary brand */
+  --color-meyng-purple-a11y: #8b80ff /* WCAG AA accessible variant */
+  --color-meyng-deep: #28208c /* Dark purple */ --color-meyng-dark: #0a0a0a
+  /* Background */ --color-meyng-card: #111111 /* Card background */
+  --color-meyng-border: #1a1a2e /* Borders */ --color-meyng-silver: #c4c4c4
+  /* Secondary text */ --color-meyng-light: #e9e9e9 /* Primary text */;
 ```
 
 ### Google Analytics (IMPORTANT — DO NOT USE next/script)
@@ -169,16 +168,22 @@ export function GoogleAnalytics() {
   if (!GA_ID) return null;
   return (
     <>
-      <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
-      <script dangerouslySetInnerHTML={{
-        __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${GA_ID}');`,
-      }} />
+      <script
+        async
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+      />
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${GA_ID}');`,
+        }}
+      />
     </>
   );
 }
 ```
 
 **Rules**:
+
 - **Never use `next/script`** or `@next/third-parties/google` for GA — causes hydration SyntaxError
 - **Always `.trim()` env vars** before interpolating into inline `<script>` — Vercel env vars can have trailing newlines that break JS string literals
 - Component renders in `layout.tsx` before `<Providers>` — it's a server component, not a client component
@@ -186,6 +191,7 @@ export function GoogleAnalytics() {
 ### Animation Pattern
 
 All animated components use Framer Motion with this pattern:
+
 - `motion.div` with `initial`, `whileInView`, `viewport={{ once: true }}`
 - `AnimatePresence` for mount/unmount transitions (Navbar mobile menu, BackToTop)
 - No direct `window`/`document` access outside `useEffect`
@@ -248,6 +254,7 @@ curl -s -L -o /dev/null -w "%{http_code}" https://www.meyng.com/fr  # Must be 20
 **What happened**: After fixing Part 1, the console still showed `SyntaxError: Invalid or unexpected token` at `en:2` — a different error (no `appendChild` mention). Line 2 of the inline script was `');`.
 
 **Root cause**: The `NEXT_PUBLIC_GA_ID` environment variable on Vercel had a **trailing newline character** (`G-FFEZSWMXDJ\n`). When interpolated into the inline `<script>` via template literal, it produced a raw newline inside a single-quoted JavaScript string — which is a SyntaxError:
+
 ```javascript
 // Line 1: gtag('config','G-FFEZSWMXDJ    ← unterminated string
 // Line 2: ');                             ← SyntaxError: Invalid or unexpected token
@@ -256,6 +263,7 @@ curl -s -L -o /dev/null -w "%{http_code}" https://www.meyng.com/fr  # Must be 20
 **Fix**: Added `.trim()`: `const GA_ID = process.env.NEXT_PUBLIC_GA_ID?.trim();`
 
 **General rules**:
+
 1. For analytics/tracking scripts, prefer server-rendered `<script>` tags over `next/script` in App Router
 2. **Always `.trim()` environment variables** before interpolating into inline JavaScript — Vercel env vars can have trailing whitespace/newlines
 3. When debugging inline script SyntaxErrors, use `repr()` or hex dump to reveal invisible characters
