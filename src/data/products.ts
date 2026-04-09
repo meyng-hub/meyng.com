@@ -29,7 +29,7 @@ export const productMeta: ProductMeta[] = [
   {
     icon: Leaf,
     name: "Ob\u00EAtrack",
-    url: "https://obetrack.vercel.app",
+    url: "https://xn--obtrack-kya.com",
     demo: "phone",
     statusKey: "live",
   },
