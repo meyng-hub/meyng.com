@@ -19,6 +19,18 @@ Corporate website for MEYNG, an AI company building accessibility products for u
 - **Hosting**: Vercel
 - **Node**: 24.x on Vercel, local dev on 22.x
 
+## User-level standards
+
+Truly cross-project content (`printf`-vs-`echo` Vercel gotcha, WebFetch 15-min cache, AI-fabricates-numbers audit rule, `git reset --mixed` pattern, commit-checkpoint rule, worktree discipline, MEYNG multi-brand OPSEC scope) lives in `~/.claude/CLAUDE.md` on the dev machine and loads automatically into every Claude Code session. Don't duplicate those rules in this file.
+
+This file focuses on what's **specific to this repo** — Next.js 16 + next-intl idioms, the server/client boundary pattern, the Google Analytics `next/script` incident, and the `.trim()` env-var rule that matters here because GA is injected via inline `<script>`. The Next.js-specific entries under "Lessons Learned" below are load-bearing and should stay.
+
+**Sibling projects** — each has its own `CLAUDE.md` with its own stack / patterns:
+
+- SangoAI: `C:\ndaraAI\CLAUDE.md` (React + Vite + Python Lambda)
+- Obêtrack: `C:\obetrack\CLAUDE.md` (Next.js + Dexie + offline-first PWA)
+- eNdara: `C:\eNdara\CLAUDE.md` (Moodle + Flask SMS + WhatsApp)
+
 ## Key Commands
 
 ```bash
