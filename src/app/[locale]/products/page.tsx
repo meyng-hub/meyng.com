@@ -4,59 +4,58 @@ import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import {
-  Languages,
-  Leaf,
-  BookOpen,
-  Users,
   ArrowRight,
   ExternalLink,
+  Code,
+  Cpu,
+  Globe,
+  MessageSquare,
+  CheckCircle,
 } from "lucide-react";
 import { SectionHeading } from "@/components/SectionHeading";
 import { TranslationDemo } from "@/components/TranslationDemo";
-import { PhoneMockup } from "@/components/PhoneMockup";
 import { SMSConversation } from "@/components/SMSConversation";
-import { DashboardMockup } from "@/components/DashboardMockup";
+import { PhoneMockup } from "@/components/PhoneMockup";
+import { APIShowcase } from "@/components/APIShowcase";
+import { productKeys, productMeta, statusColorMap } from "@/data/products";
 
-const productKeys = ["sangoai", "obetrack", "endara", "connectz"] as const;
-
-const productMeta = [
-  { icon: Languages, name: "SangoAI", url: "https://sangoai.sbs", demo: "translation", statusKey: "live" },
-  { icon: Leaf, name: "Obêtrack", url: null, demo: "phone", statusKey: "inDevelopment" },
-  { icon: BookOpen, name: "eNdara", url: null, demo: "sms", statusKey: "inDevelopment" },
-  { icon: Users, name: "ConnectZ", url: null, demo: "dashboard", statusKey: "comingSoon" },
-];
+const techCards = [
+  { icon: Code, color: "text-meyng-purple" },
+  { icon: Cpu, color: "text-emerald-400" },
+  { icon: Globe, color: "text-blue-400" },
+  { icon: MessageSquare, color: "text-amber-400" },
+] as const;
 
 function ProductDemoPreview({ type }: { type: string }) {
   switch (type) {
     case "translation":
       return <TranslationDemo />;
-    case "phone":
-      return <PhoneMockup />;
     case "sms":
       return <SMSConversation />;
-    case "dashboard":
-      return <DashboardMockup />;
+    case "phone":
+      return <PhoneMockup />;
     default:
       return null;
   }
 }
 
-export default function ProductsPage() {
+export default function TechnologyPage() {
   const t = useTranslations();
-
-  const statusColorMap: Record<string, string> = {
-    live: "bg-green-500/20 text-green-400 border-green-500/30",
-    inDevelopment: "bg-meyng-purple/20 text-meyng-purple border-meyng-purple/30",
-    comingSoon: "bg-amber-500/20 text-amber-400 border-amber-500/30",
-  };
 
   const products = productMeta.map((meta, i) => ({
     ...meta,
     tagline: t(`products.${productKeys[i]}Full.tagline`),
     description: t(`products.${productKeys[i]}Full.description`),
     features: Array.from(
-      { length: i === 0 || i === 1 || i === 2 || i === 3 ? 5 : 4 },
-      (_, j) => t(`products.${productKeys[i]}Full.features.${j}`)
+      {
+        length:
+          productKeys[i] === "sangoai"
+            ? 7
+            : productKeys[i] === "endara"
+              ? 6
+              : 6,
+      },
+      (_, j) => t(`products.${productKeys[i]}Full.features.${j}`),
     ),
     status: t(`common.${meta.statusKey}`),
   }));
@@ -75,8 +74,41 @@ export default function ProductsPage() {
         </div>
       </section>
 
+      {/* Technology Infrastructure Overview */}
+      <section className="pb-16">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {(["api", "nlp", "model", "deploy"] as const).map((key, i) => {
+              const Icon = techCards[i].icon;
+              return (
+                <motion.div
+                  key={key}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  className="bg-meyng-card rounded-2xl border border-meyng-border p-6 hover:border-meyng-purple/30 transition-colors"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-meyng-deep/40 flex items-center justify-center mb-4">
+                    <Icon className={`w-5 h-5 ${techCards[i].color}`} />
+                  </div>
+                  <h3 className="text-lg font-bold text-meyng-light mb-2">
+                    {t(`techStack.${key}.title`)}
+                  </h3>
+                  <p className="text-meyng-silver text-xs leading-relaxed">
+                    {t(`techStack.${key}.description`)}
+                  </p>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <div className="section-divider max-w-4xl mx-auto" />
+
       {/* Product Sections */}
-      <section className="pb-24 lg:pb-32">
+      <section className="py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="space-y-24 lg:space-y-32">
             {products.map((product, i) => {
@@ -124,9 +156,9 @@ export default function ProductsPage() {
                       {product.features.map((feature) => (
                         <li
                           key={feature}
-                          className="flex items-center gap-2 text-meyng-silver/80 text-sm"
+                          className="flex items-start gap-2 text-meyng-silver/80 text-sm"
                         >
-                          <span className="w-1.5 h-1.5 rounded-full bg-meyng-purple flex-shrink-0" />
+                          <CheckCircle className="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" />
                           {feature}
                         </li>
                       ))}
@@ -152,6 +184,49 @@ export default function ProductsPage() {
                 </motion.div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      <div className="section-divider max-w-4xl mx-auto" />
+
+      {/* API Showcase */}
+      <section className="py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <div className="flex items-center gap-2 mb-4">
+                  <Code className="w-5 h-5 text-meyng-purple" />
+                  <span className="text-meyng-purple text-sm font-semibold uppercase tracking-widest">
+                    {t("api.label")}
+                  </span>
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold text-meyng-light mb-4">
+                  {t("api.title")}
+                </h2>
+                <p className="text-meyng-silver leading-relaxed mb-6">
+                  {t("api.description")}
+                </p>
+                <a
+                  href="https://sangoai.sbs/docs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-meyng-purple hover:text-meyng-light transition-colors font-medium"
+                >
+                  {t("api.cta")}
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+              </motion.div>
+            </div>
+            <div>
+              <APIShowcase />
+            </div>
           </div>
         </div>
       </section>

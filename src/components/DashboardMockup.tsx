@@ -39,7 +39,9 @@ export function DashboardMockup() {
             <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/60" />
             <div className="w-2.5 h-2.5 rounded-full bg-green-500/60" />
           </div>
-          <span className="text-meyng-silver/50 text-xs ml-2 font-mono">connectz.app/dashboard</span>
+          <span className="text-meyng-silver/50 text-xs ml-2 font-mono">
+            connectz.app/dashboard
+          </span>
         </div>
 
         {/* Mobile horizontal icon bar (replaces sidebar on small screens) */}
@@ -61,8 +63,12 @@ export function DashboardMockup() {
           <div className="flex-1 p-4">
             {/* Header */}
             <div className="flex items-center justify-between mb-4">
-              <h4 className="text-meyng-light text-xs font-bold">Impact Overview</h4>
-              <span className="text-meyng-silver/40 text-[10px]">2025-2026</span>
+              <h4 className="text-meyng-light text-xs font-bold">
+                Impact Overview
+              </h4>
+              <span className="text-meyng-silver/40 text-[10px]">
+                2025-2026
+              </span>
             </div>
 
             {/* Stats row */}
@@ -72,26 +78,40 @@ export function DashboardMockup() {
                 { label: "Partners", value: "28" },
                 { label: "Impact", value: "94%" },
               ].map((stat) => (
-                <div key={stat.label} className="p-2 rounded-lg bg-meyng-dark/50 text-center">
-                  <p className="text-meyng-purple text-sm font-bold">{stat.value}</p>
-                  <p className="text-meyng-silver/40 text-[9px]">{stat.label}</p>
+                <div
+                  key={stat.label}
+                  className="p-2 rounded-lg bg-meyng-dark/50 text-center"
+                >
+                  <p className="text-meyng-purple text-sm font-bold">
+                    {stat.value}
+                  </p>
+                  <p className="text-meyng-silver/40 text-[9px]">
+                    {stat.label}
+                  </p>
                 </div>
               ))}
             </div>
 
             {/* Bar chart */}
             <div className="mb-4">
-              <p className="text-meyng-silver/50 text-[10px] mb-2">Quarterly Impact Score</p>
+              <p className="text-meyng-silver/50 text-[10px] mb-2">
+                Quarterly Impact Score
+              </p>
               <div className="flex items-end gap-2 h-16">
                 {barData.map((bar, i) => (
-                  <div key={bar.label} className="flex-1 flex flex-col items-center gap-1">
+                  <div
+                    key={bar.label}
+                    className="flex-1 flex flex-col items-center gap-1"
+                  >
                     <motion.div
                       className="w-full rounded-t bg-gradient-to-t from-meyng-deep to-meyng-purple"
                       initial={{ height: 0 }}
                       animate={isInView ? { height: `${bar.height}%` } : {}}
                       transition={{ duration: 0.6, delay: 0.3 + i * 0.15 }}
                     />
-                    <span className="text-meyng-silver/30 text-[8px]">{bar.label}</span>
+                    <span className="text-meyng-silver/30 text-[8px]">
+                      {bar.label}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -99,7 +119,9 @@ export function DashboardMockup() {
 
             {/* Projects table */}
             <div>
-              <p className="text-meyng-silver/50 text-[10px] mb-2">Active Projects</p>
+              <p className="text-meyng-silver/50 text-[10px] mb-2">
+                Active Projects
+              </p>
               <div className="space-y-1.5">
                 {projects.map((project) => {
                   const statusColor =
@@ -113,14 +135,20 @@ export function DashboardMockup() {
                       key={project.name}
                       className="flex items-center justify-between py-1.5 px-2 rounded bg-meyng-dark/30"
                     >
-                      <span className="text-meyng-light text-[10px]">{project.name}</span>
+                      <span className="text-meyng-light text-[10px]">
+                        {project.name}
+                      </span>
                       <div className="flex items-center gap-2">
-                        <span className={`text-[9px] ${statusColor}`}>{project.status}</span>
+                        <span className={`text-[9px] ${statusColor}`}>
+                          {project.status}
+                        </span>
                         <div className="w-12 h-1 rounded-full bg-meyng-dark overflow-hidden">
                           <motion.div
                             className="h-full bg-meyng-purple rounded-full"
                             initial={{ width: 0 }}
-                            animate={isInView ? { width: `${project.progress}%` } : {}}
+                            animate={
+                              isInView ? { width: `${project.progress}%` } : {}
+                            }
                             transition={{ duration: 0.8, delay: 0.6 }}
                           />
                         </div>
@@ -141,7 +169,9 @@ export function DashboardMockup() {
               <div className="flex items-start gap-1.5">
                 <Sparkles className="w-3 h-3 text-meyng-purple mt-0.5 flex-shrink-0" />
                 <p className="text-meyng-purple text-[9px] leading-relaxed">
-                  AI Insight: &quot;School Build&quot; project is 15% behind schedule. Consider reallocating resources from completed projects.
+                  AI Insight: &quot;School Build&quot; project is 15% behind
+                  schedule. Consider reallocating resources from completed
+                  projects.
                 </p>
               </div>
             </motion.div>

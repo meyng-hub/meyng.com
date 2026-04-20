@@ -1,132 +1,212 @@
 {
   "metadata": {
-    "title": "MEYNG | AI That Matters",
+    "title": "MEYNG | AI Infrastructure for African Languages",
     "titleTemplate": "%s | MEYNG",
-    "description": "MEYNG builds AI-driven products that expand access — bridging gaps in language, education, food sustainability, and community development for communities worldwide.",
-    "ogDescription": "We build AI products that expand access — in language, education, sustainability, and community development."
+    "description": "MEYNG builds the translation APIs, NLP tools, and language models that power applications across Africa. Starting with Sango. Scaling to the continent.",
+    "ogDescription": "The AI infrastructure company for African languages. Production-grade translation APIs, NLP tools, and language models."
   },
   "nav": {
     "home": "Home",
-    "products": "Products",
-    "about": "About",
+    "technology": "Technology",
+    "about": "Company",
     "contact": "Contact",
-    "getInTouch": "Get in Touch"
+    "cta": "Partner With Us"
   },
   "hero": {
-    "badge": "AI That Matters",
-    "title": "We build AI for",
-    "titleHighlight": "everyone, everywhere",
-    "description": "We fight for accessibility. We build AI products that bridge gaps in language, education, sustainability, and community development — where access is limited and impact is greatest.",
-    "cta1": "Explore Our Products",
-    "cta2": "Our Mission"
+    "badge": "African Language AI",
+    "title": "Building the Language Layer",
+    "titleHighlight": "for Africa",
+    "description": "We build the translation APIs, NLP tools, and language models that power applications across the continent. Production-grade AI infrastructure for the world's most underserved languages.",
+    "cta1": "Start a Free Pilot",
+    "cta2": "View Technology"
+  },
+  "traction": {
+    "api": "Production API",
+    "apiSub": "Live & serving requests",
+    "vocab": "760+ Words",
+    "vocabSub": "Trilingual vocabulary",
+    "hf": "Open Research",
+    "hfSub": "Model & dataset published",
+    "whatsapp": "WhatsApp Bot",
+    "whatsappSub": "Live on Meta Platform"
+  },
+  "flagship": {
+    "sectionLabel": "Flagship Product",
+    "sectionTitle": "SangoAI — The First AI Platform for Sango",
+    "sectionDescription": "The world's only AI-powered translation and language platform for Sango, the national language of the Central African Republic. 5M+ speakers, zero competitors.",
+    "features": [
+      "Production REST API with tiered pricing",
+      "Real-time translation (French, English, Sango)",
+      "Conversational AI with advanced language models",
+      "760+ trilingual vocabulary with pronunciation guides",
+      "Open-source NLP toolkit for Sango processing",
+      "Fine-tuned language model with published datasets"
+    ],
+    "visitSite": "Visit SangoAI",
+    "tryApi": "Try the API"
+  },
+  "market": {
+    "sectionLabel": "Market Opportunity",
+    "sectionTitle": "The $4.8B African Language AI Market",
+    "sectionDescription": "Africa has 2,000+ languages. Less than 5% have any NLP tools. We're building the infrastructure to change that.",
+    "languages": "African Languages",
+    "languagesSub": "Massively underserved by AI",
+    "speakers": "Speakers",
+    "speakersSub": "Across the continent",
+    "nlpCoverage": "NLP Coverage",
+    "nlpCoverageSub": "Of African languages today",
+    "tam": "Market Size",
+    "tamSub": "African language tech by 2030"
+  },
+  "techStack": {
+    "sectionLabel": "What We've Built",
+    "sectionTitle": "Production-Grade AI Infrastructure",
+    "sectionDescription": "Not a research project. A production system processing real requests, serving real users, deployed on enterprise-grade infrastructure.",
+    "api": {
+      "title": "Translation API",
+      "description": "RESTful API with tiered access (Free/Startup/Business/Enterprise), quota management, usage analytics, and developer dashboard. Enterprise-grade cloud infrastructure."
+    },
+    "nlp": {
+      "title": "NLP Toolkit",
+      "description": "Open-source Sango language processing: tokenizer, language detection, stemmer, and morphological analysis. Available as a published open-source package."
+    },
+    "model": {
+      "title": "Language Models",
+      "description": "Custom fine-tuned language models for Sango tasks. 760+ word parallel corpus (Sango-French-English). Published openly for the AI research community."
+    },
+    "deploy": {
+      "title": "Deployment Proof",
+      "description": "eNdara WhatsApp learning bot live on Meta Platform since April 2026. Real-world deployment serving users across Central Africa. Proof that our AI works beyond the browser."
+    }
+  },
+  "roadmap": {
+    "sectionLabel": "Language Expansion",
+    "sectionTitle": "From Sango to the Continent",
+    "sectionDescription": "Starting with Sango. Expanding to 5 languages covering 66M+ speakers. The same infrastructure scales to every African language.",
+    "sango": "Sango",
+    "sangoSpeakers": "5M speakers",
+    "sangoStatus": "Live",
+    "lingala": "Lingala",
+    "lingalaSpeakers": "25M speakers",
+    "lingalaStatus": "2026",
+    "wolof": "Wolof",
+    "wolofSpeakers": "10M speakers",
+    "wolofStatus": "2026",
+    "bambara": "Bambara",
+    "bambaraSpeakers": "14M speakers",
+    "bambaraStatus": "2027",
+    "kirundi": "Kirundi",
+    "kirundiSpeakers": "12M speakers",
+    "kirundiStatus": "2027",
+    "total": "66M+ speakers across 5 languages"
+  },
+  "builtOn": {
+    "sectionLabel": "Infrastructure",
+    "title": "Built on World-Class Infrastructure",
+    "aws": "Cloud Platform",
+    "awsSub": "Enterprise-grade compute & database",
+    "anthropic": "Foundation AI",
+    "anthropicSub": "State-of-the-art language models",
+    "huggingface": "Open Research",
+    "huggingfaceSub": "Published models & datasets",
+    "meta": "Messaging",
+    "metaSub": "WhatsApp Business Platform"
   },
   "stats": {
-    "products": "AI Products",
-    "industries": "Focus Areas",
-    "lives": "Sango Speakers",
-    "countries": "Open-Source Releases"
+    "languages": "Languages Supported",
+    "endpoints": "API Endpoints",
+    "vocab": "Vocabulary Words",
+    "uptime": "API Uptime"
   },
-  "homeProducts": {
-    "sectionLabel": "What We Build",
-    "sectionTitle": "AI Products for Real Impact",
-    "sectionDescription": "Each product tackles a specific barrier that keeps communities from reaching their potential — powered by cutting-edge artificial intelligence."
+  "api": {
+    "label": "Developer API",
+    "title": "Built for developers",
+    "description": "Integrate African language AI directly into your applications. Simple REST endpoints, predictable pricing, production-grade reliability.",
+    "cta": "View documentation"
+  },
+  "cta": {
+    "title": "Ready to bring AI to",
+    "titleHighlight": "African languages?",
+    "description": "Whether you're an investor, enterprise partner, government agency, or NGO — we'd love to explore how MEYNG can power your language needs.",
+    "button": "Partner With Us",
+    "investorCta": "For Investors",
+    "enterpriseCta": "Start a Free Pilot"
   },
   "products": {
-    "sectionLabel": "Our Products",
-    "sectionTitle": "AI Solutions Built for Impact",
-    "sectionDescription": "From preserving endangered languages to reducing food waste, every product we build addresses a real barrier that keeps underserved communities from reaching their potential.",
+    "sectionLabel": "Our Technology",
+    "sectionTitle": "AI Infrastructure for African Languages",
+    "sectionDescription": "From production APIs to open-source NLP tools, we build the complete language AI stack. SangoAI is our flagship — proving the model before scaling across the continent.",
     "sangoai": {
-      "tagline": "AI-Powered Language Platform",
-      "description": "Real-time translation, conversational AI, and gamified language learning for Sango — powered by Claude Sonnet 4 and our open-source Sango NLP toolkit, with 643+ vocabulary words.",
+      "tagline": "Flagship — AI Language Infrastructure",
+      "description": "The world's only AI-powered translation and language platform for Sango. Production REST API, real-time translation, conversational AI, and gamified learning — backed by our open-source NLP toolkit and published models.",
       "features": [
-        "Multi-language AI translation",
-        "Conversational chat (Claude Sonnet 4)",
-        "Gamified learning with XP and levels",
-        "Open-source NLP toolkit and dataset"
+        "Production REST API with tiered pricing",
+        "Real-time translation (French, English, Sango)",
+        "Conversational AI with advanced models",
+        "Open-source NLP toolkit"
       ]
     },
     "sangoaiFull": {
-      "tagline": "AI for the Sango Language",
-      "description": "The first AI-powered language platform for Sango, the national language of the Central African Republic spoken by over 5 million people. SangoAI provides real-time translation powered by Claude Sonnet 4, conversational AI chat, gamified language learning with XP, levels, combos, and daily challenges, and a developer API — backed by our open-source Sango language model and dataset published on HuggingFace.",
+      "tagline": "Flagship — AI Language Infrastructure",
+      "description": "The world's only AI-powered translation and language platform for Sango, the national language of the Central African Republic spoken by 5M+ people. SangoAI provides a production REST API with tiered pricing, real-time AI translation, conversational AI chat, gamified learning with XP and levels, and a developer dashboard — backed by our open-source NLP toolkit and published language models.",
       "features": [
+        "Production REST API with quota management",
         "French-Sango and English-Sango translation",
-        "AI chat assistant powered by Claude Sonnet 4",
-        "Gamified learning with XP, levels, and daily challenges",
-        "643+ trilingual vocabulary words",
-        "Open-source NLP toolkit (@meyng/sango-nlp)",
-        "Developer REST API",
+        "AI-powered conversational chat",
+        "760+ trilingual vocabulary with pronunciation",
+        "Open-source NLP toolkit for Sango",
+        "Fine-tuned language models with published datasets",
         "Progressive Web App (PWA)"
       ]
     },
+    "endara": {
+      "tagline": "Deployment Proof — WhatsApp Learning Bot",
+      "description": "WhatsApp-based Sango learning bot live on Meta Platform. Any user can message to learn Sango vocabulary — proving our AI works in real-world, low-bandwidth deployments.",
+      "features": [
+        "Live on Meta Platform (published Apr 2026)",
+        "WhatsApp-native learning experience",
+        "SMS fallback for areas without internet",
+        "Zero-install, works on any phone"
+      ]
+    },
+    "endaraFull": {
+      "tagline": "Deployment Proof — WhatsApp Learning Bot",
+      "description": "eNdara is a WhatsApp-based Sango learning bot live on Meta Platform since April 2026. Users can interact with the bot to learn Sango vocabulary through interactive lessons. Deployed on production infrastructure with high availability. Proves our language AI works in real-world, low-bandwidth environments across Central Africa.",
+      "features": [
+        "Live on Meta Platform since April 2026",
+        "WhatsApp-native interactive lessons",
+        "SMS-based vocabulary lessons via Africa's Talking",
+        "Lesson engine with fuzzy matching",
+        "Zero-install, works on any phone",
+        "Production-grade deployment"
+      ]
+    },
     "obetrack": {
-      "tagline": "AI-Powered Food Waste Prevention",
-      "description": "A smart PWA that uses AI-powered food recognition and barcode scanning to track your inventory, predict expiry dates, generate recipes from expiring items, and help households and businesses cut food waste.",
+      "tagline": "Portfolio — AI Food Waste Prevention",
+      "description": "Smart PWA using AI-powered food recognition and barcode scanning to track inventory, predict expiry, and reduce food waste for households and businesses.",
       "features": [
         "AI food recognition & barcode scanning",
         "Smart expiry predictions & alerts",
         "AI recipe generation from expiring items",
-        "Waste analytics & EU compliance reporting"
+        "EU compliance reporting"
       ]
     },
     "obetrackFull": {
-      "tagline": "AI-Powered Food Waste Prevention",
-      "description": "A progressive web app that combines AI-powered food recognition, barcode scanning, and smart expiry predictions to help households, restaurants, and businesses eliminate food waste. Obêtrack generates recipes from items nearing expiry, provides waste prediction analytics, and supports EU food waste compliance reporting — turning sustainability into savings.",
+      "tagline": "Portfolio — AI Food Waste Prevention",
+      "description": "A progressive web app that combines AI-powered food recognition, barcode scanning, and smart expiry predictions to help households, restaurants, and businesses eliminate food waste. Part of the MEYNG product portfolio — demonstrating our AI capabilities beyond language.",
       "features": [
         "AI-powered food recognition from photos",
         "Barcode scanning for instant product entry",
-        "Smart expiry date predictions & push alerts",
+        "Smart expiry predictions & push alerts",
         "AI recipe generation from expiring ingredients",
-        "Waste prediction analytics & dashboards",
+        "Waste analytics & dashboards",
         "EU food waste compliance reporting"
       ]
     },
-    "endara": {
-      "tagline": "Free Learning Platform with SMS Access",
-      "description": "Free learning platform offering courses in academics, professional skills, and languages for Central African students — with an SMS-based learning pipeline for areas without internet.",
-      "features": [
-        "Academic courses and study materials",
-        "SMS-based vocabulary lessons",
-        "Language learning resources",
-        "Free and accessible to all"
-      ]
-    },
-    "endaraFull": {
-      "tagline": "Free Learning Platform with SMS Access",
-      "description": "A free learning platform offering courses in academics, professional skills, and languages for Central African students. eNdara includes an SMS-based learning pipeline (via Africa's Talking) with a lesson engine and fuzzy matching, bringing vocabulary lessons to learners with only a basic mobile phone — no internet required.",
-      "features": [
-        "Academic courses and study materials",
-        "SMS-based vocabulary lessons via Africa's Talking",
-        "Lesson engine with fuzzy matching",
-        "Language learning resources",
-        "Moodle-based learning management system",
-        "Free and accessible to all"
-      ]
-    },
-    "connectz": {
-      "tagline": "Smarter Project Management for NGOs",
-      "description": "A collaborative portal for NGOs and municipalities to manage projects, track outcomes, and improve impact reporting with AI-generated insights and automated analytics.",
-      "features": [
-        "Centralized project dashboard",
-        "AI-generated impact reports",
-        "Multi-stakeholder collaboration",
-        "Grant and donor tracking"
-      ]
-    },
-    "connectzFull": {
-      "tagline": "Smarter Project Management for NGOs",
-      "description": "A collaborative portal designed for NGOs and municipalities to manage projects, track outcomes, and improve impact reporting. ConnectZ uses AI to aggregate data from multiple sources, generate automated reports, and provide actionable insights for better decision-making and donor engagement.",
-      "features": [
-        "Centralized project dashboard",
-        "AI-generated impact reports",
-        "Multi-stakeholder collaboration tools",
-        "Data visualization and analytics",
-        "Grant and donor management tracking"
-      ]
-    },
     "visit": "Visit {name}",
-    "ctaTitle": "Interested in partnering on a product?",
-    "ctaDescription": "We are always looking for partners, collaborators, and organizations who share our vision of using AI to create real-world impact where it matters most.",
-    "ctaButton": "Get in Touch"
+    "ctaTitle": "Ready to integrate African language AI?",
+    "ctaDescription": "Whether you need translation APIs for your app, language data for research, or custom NLP solutions — let's talk.",
+    "ctaButton": "Partner With Us"
   },
   "common": {
     "live": "Live",
@@ -134,128 +214,124 @@
     "comingSoon": "Coming Soon",
     "inResearch": "In Research"
   },
-  "api": {
-    "label": "Developer API",
-    "title": "Built for developers",
-    "description": "Integrate our AI capabilities directly into your applications. SangoAI's REST API gives you access to state-of-the-art translation and language processing — with simple, documented endpoints and predictable pricing.",
-    "cta": "Learn more"
-  },
   "values": {
-    "sectionLabel": "Our Approach",
-    "sectionTitle": "Built Different",
-    "sectionDescription": "We don't just build technology. We build AI solutions for communities and markets where access matters most and impact is greatest.",
-    "aiFirst": {
-      "title": "AI-First",
-      "description": "Every product we build harnesses artificial intelligence to solve real problems — expanding access to communities and markets where technology can make the greatest difference."
+    "sectionLabel": "Why MEYNG",
+    "sectionTitle": "First-Mover in a Massive Market",
+    "sectionDescription": "We're not competing in a crowded market. We're creating a new one — AI infrastructure for the most underserved languages on Earth.",
+    "firstMover": {
+      "title": "Zero Competition",
+      "description": "SangoAI is the only AI translation platform for Sango. No Google Translate, no DeepL, no open-source alternative. First-mover advantage in a 5M+ speaker market."
     },
-    "accessibilityFirst": {
-      "title": "Accessibility-First",
-      "description": "We design for the hardest constraints first — no internet, no smartphone, no literacy. If it works there, it works everywhere."
+    "production": {
+      "title": "Production, Not Research",
+      "description": "Live API serving real requests. Published models and datasets. WhatsApp bot deployed on a global messaging platform. This isn't a paper — it's infrastructure you can integrate today."
     },
-    "impactDriven": {
-      "title": "Impact-Driven",
-      "description": "We measure success not in downloads, but in barriers removed, communities empowered, and lives meaningfully improved."
+    "scalable": {
+      "title": "Built to Scale",
+      "description": "The same architecture that powers Sango scales to any language. Lingala, Wolof, Bambara — each new language is infrastructure, not a rebuild. 2,000+ languages await."
     }
-  },
-  "cta": {
-    "title": "Ready to build something",
-    "titleHighlight": "that matters?",
-    "description": "Whether you are a partner, investor, or organization fighting for accessibility — we would love to hear from you.",
-    "button": "Contact Us"
   },
   "about": {
     "sectionLabel": "About MEYNG",
-    "sectionTitle": "AI That Fights for Accessibility",
-    "sectionDescription": "We are an AI company dedicated to building products that bridge gaps in language, education, sustainability, and community development — extending AI's reach to every community.",
+    "sectionTitle": "The AI Infrastructure Company for African Languages",
+    "sectionDescription": "We build the translation APIs, NLP tools, and language models that enable organizations to operate in African languages at scale.",
     "missionTitle": "Our Mission",
-    "missionDescription": "To harness the power of artificial intelligence to create accessible, impactful products that bridge gaps in language preservation, education access, food sustainability, and community development — wherever access is limited and impact is greatest. We believe AI should be a force for equity and inclusion.",
+    "missionDescription": "To build production-grade AI infrastructure for every African language — starting with the most underserved. We believe the next billion internet users will speak languages that AI doesn't understand yet. MEYNG is building the bridge.",
     "visionTitle": "Our Vision",
-    "visionDescription": "A future where every underserved community has access to AI-powered tools that enhance their daily lives — whether it is communicating in their native language, learning without internet access, reducing food waste, or managing community projects with data-driven insights.",
-    "valuesLabel": "What Drives Us",
-    "valuesTitle": "Our Core Values",
-    "innovation": {
-      "title": "Innovation",
-      "description": "We push the boundaries of what AI can achieve, especially in emerging markets and communities where the next wave of innovation begins."
+    "visionDescription": "A future where every African language has production-quality NLP tools — translation APIs, speech recognition, and language models — accessible to any developer, organization, or government that needs them.",
+    "whyTitle": "Why African Languages?",
+    "whyDescription": "Africa has 2,000+ languages spoken by 1.4 billion people. Less than 5% have basic NLP tools. Google Translate supports 133 languages — fewer than 25 are African. This isn't a niche. It's the largest untapped market in language AI.",
+    "whyPoints": [
+      "2,000+ languages, <5% have NLP tools",
+      "$4.8B projected market by 2030",
+      "1.4B speakers across the continent",
+      "Zero competition for most languages"
+    ],
+    "valuesLabel": "Why We Win",
+    "valuesTitle": "Our Competitive Advantage",
+    "technical": {
+      "title": "Technical Moat",
+      "description": "Proprietary training data, fine-tuned models, and production infrastructure that took years to build. You can't replicate this with a weekend hackathon."
     },
-    "socialImpact": {
-      "title": "Social Impact",
-      "description": "Technology must serve people. Every product we build is measured by its ability to create meaningful, positive change in real lives."
+    "cultural": {
+      "title": "Cultural Authority",
+      "description": "Founded by a Central African native speaker with deep linguistic expertise. Our data quality comes from cultural understanding, not just computation."
     },
-    "accessibility": {
-      "title": "Accessibility-First",
-      "description": "We design for the hardest constraints first — no internet, no smartphone, no literacy. If it works there, it works everywhere."
+    "firstMover": {
+      "title": "First-Mover Lock-In",
+      "description": "First to publish Sango NLP tools, first to deploy a Sango AI API, first to ship a WhatsApp bot for Sango learning. Network effects compound."
     },
-    "community": {
-      "title": "Community",
-      "description": "We believe in the power of collaboration. Our products are built with and for the communities they serve, not just about them."
+    "partnerships": {
+      "title": "Strategic Positioning",
+      "description": "Built on world-class foundation models, published openly for AI community visibility, deployed on the world's largest messaging platform for maximum reach across Africa."
     },
-    "teamLabel": "The Team",
-    "teamTitle": "Who We Are",
+    "teamLabel": "Leadership",
+    "teamTitle": "Who's Building This",
     "founder": {
       "name": "Michel WENEZOUI",
       "role": "Founder & CEO",
-      "bio": "Software engineer and entrepreneur passionate about using AI to solve real-world problems for underserved communities. Based in Paris, Michel founded MEYNG with a simple belief: AI should be a force for equity, not exclusion."
+      "bio": "Software engineer and AI entrepreneur. Native Sango speaker from the Central African Republic. Built SangoAI from zero to production — scalable cloud infrastructure, published NLP toolkit, and fine-tuned language models. Based in Paris."
     },
-    "journeyLabel": "Our Journey",
-    "journeyTitle": "Building Step by Step",
+    "founderJobTitle": "Software Engineer & AI Entrepreneur",
+    "founderLocation": "Paris, France",
+    "journeyLabel": "Milestones",
+    "journeyTitle": "From Idea to Production",
     "founded": {
       "year": "2023",
       "title": "MEYNG Founded",
-      "description": "Established with a mission to build AI products that expand access — where technology can make the greatest difference."
+      "description": "Incorporated in Paris. Began building the first Sango NLP pipeline and training data collection."
     },
     "sangoaiLaunch": {
-      "year": "2026",
-      "title": "SangoAI Launched",
-      "description": "First AI-powered language platform for Sango goes live. Published first open-source Sango language model and dataset on HuggingFace."
+      "year": "Jan 2026",
+      "title": "SangoAI Goes Live",
+      "description": "Production API deployed on cloud infrastructure. Translation, chat, and learning platform launched at sangoai.sbs with enterprise-grade scalability."
     },
-    "obetrackEndara": {
-      "year": "2026",
-      "title": "Ob\u00EAtrack & eNdara",
-      "description": "eNdara learning platform goes live with SMS-based lessons. Development begins on Ob\u00EAtrack food waste reduction app. MEYNG officially registered (SIRET: 97936105200017)."
+    "apiPublished": {
+      "year": "Mar 2026",
+      "title": "AI Assets Published",
+      "description": "Open-source NLP toolkit published for developers. Fine-tuned language model and 760-word parallel corpus released openly. Sango becomes a documented NLP language."
     },
-    "expanding": {
-      "year": "2026",
-      "title": "Open Source & Expanding Impact",
-      "description": "Published open-source Sango NLP toolkit, AI model, and dataset on HuggingFace. ConnectZ in early research. Pursuing grants and partnerships."
+    "metaLive": {
+      "year": "Apr 2026",
+      "title": "WhatsApp Bot on Meta Platform",
+      "description": "eNdara learning bot published on Meta. Any WhatsApp user can message to learn Sango. First real-world deployment proof beyond web."
     },
-    "founderJobTitle": "Software Engineer",
-    "founderLocation": "Paris, France",
-    "ctaTitle": "Join us on this journey",
-    "ctaDescription": "We are looking for partners, investors, and talented individuals who share our passion for using AI to fight for accessibility and create meaningful, lasting impact.",
+    "ctaTitle": "Invest in African language AI",
+    "ctaDescription": "We're raising pre-seed funding to scale from 1 language to 5, hire our first NLP engineers, and close our first enterprise contracts. The market is massive, the timing is now.",
     "ctaButton": "Let's Talk"
   },
   "contact": {
     "sectionLabel": "Contact",
-    "sectionTitle": "Let's Connect",
-    "sectionDescription": "Have a question, partnership idea, or want to learn more about what we're building? We'd love to hear from you.",
+    "sectionTitle": "Let's Build Together",
+    "sectionDescription": "Whether you're an investor, enterprise partner, government agency, NGO, or developer — we'd love to hear from you.",
     "getInTouch": "Get in Touch",
-    "contactIntro": "Whether you are an investor, partner, NGO, or simply curious about our work, reach out. We respond to every message.",
+    "contactIntro": "MEYNG is actively seeking strategic partners, investors, and early adopter customers. We respond to every inquiry.",
     "email": "Email",
     "location": "Location",
     "locationValue": "Paris, France",
     "openTo": "We are open to:",
-    "partnerships": "Partnerships & collaborations",
-    "investment": "Investment inquiries",
+    "partnerships": "Enterprise partnerships & API integration",
+    "investment": "Pre-seed investment inquiries",
     "grants": "Grant & funding opportunities",
-    "feedback": "Product feedback",
-    "media": "Media & press inquiries",
+    "feedback": "Government & NGO pilot programs",
+    "media": "Media, press & speaking opportunities",
     "formName": "Name",
     "formNamePlaceholder": "Your name",
     "formEmail": "Email",
     "formEmailPlaceholder": "you@example.com",
     "formSubject": "Subject",
     "subjectGeneral": "General Inquiry",
-    "subjectPartnership": "Partnership",
+    "subjectPartnership": "Enterprise Partnership",
     "subjectInvestment": "Investment",
     "subjectGrant": "Grant / Funding",
-    "subjectProduct": "Product Feedback",
+    "subjectProduct": "API Integration",
     "subjectMedia": "Media / Press",
     "formMessage": "Message",
-    "formMessagePlaceholder": "Tell us about your inquiry...",
+    "formMessagePlaceholder": "Tell us about your needs...",
     "formSubmit": "Send Message",
     "formSending": "Sending...",
-    "formResponseTime": "We typically respond within 24-48 hours.",
-    "formSuccess": "Thank you! Your message has been sent. We'll get back to you within 24-48 hours.",
+    "formResponseTime": "We typically respond within 24 hours.",
+    "formSuccess": "Thank you! Your message has been sent. We'll get back to you within 24 hours.",
     "formError": "Something went wrong. Please try again or email us directly at contact@meyng.com.",
     "validationNameRequired": "Please enter your name",
     "validationEmailRequired": "Please enter your email address",
@@ -272,14 +348,14 @@
   },
   "notFound": {
     "title": "Page not found",
-    "description": "The page you are looking for does not exist or has been moved. Let us help you find your way.",
+    "description": "The page you are looking for does not exist or has been moved.",
     "backHome": "Back to Home",
     "contact": "Contact Us"
   },
   "privacy": {
     "sectionLabel": "Legal",
     "title": "Privacy Policy",
-    "lastUpdated": "Last updated: February 2026",
+    "lastUpdated": "Last updated: April 2026",
     "intro": "MEYNG (\"we\", \"us\", or \"our\") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website meyng.com.",
     "collectTitle": "Information We Collect",
     "collectDescription": "We may collect the following types of information:",
@@ -310,8 +386,8 @@
   "terms": {
     "sectionLabel": "Legal",
     "title": "Terms of Service",
-    "lastUpdated": "Last updated: February 2026",
-    "intro": "Please read these Terms of Service (\"Terms\") carefully before using the website meyng.com operated by MEYNG, auto-entrepreneur (micro-enterprise) registered in Paris, France. SIRET: 97936105200017. (\"we\", \"us\", or \"our\").",
+    "lastUpdated": "Last updated: April 2026",
+    "intro": "Please read these Terms of Service (\"Terms\") carefully before using the website meyng.com operated by MEYNG (\"we\", \"us\", or \"our\").",
     "acceptanceTitle": "Acceptance of Terms",
     "acceptanceDescription": "By accessing or using our website, you agree to be bound by these Terms. If you do not agree, please do not use our website.",
     "useTitle": "Use of Website",
@@ -319,13 +395,13 @@
     "ipTitle": "Intellectual Property",
     "ipDescription": "All content on this website, including text, graphics, logos, and software, is the property of MEYNG or its licensors and is protected by intellectual property laws. You may not reproduce, distribute, or create derivative works without our prior written consent.",
     "productsTitle": "Products and Services",
-    "productsDescription": "Information about our products (SangoAI, Obêtrack, eNdara, ConnectZ) is provided for informational purposes. Product features, availability, and pricing are subject to change without notice.",
+    "productsDescription": "Information about our products and services is provided for informational purposes. Product features, availability, and pricing are subject to change without notice.",
     "disclaimerTitle": "Disclaimer",
     "disclaimerDescription": "This website is provided \"as is\" without warranties of any kind. We do not guarantee that the website will be uninterrupted, error-free, or free of harmful components.",
     "liabilityTitle": "Limitation of Liability",
     "liabilityDescription": "To the maximum extent permitted by law, MEYNG shall not be liable for any indirect, incidental, or consequential damages arising from your use of this website.",
     "governingTitle": "Governing Law",
-    "governingDescription": "These Terms are governed by the laws of France. MEYNG operates as an auto-entrepreneur (micro-enterprise) under French law. Any disputes shall be subject to the exclusive jurisdiction of the courts of Paris, France.",
+    "governingDescription": "These Terms are governed by the laws of France. Any disputes shall be subject to the exclusive jurisdiction of the courts of Paris, France.",
     "changesTitle": "Changes to Terms",
     "changesDescription": "We reserve the right to modify these Terms at any time. Continued use of the website after changes constitutes acceptance of the new Terms.",
     "contactTitle": "Contact Us",
@@ -343,8 +419,9 @@
     "decline": "Decline"
   },
   "footer": {
-    "description": "Building AI-driven products that expand access — bridging gaps in language, education, food sustainability, and community development for every community.",
+    "description": "The AI infrastructure company for African languages. We build the translation APIs, NLP tools, and language models that power applications across the continent.",
     "navigate": "Navigate",
+    "technology": "Technology",
     "products": "Products",
     "legal": "Legal",
     "privacy": "Privacy Policy",

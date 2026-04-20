@@ -3,7 +3,8 @@ title: "Building NLP for a Language with Zero Digital Resources: The Sango Story
 author: "Michel WENEZOUI"
 role: "Founder & Engineer at MEYNG"
 date: "2026-04-02"
-tags: ["nlp", "sango", "low-resource-languages", "open-source", "african-languages"]
+tags:
+  ["nlp", "sango", "low-resource-languages", "open-source", "african-languages"]
 description: "How we built the first open-source NLP toolkit for Sango, a language spoken by 5 million people but invisible to modern AI."
 ---
 
@@ -54,8 +55,7 @@ const tokens = tokenize("Bara âla, tongana nye?");
 The key design decision was the character class. We defined a regex that explicitly includes every diacritical variant used in Sango orthography, and we match words as sequences of these characters, optionally joined by hyphens:
 
 ```typescript
-const SANGO_LETTER =
-  /[a-zA-ZàâäáãèéêëìîïíòóôöùúûüñçÀÂÄÁÃÈÉÊËÌÎÏÍÒÓÔÖÙÚÛÜÑÇ]/;
+const SANGO_LETTER = /[a-zA-ZàâäáãèéêëìîïíòóôöùúûüñçÀÂÄÁÃÈÉÊËÌÎÏÍÒÓÔÖÙÚÛÜÑÇ]/;
 
 const WORD_PATTERN = new RegExp(
   `${SANGO_LETTER.source}+(?:-${SANGO_LETTER.source}+)*`,
@@ -94,17 +94,17 @@ The stemmer strips known Sango affixes to approximate base forms. It is delibera
 ```typescript
 import { stem, normalize } from "@meyng/sango-nlp";
 
-stem("längö");   // "lä"    -- strips nominalizer -ngö
-stem("wandë");   // "ndë"   -- strips agentive wa-
-stem("nzoni");   // "nzoni" -- no known affixes, left alone
-stem("na");      // "na"    -- exception: particle, never stemmed
+stem("längö"); // "lä"    -- strips nominalizer -ngö
+stem("wandë"); // "ndë"   -- strips agentive wa-
+stem("nzoni"); // "nzoni" -- no known affixes, left alone
+stem("na"); // "na"    -- exception: particle, never stemmed
 ```
 
 The normalizer strips diacritics for search and comparison without losing the ability to work with tonal forms:
 
 ```typescript
-normalize("nzônî");  // "nzoni"
-normalize("längö");  // "lango"
+normalize("nzônî"); // "nzoni"
+normalize("längö"); // "lango"
 ```
 
 This is critical for user-facing search. A user looking up a word might not type the tone marks. The dictionary needs to find "nzoni" when someone searches for "nzônî" and vice versa.
@@ -183,4 +183,4 @@ Every language deserves to exist in the digital world. We are building the tools
 
 ---
 
-*Michel WENEZOUI is the founder and lead engineer at [MEYNG](https://meyng.com), building technology for underrepresented languages. SangoAI is live at [sangoai.sbs](https://sangoai.sbs).*
+_Michel WENEZOUI is the founder and lead engineer at [MEYNG](https://meyng.com), building technology for underrepresented languages. SangoAI is live at [sangoai.sbs](https://sangoai.sbs)._

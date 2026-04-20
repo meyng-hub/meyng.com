@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Serverless = Accessibility — 1200x627</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap");
+      .card {
+        width: 1200px;
+        height: 627px;
+        background: #0a0a0a;
+        position: relative;
+        overflow: hidden;
+        font-family: "Montserrat", sans-serif;
+        display: flex;
+        align-items: center;
+        padding: 60px 80px;
+      }
+      .left {
+        width: 42%;
+      }
+      .hot-take {
+        display: inline-block;
+        background: rgba(239, 68, 68, 0.15);
+        color: #ef4444;
+        font-size: 11px;
+        font-weight: 700;
+        padding: 5px 12px;
+        border-radius: 20px;
+        margin-bottom: 16px;
+        letter-spacing: 2px;
+      }
+      .title {
+        font-size: 36px;
+        font-weight: 700;
+        color: #e9e9e9;
+        line-height: 1.2;
+        margin-bottom: 8px;
+      }
+      .title span {
+        color: #7065ef;
+      }
+      .subtitle {
+        font-size: 15px;
+        font-weight: 400;
+        color: #c4c4c4;
+        line-height: 1.5;
+      }
+      .right {
+        flex: 1;
+        padding-left: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+      .req-card {
+        background: #111111;
+        border: 1px solid #1a1a2e;
+        border-radius: 12px;
+        padding: 16px 24px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      .check {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: rgba(112, 101, 239, 0.15);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .check svg {
+        width: 14px;
+        height: 14px;
+      }
+      .req-text {
+        font-size: 15px;
+        color: #e9e9e9;
+      }
+      .stack-tag {
+        display: inline-block;
+        background: #1a1a2e;
+        color: #7065ef;
+        font-family: "Fira Code", monospace;
+        font-size: 12px;
+        padding: 6px 14px;
+        border-radius: 6px;
+        margin-top: 8px;
+        margin-right: 6px;
+      }
+      .stack-row {
+        margin-top: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="left">
+        <div class="hot-take">HOT TAKE</div>
+        <div class="title">
+          Serverless isn't cost optimization.<br />It's
+          <span>accessibility</span>.
+        </div>
+        <div class="subtitle">
+          When building for unreliable infrastructure, your architecture IS your
+          accessibility strategy.
+        </div>
+        <div class="stack-row">
+          <span class="stack-tag">Lambda</span>
+          <span class="stack-tag">API Gateway</span>
+          <span class="stack-tag">DynamoDB</span>
+          <span class="stack-tag">Vercel</span>
+        </div>
+      </div>
+      <div class="right">
+        <div class="req-card">
+          <div class="check">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#7065EF"
+              stroke-width="3"
+            >
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+          </div>
+          <div class="req-text">Zero cold-start dependencies</div>
+        </div>
+        <div class="req-card">
+          <div class="check">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#7065EF"
+              stroke-width="3"
+            >
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+          </div>
+          <div class="req-text">Pay-per-use (unpredictable traffic)</div>
+        </div>
+        <div class="req-card">
+          <div class="check">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#7065EF"
+              stroke-width="3"
+            >
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+          </div>
+          <div class="req-text">Global edge distribution</div>
+        </div>
+        <div class="req-card">
+          <div class="check">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#7065EF"
+              stroke-width="3"
+            >
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+          </div>
+          <div class="req-text">No servers to maintain on the ground</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

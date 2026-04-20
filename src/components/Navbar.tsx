@@ -36,7 +36,7 @@ export function Navbar() {
 
   const links = [
     { href: "/" as const, label: t("home") },
-    { href: "/products" as const, label: t("products") },
+    { href: "/products" as const, label: t("technology") },
     { href: "/about" as const, label: t("about") },
     { href: "/contact" as const, label: t("contact") },
   ];
@@ -83,7 +83,7 @@ export function Navbar() {
           <Link href="/" className="flex items-center gap-3">
             <Image
               src="/images/logo-full.png"
-              alt="MEYNG — AI-powered accessibility products"
+              alt="MEYNG — AI Infrastructure for African Languages"
               width={140}
               height={50}
               className="h-10 w-auto"
@@ -115,7 +115,7 @@ export function Navbar() {
               href="/contact"
               className="px-6 py-2.5 bg-meyng-purple hover:bg-meyng-deep active:scale-[0.98] text-white text-sm font-semibold rounded-lg transition-all duration-200 shadow-lg shadow-meyng-purple/25 hover:shadow-xl hover:shadow-meyng-purple/30"
             >
-              {t("getInTouch")}
+              {t("cta")}
             </Link>
           </div>
 
@@ -173,7 +173,7 @@ export function Navbar() {
                     onClick={() => setIsOpen(false)}
                     className="flex-1 text-center px-6 py-3 bg-meyng-purple active:scale-[0.98] text-white font-semibold rounded-lg transition-transform"
                   >
-                    {t("getInTouch")}
+                    {t("cta")}
                   </Link>
                 </div>
               </div>

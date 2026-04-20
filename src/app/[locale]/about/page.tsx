@@ -7,19 +7,31 @@ import {
   ArrowRight,
   Target,
   Eye,
-  Heart,
   Lightbulb,
   Shield,
-  Users,
-  Code2,
+  Trophy,
   Globe,
+  Code2,
+  Cpu,
+  AlertTriangle,
+  CheckCircle,
 } from "lucide-react";
 import { SectionHeading } from "@/components/SectionHeading";
 
-const valueKeys = ["innovation", "socialImpact", "accessibility", "community"] as const;
-const valueIcons = [Lightbulb, Heart, Shield, Users];
+const advantageKeys = [
+  "technical",
+  "cultural",
+  "firstMover",
+  "partnerships",
+] as const;
+const advantageIcons = [Cpu, Lightbulb, Trophy, Globe];
 
-const milestoneKeys = ["founded", "sangoaiLaunch", "obetrackEndara", "expanding"] as const;
+const milestoneKeys = [
+  "founded",
+  "sangoaiLaunch",
+  "apiPublished",
+  "metaLive",
+] as const;
 
 export default function AboutPage() {
   const t = useTranslations("about");
@@ -83,17 +95,84 @@ export default function AboutPage() {
 
       <div className="section-divider max-w-4xl mx-auto" />
 
-      {/* Core Values */}
+      {/* Why African Languages */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <SectionHeading
-            label={t("valuesLabel")}
-            title={t("valuesTitle")}
-          />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className="flex items-center gap-2 mb-4">
+                <AlertTriangle className="w-5 h-5 text-amber-400" />
+                <span className="text-amber-400 text-sm font-semibold uppercase tracking-widest">
+                  {t("sectionLabel")}
+                </span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-meyng-light mb-4">
+                {t("whyTitle")}
+              </h2>
+              <p className="text-meyng-silver leading-relaxed mb-6">
+                {t("whyDescription")}
+              </p>
+
+              <ul className="space-y-3">
+                {[0, 1, 2, 3].map((i) => (
+                  <li key={i} className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0" />
+                    <span className="text-meyng-silver text-sm">
+                      {t(`whyPoints.${i}`)}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
+            {/* Market visualization */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="grid grid-cols-2 gap-4"
+            >
+              {[
+                { value: "2,000+", label: "Languages", color: "text-meyng-purple" },
+                { value: "1.4B", label: "Speakers", color: "text-emerald-400" },
+                { value: "<5%", label: "Have NLP", color: "text-red-400" },
+                { value: "$4.8B", label: "Market", color: "text-amber-400" },
+              ].map((stat, i) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: i * 0.1 }}
+                  className="bg-meyng-card rounded-2xl border border-meyng-border p-6 text-center"
+                >
+                  <p className={`text-2xl md:text-3xl font-extrabold ${stat.color} mb-1`}>
+                    {stat.value}
+                  </p>
+                  <p className="text-meyng-silver/60 text-xs">{stat.label}</p>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      <div className="section-divider max-w-4xl mx-auto" />
+
+      {/* Competitive Advantage */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <SectionHeading label={t("valuesLabel")} title={t("valuesTitle")} />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {valueKeys.map((key, i) => {
-              const Icon = valueIcons[i];
+            {advantageKeys.map((key, i) => {
+              const Icon = advantageIcons[i];
               return (
                 <motion.div
                   key={key}
@@ -126,10 +205,7 @@ export default function AboutPage() {
       {/* Team / Founder */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <SectionHeading
-            label={t("teamLabel")}
-            title={t("teamTitle")}
-          />
+          <SectionHeading label={t("teamLabel")} title={t("teamTitle")} />
 
           <div className="max-w-2xl mx-auto">
             <motion.div
@@ -157,12 +233,12 @@ export default function AboutPage() {
               <div className="flex items-center justify-center gap-4">
                 <div className="flex items-center gap-2 text-meyng-silver/70 text-xs">
                   <Code2 className="w-4 h-4" />
-                  <span>Software Engineer</span>
+                  <span>{t("founderJobTitle")}</span>
                 </div>
                 <div className="w-1 h-1 rounded-full bg-meyng-silver/30" />
                 <div className="flex items-center gap-2 text-meyng-silver/70 text-xs">
                   <Globe className="w-4 h-4" />
-                  <span>Paris, France</span>
+                  <span>{t("founderLocation")}</span>
                 </div>
               </div>
             </motion.div>
@@ -175,10 +251,7 @@ export default function AboutPage() {
       {/* Timeline */}
       <section className="py-24">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
-          <SectionHeading
-            label={t("journeyLabel")}
-            title={t("journeyTitle")}
-          />
+          <SectionHeading label={t("journeyLabel")} title={t("journeyTitle")} />
 
           <div className="relative">
             {/* Vertical line */}

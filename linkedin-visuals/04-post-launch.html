@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Post 1 — Launch Announcement — 1200x627</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+      .card {
+        width: 1200px;
+        height: 627px;
+        background: #0a0a0a;
+        position: relative;
+        overflow: hidden;
+        font-family: "Montserrat", sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .glow {
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(
+          circle,
+          rgba(112, 101, 239, 0.12) 0%,
+          transparent 70%
+        );
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .content {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+      }
+      .logo {
+        font-size: 72px;
+        font-weight: 800;
+        color: #ffffff;
+        margin-bottom: 8px;
+      }
+      .logo-sub {
+        font-size: 16px;
+        font-weight: 500;
+        color: #e9e9e9;
+        letter-spacing: 8px;
+        margin-bottom: 40px;
+      }
+      .tagline {
+        font-size: 48px;
+        font-weight: 700;
+        color: #e9e9e9;
+        margin-bottom: 24px;
+      }
+      .line {
+        width: 100px;
+        height: 3px;
+        background: #7065ef;
+        margin: 0 auto 24px;
+        border-radius: 2px;
+      }
+      .pillars {
+        font-size: 18px;
+        font-weight: 400;
+        color: #c4c4c4;
+        letter-spacing: 2px;
+      }
+      .pillars span {
+        color: rgba(112, 101, 239, 0.5);
+        margin: 0 12px;
+      }
+      .url {
+        position: absolute;
+        bottom: 30px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #7065ef;
+        letter-spacing: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="glow"></div>
+      <div class="content">
+        <div class="logo">M</div>
+        <div class="logo-sub">MEYNG</div>
+        <div class="tagline">AI That Matters</div>
+        <div class="line"></div>
+        <div class="pillars">
+          Language <span>|</span> Education <span>|</span> Sustainability
+          <span>|</span> Community
+        </div>
+      </div>
+      <div class="url">meyng.com</div>
+    </div>
+  </body>
+</html>

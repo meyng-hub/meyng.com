@@ -51,7 +51,9 @@ export function TranslationDemo() {
             const typeTo = () => {
               if (toIdx <= phrase.to.length) {
                 setDisplayedTo(phrase.to.slice(0, toIdx));
-                setConfidence(Math.min(97, Math.round((toIdx / phrase.to.length) * 97)));
+                setConfidence(
+                  Math.min(97, Math.round((toIdx / phrase.to.length) * 97)),
+                );
                 toIdx++;
                 toTimeout = setTimeout(typeTo, 35);
               } else {
@@ -99,7 +101,9 @@ export function TranslationDemo() {
             <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/60" />
             <div className="w-2.5 h-2.5 rounded-full bg-green-500/60" />
           </div>
-          <span className="text-meyng-silver/50 text-xs ml-2 font-mono">sangoai.sbs</span>
+          <span className="text-meyng-silver/50 text-xs ml-2 font-mono">
+            sangoai.sbs
+          </span>
         </div>
 
         {/* Language selector */}
@@ -127,11 +131,22 @@ export function TranslationDemo() {
             {isTranslating ? (
               <div className="flex items-center gap-2">
                 <div className="flex gap-1">
-                  <div className="w-1.5 h-1.5 rounded-full bg-meyng-purple animate-bounce" style={{ animationDelay: "0ms" }} />
-                  <div className="w-1.5 h-1.5 rounded-full bg-meyng-purple animate-bounce" style={{ animationDelay: "150ms" }} />
-                  <div className="w-1.5 h-1.5 rounded-full bg-meyng-purple animate-bounce" style={{ animationDelay: "300ms" }} />
+                  <div
+                    className="w-1.5 h-1.5 rounded-full bg-meyng-purple animate-bounce"
+                    style={{ animationDelay: "0ms" }}
+                  />
+                  <div
+                    className="w-1.5 h-1.5 rounded-full bg-meyng-purple animate-bounce"
+                    style={{ animationDelay: "150ms" }}
+                  />
+                  <div
+                    className="w-1.5 h-1.5 rounded-full bg-meyng-purple animate-bounce"
+                    style={{ animationDelay: "300ms" }}
+                  />
                 </div>
-                <span className="text-meyng-silver/50 text-xs">Translating...</span>
+                <span className="text-meyng-silver/50 text-xs">
+                  Translating...
+                </span>
               </div>
             ) : (
               <p className="text-meyng-purple text-sm font-medium leading-relaxed">
@@ -146,7 +161,9 @@ export function TranslationDemo() {
           <div className="px-4 py-3 border-t border-meyng-border">
             <div className="flex items-center justify-between mb-1">
               <span className="text-meyng-silver/50 text-xs">Confidence</span>
-              <span className="text-meyng-purple text-xs font-mono">{confidence}%</span>
+              <span className="text-meyng-purple text-xs font-mono">
+                {confidence}%
+              </span>
             </div>
             <div className="h-1 rounded-full bg-meyng-dark overflow-hidden">
               <motion.div

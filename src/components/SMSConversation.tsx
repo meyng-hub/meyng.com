@@ -10,11 +10,20 @@ interface Message {
 }
 
 const conversation: Message[] = [
-  { sender: "ai", text: "Welcome to eNdara! Today: Math Lesson 3. What is 15 x 7?" },
+  {
+    sender: "ai",
+    text: "Welcome to eNdara! Today: Math Lesson 3. What is 15 x 7?",
+  },
   { sender: "student", text: "105" },
-  { sender: "ai", text: "Correct! Great job. Next: What is the square root of 144?" },
+  {
+    sender: "ai",
+    text: "Correct! Great job. Next: What is the square root of 144?",
+  },
   { sender: "student", text: "12" },
-  { sender: "ai", text: "Perfect! You scored 100%. Lesson 4 unlocked. Reply START to continue." },
+  {
+    sender: "ai",
+    text: "Perfect! You scored 100%. Lesson 4 unlocked. Reply START to continue.",
+  },
 ];
 
 export function SMSConversation() {
@@ -33,10 +42,13 @@ export function SMSConversation() {
         timers.push(setTimeout(() => setIsTyping(true), 800 + i * 1200 - 400));
       }
       timers.push(
-        setTimeout(() => {
-          setIsTyping(false);
-          setVisibleMessages(i + 1);
-        }, 800 + i * 1200)
+        setTimeout(
+          () => {
+            setIsTyping(false);
+            setVisibleMessages(i + 1);
+          },
+          800 + i * 1200,
+        ),
       );
     });
 
@@ -94,9 +106,18 @@ export function SMSConversation() {
             >
               <div className="px-3 py-2 rounded-xl bg-meyng-card border border-meyng-border rounded-bl-sm">
                 <div className="flex gap-1">
-                  <div className="w-1.5 h-1.5 rounded-full bg-meyng-silver/40 animate-bounce" style={{ animationDelay: "0ms" }} />
-                  <div className="w-1.5 h-1.5 rounded-full bg-meyng-silver/40 animate-bounce" style={{ animationDelay: "150ms" }} />
-                  <div className="w-1.5 h-1.5 rounded-full bg-meyng-silver/40 animate-bounce" style={{ animationDelay: "300ms" }} />
+                  <div
+                    className="w-1.5 h-1.5 rounded-full bg-meyng-silver/40 animate-bounce"
+                    style={{ animationDelay: "0ms" }}
+                  />
+                  <div
+                    className="w-1.5 h-1.5 rounded-full bg-meyng-silver/40 animate-bounce"
+                    style={{ animationDelay: "150ms" }}
+                  />
+                  <div
+                    className="w-1.5 h-1.5 rounded-full bg-meyng-silver/40 animate-bounce"
+                    style={{ animationDelay: "300ms" }}
+                  />
                 </div>
               </div>
             </motion.div>
@@ -123,7 +144,9 @@ export function SMSConversation() {
         className="absolute -bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-green-500/20 border border-green-500/30"
       >
         <Wifi className="w-3 h-3 text-green-400" />
-        <span className="text-green-400 text-[10px] font-semibold whitespace-nowrap">No internet required</span>
+        <span className="text-green-400 text-[10px] font-semibold whitespace-nowrap">
+          No internet required
+        </span>
       </motion.div>
     </motion.div>
   );
