@@ -35,11 +35,41 @@ const techKeys = ["api", "nlp", "model", "deploy"] as const;
 const techIcons = [Code, Cpu, Globe, MessageSquare];
 
 const languageRoadmap = [
-  { key: "sango", color: "bg-emerald-500", borderColor: "border-emerald-500/30", textColor: "text-emerald-400", live: true },
-  { key: "lingala", color: "bg-blue-500", borderColor: "border-blue-500/30", textColor: "text-blue-400", live: false },
-  { key: "wolof", color: "bg-blue-500", borderColor: "border-blue-500/30", textColor: "text-blue-400", live: false },
-  { key: "bambara", color: "bg-slate-500", borderColor: "border-slate-500/30", textColor: "text-slate-400", live: false },
-  { key: "kirundi", color: "bg-slate-500", borderColor: "border-slate-500/30", textColor: "text-slate-400", live: false },
+  {
+    key: "sango",
+    color: "bg-emerald-500",
+    borderColor: "border-emerald-500/30",
+    textColor: "text-emerald-400",
+    live: true,
+  },
+  {
+    key: "lingala",
+    color: "bg-blue-500",
+    borderColor: "border-blue-500/30",
+    textColor: "text-blue-400",
+    live: false,
+  },
+  {
+    key: "wolof",
+    color: "bg-blue-500",
+    borderColor: "border-blue-500/30",
+    textColor: "text-blue-400",
+    live: false,
+  },
+  {
+    key: "bambara",
+    color: "bg-slate-500",
+    borderColor: "border-slate-500/30",
+    textColor: "text-slate-400",
+    live: false,
+  },
+  {
+    key: "kirundi",
+    color: "bg-slate-500",
+    borderColor: "border-slate-500/30",
+    textColor: "text-slate-400",
+    live: false,
+  },
 ] as const;
 
 const valueKeys = ["firstMover", "production", "scalable"] as const;
@@ -245,7 +275,11 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {(
               [
-                { key: "languages", value: "2,000+", color: "text-meyng-purple" },
+                {
+                  key: "languages",
+                  value: "2,000+",
+                  color: "text-meyng-purple",
+                },
                 { key: "speakers", value: "1.4B+", color: "text-emerald-400" },
                 { key: "nlpCoverage", value: "<5%", color: "text-red-400" },
                 { key: "tam", value: "$4.8B", color: "text-amber-400" },
@@ -259,7 +293,9 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="bg-meyng-card rounded-2xl border border-meyng-border p-6 text-center"
               >
-                <p className={`text-3xl md:text-4xl font-extrabold ${item.color} mb-2`}>
+                <p
+                  className={`text-3xl md:text-4xl font-extrabold ${item.color} mb-2`}
+                >
                   {item.value}
                 </p>
                 <p className="text-meyng-light text-sm font-semibold mb-1">
@@ -464,7 +500,7 @@ export default function Home() {
             {t("builtOn.title")}
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {(["aws", "anthropic", "huggingface", "meta"] as const).map(
+            {(["cloud", "ai", "research", "messaging"] as const).map(
               (key, i) => (
                 <motion.div
                   key={key}

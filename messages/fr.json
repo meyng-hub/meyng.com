@@ -103,14 +103,14 @@
   "builtOn": {
     "sectionLabel": "Infrastructure",
     "title": "Construit sur une infrastructure de classe mondiale",
-    "aws": "Plateforme Cloud",
-    "awsSub": "Calcul et base de données de niveau entreprise",
-    "anthropic": "IA Fondamentale",
-    "anthropicSub": "Modèles linguistiques de pointe",
-    "huggingface": "Recherche Ouverte",
-    "huggingfaceSub": "Modèles et datasets publiés",
-    "meta": "Messagerie",
-    "metaSub": "WhatsApp Business Platform"
+    "cloud": "Plateforme Cloud",
+    "cloudSub": "Calcul et base de données de niveau entreprise",
+    "ai": "IA Fondamentale",
+    "aiSub": "Modèles linguistiques de pointe",
+    "research": "Recherche Ouverte",
+    "researchSub": "Modèles et datasets publiés",
+    "messaging": "Messagerie",
+    "messagingSub": "WhatsApp Business Platform"
   },
   "stats": {
     "languages": "Langues supportées",
