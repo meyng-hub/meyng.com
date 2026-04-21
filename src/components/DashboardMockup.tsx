@@ -40,7 +40,7 @@ export function DashboardMockup() {
             <div className="w-2.5 h-2.5 rounded-full bg-green-500/60" />
           </div>
           <span className="text-meyng-silver/50 text-xs ml-2 font-mono">
-            connectz.app/dashboard
+            sangoai.sbs/api/v1/dashboard
           </span>
         </div>
 

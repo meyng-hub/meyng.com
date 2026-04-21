@@ -100,7 +100,7 @@ export default async function OGImage({
           marginTop: "40px",
         }}
       >
-        {["SangoAI", "Obêtrack", "eNdara", "ConnectZ"].map((name) => (
+        {["SangoAI", "Obêtrack", "eNdara"].map((name) => (
           <div
             key={name}
             style={{
