@@ -1,0 +1,95 @@
+name: Production Smoke Test
+
+# Run after every push to main (i.e., every Vercel production deploy)
+# and daily at 08:00 UTC to catch silent regressions
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '0 8 * * *'
+  workflow_dispatch:
+
+jobs:
+  smoke-test:
+    name: Live site content check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for Vercel production deploy
+        if: github.event_name == 'push'
+        run: |
+          echo "Waiting 90s for Vercel to build and promote..."
+          sleep 90
+
+      - name: Fetch homepage (EN)
+        id: fetch_en
+        run: |
+          BODY=$(curl -sL https://www.meyng.com/en)
+          echo "$BODY" > /tmp/homepage_en.html
+          echo "fetched=$(echo "$BODY" | wc -c) bytes"
+
+      - name: Assert new hero headline present
+        run: |
+          if ! grep -qi "Building the Language Layer" /tmp/homepage_en.html; then
+            echo "FAIL: Hero headline 'Building the Language Layer' not found"
+            echo "First 500 chars of response:"
+            head -c 500 /tmp/homepage_en.html
+            exit 1
+          fi
+          echo "PASS: Hero headline present"
+
+      - name: Assert SangoAI flagship section present
+        run: |
+          if ! grep -qi "SangoAI" /tmp/homepage_en.html; then
+            echo "FAIL: SangoAI not found on homepage"
+            exit 1
+          fi
+          echo "PASS: SangoAI present"
+
+      - name: Assert ConnectZ absent
+        run: |
+          if grep -qi "ConnectZ" /tmp/homepage_en.html; then
+            echo "FAIL: ConnectZ found on homepage — discontinued project must not appear"
+            grep -i "ConnectZ" /tmp/homepage_en.html | head -5
+            exit 1
+          fi
+          echo "PASS: ConnectZ absent"
+
+      - name: Assert language roadmap present
+        run: |
+          if ! grep -qi "Lingala\|Wolof\|Bambara\|Kirundi\|roadmap\|Language Expansion" /tmp/homepage_en.html; then
+            echo "FAIL: Language roadmap section missing"
+            exit 1
+          fi
+          echo "PASS: Language roadmap present"
+
+      - name: OPSEC check — no infra names in public HTML
+        run: |
+          FAIL=0
+          for term in "Lambda" "DynamoDB" "Bedrock" "Claude Sonnet" "claude-sonnet" "Next.js" "Vercel" "Flask" "Docker"; do
+            if grep -q "$term" /tmp/homepage_en.html; then
+              echo "OPSEC FAIL: '$term' found in public HTML"
+              FAIL=1
+            fi
+          done
+          if [ $FAIL -eq 1 ]; then
+            exit 1
+          fi
+          echo "PASS: OPSEC clean"
+
+      - name: French version loads
+        run: |
+          STATUS=$(curl -sLo /dev/null -w "%{http_code}" https://www.meyng.com/fr)
+          if [ "$STATUS" != "200" ]; then
+            echo "FAIL: French version returned $STATUS"
+            exit 1
+          fi
+          echo "PASS: French version 200 OK"
+
+      - name: HTTP status check (bare domain redirect)
+        run: |
+          STATUS=$(curl -so /dev/null -w "%{http_code}" https://meyng.com)
+          if [ "$STATUS" != "200" ] && [ "$STATUS" != "301" ] && [ "$STATUS" != "307" ]; then
+            echo "FAIL: meyng.com returned $STATUS"
+            exit 1
+          fi
+          echo "PASS: meyng.com HTTP $STATUS"
