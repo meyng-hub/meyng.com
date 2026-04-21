@@ -5,7 +5,12 @@ import { useRef, useState, useEffect } from "react";
 import { Leaf, Bell, TrendingDown } from "lucide-react";
 
 const inventory = [
-  { name: "Tomatoes", days: 1, color: "bg-red-500", status: "Expiring tomorrow" },
+  {
+    name: "Tomatoes",
+    days: 1,
+    color: "bg-red-500",
+    status: "Expiring tomorrow",
+  },
   { name: "Bananas", days: 3, color: "bg-amber-500", status: "3 days left" },
   { name: "Milk", days: 2, color: "bg-amber-500", status: "2 days left" },
   { name: "Spinach", days: 5, color: "bg-green-500", status: "5 days left" },
@@ -25,7 +30,12 @@ export function PhoneMockup() {
     inventory.forEach((_, i) => {
       timers.push(setTimeout(() => setVisibleItems(i + 1), 300 + i * 200));
     });
-    timers.push(setTimeout(() => setShowNotification(true), 300 + inventory.length * 200 + 500));
+    timers.push(
+      setTimeout(
+        () => setShowNotification(true),
+        300 + inventory.length * 200 + 500,
+      ),
+    );
 
     return () => timers.forEach(clearTimeout);
   }, [isInView]);
@@ -45,7 +55,9 @@ export function PhoneMockup() {
         <div className="rounded-[2rem] bg-meyng-dark overflow-hidden">
           {/* Status bar */}
           <div className="flex items-center justify-between px-6 pt-3 pb-1">
-            <span className="text-meyng-silver/50 text-[10px] font-mono">9:41</span>
+            <span className="text-meyng-silver/50 text-[10px] font-mono">
+              9:41
+            </span>
             <div className="w-20 h-5 rounded-full bg-meyng-card" />
             <div className="flex gap-1">
               <div className="w-3 h-1.5 rounded-sm bg-meyng-silver/30" />
@@ -57,16 +69,22 @@ export function PhoneMockup() {
           <div className="px-4 pt-2 pb-3">
             <div className="flex items-center gap-2 mb-1">
               <Leaf className="w-4 h-4 text-green-400" />
-              <span className="text-meyng-light text-sm font-bold">Obêtrack</span>
+              <span className="text-meyng-light text-sm font-bold">
+                Obêtrack
+              </span>
             </div>
-            <p className="text-meyng-silver/60 text-[10px]">Your fresh inventory</p>
+            <p className="text-meyng-silver/60 text-[10px]">
+              Your fresh inventory
+            </p>
           </div>
 
           {/* Waste reduction stat */}
           <div className="mx-4 mb-3 p-3 rounded-xl bg-green-500/10 border border-green-500/20">
             <div className="flex items-center gap-2">
               <TrendingDown className="w-3.5 h-3.5 text-green-400" />
-              <span className="text-green-400 text-xs font-semibold">32% less waste this month</span>
+              <span className="text-green-400 text-xs font-semibold">
+                32% less waste this month
+              </span>
             </div>
           </div>
 
@@ -84,7 +102,9 @@ export function PhoneMockup() {
                   <div className={`w-2 h-2 rounded-full ${item.color}`} />
                   <span className="text-meyng-light text-xs">{item.name}</span>
                 </div>
-                <span className={`text-[10px] ${item.days <= 1 ? "text-red-400" : "text-meyng-silver/60"}`}>
+                <span
+                  className={`text-[10px] ${item.days <= 1 ? "text-red-400" : "text-meyng-silver/60"}`}
+                >
                   {item.status}
                 </span>
               </motion.div>
@@ -113,8 +133,12 @@ export function PhoneMockup() {
           <div className="flex items-start gap-2">
             <Bell className="w-3.5 h-3.5 text-amber-400 mt-0.5 flex-shrink-0" />
             <div>
-              <p className="text-meyng-light text-[10px] font-semibold">2 items expiring tomorrow</p>
-              <p className="text-meyng-silver/50 text-[9px] mt-0.5">Tap to view suggestions</p>
+              <p className="text-meyng-light text-[10px] font-semibold">
+                2 items expiring tomorrow
+              </p>
+              <p className="text-meyng-silver/50 text-[9px] mt-0.5">
+                Tap to view suggestions
+              </p>
             </div>
           </div>
         </motion.div>

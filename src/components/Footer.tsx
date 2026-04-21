@@ -10,7 +10,7 @@ export function Footer() {
 
   const navLinks = [
     { href: "/" as const, label: t("nav.home") },
-    { href: "/products" as const, label: t("nav.products") },
+    { href: "/products" as const, label: t("nav.technology") },
     { href: "/about" as const, label: t("nav.about") },
     { href: "/contact" as const, label: t("nav.contact") },
   ];
@@ -23,7 +23,7 @@ export function Footer() {
           <div className="md:col-span-2">
             <Image
               src="/images/logo-full.png"
-              alt="MEYNG — AI-powered accessibility products"
+              alt="MEYNG — AI Infrastructure for African Languages"
               width={120}
               height={44}
               className="h-10 w-auto mb-4"
@@ -58,18 +58,16 @@ export function Footer() {
               {t("footer.products")}
             </h4>
             <ul className="space-y-3">
-              {["SangoAI", "Obêtrack", "eNdara", "ConnectZ"].map(
-                (product) => (
-                  <li key={product}>
-                    <Link
-                      href="/products"
-                      className="text-meyng-silver hover:text-meyng-purple transition-colors text-sm underline-offset-4 hover:underline"
-                    >
-                      {product}
-                    </Link>
-                  </li>
-                )
-              )}
+              {["SangoAI", "eNdara", "Obêtrack"].map((product) => (
+                <li key={product}>
+                  <Link
+                    href="/products"
+                    className="text-meyng-silver hover:text-meyng-purple transition-colors text-sm underline-offset-4 hover:underline"
+                  >
+                    {product}
+                  </Link>
+                </li>
+              ))}
             </ul>
 
             {/* Legal */}

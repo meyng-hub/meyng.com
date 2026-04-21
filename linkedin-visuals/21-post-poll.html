@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Poll — AI for Africa — 1200x627</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+      .card {
+        width: 1200px;
+        height: 627px;
+        background: #0a0a0a;
+        position: relative;
+        overflow: hidden;
+        font-family: "Montserrat", sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 50px 80px;
+      }
+      .question {
+        font-size: 28px;
+        font-weight: 700;
+        color: #e9e9e9;
+        text-align: center;
+        margin-bottom: 40px;
+        line-height: 1.4;
+      }
+      .options {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        width: 100%;
+        max-width: 600px;
+      }
+      .option {
+        background: #111111;
+        border: 1px solid #1a1a2e;
+        border-radius: 12px;
+        padding: 18px 24px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        transition: border-color 0.2s;
+      }
+      .option:hover {
+        border-color: #7065ef;
+      }
+      .letter {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: rgba(112, 101, 239, 0.15);
+        color: #7065ef;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+      .option-text {
+        font-size: 17px;
+        font-weight: 500;
+        color: #e9e9e9;
+      }
+      .cta {
+        margin-top: 36px;
+        font-size: 15px;
+        color: #7065ef;
+        font-weight: 500;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="question">
+        If you could solve ONE problem<br />with AI for communities in Africa?
+      </div>
+      <div class="options">
+        <div class="option">
+          <div class="letter">A</div>
+          <div class="option-text">Healthcare access</div>
+        </div>
+        <div class="option">
+          <div class="letter">B</div>
+          <div class="option-text">Language preservation</div>
+        </div>
+        <div class="option">
+          <div class="letter">C</div>
+          <div class="option-text">Education delivery</div>
+        </div>
+        <div class="option">
+          <div class="letter">D</div>
+          <div class="option-text">Agricultural efficiency</div>
+        </div>
+        <div class="option">
+          <div class="letter">E</div>
+          <div class="option-text">Financial inclusion</div>
+        </div>
+      </div>
+      <div class="cta">Drop your answer in the comments</div>
+    </div>
+  </body>
+</html>

@@ -41,8 +41,7 @@ export default function ContactPage() {
         return "";
       case "message":
         if (value.trim().length === 0) return t("validationMessageRequired");
-        if (value.trim().length < 10)
-          return t("validationMessageMinLength");
+        if (value.trim().length < 10) return t("validationMessageMinLength");
         return "";
       default:
         return "";
@@ -50,7 +49,7 @@ export default function ContactPage() {
   }
 
   function handleBlur(
-    e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) {
     const { name, value } = e.target;
     setTouched((prev) => ({ ...prev, [name]: true }));
@@ -317,9 +316,7 @@ export default function ContactPage() {
                     <option value="partnership">
                       {t("subjectPartnership")}
                     </option>
-                    <option value="investment">
-                      {t("subjectInvestment")}
-                    </option>
+                    <option value="investment">{t("subjectInvestment")}</option>
                     <option value="grant">{t("subjectGrant")}</option>
                     <option value="product">{t("subjectProduct")}</option>
                     <option value="media">{t("subjectMedia")}</option>

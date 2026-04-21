@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>LinkedIn Personal Banner — 1584x396</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap");
+      .banner {
+        width: 1584px;
+        height: 396px;
+        background: linear-gradient(
+          to right,
+          #0a0a0a 0%,
+          #1a1040 25%,
+          #28208c 50%,
+          #1a1040 75%,
+          #0a0a0a 100%
+        );
+        position: relative;
+        overflow: hidden;
+        font-family: "Montserrat", sans-serif;
+      }
+      /* Dot grid pattern */
+      .dots {
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(
+          circle,
+          rgba(112, 101, 239, 0.08) 1px,
+          transparent 1px
+        );
+        background-size: 24px 24px;
+      }
+      /* Geometric shapes */
+      .shape {
+        position: absolute;
+        border-radius: 50%;
+        border: 1px solid rgba(112, 101, 239, 0.15);
+      }
+      .shape-1 {
+        width: 120px;
+        height: 120px;
+        top: 30px;
+        left: 80px;
+      }
+      .shape-2 {
+        width: 80px;
+        height: 80px;
+        top: 200px;
+        left: 300px;
+      }
+      .shape-3 {
+        width: 60px;
+        height: 60px;
+        top: 60px;
+        left: 500px;
+      }
+      .shape-4 {
+        width: 100px;
+        height: 100px;
+        top: 250px;
+        left: 700px;
+      }
+      .shape-5 {
+        width: 40px;
+        height: 40px;
+        top: 100px;
+        left: 900px;
+      }
+      .hex {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        opacity: 0.08;
+      }
+      .hex svg {
+        fill: #7065ef;
+      }
+      .hex-1 {
+        top: 150px;
+        left: 200px;
+      }
+      .hex-2 {
+        top: 50px;
+        left: 750px;
+      }
+      .hex-3 {
+        top: 280px;
+        left: 1100px;
+      }
+      /* Text */
+      .text-block {
+        position: absolute;
+        right: 120px;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: right;
+      }
+      .text-block h1 {
+        font-size: 32px;
+        font-weight: 700;
+        color: #e9e9e9;
+        letter-spacing: 6px;
+      }
+      .text-block h1 span {
+        color: rgba(112, 101, 239, 0.6);
+        margin: 0 12px;
+      }
+      /* Subtle line accent */
+      .accent-line {
+        position: absolute;
+        bottom: 60px;
+        right: 120px;
+        width: 200px;
+        height: 2px;
+        background: linear-gradient(
+          to right,
+          transparent,
+          #7065ef,
+          transparent
+        );
+        opacity: 0.4;
+      }
+      /* Watermark logo */
+      .watermark {
+        position: absolute;
+        bottom: 20px;
+        right: 30px;
+        opacity: 0.1;
+      }
+      .watermark svg {
+        width: 40px;
+        height: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="banner">
+      <div class="dots"></div>
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+      <div class="shape shape-4"></div>
+      <div class="shape shape-5"></div>
+
+      <svg class="hex hex-1" viewBox="0 0 100 100">
+        <polygon points="50,3 97,25 97,75 50,97 3,75 3,25" fill="#7065EF" />
+      </svg>
+      <svg class="hex hex-2" viewBox="0 0 100 100">
+        <polygon points="50,3 97,25 97,75 50,97 3,75 3,25" fill="#7065EF" />
+      </svg>
+      <svg class="hex hex-3" viewBox="0 0 100 100">
+        <polygon points="50,3 97,25 97,75 50,97 3,75 3,25" fill="#7065EF" />
+      </svg>
+
+      <div class="text-block">
+        <h1>AI <span>|</span> Cloud <span>|</span> Impact</h1>
+      </div>
+      <div class="accent-line"></div>
+    </div>
+  </body>
+</html>

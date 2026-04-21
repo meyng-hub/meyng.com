@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>MEYNG Company Logo — 300x300</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap");
+      .logo-box {
+        width: 300px;
+        height: 300px;
+        background: #0a0a0a;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        font-family: "Montserrat", sans-serif;
+      }
+      .logo-box .m {
+        font-size: 96px;
+        font-weight: 800;
+        color: #7065ef;
+        line-height: 1;
+      }
+      .logo-box .name {
+        font-size: 22px;
+        font-weight: 500;
+        color: #e9e9e9;
+        letter-spacing: 8px;
+        margin-top: 4px;
+      }
+      /* Subtle glow */
+      .glow {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background: radial-gradient(
+          circle,
+          rgba(112, 101, 239, 0.1) 0%,
+          transparent 70%
+        );
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="logo-box">
+      <div class="glow"></div>
+      <div class="m">M</div>
+      <div class="name">MEYNG</div>
+    </div>
+  </body>
+</html>

@@ -16,7 +16,7 @@ const jsonResponse = `{
   "confidence": 0.97,
   "source_lang": "en",
   "target_lang": "sg",
-  "model": "claude-sonnet-4"
+  "model": "sango-v1"
 }`;
 
 export function APIShowcase() {
@@ -71,7 +71,9 @@ export function APIShowcase() {
               <div className="w-2.5 h-2.5 rounded-full bg-green-500/60" />
             </div>
             <Terminal className="w-3.5 h-3.5 text-meyng-silver/40 ml-2" />
-            <span className="text-meyng-silver/50 text-xs font-mono">terminal</span>
+            <span className="text-meyng-silver/50 text-xs font-mono">
+              terminal
+            </span>
           </div>
           <button
             onClick={handleCopy}
@@ -90,17 +92,39 @@ export function APIShowcase() {
           {/* Command */}
           <div className="mb-4">
             <span className="text-green-400">$</span>{" "}
-            <span className="text-meyng-light">{curlCommand.split("\n").map((line, i) => (
-              <span key={i}>
-                {i > 0 && <><br />&nbsp;&nbsp;</>}
-                {line.split(" ").map((word, j) => {
-                  if (word.startsWith('"') || word.startsWith("'")) return <span key={j} className="text-amber-300">{word} </span>;
-                  if (word.startsWith("-")) return <span key={j} className="text-cyan-400">{word} </span>;
-                  if (word.startsWith("http")) return <span key={j} className="text-meyng-purple">{word} </span>;
-                  return <span key={j}>{word} </span>;
-                })}
-              </span>
-            ))}</span>
+            <span className="text-meyng-light">
+              {curlCommand.split("\n").map((line, i) => (
+                <span key={i}>
+                  {i > 0 && (
+                    <>
+                      <br />
+                      &nbsp;&nbsp;
+                    </>
+                  )}
+                  {line.split(" ").map((word, j) => {
+                    if (word.startsWith('"') || word.startsWith("'"))
+                      return (
+                        <span key={j} className="text-amber-300">
+                          {word}{" "}
+                        </span>
+                      );
+                    if (word.startsWith("-"))
+                      return (
+                        <span key={j} className="text-cyan-400">
+                          {word}{" "}
+                        </span>
+                      );
+                    if (word.startsWith("http"))
+                      return (
+                        <span key={j} className="text-meyng-purple">
+                          {word}{" "}
+                        </span>
+                      );
+                    return <span key={j}>{word} </span>;
+                  })}
+                </span>
+              ))}
+            </span>
           </div>
 
           {/* Response */}
