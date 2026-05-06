@@ -23,8 +23,8 @@
   "traction": {
     "api": "Production API",
     "apiSub": "Live & serving requests",
-    "vocab": "760+ Words",
-    "vocabSub": "Trilingual vocabulary",
+    "vocab": "611 Words",
+    "vocabSub": "Verified trilingual entries",
     "hf": "Open Research",
     "hfSub": "Model & dataset published",
     "whatsapp": "WhatsApp Bot",
@@ -38,9 +38,9 @@
       "Production REST API with tiered pricing",
       "Real-time translation (French, English, Sango)",
       "Conversational AI with advanced language models",
-      "760+ trilingual vocabulary with pronunciation guides",
+      "611 verified trilingual vocabulary with pronunciation guides",
       "Open-source NLP toolkit for Sango processing",
-      "Fine-tuned language model with published datasets"
+      "Vocabulary-augmented prompting research published on HuggingFace"
     ],
     "visitSite": "Visit SangoAI",
     "tryApi": "Try the API"
@@ -72,7 +72,7 @@
     },
     "model": {
       "title": "Language Models",
-      "description": "Custom fine-tuned language models for Sango tasks. 760+ word parallel corpus (Sango-French-English). Published openly for the AI research community."
+      "description": "Vocabulary-augmented prompting with foundation AI — no fine-tuning required. 611 verified-word Sango lexicon (Sango-French-English). Methodology and dataset published openly for the AI research community on HuggingFace."
     },
     "deploy": {
       "title": "Deployment Proof",
@@ -82,23 +82,26 @@
   "roadmap": {
     "sectionLabel": "Language Expansion",
     "sectionTitle": "From Sango to the Continent",
-    "sectionDescription": "Starting with Sango. Expanding to 5 languages covering 66M+ speakers. The same infrastructure scales to every African language.",
+    "sectionDescription": "Starting with Sango. Expanding to 6 languages covering 68M+ speakers. The same infrastructure scales to every African language.",
     "sango": "Sango",
     "sangoSpeakers": "5M speakers",
     "sangoStatus": "Live",
+    "ewondo": "Ewondo",
+    "ewondoSpeakers": "2M speakers",
+    "ewondoStatus": "Q3 2026",
     "lingala": "Lingala",
     "lingalaSpeakers": "25M speakers",
-    "lingalaStatus": "2026",
+    "lingalaStatus": "H1 2027",
     "wolof": "Wolof",
     "wolofSpeakers": "10M speakers",
-    "wolofStatus": "2026",
+    "wolofStatus": "H2 2027",
     "bambara": "Bambara",
     "bambaraSpeakers": "14M speakers",
-    "bambaraStatus": "2027",
+    "bambaraStatus": "Q2 2028",
     "kirundi": "Kirundi",
     "kirundiSpeakers": "12M speakers",
-    "kirundiStatus": "2027",
-    "total": "66M+ speakers across 5 languages"
+    "kirundiStatus": "Q3 2028",
+    "total": "68M+ speakers across 6 languages"
   },
   "builtOn": {
     "sectionLabel": "Infrastructure",
@@ -153,9 +156,9 @@
         "Production REST API with quota management",
         "French-Sango and English-Sango translation",
         "AI-powered conversational chat",
-        "760+ trilingual vocabulary with pronunciation",
+        "611 verified trilingual vocabulary with pronunciation",
         "Open-source NLP toolkit for Sango",
-        "Fine-tuned language models with published datasets",
+        "Vocabulary-augmented prompting — research published on HuggingFace",
         "Progressive Web App (PWA)"
       ]
     },
@@ -220,7 +223,7 @@
     "sectionDescription": "We're not competing in a crowded market. We're creating a new one — AI infrastructure for the most underserved languages on Earth.",
     "firstMover": {
       "title": "Zero Competition",
-      "description": "SangoAI is the only AI translation platform for Sango. No Google Translate, no DeepL, no open-source alternative. First-mover advantage in a 5M+ speaker market."
+      "description": "SangoAI is the only dedicated AI language platform for Sango — specialized vocabulary, grammar explanation, domain accuracy, and a full learning platform. Where general-purpose translation ends, SangoAI begins. First-mover in the infrastructure that matters."
     },
     "production": {
       "title": "Production, Not Research",
@@ -240,7 +243,7 @@
     "visionTitle": "Our Vision",
     "visionDescription": "A future where every African language has production-quality NLP tools — translation APIs, speech recognition, and language models — accessible to any developer, organization, or government that needs them.",
     "whyTitle": "Why African Languages?",
-    "whyDescription": "Africa has 2,000+ languages spoken by 1.4 billion people. Less than 5% have basic NLP tools. Google Translate supports 133 languages — fewer than 25 are African. This isn't a niche. It's the largest untapped market in language AI.",
+    "whyDescription": "Africa has 2,000+ languages spoken by 1.4 billion people. Less than 5% have basic NLP tools. Google Translate supports 134+ languages — fewer than 25 are African, and most with limited depth. The gap between basic translation coverage and production-grade language infrastructure is where MEYNG operates. This isn't a niche. It's the largest untapped market in language AI.",
     "whyPoints": [
       "2,000+ languages, <5% have NLP tools",
       "$4.8B projected market by 2030",
@@ -251,7 +254,7 @@
     "valuesTitle": "Our Competitive Advantage",
     "technical": {
       "title": "Technical Moat",
-      "description": "Proprietary training data, fine-tuned models, and production infrastructure that took years to build. You can't replicate this with a weekend hackathon."
+      "description": "Community-verified vocabulary database, published vocabulary-augmented prompting methodology, and production infrastructure that took years to build. The moat is data quality and cultural authority — not just compute."
     },
     "cultural": {
       "title": "Cultural Authority",
@@ -270,7 +273,7 @@
     "founder": {
       "name": "Michel WENEZOUI",
       "role": "Founder & CEO",
-      "bio": "Software engineer and AI entrepreneur. Native Sango speaker from the Central African Republic. Built SangoAI from zero to production — scalable cloud infrastructure, published NLP toolkit, and fine-tuned language models. Based in Paris."
+      "bio": "Software engineer and AI entrepreneur. Native Sango speaker from the Central African Republic. Built SangoAI from zero to production — scalable cloud infrastructure, published NLP toolkit, and vocabulary-augmented prompting research published on HuggingFace. Based in Paris."
     },
     "founderJobTitle": "Software Engineer & AI Entrepreneur",
     "founderLocation": "Paris, France",
@@ -289,12 +292,17 @@
     "apiPublished": {
       "year": "Mar 2026",
       "title": "AI Assets Published",
-      "description": "Open-source NLP toolkit published for developers. Fine-tuned language model and 760-word parallel corpus released openly. Sango becomes a documented NLP language."
+      "description": "Open-source NLP toolkit published for developers. Vocabulary-augmented prompting methodology and 740-word Sango lexicon released openly on HuggingFace. Sango becomes a documented NLP research language."
     },
     "metaLive": {
       "year": "Apr 2026",
       "title": "WhatsApp Bot on Meta Platform",
       "description": "eNdara learning bot published on Meta. Any WhatsApp user can message to learn Sango. First real-world deployment proof beyond web."
+    },
+    "hfPublished": {
+      "year": "May 2026",
+      "title": "First Research Publication",
+      "description": "Vocabulary-augmented prompting methodology and 611-word Sango lexicon published on HuggingFace. Sango becomes a documented NLP research language with an open, reusable dataset for the global research community."
     },
     "ctaTitle": "Invest in African language AI",
     "ctaDescription": "We're raising pre-seed funding to scale from 1 language to 5, hire our first NLP engineers, and close our first enterprise contracts. The market is massive, the timing is now.",

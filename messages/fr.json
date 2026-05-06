@@ -23,8 +23,8 @@
   "traction": {
     "api": "API en production",
     "apiSub": "Active et traitant des requêtes",
-    "vocab": "760+ mots",
-    "vocabSub": "Vocabulaire trilingue",
+    "vocab": "611 mots",
+    "vocabSub": "Entrées trilingues vérifiées",
     "hf": "Recherche ouverte",
     "hfSub": "Modèle et dataset publiés",
     "whatsapp": "Bot WhatsApp",
@@ -38,9 +38,9 @@
       "API REST de production avec tarification par paliers",
       "Traduction en temps réel (français, anglais, sango)",
       "IA conversationnelle avec modèles avancés",
-      "760+ mots de vocabulaire trilingues avec guides de prononciation",
+      "611 mots de vocabulaire trilingues vérifiés avec guides de prononciation",
       "Toolkit NLP open source pour le traitement du sango",
-      "Modèle linguistique fine-tuné avec datasets publiés"
+      "Recherche en prompting vocabulaire publiée sur HuggingFace"
     ],
     "visitSite": "Visiter SangoAI",
     "tryApi": "Essayer l'API"
@@ -72,7 +72,7 @@
     },
     "model": {
       "title": "Modèles linguistiques",
-      "description": "Modèles linguistiques fine-tunés pour les tâches en sango. Corpus parallèle de 760+ mots (sango-français-anglais). Publiés ouvertement pour la communauté de recherche en IA."
+      "description": "Prompting augmenté par vocabulaire avec IA fondamentale — sans fine-tuning. Lexique sango de 611 mots vérifiés (sango-français-anglais). Méthodologie et dataset publiés ouvertement sur HuggingFace pour la communauté de recherche en IA."
     },
     "deploy": {
       "title": "Preuve de déploiement",
@@ -82,23 +82,26 @@
   "roadmap": {
     "sectionLabel": "Expansion linguistique",
     "sectionTitle": "Du sango au continent",
-    "sectionDescription": "En commençant par le sango. Expansion vers 5 langues couvrant 66M+ de locuteurs. La même infrastructure s'adapte à toute langue africaine.",
+    "sectionDescription": "En commençant par le sango. Expansion vers 6 langues couvrant 68M+ de locuteurs. La même infrastructure s'adapte à toute langue africaine.",
     "sango": "Sango",
     "sangoSpeakers": "5M locuteurs",
     "sangoStatus": "En ligne",
+    "ewondo": "Ewondo",
+    "ewondoSpeakers": "2M locuteurs",
+    "ewondoStatus": "T3 2026",
     "lingala": "Lingala",
     "lingalaSpeakers": "25M locuteurs",
-    "lingalaStatus": "2026",
+    "lingalaStatus": "S1 2027",
     "wolof": "Wolof",
     "wolofSpeakers": "10M locuteurs",
-    "wolofStatus": "2026",
+    "wolofStatus": "S2 2027",
     "bambara": "Bambara",
     "bambaraSpeakers": "14M locuteurs",
-    "bambaraStatus": "2027",
+    "bambaraStatus": "T2 2028",
     "kirundi": "Kirundi",
     "kirundiSpeakers": "12M locuteurs",
-    "kirundiStatus": "2027",
-    "total": "66M+ de locuteurs à travers 5 langues"
+    "kirundiStatus": "T3 2028",
+    "total": "68M+ de locuteurs à travers 6 langues"
   },
   "builtOn": {
     "sectionLabel": "Infrastructure",
@@ -153,9 +156,9 @@
         "API REST de production avec gestion des quotas",
         "Traduction français-sango et anglais-sango",
         "Chat IA conversationnel avancé",
-        "760+ mots de vocabulaire trilingues avec prononciation",
+        "611 mots de vocabulaire trilingues vérifiés avec prononciation",
         "Toolkit NLP open source pour le sango",
-        "Modèles linguistiques fine-tunés avec datasets publiés",
+        "Prompting vocabulaire — recherche publiée sur HuggingFace",
         "Application Web Progressive (PWA)"
       ]
     },
@@ -220,7 +223,7 @@
     "sectionDescription": "Nous ne sommes pas en compétition sur un marché saturé. Nous en créons un nouveau — l'infrastructure IA pour les langues les plus sous-servies de la planète.",
     "firstMover": {
       "title": "Zéro concurrence",
-      "description": "SangoAI est la seule plateforme de traduction IA pour le sango. Pas de Google Translate, pas de DeepL, pas d'alternative open source. Avantage de premier entrant sur un marché de 5M+ de locuteurs."
+      "description": "SangoAI est la seule plateforme IA dédiée au sango — vocabulaire spécialisé, explication grammaticale, précision sectorielle et plateforme d'apprentissage complète. Là où la traduction généraliste s'arrête, SangoAI commence. Premier entrant sur l'infrastructure qui compte."
     },
     "production": {
       "title": "Production, pas recherche",
@@ -240,7 +243,7 @@
     "visionTitle": "Notre vision",
     "visionDescription": "Un avenir où chaque langue africaine dispose d'outils NLP de qualité production — API de traduction, reconnaissance vocale et modèles linguistiques — accessibles à tout développeur, organisation ou gouvernement qui en a besoin.",
     "whyTitle": "Pourquoi les langues africaines ?",
-    "whyDescription": "L'Afrique compte plus de 2 000 langues parlées par 1,4 milliard de personnes. Moins de 5 % disposent d'outils NLP de base. Google Translate prend en charge 133 langues — moins de 25 sont africaines. Ce n'est pas une niche. C'est le plus grand marché inexploité de l'IA linguistique.",
+    "whyDescription": "L'Afrique compte plus de 2 000 langues parlées par 1,4 milliard de personnes. Moins de 5 % disposent d'outils NLP de base. Google Translate prend en charge 134+ langues — moins de 25 sont africaines, et la plupart avec une profondeur limitée. L'écart entre une couverture de traduction basique et une infrastructure linguistique de qualité production, c'est là où MEYNG opère. Ce n'est pas une niche. C'est le plus grand marché inexploité de l'IA linguistique.",
     "whyPoints": [
       "2 000+ langues, <5 % avec des outils NLP",
       "Marché projeté à 4,8 Md$ d'ici 2030",
@@ -251,7 +254,7 @@
     "valuesTitle": "Notre avantage compétitif",
     "technical": {
       "title": "Fossé technique",
-      "description": "Données d'entraînement propriétaires, modèles fine-tunés et infrastructure de production qui ont pris des années à construire. Vous ne pouvez pas reproduire cela en un week-end."
+      "description": "Base de données de vocabulaire vérifiée par la communauté, méthodologie de prompting augmenté par vocabulaire publiée, et infrastructure de production construite sur des années. Le fossé repose sur la qualité des données et l'autorité culturelle — pas seulement la puissance de calcul."
     },
     "cultural": {
       "title": "Autorité culturelle",

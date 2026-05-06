@@ -43,6 +43,13 @@ const languageRoadmap = [
     live: true,
   },
   {
+    key: "ewondo",
+    color: "bg-amber-500",
+    borderColor: "border-amber-500/30",
+    textColor: "text-amber-400",
+    live: false,
+  },
+  {
     key: "lingala",
     color: "bg-blue-500",
     borderColor: "border-blue-500/30",
