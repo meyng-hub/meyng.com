@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useTranslations, useLocale } from "next-intl";
 import { Link, usePathname, useRouter } from "@/i18n/navigation";
+import { EventBanner } from "@/components/EventBanner";
 
 function LanguageSwitcher() {
   const locale = useLocale();
@@ -77,6 +78,7 @@ export function Navbar() {
           : "bg-transparent"
       }`}
     >
+      <EventBanner />
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
