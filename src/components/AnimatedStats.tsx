@@ -46,7 +46,7 @@ export function AnimatedStats() {
   const stats: Stat[] = [
     { value: 3, suffix: "", label: t("languages") },
     { value: 8, suffix: "+", label: t("endpoints") },
-    { value: 611, suffix: "", label: t("vocab") },
+    { value: 581, suffix: "", label: t("vocab") },
     { value: 99, suffix: "%", label: t("uptime") },
   ];
 

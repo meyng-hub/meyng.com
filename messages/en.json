@@ -23,7 +23,7 @@
   "traction": {
     "api": "Production API",
     "apiSub": "Live & serving requests",
-    "vocab": "611 Words",
+    "vocab": "581 Words",
     "vocabSub": "Verified trilingual entries",
     "hf": "Open Research",
     "hfSub": "Model & dataset published",
@@ -38,7 +38,7 @@
       "Production REST API with tiered pricing",
       "Real-time translation (French, English, Sango)",
       "Conversational AI with advanced language models",
-      "611 verified trilingual vocabulary with pronunciation guides",
+      "581 verified trilingual vocabulary with pronunciation guides",
       "Open-source NLP toolkit for Sango processing",
       "Vocabulary-augmented prompting research published on HuggingFace"
     ],
@@ -72,7 +72,7 @@
     },
     "model": {
       "title": "Language Models",
-      "description": "Vocabulary-augmented prompting with foundation AI — no fine-tuning required. 611 verified-word Sango lexicon (Sango-French-English). Methodology and dataset published openly for the AI research community on HuggingFace."
+      "description": "Vocabulary-augmented prompting with foundation AI — no fine-tuning required. 581 verified-word Sango lexicon (Sango-French-English). Methodology and dataset published openly for the AI research community on HuggingFace."
     },
     "deploy": {
       "title": "Deployment Proof",
@@ -156,7 +156,7 @@
         "Production REST API with quota management",
         "French-Sango and English-Sango translation",
         "AI-powered conversational chat",
-        "611 verified trilingual vocabulary with pronunciation",
+        "581 verified trilingual vocabulary with pronunciation",
         "Open-source NLP toolkit for Sango",
         "Vocabulary-augmented prompting — research published on HuggingFace",
         "Progressive Web App (PWA)"
@@ -292,7 +292,7 @@
     "apiPublished": {
       "year": "Mar 2026",
       "title": "AI Assets Published",
-      "description": "Open-source NLP toolkit published for developers. Vocabulary-augmented prompting methodology and 740-word Sango lexicon released openly on HuggingFace. Sango becomes a documented NLP research language."
+      "description": "Open-source NLP toolkit published for developers. Vocabulary-augmented prompting methodology and 581-word Sango lexicon released openly on HuggingFace. Sango becomes a documented NLP research language."
     },
     "metaLive": {
       "year": "Apr 2026",
@@ -302,7 +302,7 @@
     "hfPublished": {
       "year": "May 2026",
       "title": "First Research Publication",
-      "description": "Vocabulary-augmented prompting methodology and 611-word Sango lexicon published on HuggingFace. Sango becomes a documented NLP research language with an open, reusable dataset for the global research community."
+      "description": "Vocabulary-augmented prompting methodology and 581-word Sango lexicon published on HuggingFace. Sango becomes a documented NLP research language with an open, reusable dataset for the global research community."
     },
     "ctaTitle": "Invest in African language AI",
     "ctaDescription": "We're raising pre-seed funding to scale from 1 language to 5, hire our first NLP engineers, and close our first enterprise contracts. The market is massive, the timing is now.",

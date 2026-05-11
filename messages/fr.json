@@ -23,7 +23,7 @@
   "traction": {
     "api": "API en production",
     "apiSub": "Active et traitant des requêtes",
-    "vocab": "611 mots",
+    "vocab": "581 mots",
     "vocabSub": "Entrées trilingues vérifiées",
     "hf": "Recherche ouverte",
     "hfSub": "Modèle et dataset publiés",
@@ -38,7 +38,7 @@
       "API REST de production avec tarification par paliers",
       "Traduction en temps réel (français, anglais, sango)",
       "IA conversationnelle avec modèles avancés",
-      "611 mots de vocabulaire trilingues vérifiés avec guides de prononciation",
+      "581 mots de vocabulaire trilingues vérifiés avec guides de prononciation",
       "Toolkit NLP open source pour le traitement du sango",
       "Recherche en prompting vocabulaire publiée sur HuggingFace"
     ],
@@ -72,7 +72,7 @@
     },
     "model": {
       "title": "Modèles linguistiques",
-      "description": "Prompting augmenté par vocabulaire avec IA fondamentale — sans fine-tuning. Lexique sango de 611 mots vérifiés (sango-français-anglais). Méthodologie et dataset publiés ouvertement sur HuggingFace pour la communauté de recherche en IA."
+      "description": "Prompting augmenté par vocabulaire avec IA fondamentale — sans fine-tuning. Lexique sango de 581 mots vérifiés (sango-français-anglais). Méthodologie et dataset publiés ouvertement sur HuggingFace pour la communauté de recherche en IA."
     },
     "deploy": {
       "title": "Preuve de déploiement",
@@ -156,7 +156,7 @@
         "API REST de production avec gestion des quotas",
         "Traduction français-sango et anglais-sango",
         "Chat IA conversationnel avancé",
-        "611 mots de vocabulaire trilingues vérifiés avec prononciation",
+        "581 mots de vocabulaire trilingues vérifiés avec prononciation",
         "Toolkit NLP open source pour le sango",
         "Prompting vocabulaire — recherche publiée sur HuggingFace",
         "Application Web Progressive (PWA)"
