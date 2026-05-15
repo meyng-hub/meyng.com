@@ -12,7 +12,7 @@ const curlCommand = `curl -X POST https://api.sangoai.sbs/v1/translate \\
        "target": "sg"}'`;
 
 const jsonResponse = `{
-  "translation": "Bala mo, tongana nyen ?",
+  "translation": "Bala mo, tongana nye ?",
   "confidence": 0.97,
   "source_lang": "en",
   "target_lang": "sg",

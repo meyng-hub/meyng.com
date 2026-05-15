@@ -6,7 +6,7 @@ import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
 
 const phrases = [
-  { from: "Bonjour, comment allez-vous ?", to: "Bala mo, tongana nyen ?" },
+  { from: "Bonjour, comment allez-vous ?", to: "Bala mo, tongana nye ?" },
   { from: "Merci beaucoup", to: "Singila mingi" },
   { from: "Je suis heureux", to: "Mo yeke na nzoni" },
   { from: "Bienvenue chez nous", to: "Mo gue na da ti e" },
