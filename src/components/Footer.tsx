@@ -58,7 +58,7 @@ export function Footer() {
               {t("footer.products")}
             </h4>
             <ul className="space-y-3">
-              {["SangoAI", "eNdara", "Obêtrack"].map((product) => (
+              {["SangoAI", "eNdara"].map((product) => (
                 <li key={product}>
                   <Link
                     href="/products"

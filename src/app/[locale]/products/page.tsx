@@ -15,7 +15,6 @@ import {
 import { SectionHeading } from "@/components/SectionHeading";
 import { TranslationDemo } from "@/components/TranslationDemo";
 import { SMSConversation } from "@/components/SMSConversation";
-import { PhoneMockup } from "@/components/PhoneMockup";
 import { APIShowcase } from "@/components/APIShowcase";
 import { productKeys, productMeta, statusColorMap } from "@/data/products";
 
@@ -32,8 +31,6 @@ function ProductDemoPreview({ type }: { type: string }) {
       return <TranslationDemo />;
     case "sms":
       return <SMSConversation />;
-    case "phone":
-      return <PhoneMockup />;
     default:
       return null;
   }
