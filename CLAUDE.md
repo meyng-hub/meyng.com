@@ -25,8 +25,8 @@ This file focuses on what's **specific to this repo** — Next.js 16 + next-intl
 **Sibling projects** — each has its own `CLAUDE.md` with its own stack / patterns:
 
 - SangoAI: `C:\ndaraAI\CLAUDE.md` (React + Vite + Python Lambda)
-- Obêtrack: `C:\obetrack\CLAUDE.md` (Next.js + Dexie + offline-first PWA)
 - eNdara: `C:\eNdara\CLAUDE.md` (Moodle + Flask SMS + WhatsApp)
+- Obêtrack: **RETIRED from MEYNG portfolio (May 2026) — do not re-add to this site**
 
 ## Key Commands
 
@@ -59,7 +59,7 @@ meyng-website/
 ├── src/
 │   ├── app/[locale]/        # Pages (home, about, products, contact, privacy, terms)
 │   ├── components/          # Shared components (Navbar, Footer, AnimatedStats, APIShowcase, etc.)
-│   ├── data/products.ts     # Product metadata (SangoAI, eNdara, Obetrack)
+│   ├── data/products.ts     # Product metadata (SangoAI, eNdara only — Obêtrack retired)
 │   ├── i18n/                # next-intl config (routing, request, navigation)
 │   ├── middleware.ts         # Locale routing middleware
 │   └── types/gtag.d.ts      # GA type declarations
@@ -80,8 +80,9 @@ meyng-website/
 ### Content Updates
 
 - Always update BOTH `messages/en.json` AND `messages/fr.json` — they must have identical structure
-- Products: SangoAI (flagship), eNdara (deployment proof), Obetrack (portfolio)
-- ConnectZ was removed — do not re-add
+- Products: **SangoAI** (flagship) + **eNdara** (deployment proof) — two products only
+- Obêtrack: **RETIRED** — removed from site May 2026. Do not re-add.
+- ConnectZ: removed — do not re-add
 
 ### Design Tokens
 
