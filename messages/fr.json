@@ -23,8 +23,8 @@
   "traction": {
     "api": "API en production",
     "apiSub": "Active et traitant des requêtes",
-    "vocab": "581 mots",
-    "vocabSub": "Entrées trilingues vérifiées",
+    "vocab": "611 mots",
+    "vocabSub": "Entrées trilingues vérifiées + audio natif",
     "hf": "Recherche ouverte",
     "hfSub": "Modèle et dataset publiés",
     "whatsapp": "Bot WhatsApp",
@@ -38,9 +38,10 @@
       "API REST de production avec tarification par paliers",
       "Traduction en temps réel (français, anglais, sango)",
       "IA conversationnelle avec modèles avancés",
-      "581 mots de vocabulaire trilingues vérifiés avec guides de prononciation",
+      "611 mots de vocabulaire trilingues vérifiés avec enregistrements audio natifs",
       "Toolkit NLP open source pour le traitement du sango",
-      "Recherche en prompting vocabulaire publiée sur HuggingFace"
+      "Recherche en prompting vocabulaire publiée ouvertement",
+      "Audio locuteur natif — 12 enregistrements en production, programme 300 mots en cours"
     ],
     "visitSite": "Visiter SangoAI",
     "tryApi": "Essayer l'API"
@@ -72,7 +73,7 @@
     },
     "model": {
       "title": "Modèles linguistiques",
-      "description": "Prompting augmenté par vocabulaire avec IA fondamentale — sans fine-tuning. Lexique sango de 581 mots vérifiés (sango-français-anglais). Méthodologie et dataset publiés ouvertement sur HuggingFace pour la communauté de recherche en IA."
+      "description": "Prompting augmenté par vocabulaire avec IA fondamentale — sans fine-tuning. Lexique sango de 611 mots vérifiés (sango-français-anglais) avec enregistrements audio de locuteurs natifs. Méthodologie et dataset publiés ouvertement pour la communauté de recherche en IA."
     },
     "deploy": {
       "title": "Preuve de déploiement",
@@ -138,7 +139,7 @@
   "products": {
     "sectionLabel": "Notre technologie",
     "sectionTitle": "Infrastructure IA pour les langues africaines",
-    "sectionDescription": "Des API de production aux outils NLP open source, nous construisons la stack IA linguistique complète. SangoAI est notre produit phare — prouvant le modèle avant de l'étendre au continent.",
+    "sectionDescription": "Des API de production aux programmes d'enregistrement de locuteurs natifs, nous construisons la stack IA linguistique complète. SangoAI est notre produit phare — prouvant le modèle. eNdara le déploie sur le terrain.",
     "sangoai": {
       "tagline": "Produit phare — Infrastructure linguistique IA",
       "description": "La seule plateforme de traduction et de langue propulsée par l'IA pour le sango. API REST de production, traduction en temps réel, IA conversationnelle et apprentissage ludique — soutenu par notre toolkit NLP open source et nos modèles publiés.",
@@ -151,15 +152,15 @@
     },
     "sangoaiFull": {
       "tagline": "Produit phare — Infrastructure linguistique IA",
-      "description": "La seule plateforme de traduction et de langue propulsée par l'IA pour le sango, la langue nationale de la République centrafricaine parlée par 5M+ de personnes. SangoAI fournit une API REST de production avec tarification par paliers, traduction IA en temps réel, chat IA conversationnel, apprentissage ludique avec XP et niveaux, et un tableau de bord développeur — soutenu par notre toolkit NLP open source et nos modèles linguistiques publiés.",
+      "description": "La plateforme IA la plus complète pour le sango, la langue nationale de la République centrafricaine parlée par 5M+ de personnes. SangoAI fournit une API REST de production, traduction IA en temps réel, chat IA conversationnel, apprentissage ludique avec XP et niveaux, audio de locuteurs natifs et un tableau de bord développeur — soutenu par notre toolkit NLP open source et nos modèles linguistiques publiés.",
       "features": [
         "API REST de production avec gestion des quotas",
         "Traduction français-sango et anglais-sango",
         "Chat IA conversationnel avancé",
-        "581 mots de vocabulaire trilingues vérifiés avec prononciation",
+        "611 mots de vocabulaire trilingues vérifiés avec audio natif",
         "Toolkit NLP open source pour le sango",
-        "Prompting vocabulaire — recherche publiée sur HuggingFace",
-        "Application Web Progressive (PWA)"
+        "Prompting vocabulaire — recherche publiée ouvertement",
+        "Application Web Progressive (PWA) — fonctionne hors ligne"
       ]
     },
     "endara": {
@@ -184,28 +185,6 @@
         "Déploiement de qualité production"
       ]
     },
-    "obetrack": {
-      "tagline": "Portfolio — Prévention du gaspillage alimentaire par l'IA",
-      "description": "PWA intelligente utilisant la reconnaissance alimentaire par IA et le scan de codes-barres pour suivre les stocks, prédire les péremptions et réduire le gaspillage alimentaire.",
-      "features": [
-        "Reconnaissance alimentaire IA & scan codes-barres",
-        "Prédictions intelligentes de péremption & alertes",
-        "Génération de recettes IA à partir des produits bientôt périmés",
-        "Reporting de conformité UE"
-      ]
-    },
-    "obetrackFull": {
-      "tagline": "Portfolio — Prévention du gaspillage alimentaire par l'IA",
-      "description": "Une application web progressive qui combine reconnaissance alimentaire par IA, scan de codes-barres et prédictions intelligentes de péremption pour aider ménages, restaurants et entreprises à éliminer le gaspillage. Fait partie du portfolio MEYNG — démontrant nos capacités IA au-delà de la langue.",
-      "features": [
-        "Reconnaissance alimentaire par IA à partir de photos",
-        "Scan de codes-barres pour saisie instantanée",
-        "Prédictions intelligentes de péremption & alertes push",
-        "Génération de recettes IA à partir des ingrédients bientôt périmés",
-        "Analyses du gaspillage & tableaux de bord",
-        "Reporting de conformité UE sur le gaspillage alimentaire"
-      ]
-    },
     "visit": "Visiter {name}",
     "ctaTitle": "Prêt à intégrer l'IA linguistique africaine ?",
     "ctaDescription": "Que vous ayez besoin d'API de traduction pour votre application, de données linguistiques pour la recherche ou de solutions NLP sur mesure — discutons.",
@@ -222,8 +201,8 @@
     "sectionTitle": "Premier entrant sur un marché massif",
     "sectionDescription": "Nous ne sommes pas en compétition sur un marché saturé. Nous en créons un nouveau — l'infrastructure IA pour les langues les plus sous-servies de la planète.",
     "firstMover": {
-      "title": "Zéro concurrence",
-      "description": "SangoAI est la seule plateforme IA dédiée au sango — vocabulaire spécialisé, explication grammaticale, précision sectorielle et plateforme d'apprentissage complète. Là où la traduction généraliste s'arrête, SangoAI commence. Premier entrant sur l'infrastructure qui compte."
+      "title": "Au-delà de la traduction",
+      "description": "Les traducteurs généralistes gèrent les mots. SangoAI gère la langue — règles grammaticales spécialisées, précision sectorielle, vocabulaire vérifié, audio de locuteurs natifs et plateforme d'apprentissage complète. Là où la traduction de surface s'arrête, l'infrastructure SangoAI commence."
     },
     "production": {
       "title": "Production, pas recherche",
@@ -273,7 +252,7 @@
     "founder": {
       "name": "Michel WENEZOUI",
       "role": "Fondateur & PDG",
-      "bio": "Ingénieur logiciel et entrepreneur IA. Locuteur natif du sango originaire de la République centrafricaine. A construit SangoAI de zéro à la production — infrastructure cloud évolutive, toolkit NLP publié et modèles linguistiques fine-tunés. Basé à Paris."
+      "bio": "Ingénieur logiciel et entrepreneur IA. Locuteur natif du sango originaire de la République centrafricaine. A construit SangoAI de zéro à la production — infrastructure cloud évolutive, toolkit NLP publié, programme d'enregistrements audio de locuteurs natifs et recherche en prompting vocabulaire. Intervenant au Africa Forward Summit, Nairobi 2026. Basé à Paris."
     },
     "founderJobTitle": "Ingénieur logiciel & entrepreneur IA",
     "founderLocation": "Paris, France",
@@ -292,12 +271,27 @@
     "apiPublished": {
       "year": "Mars 2026",
       "title": "Assets IA publiés",
-      "description": "Toolkit NLP open source publié pour les développeurs. Modèle linguistique fine-tuné et corpus parallèle de 760 mots publiés ouvertement. Le sango devient une langue NLP documentée."
+      "description": "Toolkit NLP open source publié pour les développeurs. Lexique sango de 611 mots vérifiés publié ouvertement. Le sango devient une langue NLP documentée avec un dataset réutilisable."
     },
     "metaLive": {
       "year": "Avr. 2026",
       "title": "Bot WhatsApp sur Meta Platform",
       "description": "Bot d'apprentissage eNdara publié sur Meta. Tout utilisateur WhatsApp peut envoyer un message pour apprendre le sango. Première preuve de déploiement réel au-delà du web."
+    },
+    "hfPublished": {
+      "year": "Mai 2026",
+      "title": "Recherche publiée",
+      "description": "Méthodologie de prompting augmenté par vocabulaire et lexique sango de 611 mots publiés ouvertement. Le sango devient une langue NLP documentée avec un dataset ouvert et réutilisable."
+    },
+    "nativeAudio": {
+      "year": "Mai 2026",
+      "title": "Programme audio locuteurs natifs",
+      "description": "Premiers enregistrements de locuteurs natifs sango en production. Phase 1 : 12 mots. Phase 2 : programme d'enregistrement de 300 mots en cours. Première plateforme IA pour le sango avec prononciation authentique."
+    },
+    "nairobiSummit": {
+      "year": "Mai 2026",
+      "title": "Africa Forward Summit — Nairobi",
+      "description": "Présent au principal sommet technologique africain. Échanges stratégiques avec officiels gouvernementaux, partenaires ONG et investisseurs institutionnels. L'histoire de l'infrastructure linguistique atteint les décideurs."
     },
     "ctaTitle": "Investissez dans l'IA linguistique africaine",
     "ctaDescription": "Nous levons un pré-seed pour passer de 1 langue à 5, recruter nos premiers ingénieurs NLP et signer nos premiers contrats entreprise. Le marché est immense, le moment est maintenant.",

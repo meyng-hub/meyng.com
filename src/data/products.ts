@@ -1,7 +1,7 @@
-import { Languages, BookOpen, Leaf } from "lucide-react";
+import { Languages, BookOpen } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
-export const productKeys = ["sangoai", "endara", "obetrack"] as const;
+export const productKeys = ["sangoai", "endara"] as const;
 
 export type ProductKey = (typeof productKeys)[number];
 
@@ -26,13 +26,6 @@ export const productMeta: ProductMeta[] = [
     name: "eNdara",
     url: "https://e-ndara.org",
     demo: "sms",
-    statusKey: "live",
-  },
-  {
-    icon: Leaf,
-    name: "Ob\u00EAtrack",
-    url: "https://xn--obtrack-kya.com",
-    demo: "phone",
     statusKey: "live",
   },
 ];

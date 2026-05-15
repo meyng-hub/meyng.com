@@ -23,8 +23,8 @@
   "traction": {
     "api": "Production API",
     "apiSub": "Live & serving requests",
-    "vocab": "581 Words",
-    "vocabSub": "Verified trilingual entries",
+    "vocab": "611 Words",
+    "vocabSub": "Verified trilingual + native audio",
     "hf": "Open Research",
     "hfSub": "Model & dataset published",
     "whatsapp": "WhatsApp Bot",
@@ -38,9 +38,10 @@
       "Production REST API with tiered pricing",
       "Real-time translation (French, English, Sango)",
       "Conversational AI with advanced language models",
-      "581 verified trilingual vocabulary with pronunciation guides",
+      "611 verified trilingual vocabulary with native audio recordings",
       "Open-source NLP toolkit for Sango processing",
-      "Vocabulary-augmented prompting research published on HuggingFace"
+      "Vocabulary-augmented prompting research published on HuggingFace",
+      "Native speaker audio — 12 recordings live, 300-word program underway"
     ],
     "visitSite": "Visit SangoAI",
     "tryApi": "Try the API"
@@ -72,7 +73,7 @@
     },
     "model": {
       "title": "Language Models",
-      "description": "Vocabulary-augmented prompting with foundation AI — no fine-tuning required. 581 verified-word Sango lexicon (Sango-French-English). Methodology and dataset published openly for the AI research community on HuggingFace."
+      "description": "Vocabulary-augmented prompting with foundation AI — no fine-tuning required. 611 verified-word Sango lexicon (Sango-French-English) with native speaker audio recordings. Methodology and dataset published openly for the AI research community."
     },
     "deploy": {
       "title": "Deployment Proof",
@@ -138,7 +139,7 @@
   "products": {
     "sectionLabel": "Our Technology",
     "sectionTitle": "AI Infrastructure for African Languages",
-    "sectionDescription": "From production APIs to open-source NLP tools, we build the complete language AI stack. SangoAI is our flagship — proving the model before scaling across the continent.",
+    "sectionDescription": "From production APIs to native speaker audio programs, we build the complete language AI stack. SangoAI is our flagship — proving the model. eNdara deploys it in the field.",
     "sangoai": {
       "tagline": "Flagship — AI Language Infrastructure",
       "description": "The world's only AI-powered translation and language platform for Sango. Production REST API, real-time translation, conversational AI, and gamified learning — backed by our open-source NLP toolkit and published models.",
@@ -151,15 +152,15 @@
     },
     "sangoaiFull": {
       "tagline": "Flagship — AI Language Infrastructure",
-      "description": "The world's only AI-powered translation and language platform for Sango, the national language of the Central African Republic spoken by 5M+ people. SangoAI provides a production REST API with tiered pricing, real-time AI translation, conversational AI chat, gamified learning with XP and levels, and a developer dashboard — backed by our open-source NLP toolkit and published language models.",
+      "description": "The world's most complete AI platform for Sango, the national language of the Central African Republic spoken by 5M+ people. SangoAI provides a production REST API with tiered pricing, real-time AI translation, conversational AI chat, gamified learning with XP and levels, native speaker audio, and a developer dashboard — backed by our open-source NLP toolkit and published language models.",
       "features": [
         "Production REST API with quota management",
         "French-Sango and English-Sango translation",
         "AI-powered conversational chat",
-        "581 verified trilingual vocabulary with pronunciation",
+        "611 verified trilingual vocabulary with native speaker audio",
         "Open-source NLP toolkit for Sango",
         "Vocabulary-augmented prompting — research published on HuggingFace",
-        "Progressive Web App (PWA)"
+        "Progressive Web App (PWA) — works offline"
       ]
     },
     "endara": {
@@ -184,28 +185,6 @@
         "Production-grade deployment"
       ]
     },
-    "obetrack": {
-      "tagline": "Portfolio — AI Food Waste Prevention",
-      "description": "Smart PWA using AI-powered food recognition and barcode scanning to track inventory, predict expiry, and reduce food waste for households and businesses.",
-      "features": [
-        "AI food recognition & barcode scanning",
-        "Smart expiry predictions & alerts",
-        "AI recipe generation from expiring items",
-        "EU compliance reporting"
-      ]
-    },
-    "obetrackFull": {
-      "tagline": "Portfolio — AI Food Waste Prevention",
-      "description": "A progressive web app that combines AI-powered food recognition, barcode scanning, and smart expiry predictions to help households, restaurants, and businesses eliminate food waste. Part of the MEYNG product portfolio — demonstrating our AI capabilities beyond language.",
-      "features": [
-        "AI-powered food recognition from photos",
-        "Barcode scanning for instant product entry",
-        "Smart expiry predictions & push alerts",
-        "AI recipe generation from expiring ingredients",
-        "Waste analytics & dashboards",
-        "EU food waste compliance reporting"
-      ]
-    },
     "visit": "Visit {name}",
     "ctaTitle": "Ready to integrate African language AI?",
     "ctaDescription": "Whether you need translation APIs for your app, language data for research, or custom NLP solutions — let's talk.",
@@ -222,8 +201,8 @@
     "sectionTitle": "First-Mover in a Massive Market",
     "sectionDescription": "We're not competing in a crowded market. We're creating a new one — AI infrastructure for the most underserved languages on Earth.",
     "firstMover": {
-      "title": "Zero Competition",
-      "description": "SangoAI is the only dedicated AI language platform for Sango — specialized vocabulary, grammar explanation, domain accuracy, and a full learning platform. Where general-purpose translation ends, SangoAI begins. First-mover in the infrastructure that matters."
+      "title": "Beyond Translation",
+      "description": "General-purpose translators handle words. SangoAI handles the language — specialized grammar rules, domain accuracy, verified vocabulary, native speaker audio, and a full learning platform. Where surface translation ends, SangoAI infrastructure begins."
     },
     "production": {
       "title": "Production, Not Research",
@@ -273,7 +252,7 @@
     "founder": {
       "name": "Michel WENEZOUI",
       "role": "Founder & CEO",
-      "bio": "Software engineer and AI entrepreneur. Native Sango speaker from the Central African Republic. Built SangoAI from zero to production — scalable cloud infrastructure, published NLP toolkit, and vocabulary-augmented prompting research published on HuggingFace. Based in Paris."
+      "bio": "Software engineer and AI entrepreneur. Native Sango speaker from the Central African Republic. Built SangoAI from zero to production — scalable cloud infrastructure, published NLP toolkit, native speaker audio program, and vocabulary-augmented prompting research. Speaker at Africa Forward Summit, Nairobi 2026. Based in Paris."
     },
     "founderJobTitle": "Software Engineer & AI Entrepreneur",
     "founderLocation": "Paris, France",
@@ -292,7 +271,7 @@
     "apiPublished": {
       "year": "Mar 2026",
       "title": "AI Assets Published",
-      "description": "Open-source NLP toolkit published for developers. Vocabulary-augmented prompting methodology and 581-word Sango lexicon released openly on HuggingFace. Sango becomes a documented NLP research language."
+      "description": "Open-source NLP toolkit published for developers. Vocabulary-augmented prompting methodology and 611-word Sango lexicon released openly. Sango becomes a documented NLP research language."
     },
     "metaLive": {
       "year": "Apr 2026",
@@ -301,9 +280,19 @@
     },
     "hfPublished": {
       "year": "May 2026",
-      "title": "First Research Publication",
-      "description": "Vocabulary-augmented prompting methodology and 581-word Sango lexicon published on HuggingFace. Sango becomes a documented NLP research language with an open, reusable dataset for the global research community."
+      "title": "Research Published",
+      "description": "Vocabulary-augmented prompting methodology and 611-word Sango lexicon published openly. Sango becomes a documented NLP research language with an open, reusable dataset for the global research community."
     },
+    "nativeAudio": {
+      "year": "May 2026",
+      "title": "Native Speaker Audio Program",
+      "description": "First native Sango speaker recordings live in production. Phase 1: 12 words. Phase 2: 300-word recording program underway. First AI platform for Sango with authentic pronunciation — not machine-generated speech."
+    },
+    "nairobiSummit": {
+      "year": "May 2026",
+      "title": "Africa Forward Summit — Nairobi",
+      "description": "Featured at Africa's leading technology summit. Strategic conversations with government officials, NGO partners, and institutional investors across the continent. The language infrastructure story reaches decision-makers."
+    }
     "ctaTitle": "Invest in African language AI",
     "ctaDescription": "We're raising pre-seed funding to scale from 1 language to 5, hire our first NLP engineers, and close our first enterprise contracts. The market is massive, the timing is now.",
     "ctaButton": "Let's Talk"
