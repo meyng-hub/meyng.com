@@ -33,7 +33,7 @@
   "flagship": {
     "sectionLabel": "Produit phare",
     "sectionTitle": "SangoAI — La première plateforme IA pour le sango",
-    "sectionDescription": "La seule plateforme de traduction et de langue propulsée par l'IA pour le sango, la langue nationale de la République centrafricaine. 5M+ de locuteurs, zéro concurrent.",
+    "sectionDescription": "La première infrastructure IA dédiée au sango, la langue nationale de la République centrafricaine. 5M+ de locuteurs. API de production, audio natif, datasets ouverts — construits depuis le sol.",
     "features": [
       "API REST de production avec tarification par paliers",
       "Traduction en temps réel (français, anglais, sango)",
@@ -142,7 +142,7 @@
     "sectionDescription": "Des API de production aux programmes d'enregistrement de locuteurs natifs, nous construisons la stack IA linguistique complète. SangoAI est notre produit phare — prouvant le modèle. eNdara le déploie sur le terrain.",
     "sangoai": {
       "tagline": "Produit phare — Infrastructure linguistique IA",
-      "description": "La seule plateforme de traduction et de langue propulsée par l'IA pour le sango. API REST de production, traduction en temps réel, IA conversationnelle et apprentissage ludique — soutenu par notre toolkit NLP open source et nos modèles publiés.",
+      "description": "La première infrastructure IA dédiée au sango. API REST de production, traduction en temps réel, IA conversationnelle et apprentissage ludique — soutenu par notre toolkit NLP open source et nos modèles publiés.",
       "features": [
         "API REST de production avec tarification par paliers",
         "Traduction en temps réel (français, anglais, sango)",
@@ -227,7 +227,7 @@
       "2 000+ langues, <5 % avec des outils NLP",
       "Marché projeté à 4,8 Md$ d'ici 2030",
       "1,4 milliard de locuteurs à travers le continent",
-      "Zéro concurrence pour la plupart des langues"
+      "Première infrastructure dédiée pour la plupart des langues"
     ],
     "valuesLabel": "Pourquoi nous gagnons",
     "valuesTitle": "Notre avantage compétitif",

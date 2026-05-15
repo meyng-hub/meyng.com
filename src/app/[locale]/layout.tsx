@@ -42,14 +42,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     keywords: [
       "MEYNG",
       "AI",
-      "accessibility",
-      "impact",
+      "African language AI",
+      "Sango language",
       "SangoAI",
       "language technology",
-      "food waste",
+      "African NLP",
       "education",
       "NGO",
-      "global",
+      "eNdara",
     ],
     openGraph: {
       title: t("title"),
@@ -63,7 +63,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
           url: `https://meyng.com/${locale}/opengraph-image`,
           width: 1200,
           height: 630,
-          alt: "MEYNG — AI That Matters",
+          alt: "MEYNG — African Language AI Infrastructure",
         },
       ],
     },
@@ -125,7 +125,7 @@ export default async function RootLayout({ children, params }: Props) {
               url: "https://meyng.com",
               logo: "https://meyng.com/favicon.png",
               description:
-                "MEYNG builds AI-driven products that expand access in language, education, food sustainability, and community development.",
+                "MEYNG builds AI infrastructure for African languages — enabling translation, education, and developer tools for 5M+ speakers starting with Sango.",
               founder: {
                 "@type": "Person",
                 name: "Michel WENEZOUI",
@@ -157,11 +157,12 @@ export default async function RootLayout({ children, params }: Props) {
                   "@type": "Offer",
                   itemOffered: {
                     "@type": "SoftwareApplication",
-                    name: "Ob\u00eatrack",
-                    applicationCategory: "LifestyleApplication",
+                    name: "eNdara",
+                    url: "https://e-ndara.org",
+                    applicationCategory: "EducationalApplication",
                     operatingSystem: "Web",
                     description:
-                      "AI-powered food waste prevention app with expiry prediction and recipe generation.",
+                      "WhatsApp-based Sango language learning bot deployed on Meta Platform, bringing AI education to low-bandwidth environments.",
                   },
                 },
               ],

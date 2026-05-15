@@ -33,7 +33,7 @@
   "flagship": {
     "sectionLabel": "Flagship Product",
     "sectionTitle": "SangoAI — The First AI Platform for Sango",
-    "sectionDescription": "The world's only AI-powered translation and language platform for Sango, the national language of the Central African Republic. 5M+ speakers, zero competitors.",
+    "sectionDescription": "The first dedicated AI infrastructure for Sango, the national language of the Central African Republic. 5M+ speakers. Production API, native audio, open datasets — built from the ground up.",
     "features": [
       "Production REST API with tiered pricing",
       "Real-time translation (French, English, Sango)",
@@ -142,7 +142,7 @@
     "sectionDescription": "From production APIs to native speaker audio programs, we build the complete language AI stack. SangoAI is our flagship — proving the model. eNdara deploys it in the field.",
     "sangoai": {
       "tagline": "Flagship — AI Language Infrastructure",
-      "description": "The world's only AI-powered translation and language platform for Sango. Production REST API, real-time translation, conversational AI, and gamified learning — backed by our open-source NLP toolkit and published models.",
+      "description": "The first dedicated AI infrastructure for Sango. Production REST API, real-time translation, conversational AI, and gamified learning — backed by our open-source NLP toolkit and published models.",
       "features": [
         "Production REST API with tiered pricing",
         "Real-time translation (French, English, Sango)",
@@ -152,7 +152,7 @@
     },
     "sangoaiFull": {
       "tagline": "Flagship — AI Language Infrastructure",
-      "description": "The world's most complete AI platform for Sango, the national language of the Central African Republic spoken by 5M+ people. SangoAI provides a production REST API with tiered pricing, real-time AI translation, conversational AI chat, gamified learning with XP and levels, native speaker audio, and a developer dashboard — backed by our open-source NLP toolkit and published language models.",
+      "description": "The most complete AI platform for Sango, the national language of the Central African Republic spoken by 5M+ people. SangoAI provides a production REST API with tiered pricing, real-time AI translation, conversational AI chat, gamified learning with XP and levels, native speaker audio, and a developer dashboard — backed by our open-source NLP toolkit and published language models.",
       "features": [
         "Production REST API with quota management",
         "French-Sango and English-Sango translation",
@@ -227,7 +227,7 @@
       "2,000+ languages, <5% have NLP tools",
       "$4.8B projected market by 2030",
       "1.4B speakers across the continent",
-      "Zero competition for most languages"
+      "First dedicated infrastructure for most languages"
     ],
     "valuesLabel": "Why We Win",
     "valuesTitle": "Our Competitive Advantage",
