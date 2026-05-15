@@ -8,8 +8,8 @@ import { ArrowRight } from "lucide-react";
 const phrases = [
   { from: "Bonjour, comment allez-vous ?", to: "Bala mo, tongana nye ?" },
   { from: "Merci beaucoup", to: "Singila mingi" },
-  { from: "Je suis heureux", to: "Mo yeke na nzoni" },
-  { from: "Bienvenue chez nous", to: "Mo gue na da ti e" },
+  { from: "Je suis heureux", to: "Térê tî mbi a djerê" },
+  { from: "Bienvenue chez nous", to: "Djoni gangô na âla" },
 ];
 
 export function TranslationDemo() {
