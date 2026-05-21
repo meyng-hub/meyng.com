@@ -24,7 +24,7 @@
   "traction": {
     "api": "API en production",
     "apiSub": "Active et traitant des requêtes",
-    "vocab": "611 mots",
+    "vocab": "581 mots",
     "vocabSub": "Entrées trilingues vérifiées + audio natif",
     "hf": "Recherche ouverte",
     "hfSub": "Modèle et dataset publiés",
@@ -208,7 +208,7 @@
     },
     "dataset": {
       "title": "Jeu de données du vocabulaire sango",
-      "description": "769+ entrées sango vérifiées avec traductions en français et anglais, guides de prononciation et contexte grammatical. Le seul jeu de données lexicales sango structuré dans un dépôt ouvert.",
+      "description": "611+ entrées sango avec traductions en français et anglais, guides de prononciation et contexte grammatical. Le seul jeu de données lexicales sango structuré dans un dépôt ouvert.",
       "cta": "Voir sur HuggingFace"
     },
     "npm": {

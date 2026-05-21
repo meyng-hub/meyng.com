@@ -24,7 +24,7 @@
   "traction": {
     "api": "Production API",
     "apiSub": "Live & serving requests",
-    "vocab": "611 Words",
+    "vocab": "581 Words",
     "vocabSub": "Verified trilingual + native audio",
     "hf": "Open Research",
     "hfSub": "Model & dataset published",
@@ -208,7 +208,7 @@
     },
     "dataset": {
       "title": "Sango Vocabulary Dataset",
-      "description": "769+ verified Sango entries with French and English translations, pronunciation guides, and grammar context. The only structured Sango lexical dataset in any open repository.",
+      "description": "611+ Sango entries with French and English translations, pronunciation guides, and grammar context. The only structured Sango lexical dataset in any open repository.",
       "cta": "View on HuggingFace"
     },
     "npm": {
