@@ -18,7 +18,8 @@
     "titleHighlight": "pour l'Afrique",
     "description": "Nous construisons les API de traduction, les outils NLP et les modèles linguistiques qui propulsent les applications à travers le continent. Une infrastructure IA de qualité production pour les langues les plus sous-servies au monde.",
     "cta1": "Lancer un pilote gratuit",
-    "cta2": "Voir la technologie"
+    "cta2": "Voir la technologie",
+    "milestoneBadge": "Étape clé · Premier modèle IA Sango open source publié · BENCH-001 : +41 % BLEU"
   },
   "traction": {
     "api": "API en production",

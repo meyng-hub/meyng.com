@@ -18,7 +18,8 @@
     "titleHighlight": "for Africa",
     "description": "We build the translation APIs, NLP tools, and language models that power applications across the continent. Production-grade AI infrastructure for the world's most underserved languages.",
     "cta1": "Start a Free Pilot",
-    "cta2": "View Technology"
+    "cta2": "View Technology",
+    "milestoneBadge": "Research milestone · First open Sango AI model published · BENCH-001: +41% BLEU"
   },
   "traction": {
     "api": "Production API",
