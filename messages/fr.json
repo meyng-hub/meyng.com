@@ -196,6 +196,26 @@
     "comingSoon": "Bientôt disponible",
     "inResearch": "En recherche"
   },
+  "research": {
+    "sectionLabel": "Recherche ouverte",
+    "sectionTitle": "Infrastructure pour les communs de l'IA",
+    "sectionDescription": "Chaque ressource construite par MEYNG pour le sango est publiée gratuitement sous licences ouvertes — pour les chercheurs, ONG et gouvernements du monde entier.",
+    "model": {
+      "title": "Premier modèle de traduction sango open source",
+      "description": "Affiné sur 500 000+ paires de phrases français-sango. BENCH-001 : +41 % BLEU vs la référence. Le premier modèle de traduction automatique neuronal open source pour le sango — libre pour tout usage.",
+      "cta": "Voir sur HuggingFace"
+    },
+    "dataset": {
+      "title": "Jeu de données du vocabulaire sango",
+      "description": "769+ entrées sango vérifiées avec traductions en français et anglais, guides de prononciation et contexte grammatical. Le seul jeu de données lexicales sango structuré dans un dépôt ouvert.",
+      "cta": "Voir sur HuggingFace"
+    },
+    "npm": {
+      "title": "Boîte à outils NLP sango",
+      "description": "Tokeniseur, détecteur de langue et raciniseur open source pour le sango. Publié sur npm. Conçu pour les diacritiques — gère les 8 diacritiques tonales de l'orthographe sango.",
+      "cta": "Voir sur npm"
+    }
+  },
   "values": {
     "sectionLabel": "Pourquoi MEYNG",
     "sectionTitle": "Premier entrant sur un marché massif",

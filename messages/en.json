@@ -196,6 +196,26 @@
     "comingSoon": "Coming Soon",
     "inResearch": "In Research"
   },
+  "research": {
+    "sectionLabel": "Open Research",
+    "sectionTitle": "Infrastructure for the open AI commons",
+    "sectionDescription": "Every resource MEYNG builds for Sango is published free under open licenses — for researchers, NGOs, and governments worldwide.",
+    "model": {
+      "title": "First Open Sango Translation Model",
+      "description": "Fine-tuned on 500,000+ French-Sango sentence pairs. BENCH-001: +41% BLEU vs baseline. The first open neural machine translation model for Sango — free for any use.",
+      "cta": "View on HuggingFace"
+    },
+    "dataset": {
+      "title": "Sango Vocabulary Dataset",
+      "description": "769+ verified Sango entries with French and English translations, pronunciation guides, and grammar context. The only structured Sango lexical dataset in any open repository.",
+      "cta": "View on HuggingFace"
+    },
+    "npm": {
+      "title": "Sango NLP Toolkit",
+      "description": "Open-source tokenizer, language detector, and stemmer for Sango. Published on npm. Diacritic-aware by design — handles the 8 tonal diacritics of the Sango orthography.",
+      "cta": "View on npm"
+    }
+  },
   "values": {
     "sectionLabel": "Why MEYNG",
     "sectionTitle": "First-Mover in a Massive Market",

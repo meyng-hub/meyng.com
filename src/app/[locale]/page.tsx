@@ -460,6 +460,124 @@ export default function Home() {
 
       <div className="section-divider max-w-4xl mx-auto" />
 
+      {/* ============ OPEN RESEARCH ============ */}
+      <section className="py-24 lg:py-32 relative">
+        <div className="absolute inset-0 dot-grid opacity-20" />
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+          <SectionHeading
+            label={t("research.sectionLabel")}
+            title={t("research.sectionTitle")}
+            description={t("research.sectionDescription")}
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Fine-tuned model */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="bg-meyng-card rounded-2xl border border-meyng-border p-8 hover:border-meyng-purple/30 transition-colors"
+            >
+              <div className="w-12 h-12 rounded-xl bg-emerald-500/20 flex items-center justify-center mb-4">
+                <Cpu className="w-6 h-6 text-emerald-400" />
+              </div>
+              <div className="flex items-center gap-2 mb-3">
+                <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400">
+                  Apache 2.0
+                </span>
+                <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-meyng-deep/40 text-meyng-silver/70">
+                  BENCH-001
+                </span>
+              </div>
+              <h3 className="text-xl font-bold text-meyng-light mb-3">
+                {t("research.model.title")}
+              </h3>
+              <p className="text-meyng-silver text-sm leading-relaxed mb-4">
+                {t("research.model.description")}
+              </p>
+              <a
+                href="https://huggingface.co/MEYNG/nllb-sango-finetuned-600m"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-meyng-purple hover:text-meyng-light transition-colors text-sm font-medium"
+              >
+                {t("research.model.cta")}
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            </motion.div>
+
+            {/* Vocabulary dataset */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="bg-meyng-card rounded-2xl border border-meyng-border p-8 hover:border-meyng-purple/30 transition-colors"
+            >
+              <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center mb-4">
+                <Database className="w-6 h-6 text-blue-400" />
+              </div>
+              <div className="flex items-center gap-2 mb-3">
+                <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-400">
+                  CC-BY-SA 4.0
+                </span>
+              </div>
+              <h3 className="text-xl font-bold text-meyng-light mb-3">
+                {t("research.dataset.title")}
+              </h3>
+              <p className="text-meyng-silver text-sm leading-relaxed mb-4">
+                {t("research.dataset.description")}
+              </p>
+              <a
+                href="https://huggingface.co/datasets/MEYNG/sango-vocabulary"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-meyng-purple hover:text-meyng-light transition-colors text-sm font-medium"
+              >
+                {t("research.dataset.cta")}
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            </motion.div>
+
+            {/* NLP toolkit */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="bg-meyng-card rounded-2xl border border-meyng-border p-8 hover:border-meyng-purple/30 transition-colors"
+            >
+              <div className="w-12 h-12 rounded-xl bg-amber-500/20 flex items-center justify-center mb-4">
+                <Code className="w-6 h-6 text-amber-400" />
+              </div>
+              <div className="flex items-center gap-2 mb-3">
+                <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-400">
+                  MIT License
+                </span>
+              </div>
+              <h3 className="text-xl font-bold text-meyng-light mb-3">
+                {t("research.npm.title")}
+              </h3>
+              <p className="text-meyng-silver text-sm leading-relaxed mb-4">
+                {t("research.npm.description")}
+              </p>
+              <a
+                href="https://www.npmjs.com/package/@meyng/sango-nlp"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-meyng-purple hover:text-meyng-light transition-colors text-sm font-medium"
+              >
+                {t("research.npm.cta")}
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      <div className="section-divider max-w-4xl mx-auto" />
+
       {/* ============ WHY MEYNG ============ */}
       <section className="py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
