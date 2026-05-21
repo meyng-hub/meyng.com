@@ -39,7 +39,7 @@
       "Production REST API with tiered pricing",
       "Real-time translation (French, English, Sango)",
       "Conversational AI with advanced language models",
-      "611 verified trilingual vocabulary with native audio recordings",
+      "581 verified trilingual vocabulary with native audio recordings",
       "Open-source NLP toolkit for Sango processing",
       "Vocabulary-augmented prompting research published on HuggingFace",
       "Native speaker audio — 12 recordings live, 300-word program underway"
@@ -74,7 +74,7 @@
     },
     "model": {
       "title": "Language Models",
-      "description": "Vocabulary-augmented prompting with foundation AI — no fine-tuning required. 611 verified-word Sango lexicon (Sango-French-English) with native speaker audio recordings. Methodology and dataset published openly for the AI research community."
+      "description": "Vocabulary-augmented prompting with foundation AI — no fine-tuning required. 581 verified-word Sango lexicon (Sango-French-English) with native speaker audio recordings. Methodology and dataset published openly for the AI research community."
     },
     "deploy": {
       "title": "Deployment Proof",
@@ -158,7 +158,7 @@
         "Production REST API with quota management",
         "French-Sango and English-Sango translation",
         "AI-powered conversational chat",
-        "611 verified trilingual vocabulary with native speaker audio",
+        "581 verified trilingual vocabulary with native speaker audio",
         "Open-source NLP toolkit for Sango",
         "Vocabulary-augmented prompting — research published on HuggingFace",
         "Progressive Web App (PWA) — works offline"
@@ -208,7 +208,7 @@
     },
     "dataset": {
       "title": "Sango Vocabulary Dataset",
-      "description": "611+ Sango entries with French and English translations, pronunciation guides, and grammar context. The only structured Sango lexical dataset in any open repository.",
+      "description": "581+ Sango entries with French and English translations, pronunciation guides, and grammar context. The only structured Sango lexical dataset in any open repository.",
       "cta": "View on HuggingFace"
     },
     "npm": {
@@ -292,7 +292,7 @@
     "apiPublished": {
       "year": "Mar 2026",
       "title": "AI Assets Published",
-      "description": "Open-source NLP toolkit published for developers. Vocabulary-augmented prompting methodology and 611-word Sango lexicon released openly. Sango becomes a documented NLP research language."
+      "description": "Open-source NLP toolkit published for developers. Vocabulary-augmented prompting methodology and 581-word Sango lexicon released openly. Sango becomes a documented NLP research language."
     },
     "metaLive": {
       "year": "Apr 2026",
@@ -302,7 +302,7 @@
     "hfPublished": {
       "year": "May 2026",
       "title": "Research Published",
-      "description": "Vocabulary-augmented prompting methodology and 611-word Sango lexicon published openly. Sango becomes a documented NLP research language with an open, reusable dataset for the global research community."
+      "description": "Vocabulary-augmented prompting methodology and 581-word Sango lexicon published openly. Sango becomes a documented NLP research language with an open, reusable dataset for the global research community."
     },
     "nativeAudio": {
       "year": "May 2026",

@@ -39,7 +39,7 @@
       "API REST de production avec tarification par paliers",
       "Traduction en temps réel (français, anglais, sango)",
       "IA conversationnelle avec modèles avancés",
-      "611 mots de vocabulaire trilingues vérifiés avec enregistrements audio natifs",
+      "581 mots de vocabulaire trilingues vérifiés avec enregistrements audio natifs",
       "Toolkit NLP open source pour le traitement du sango",
       "Recherche en prompting vocabulaire publiée ouvertement",
       "Audio locuteur natif — 12 enregistrements en production, programme 300 mots en cours"
@@ -74,7 +74,7 @@
     },
     "model": {
       "title": "Modèles linguistiques",
-      "description": "Prompting augmenté par vocabulaire avec IA fondamentale — sans fine-tuning. Lexique sango de 611 mots vérifiés (sango-français-anglais) avec enregistrements audio de locuteurs natifs. Méthodologie et dataset publiés ouvertement pour la communauté de recherche en IA."
+      "description": "Prompting augmenté par vocabulaire avec IA fondamentale — sans fine-tuning. Lexique sango de 581 mots vérifiés (sango-français-anglais) avec enregistrements audio de locuteurs natifs. Méthodologie et dataset publiés ouvertement pour la communauté de recherche en IA."
     },
     "deploy": {
       "title": "Preuve de déploiement",
@@ -158,7 +158,7 @@
         "API REST de production avec gestion des quotas",
         "Traduction français-sango et anglais-sango",
         "Chat IA conversationnel avancé",
-        "611 mots de vocabulaire trilingues vérifiés avec audio natif",
+        "581 mots de vocabulaire trilingues vérifiés avec audio natif",
         "Toolkit NLP open source pour le sango",
         "Prompting vocabulaire — recherche publiée ouvertement",
         "Application Web Progressive (PWA) — fonctionne hors ligne"
@@ -208,7 +208,7 @@
     },
     "dataset": {
       "title": "Jeu de données du vocabulaire sango",
-      "description": "611+ entrées sango avec traductions en français et anglais, guides de prononciation et contexte grammatical. Le seul jeu de données lexicales sango structuré dans un dépôt ouvert.",
+      "description": "581+ entrées sango avec traductions en français et anglais, guides de prononciation et contexte grammatical. Le seul jeu de données lexicales sango structuré dans un dépôt ouvert.",
       "cta": "Voir sur HuggingFace"
     },
     "npm": {
@@ -292,7 +292,7 @@
     "apiPublished": {
       "year": "Mars 2026",
       "title": "Assets IA publiés",
-      "description": "Toolkit NLP open source publié pour les développeurs. Lexique sango de 611 mots vérifiés publié ouvertement. Le sango devient une langue NLP documentée avec un dataset réutilisable."
+      "description": "Toolkit NLP open source publié pour les développeurs. Lexique sango de 581 mots vérifiés publié ouvertement. Le sango devient une langue NLP documentée avec un dataset réutilisable."
     },
     "metaLive": {
       "year": "Avr. 2026",
@@ -302,7 +302,7 @@
     "hfPublished": {
       "year": "Mai 2026",
       "title": "Recherche publiée",
-      "description": "Méthodologie de prompting augmenté par vocabulaire et lexique sango de 611 mots publiés ouvertement. Le sango devient une langue NLP documentée avec un dataset ouvert et réutilisable."
+      "description": "Méthodologie de prompting augmenté par vocabulaire et lexique sango de 581 mots publiés ouvertement. Le sango devient une langue NLP documentée avec un dataset ouvert et réutilisable."
     },
     "nativeAudio": {
       "year": "Mai 2026",
