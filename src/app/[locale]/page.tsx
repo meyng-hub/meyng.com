@@ -50,6 +50,13 @@ const languageRoadmap = [
     live: false,
   },
   {
+    key: "swahili",
+    color: "bg-purple-500",
+    borderColor: "border-purple-500/30",
+    textColor: "text-purple-400",
+    live: false,
+  },
+  {
     key: "lingala",
     color: "bg-blue-500",
     borderColor: "border-blue-500/30",
@@ -61,13 +68,6 @@ const languageRoadmap = [
     color: "bg-blue-500",
     borderColor: "border-blue-500/30",
     textColor: "text-blue-400",
-    live: false,
-  },
-  {
-    key: "bambara",
-    color: "bg-slate-500",
-    borderColor: "border-slate-500/30",
-    textColor: "text-slate-400",
     live: false,
   },
   {

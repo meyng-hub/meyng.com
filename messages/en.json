@@ -84,26 +84,26 @@
   "roadmap": {
     "sectionLabel": "Language Expansion",
     "sectionTitle": "From Sango to the Continent",
-    "sectionDescription": "Starting with Sango. Expanding to 6 languages covering 68M+ speakers. The same infrastructure scales to every African language.",
+    "sectionDescription": "Starting with Sango. Expanding to 6 languages covering 250M+ speakers. The same infrastructure scales to every African language.",
     "sango": "Sango",
     "sangoSpeakers": "5M speakers",
     "sangoStatus": "Live",
     "ewondo": "Ewondo",
     "ewondoSpeakers": "2M speakers",
-    "ewondoStatus": "Q3 2026",
+    "ewondoStatus": "Q4 2026",
+    "swahili": "Swahili",
+    "swahiliSpeakers": "200M+ speakers",
+    "swahiliStatus": "Q1 2027",
     "lingala": "Lingala",
     "lingalaSpeakers": "25M speakers",
     "lingalaStatus": "H1 2027",
     "wolof": "Wolof",
     "wolofSpeakers": "10M speakers",
     "wolofStatus": "H2 2027",
-    "bambara": "Bambara",
-    "bambaraSpeakers": "14M speakers",
-    "bambaraStatus": "Q2 2028",
     "kirundi": "Kirundi",
     "kirundiSpeakers": "12M speakers",
     "kirundiStatus": "Q3 2028",
-    "total": "68M+ speakers across 6 languages"
+    "total": "250M+ speakers across 6 languages"
   },
   "builtOn": {
     "sectionLabel": "Infrastructure",
@@ -231,7 +231,7 @@
     },
     "scalable": {
       "title": "Built to Scale",
-      "description": "The same architecture that powers Sango scales to any language. Lingala, Wolof, Bambara — each new language is infrastructure, not a rebuild. 2,000+ languages await."
+      "description": "The same architecture that powers Sango scales to any language. Swahili, Lingala, Wolof — each new language is infrastructure, not a rebuild. 2,000+ languages await."
     }
   },
   "about": {
