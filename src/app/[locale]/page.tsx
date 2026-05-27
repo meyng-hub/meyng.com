@@ -502,7 +502,7 @@ export default function Home() {
               </div>
               <div className="flex items-center gap-2 mb-3">
                 <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400">
-                  Apache 2.0
+                  CC-BY-NC 4.0
                 </span>
                 <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-meyng-deep/40 text-meyng-silver/70">
                   BENCH-001

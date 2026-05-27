@@ -203,7 +203,7 @@
     "sectionDescription": "Every resource MEYNG builds for Sango is published free under open licenses — for researchers, NGOs, and governments worldwide.",
     "model": {
       "title": "First Open Sango Translation Model",
-      "description": "Fine-tuned on 500,000+ French-Sango sentence pairs. BENCH-001: +41% BLEU vs baseline. The first open neural machine translation model for Sango — free for any use.",
+      "description": "Fine-tuned on 500,000+ French-Sango sentence pairs. BENCH-001: +41% BLEU vs baseline. The first open neural machine translation model for Sango — free for non-commercial use (CC-BY-NC 4.0).",
       "cta": "View on HuggingFace"
     },
     "dataset": {
