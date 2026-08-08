@@ -39,15 +39,23 @@ npm run lint     # ESLint check
 
 ## Deployment
 
-```bash
-cd C:\meyng-website && npx vercel deploy --prod --yes
-```
+**The Vercel Git integration owns production deploys (measured 2026-08-08).** A merge/push
+to `main` auto-deploys Production, and PRs get preview deployments — verified on PR #6:
+Production deployment for the squash SHA appeared ~30 s after merge with **no CLI call**,
+and the prior merge (#5, `500b653`) shows the same pattern. Unlike SangoAI, `vercel.json`
+here has **no** `"git": { "deploymentEnabled": false }` guard — the integration is fully on.
 
+- **Normal flow: branch → PR (preview deploy is the CI check) → merge to `main` → done.**
+  Do NOT also run `npx vercel deploy --prod` after a merge — that's a double deploy.
+- Manual CLI deploy is the fallback only (e.g. Vercel webhook outage), and only from a
+  clean `main` checkout: `cd C:\meyng-website && npx vercel deploy --prod --yes`
 - **Vercel project**: `meyng-website` on team `meyng-webs-projects`
 - **Project ID**: `prj_mPZPHjHwpIBZjcNCR0NDWb2qXndn`
 - **Team ID**: `team_wONuXem8DRnuW9clO8GDXkaZ`
-- Direct deploy — no copy-to-tmp workaround needed (unlike SangoAI)
-- Always run `npm run start` + verify HTTP 200 before deploying (SSR can fail even if build passes)
+- Always run `npm run start` + verify HTTP 200 before merging (SSR can fail even if build passes)
+- Verify after merge: GitHub Deployments shows Production `success` for the merge SHA, then
+  curl the live page (**expect 307** — apex `meyng.com` redirects to `www.meyng.com`; use
+  `curl -L`, and grep for the changed content, not just HTTP 200)
 
 ## Project Structure
 
