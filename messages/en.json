@@ -277,6 +277,16 @@
     },
     "founderJobTitle": "Software Engineer & AI Entrepreneur",
     "founderLocation": "Paris, France",
+    "pressLabel": "Press",
+    "pressTitle": "Featured In",
+    "pressTais": {
+      "outlet": "The African Innovators Series (TAIS)",
+      "title": "Michel WENEZOUI and the Infrastructure Nobody Notices",
+      "author": "By Rebecca Mbaya",
+      "date": "July 2026",
+      "description": "An in-depth interview on building AI language infrastructure for Sango — from the origin story to open data, community verification, and honest evaluation.",
+      "cta": "Read the feature"
+    },
     "journeyLabel": "Milestones",
     "journeyTitle": "From Idea to Production",
     "founded": {

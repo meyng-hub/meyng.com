@@ -15,6 +15,8 @@ import {
   Cpu,
   AlertTriangle,
   CheckCircle,
+  Newspaper,
+  ExternalLink,
 } from "lucide-react";
 import { SectionHeading } from "@/components/SectionHeading";
 
@@ -242,6 +244,52 @@ export default function AboutPage() {
                 </div>
               </div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      <div className="section-divider max-w-4xl mx-auto" />
+
+      {/* Press */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <SectionHeading label={t("pressLabel")} title={t("pressTitle")} />
+
+          <div className="max-w-2xl mx-auto">
+            <motion.a
+              href="https://reamby.substack.com/p/michel-wenezoui-and-the-infrastructure"
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="group block bg-meyng-card rounded-2xl border border-meyng-border hover:border-meyng-purple/40 p-8 md:p-10 transition-colors duration-200"
+            >
+              <div className="flex items-start gap-5">
+                <div className="w-12 h-12 rounded-xl bg-meyng-deep/30 border border-meyng-purple/20 flex items-center justify-center flex-shrink-0">
+                  <Newspaper className="w-6 h-6 text-meyng-purple" />
+                </div>
+                <div>
+                  <p className="text-meyng-purple text-xs font-semibold uppercase tracking-widest mb-2">
+                    {t("pressTais.outlet")}
+                  </p>
+                  <h3 className="text-lg md:text-xl font-bold text-meyng-light mb-2">
+                    {t("pressTais.title")}
+                  </h3>
+                  <p className="text-meyng-silver/60 text-xs mb-4">
+                    {t("pressTais.author")} · {t("pressTais.date")}
+                  </p>
+                  <p className="text-meyng-silver text-sm leading-relaxed mb-5">
+                    {t("pressTais.description")}
+                  </p>
+                  <span className="inline-flex items-center gap-2 text-meyng-purple text-sm font-semibold group-hover:gap-3 transition-all duration-200">
+                    {t("pressTais.cta")}
+                    <ExternalLink className="w-4 h-4" />
+                  </span>
+                </div>
+              </div>
+            </motion.a>
           </div>
         </div>
       </section>
