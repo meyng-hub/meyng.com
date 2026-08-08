@@ -62,6 +62,29 @@ jobs:
           fi
           echo "PASS: Language roadmap present"
 
+      - name: Assert stale/false claims absent
+        run: |
+          # LINGUA Africa 0020 (Aug 2026): this site claimed "581 entries with
+          # native audio" for months — stale count AND a false feature claim —
+          # while this smoke test ran green daily. Content checks must include
+          # the claims a funder would fact-check, not only branding strings.
+          # Word-ish boundaries on 581 avoid matching asset hashes.
+          FAIL=0
+          if grep -qi "native audio" /tmp/homepage_en.html; then
+            echo "::error title=False claim live::'native audio' on meyng.com — recordings are unpublished pending consent"
+            FAIL=1
+          fi
+          if grep -qiE '[^0-9A-Za-z_]581[^0-9A-Za-z_]' /tmp/homepage_en.html; then
+            echo "::error title=Stale count live::'581' on meyng.com — counts must be non-numeric floor phrasing"
+            FAIL=1
+          fi
+          if grep -qi "thousands of" /tmp/homepage_en.html; then
+            echo "::error title=Inflated claim live::'thousands of' on meyng.com"
+            FAIL=1
+          fi
+          [ $FAIL -eq 0 ] || exit 1
+          echo "PASS: no stale or false claims"
+
       - name: OPSEC check — no infra names in public HTML
         run: |
           FAIL=0
