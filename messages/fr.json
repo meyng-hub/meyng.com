@@ -277,6 +277,16 @@
     },
     "founderJobTitle": "Ingénieur logiciel & entrepreneur IA",
     "founderLocation": "Paris, France",
+    "pressLabel": "Presse",
+    "pressTitle": "Ils parlent de nous",
+    "pressTais": {
+      "outlet": "The African Innovators Series (TAIS)",
+      "title": "Michel WENEZOUI and the Infrastructure Nobody Notices",
+      "author": "Par Rebecca Mbaya",
+      "date": "Juillet 2026",
+      "description": "Un entretien de fond sur la construction d'une infrastructure d'IA linguistique pour le sango — des origines du projet aux données ouvertes, à la vérification communautaire et à l'évaluation honnête.",
+      "cta": "Lire l'article (en anglais)"
+    },
     "journeyLabel": "Jalons",
     "journeyTitle": "De l'idée à la production",
     "founded": {
