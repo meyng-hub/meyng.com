@@ -12,6 +12,15 @@
     "contact": "Contact",
     "cta": "Devenir partenaire"
   },
+  "banner": {
+    "dismiss": "Fermer l'annonce",
+    "tais": {
+      "prefix": "À la une dans",
+      "outlet": "The African Innovators Series (TAIS)",
+      "title": "Michel WENEZOUI and the Infrastructure Nobody Notices",
+      "cta": "Lire l'article (en anglais)"
+    }
+  },
   "hero": {
     "badge": "Présent à Africa Forward · Nairobi 2026",
     "title": "Nous construisons la couche linguistique",
