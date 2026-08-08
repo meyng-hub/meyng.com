@@ -28,7 +28,7 @@
     "description": "We build the translation APIs, NLP tools, and language models that power applications across the continent. Production-grade AI infrastructure for the world's most underserved languages.",
     "cta1": "Start a Free Pilot",
     "cta2": "View Technology",
-    "milestoneBadge": "Research milestone · First open Sango AI model published · BENCH-001: +41% BLEU"
+    "milestoneBadge": "Research milestone · Open Sango↔French model v2-2 · beats the NLLB-200 baseline out-of-distribution (Sango→French)"
   },
   "traction": {
     "api": "Production API",
@@ -129,8 +129,7 @@
   "stats": {
     "languages": "Languages Supported",
     "endpoints": "API Endpoints",
-    "vocab": "Vocabulary Words",
-    "uptime": "API Uptime"
+    "vocab": "Vocabulary Words"
   },
   "api": {
     "label": "Developer API",
@@ -211,8 +210,8 @@
     "sectionTitle": "Infrastructure for the open AI commons",
     "sectionDescription": "Every resource MEYNG builds for Sango is published free under open licenses — for researchers, NGOs, and governments worldwide.",
     "model": {
-      "title": "First Open Sango Translation Model",
-      "description": "Fine-tuned on 500,000+ French-Sango sentence pairs. BENCH-001: +41% BLEU vs baseline. The first open neural machine translation model for Sango — free for non-commercial use (CC-BY-NC 4.0).",
+      "title": "Open Sango Translation Model",
+      "description": "Fine-tuned on 500,000+ French-Sango sentence pairs. Version v2-2 beats the NLLB-200 baseline out-of-distribution on FLORES+ and SIB-200 for Sango→French; for French→Sango the baseline is still stronger, and we publish that result too. Free for non-commercial use (CC-BY-NC 4.0).",
       "cta": "View on HuggingFace"
     },
     "dataset": {

@@ -153,7 +153,7 @@ export default function Home() {
             className="mt-8"
           >
             <a
-              href="https://huggingface.co/MEYNG/nllb-sango-finetuned-600m"
+              href="https://huggingface.co/MEYNG/nllb-sango-finetuned-600m-v2-2"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-400 text-sm font-medium hover:bg-emerald-500/20 transition-colors group"
@@ -505,7 +505,7 @@ export default function Home() {
                   CC-BY-NC 4.0
                 </span>
                 <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-meyng-deep/40 text-meyng-silver/70">
-                  BENCH-001
+                  FLORES+ · SIB-200
                 </span>
               </div>
               <h3 className="text-xl font-bold text-meyng-light mb-3">
@@ -515,7 +515,7 @@ export default function Home() {
                 {t("research.model.description")}
               </p>
               <a
-                href="https://huggingface.co/MEYNG/nllb-sango-finetuned-600m"
+                href="https://huggingface.co/MEYNG/nllb-sango-finetuned-600m-v2-2"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-meyng-purple hover:text-meyng-light transition-colors text-sm font-medium"

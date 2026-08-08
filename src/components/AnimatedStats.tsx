@@ -43,11 +43,25 @@ export function AnimatedStats() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
+  // NO UPTIME STAT. It read "99% API Uptime" until 2026-08-08 and was never
+  // measured: there is no synthetic canary, no status page, no retained alarm
+  // history, and the sangoai-health-check Lambda no longer exists (SangoAI
+  // docs/metrics/GROUND-TRUTH-2026-07-29.md §8 records uptime as NOT
+  // INSTRUMENTED). Do not re-add a figure here — any value would be invented.
+  // To claim uptime, instrument it first (CloudWatch Synthetics canary or an
+  // external monitor with an exportable log), then publish the measured number
+  // with its window.
   const stats: Stat[] = [
     { value: 3, suffix: "", label: t("languages") },
     { value: 8, suffix: "+", label: t("endpoints") },
-    { value: 611, suffix: "", label: t("vocab") },
-    { value: 99, suffix: "%", label: t("uptime") },
+    // Conservative FLOOR, not a snapshot — deliberately matches the "500+ Words"
+    // wording in traction.vocab. The verified count is a moving number and has
+    // FALLEN before (the 2026-07 gloss audit withdrew entries), so a precise
+    // figure here goes stale silently: this read a hardcoded 611 until
+    // 2026-08-08, when the live count was 607. The stats API cannot be called
+    // from this origin (Access-Control-Allow-Origin is https://sangoai.sbs
+    // only), so a live value is not available here — keep the floor.
+    { value: 500, suffix: "+", label: t("vocab") },
   ];
 
   return (
@@ -56,7 +70,7 @@ export function AnimatedStats() {
       initial={{ opacity: 0, y: 20 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6 }}
-      className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4"
+      className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-4"
     >
       {stats.map((stat, i) => (
         <motion.div

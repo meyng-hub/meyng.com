@@ -28,7 +28,7 @@
     "description": "Nous construisons les API de traduction, les outils NLP et les modèles linguistiques qui propulsent les applications à travers le continent. Une infrastructure IA de qualité production pour les langues les plus sous-servies au monde.",
     "cta1": "Lancer un pilote gratuit",
     "cta2": "Voir la technologie",
-    "milestoneBadge": "Étape clé · Premier modèle IA Sango open source publié · BENCH-001 : +41 % BLEU"
+    "milestoneBadge": "Étape recherche · Modèle sango↔français v2-2 ouvert · dépasse la référence NLLB-200 hors distribution (sango→français)"
   },
   "traction": {
     "api": "API en production",
@@ -129,8 +129,7 @@
   "stats": {
     "languages": "Langues supportées",
     "endpoints": "Endpoints API",
-    "vocab": "Mots de vocabulaire",
-    "uptime": "Disponibilité API"
+    "vocab": "Mots de vocabulaire"
   },
   "api": {
     "label": "API développeur",
@@ -211,8 +210,8 @@
     "sectionTitle": "Infrastructure pour les communs de l'IA",
     "sectionDescription": "Chaque ressource construite par MEYNG pour le sango est publiée gratuitement sous licences ouvertes — pour les chercheurs, ONG et gouvernements du monde entier.",
     "model": {
-      "title": "Premier modèle de traduction sango open source",
-      "description": "Affiné sur 500 000+ paires de phrases français-sango. BENCH-001 : +41 % BLEU vs la référence. Le premier modèle de traduction automatique neuronal open source pour le sango — libre pour usage non-commercial (CC-BY-NC 4.0).",
+      "title": "Modèle de traduction sango ouvert",
+      "description": "Affiné sur 500 000+ paires de phrases français-sango. La version v2-2 dépasse la référence NLLB-200 hors distribution sur FLORES+ et SIB-200 pour sango→français ; pour français→sango, la référence reste meilleure, et nous publions aussi ce résultat. Libre pour usage non-commercial (CC-BY-NC 4.0).",
       "cta": "Voir sur HuggingFace"
     },
     "dataset": {
