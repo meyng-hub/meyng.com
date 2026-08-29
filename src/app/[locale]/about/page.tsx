@@ -144,7 +144,7 @@ export default function AboutPage() {
                 { value: "2,000+", label: "Languages", color: "text-meyng-purple" },
                 { value: "1.4B", label: "Speakers", color: "text-emerald-400" },
                 { value: "<5%", label: "Have NLP", color: "text-red-400" },
-                { value: "$4.8B", label: "Market", color: "text-amber-400" },
+                { value: "5M+", label: "Sango speakers", color: "text-amber-400" },
               ].map((stat, i) => (
                 <motion.div
                   key={stat.label}
