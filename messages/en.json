@@ -85,6 +85,7 @@
       "title": "Language Models",
       "description": "Vocabulary-augmented prompting with foundation AI — no fine-tuning required. Several-hundred-word verified Sango lexicon (Sango-French-English). Methodology and dataset published openly for the AI research community."
     },
+    "deployCta": "Message the bot on WhatsApp",
     "deploy": {
       "title": "Deployment Proof",
       "description": "eNdara WhatsApp learning bot, live on Meta Platform since April 2026. No install, works on any phone, SMS fallback where there is no data. Proof that our AI runs where people already are — not just in a browser."

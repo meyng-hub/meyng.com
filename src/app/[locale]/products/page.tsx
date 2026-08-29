@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import {
   ArrowRight,
@@ -17,6 +17,7 @@ import { TranslationDemo } from "@/components/TranslationDemo";
 import { SMSConversation } from "@/components/SMSConversation";
 import { APIShowcase } from "@/components/APIShowcase";
 import { productKeys, productMeta, statusColorMap } from "@/data/products";
+import { whatsappBotLink } from "@/data/links";
 
 const techCards = [
   { icon: Code, color: "text-meyng-purple" },
@@ -38,6 +39,7 @@ function ProductDemoPreview({ type }: { type: string }) {
 
 export default function TechnologyPage() {
   const t = useTranslations();
+  const locale = useLocale();
 
   const products = productMeta.map((meta, i) => ({
     ...meta,
@@ -169,6 +171,19 @@ export default function TechnologyPage() {
                         className="inline-flex items-center gap-2 text-meyng-purple hover:text-meyng-light transition-colors text-sm font-medium"
                       >
                         {t("products.visit", { name: product.name })}
+                        <ExternalLink className="w-3.5 h-3.5" />
+                      </a>
+                    )}
+
+                    {productKeys[i] === "endara" && (
+                      <a
+                        href={whatsappBotLink(locale)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-3 inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 transition-colors text-sm font-medium"
+                      >
+                        <MessageSquare className="w-4 h-4" />
+                        {t("techStack.deployCta")}
                         <ExternalLink className="w-3.5 h-3.5" />
                       </a>
                     )}

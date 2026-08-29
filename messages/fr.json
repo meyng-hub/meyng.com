@@ -85,6 +85,7 @@
       "title": "Modèles linguistiques",
       "description": "Prompting augmenté par vocabulaire avec IA fondamentale — sans fine-tuning. Lexique sango vérifié de plusieurs centaines de mots (sango-français-anglais). Méthodologie et dataset publiés ouvertement pour la communauté de recherche en IA."
     },
+    "deployCta": "Écrire au bot sur WhatsApp",
     "deploy": {
       "title": "Preuve de déploiement",
       "description": "Bot d'apprentissage WhatsApp eNdara, en ligne sur Meta Platform depuis avril 2026. Sans installation, sur n'importe quel téléphone, avec repli SMS là où il n'y a pas de données. La preuve que notre IA fonctionne là où les gens sont déjà — pas seulement dans un navigateur."
