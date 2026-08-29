@@ -99,7 +99,28 @@ jobs:
           fi
           echo "PASS: OPSEC clean"
 
+      - name: French version loads
+        if: ${{ !cancelled() }}
+        run: |
+          STATUS=$(curl -sLo /dev/null -w "%{http_code}" https://www.meyng.com/fr)
+          if [ "$STATUS" != "200" ]; then
+            echo "FAIL: French version returned $STATUS"
+            exit 1
+          fi
+          echo "PASS: French version 200 OK"
+
+      - name: HTTP status check (bare domain redirect)
+        if: ${{ !cancelled() }}
+        run: |
+          STATUS=$(curl -so /dev/null -w "%{http_code}" https://meyng.com)
+          if [ "$STATUS" != "200" ] && [ "$STATUS" != "301" ] && [ "$STATUS" != "307" ]; then
+            echo "FAIL: meyng.com returned $STATUS"
+            exit 1
+          fi
+          echo "PASS: meyng.com HTTP $STATUS"
+
       - name: Lead channel — delivery is configured
+        if: ${{ !cancelled() }}
         run: |
           # Aug 2026: the contact form POSTed to a dead provider endpoint and
           # returned 404 for an unknown period while this smoke test ran green
@@ -117,7 +138,7 @@ jobs:
         # Config being present does not prove the provider accepts it — that was
         # exactly the Aug 2026 failure. Weekly, not daily, to stay inside the
         # provider's free-tier submission quota.
-        if: github.event_name == 'schedule'
+        if: ${{ !cancelled() && github.event_name == 'schedule' }}
         run: |
           if [ "$(date -u +%u)" != "1" ]; then
             echo "SKIP: delivery canary runs Mondays only (today is day $(date -u +%u))"
@@ -132,20 +153,3 @@ jobs:
           fi
           echo "PASS: canary lead delivered end to end"
 
-      - name: French version loads
-        run: |
-          STATUS=$(curl -sLo /dev/null -w "%{http_code}" https://www.meyng.com/fr)
-          if [ "$STATUS" != "200" ]; then
-            echo "FAIL: French version returned $STATUS"
-            exit 1
-          fi
-          echo "PASS: French version 200 OK"
-
-      - name: HTTP status check (bare domain redirect)
-        run: |
-          STATUS=$(curl -so /dev/null -w "%{http_code}" https://meyng.com)
-          if [ "$STATUS" != "200" ] && [ "$STATUS" != "301" ] && [ "$STATUS" != "307" ]; then
-            echo "FAIL: meyng.com returned $STATUS"
-            exit 1
-          fi
-          echo "PASS: meyng.com HTTP $STATUS"
