@@ -87,7 +87,7 @@
     },
     "deploy": {
       "title": "Preuve de déploiement",
-      "description": "Bot d'apprentissage WhatsApp eNdara en ligne sur Meta Platform depuis avril 2026. Déploiement réel servant des utilisateurs à travers l'Afrique centrale. Preuve que notre IA fonctionne au-delà du navigateur."
+      "description": "Bot d'apprentissage WhatsApp eNdara, en ligne sur Meta Platform depuis avril 2026. Sans installation, sur n'importe quel téléphone, avec repli SMS là où il n'y a pas de données. La preuve que notre IA fonctionne là où les gens sont déjà — pas seulement dans un navigateur."
     }
   },
   "roadmap": {
@@ -184,7 +184,7 @@
     },
     "endaraFull": {
       "tagline": "Preuve de déploiement — Bot WhatsApp",
-      "description": "eNdara est un bot d'apprentissage du sango sur WhatsApp, en ligne sur Meta Platform depuis avril 2026. Les utilisateurs peuvent interagir avec le bot pour apprendre le vocabulaire sango par des leçons interactives. En fonctionnement continu depuis son lancement — la preuve que notre IA linguistique fonctionne en conditions réelles à travers l'Afrique centrale.",
+      "description": "eNdara est un bot d'apprentissage du sango sur WhatsApp, en ligne sur Meta Platform depuis avril 2026. Les utilisateurs peuvent interagir avec le bot pour apprendre le vocabulaire sango par des leçons interactives. En fonctionnement continu depuis son lancement — la preuve que notre IA linguistique tourne sur les réseaux que les gens utilisent déjà, conçue pour les faibles bandes passantes.",
       "features": [
         "En ligne sur Meta Platform depuis avril 2026",
         "Leçons interactives natives WhatsApp",

@@ -87,7 +87,7 @@
     },
     "deploy": {
       "title": "Deployment Proof",
-      "description": "eNdara WhatsApp learning bot live on Meta Platform since April 2026. Real-world deployment serving users across Central Africa. Proof that our AI works beyond the browser."
+      "description": "eNdara WhatsApp learning bot, live on Meta Platform since April 2026. No install, works on any phone, SMS fallback where there is no data. Proof that our AI runs where people already are — not just in a browser."
     }
   },
   "roadmap": {
@@ -184,7 +184,7 @@
     },
     "endaraFull": {
       "tagline": "Deployment Proof — WhatsApp Learning Bot",
-      "description": "eNdara is a WhatsApp-based Sango learning bot live on Meta Platform since April 2026. Users can interact with the bot to learn Sango vocabulary through interactive lessons. Running continuously since launch — proof our language AI works in real-world, low-bandwidth environments across Central Africa.",
+      "description": "eNdara is a WhatsApp-based Sango learning bot live on Meta Platform since April 2026. Users can interact with the bot to learn Sango vocabulary through interactive lessons. Running continuously since launch — proof our language AI runs on the networks people already use, built for low-bandwidth conditions.",
       "features": [
         "Live on Meta Platform since April 2026",
         "WhatsApp-native interactive lessons",
