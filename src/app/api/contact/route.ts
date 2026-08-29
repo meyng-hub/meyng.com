@@ -6,14 +6,23 @@ export const dynamic = "force-dynamic";
 /**
  * Server-side contact endpoint.
  *
- * The browser never talks to the form provider directly. That buys three things:
- *  1. the provider endpoint stays out of the client bundle (bots can't scrape and spam it),
+ * The browser never talks to the mail provider directly. That buys three things:
+ *  1. the API key and provider stay out of the client bundle,
  *  2. every lead is logged here BEFORE delivery is attempted, so a provider outage
  *     costs latency instead of a lead,
  *  3. delivery failures are loud (502 + error log) instead of a silent client-side 404.
+ *
+ * Aug 2026: the previous provider account went dead and every lead was dropped for an
+ * unknown period. Hence: no hardcoded fallbacks, unset config fails loudly, and the
+ * full payload is written to logs on every delivery failure.
  */
 
-const PROVIDER_ENDPOINT = process.env.CONTACT_FORM_ENDPOINT;
+const RESEND_API_KEY = process.env.RESEND_API_KEY;
+const FROM_EMAIL = process.env.CONTACT_FROM_EMAIL;
+const TO_EMAIL = process.env.CONTACT_TO_EMAIL ?? "contact@meyng.com";
+// Overridable only so delivery can be exercised against a stub in tests.
+const RESEND_API_BASE = process.env.RESEND_API_BASE ?? "https://api.resend.com";
+
 const PROVIDER_TIMEOUT_MS = 8000;
 
 const MAX_LENGTHS = {
@@ -45,6 +54,10 @@ function clientIp(req: Request): string {
   return (req.headers.get("x-forwarded-for") ?? "unknown").split(",")[0].trim();
 }
 
+function isConfigured(): boolean {
+  return Boolean(RESEND_API_KEY && FROM_EMAIL);
+}
+
 type Lead = {
   name: string;
   email: string;
@@ -65,10 +78,16 @@ function parseLead(body: unknown): { lead: Lead } | { error: string } {
   const get = (key: keyof typeof MAX_LENGTHS) =>
     typeof raw[key] === "string" ? (raw[key] as string).trim() : "";
 
+  // name and subject end up in the email Subject header. Strip CR/LF and other
+  // control characters so a crafted value can't shape headers, whatever the
+  // provider does downstream.
+  const getHeaderSafe = (key: "name" | "subject") =>
+    get(key).replace(/[\u0000-\u001f\u007f]+/g, " ").trim();
+
   const lead: Lead = {
-    name: get("name"),
+    name: getHeaderSafe("name"),
     email: get("email"),
-    subject: get("subject") || "general",
+    subject: getHeaderSafe("subject") || "general",
     message: get("message"),
     locale: typeof raw.locale === "string" ? raw.locale.slice(0, 5) : "en",
   };
@@ -84,6 +103,40 @@ function parseLead(body: unknown): { lead: Lead } | { error: string } {
   }
 
   return { lead };
+}
+
+// The lead is attacker-controlled text landing in an HTML email body.
+function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function renderEmail(lead: Lead) {
+  const text = [
+    `Name:    ${lead.name}`,
+    `Email:   ${lead.email}`,
+    `Subject: ${lead.subject}`,
+    `Locale:  ${lead.locale}`,
+    "",
+    lead.message,
+  ].join("\n");
+
+  const html = [
+    "<div style=\"font-family:system-ui,sans-serif;font-size:15px;line-height:1.6\">",
+    `<p><strong>Name:</strong> ${escapeHtml(lead.name)}<br>`,
+    `<strong>Email:</strong> ${escapeHtml(lead.email)}<br>`,
+    `<strong>Subject:</strong> ${escapeHtml(lead.subject)}<br>`,
+    `<strong>Locale:</strong> ${escapeHtml(lead.locale)}</p>`,
+    "<hr>",
+    `<p style="white-space:pre-wrap">${escapeHtml(lead.message)}</p>`,
+    "</div>",
+  ].join("");
+
+  return { text, html };
 }
 
 export async function POST(req: Request) {
@@ -121,22 +174,32 @@ export async function POST(req: Request) {
     messageLength: lead.message.length,
   });
 
-  if (!PROVIDER_ENDPOINT) {
+  if (!isConfigured()) {
     // Misconfiguration must be loud. The lead is preserved in full below.
-    console.error("[contact] LEAD NOT DELIVERED - CONTACT_FORM_ENDPOINT is unset", lead);
+    console.error(
+      "[contact] LEAD NOT DELIVERED - RESEND_API_KEY or CONTACT_FROM_EMAIL is unset",
+      lead,
+    );
     return NextResponse.json({ error: "not_configured" }, { status: 503 });
   }
 
+  const { text, html } = renderEmail(lead);
+
   try {
-    const res = await fetch(PROVIDER_ENDPOINT, {
+    const res = await fetch(`${RESEND_API_BASE}/emails`, {
       method: "POST",
-      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      headers: {
+        Authorization: `Bearer ${RESEND_API_KEY}`,
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify({
-        name: lead.name,
-        email: lead.email,
-        subject: lead.subject,
-        message: lead.message,
-        _subject: `[meyng.com] ${lead.subject} - ${lead.name}`,
+        from: FROM_EMAIL,
+        to: [TO_EMAIL],
+        // So hitting Reply in the inbox answers the lead, not the robot.
+        reply_to: lead.email,
+        subject: `[meyng.com] ${lead.subject} - ${lead.name}`,
+        text,
+        html,
       }),
       signal: AbortSignal.timeout(PROVIDER_TIMEOUT_MS),
     });
@@ -152,6 +215,8 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "delivery_failed" }, { status: 502 });
     }
 
+    const sent = (await res.json().catch(() => ({}))) as { id?: string };
+    console.log("[contact] lead delivered", { id: sent.id, email: lead.email });
     return NextResponse.json({ ok: true }, { status: 200 });
   } catch (err) {
     console.error("[contact] LEAD DELIVERY THREW", {
@@ -164,9 +229,6 @@ export async function POST(req: Request) {
 
 export async function GET() {
   // Cheap liveness probe for the smoke test: reports whether delivery is configured
-  // without exposing the endpoint itself.
-  return NextResponse.json({
-    ok: true,
-    configured: Boolean(PROVIDER_ENDPOINT),
-  });
+  // without exposing the key or the recipient.
+  return NextResponse.json({ ok: true, configured: isConfigured() });
 }

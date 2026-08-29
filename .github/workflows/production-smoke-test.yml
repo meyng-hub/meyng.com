@@ -108,7 +108,7 @@ jobs:
           BODY=$(curl -sL https://www.meyng.com/api/contact)
           echo "$BODY"
           if ! echo "$BODY" | grep -q '"configured":true'; then
-            echo "::error title=Lead channel down::CONTACT_FORM_ENDPOINT is unset in production — every contact form submission is being dropped"
+            echo "::error title=Lead channel down::RESEND_API_KEY or CONTACT_FROM_EMAIL is unset in production — every contact form submission is being dropped"
             exit 1
           fi
           echo "PASS: contact delivery configured"
