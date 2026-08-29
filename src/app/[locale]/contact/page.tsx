@@ -2,12 +2,13 @@
 
 import { useState, type FormEvent } from "react";
 import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Mail, MapPin, ArrowRight, CheckCircle, Loader2 } from "lucide-react";
 import { SectionHeading } from "@/components/SectionHeading";
 
-const FORMSPREE_URL =
-  process.env.NEXT_PUBLIC_FORMSPREE_URL || "https://formspree.io/f/xdkodznp";
+// Posts go to our own route handler, never straight to a third party. See
+// src/app/api/contact/route.ts for why.
+const CONTACT_ENDPOINT = "/api/contact";
 
 const inquiryKeys = [
   "partnerships",
@@ -21,6 +22,7 @@ const MAX_MESSAGE_LENGTH = 2000;
 
 export default function ContactPage() {
   const t = useTranslations("contact");
+  const locale = useLocale();
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(false);
   const [sending, setSending] = useState(false);
@@ -85,12 +87,25 @@ export default function ContactPage() {
     const data = new FormData(form);
 
     try {
-      const res = await fetch(FORMSPREE_URL, {
+      const res = await fetch(CONTACT_ENDPOINT, {
         method: "POST",
-        body: data,
-        headers: { Accept: "application/json" },
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          name: data.get("name"),
+          email: data.get("email"),
+          subject: data.get("subject"),
+          message: data.get("message"),
+          company: data.get("company"), // honeypot
+          locale,
+        }),
       });
       if (res.ok) {
+        if (typeof window !== "undefined" && typeof window.gtag === "function") {
+          window.gtag("event", "generate_lead", {
+            form_location: "contact_page",
+            inquiry_type: String(data.get("subject") ?? "general"),
+          });
+        }
         setSubmitted(true);
         form.reset();
         setFieldErrors({});
@@ -220,9 +235,31 @@ export default function ContactPage() {
                     role="alert"
                     className="p-4 rounded-lg bg-red-500/10 border border-red-500/30 text-red-400 text-sm"
                   >
-                    {t("formError")}
+                    {t.rich("formError", {
+                      mail: (chunks) => (
+                        <a
+                          href="mailto:contact@meyng.com"
+                          className="underline font-medium hover:text-red-300"
+                        >
+                          {chunks}
+                        </a>
+                      ),
+                    })}
                   </div>
                 )}
+                {/* Honeypot: hidden from users, filled by bots. Not aria-hidden-only -
+                    tabIndex + autoComplete keep it out of the keyboard/AT path too. */}
+                <div className="hidden" aria-hidden="true">
+                  <label htmlFor="company">Company (leave blank)</label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    tabIndex={-1}
+                    autoComplete="off"
+                  />
+                </div>
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
                   {/* Name */}
                   <div>

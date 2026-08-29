@@ -369,7 +369,7 @@
     "formSending": "Sending...",
     "formResponseTime": "We typically respond within 24 hours.",
     "formSuccess": "Thank you! Your message has been sent. We'll get back to you within 24 hours.",
-    "formError": "Something went wrong. Please try again or email us directly at contact@meyng.com.",
+    "formError": "Something went wrong. Please try again or email us directly at <mail>contact@meyng.com</mail>.",
     "validationNameRequired": "Please enter your name",
     "validationEmailRequired": "Please enter your email address",
     "validationEmailInvalid": "Please enter a valid email address",

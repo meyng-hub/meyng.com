@@ -99,6 +99,39 @@ jobs:
           fi
           echo "PASS: OPSEC clean"
 
+      - name: Lead channel — delivery is configured
+        run: |
+          # Aug 2026: the contact form POSTed to a dead provider endpoint and
+          # returned 404 for an unknown period while this smoke test ran green
+          # daily. The site rendered perfectly; the only lead channel was gone.
+          # Uptime checks must cover the revenue path, not just the HTML.
+          BODY=$(curl -sL https://www.meyng.com/api/contact)
+          echo "$BODY"
+          if ! echo "$BODY" | grep -q '"configured":true'; then
+            echo "::error title=Lead channel down::CONTACT_FORM_ENDPOINT is unset in production — every contact form submission is being dropped"
+            exit 1
+          fi
+          echo "PASS: contact delivery configured"
+
+      - name: Lead channel — end-to-end delivery canary (weekly)
+        # Config being present does not prove the provider accepts it — that was
+        # exactly the Aug 2026 failure. Weekly, not daily, to stay inside the
+        # provider's free-tier submission quota.
+        if: github.event_name == 'schedule'
+        run: |
+          if [ "$(date -u +%u)" != "1" ]; then
+            echo "SKIP: delivery canary runs Mondays only (today is day $(date -u +%u))"
+            exit 0
+          fi
+          PAYLOAD='{"name":"Smoke Test Canary","email":"contact@meyng.com","subject":"general","message":"Automated weekly delivery canary from GitHub Actions. No action needed."}'
+          STATUS=$(curl -sL -o /tmp/canary.json -w "%{http_code}" -X POST https://www.meyng.com/api/contact -H "Content-Type: application/json" -d "$PAYLOAD")
+          cat /tmp/canary.json
+          if [ "$STATUS" != "200" ]; then
+            echo "::error title=Lead channel broken::Canary submission returned $STATUS — leads are not reaching the inbox"
+            exit 1
+          fi
+          echo "PASS: canary lead delivered end to end"
+
       - name: French version loads
         run: |
           STATUS=$(curl -sLo /dev/null -w "%{http_code}" https://www.meyng.com/fr)
