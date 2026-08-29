@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import {
   ArrowRight,
@@ -23,6 +23,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { AnimatedStats } from "@/components/AnimatedStats";
 import { TranslationDemo } from "@/components/TranslationDemo";
 import { APIShowcase } from "@/components/APIShowcase";
+import { whatsappBotLink } from "@/data/links";
 
 const tractionItems = [
   { icon: Server, colorClass: "text-green-400" },
@@ -84,6 +85,7 @@ const valueIcons = [Trophy, Target, TrendingUp];
 
 export default function Home() {
   const t = useTranslations();
+  const locale = useLocale();
 
   return (
     <>
@@ -368,6 +370,18 @@ export default function Home() {
                   <p className="text-meyng-silver text-sm leading-relaxed">
                     {t(`techStack.${key}.description`)}
                   </p>
+                  {key === "deploy" && (
+                    <a
+                      href={whatsappBotLink(locale)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-4 inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 transition-colors text-sm font-medium"
+                    >
+                      <MessageSquare className="w-4 h-4" />
+                      {t("techStack.deployCta")}
+                      <ExternalLink className="w-3.5 h-3.5" />
+                    </a>
+                  )}
                 </motion.div>
               );
             })}
