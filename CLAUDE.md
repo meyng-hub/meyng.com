@@ -13,7 +13,7 @@ Corporate website for MEYNG — an African language AI infrastructure company.
 - **UI**: React 19, TailwindCSS 4 (`@theme inline` custom tokens), Framer Motion 12
 - **i18n**: next-intl 4.8.3 (EN/FR bilingual)
 - **Analytics**: Google Analytics 4 (G-FFEZSWMXDJ)
-- **Forms**: contact form posts to `/api/contact` (own route handler), which forwards server-side to `CONTACT_FORM_ENDPOINT`
+- **Forms**: contact form posts to `/api/contact` (own route handler), which sends via Resend server-side (`RESEND_API_KEY`, `CONTACT_FROM_EMAIL`, `CONTACT_TO_EMAIL`)
 - **Hosting**: Vercel
 
 ## User-level standards
@@ -115,6 +115,11 @@ Custom TailwindCSS 4 tokens defined via `@theme inline`:
   default turns "misconfigured" into "confidently broken". `CONTACT_FORM_ENDPOINT` is now
   server-side only (no `NEXT_PUBLIC_`, so bots can't scrape it from the bundle), unset = loud 503,
   and every lead is logged before delivery is attempted so an outage costs latency, not a lead.
+  The account turned out to be dead, so delivery moved to Resend (Aug 2026) — same handler, same
+  invariants, `RESEND_API_KEY` + `CONTACT_FROM_EMAIL` replace `CONTACT_FORM_ENDPOINT`.
+- **Resend needs a verified domain.** `CONTACT_FROM_EMAIL` must be on a domain verified in Resend
+  (SPF + DKIM DNS records) or every send 403s. Sending from an unverified domain is the single
+  most likely reason a correctly-wired form still delivers nothing.
 - **Instrument the revenue path, not just the HTML.** The smoke test asserted hero copy and OPSEC
   strings on a page whose only lead channel was dead. It now checks `GET /api/contact` for
   `"configured":true` daily and posts a real canary lead weekly (Mondays — free-tier quota).
