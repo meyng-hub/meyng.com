@@ -307,7 +307,7 @@ export default function Home() {
                 },
                 { key: "speakers", value: "1.4B+", color: "text-emerald-400" },
                 { key: "nlpCoverage", value: "<5%", color: "text-red-400" },
-                { key: "tam", value: "$4.8B", color: "text-amber-400" },
+                { key: "tam", value: "5M+", color: "text-amber-400" },
               ] as const
             ).map((item, i) => (
               <motion.div

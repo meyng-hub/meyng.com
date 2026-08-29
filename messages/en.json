@@ -3,7 +3,7 @@
     "title": "MEYNG | AI Infrastructure for African Languages",
     "titleTemplate": "%s | MEYNG",
     "description": "MEYNG builds the translation APIs, NLP tools, and language models that power applications across Africa. Starting with Sango. Scaling to the continent.",
-    "ogDescription": "The AI infrastructure company for African languages. Production-grade translation APIs, NLP tools, and language models."
+    "ogDescription": "The AI infrastructure company for African languages. Translation APIs, NLP tools, and language models — built and verified with native speakers."
   },
   "nav": {
     "home": "Home",
@@ -25,14 +25,14 @@
     "badge": "Featured at Africa Forward · Nairobi 2026",
     "title": "Building the Language Layer",
     "titleHighlight": "for Africa",
-    "description": "We build the translation APIs, NLP tools, and language models that power applications across the continent. Production-grade AI infrastructure for the world's most underserved languages.",
+    "description": "We build the translation APIs, NLP tools, and language models that power applications across the continent. Verified language AI for the world's most underserved languages — open data, native-speaker review, results you can check.",
     "cta1": "Start a Free Pilot",
     "cta2": "View Technology",
     "milestoneBadge": "Research milestone · Open Sango↔French model v2-2 · beats the NLLB-200 baseline out-of-distribution (Sango→French)"
   },
   "traction": {
-    "api": "Production API",
-    "apiSub": "Live & serving requests",
+    "api": "REST API",
+    "apiSub": "Live — pilot access",
     "vocab": "500+ Words",
     "vocabSub": "Verified trilingual lexicon",
     "hf": "Open Research",
@@ -42,23 +42,23 @@
   },
   "flagship": {
     "sectionLabel": "Flagship Product",
-    "sectionTitle": "SangoAI — The First AI Platform for Sango",
-    "sectionDescription": "The first dedicated AI infrastructure for Sango, the national language of the Central African Republic. 5M+ speakers. Production API, open datasets — built from the ground up.",
+    "sectionTitle": "SangoAI — Verified Language AI for Sango",
+    "sectionDescription": "Dedicated AI infrastructure for Sango, the national language of the Central African Republic — 5M+ speakers. Open datasets with per-entry provenance, native-speaker verification throughout.",
     "features": [
-      "Production REST API with tiered pricing",
+      "REST API with quota management — pilot pricing on request",
       "Real-time translation (French, English, Sango)",
       "Conversational AI with advanced language models",
       "Several hundred verified trilingual vocabulary entries, published openly",
       "Open-source NLP toolkit for Sango processing",
       "Vocabulary-augmented prompting research published on HuggingFace",
-      "Native speaker audio — 12 recordings live, 300-word program underway"
+      "Native-speaker audio recording program — authentic pronunciation, not synthesized"
     ],
     "visitSite": "Visit SangoAI",
     "tryApi": "Try the API"
   },
   "market": {
     "sectionLabel": "Market Opportunity",
-    "sectionTitle": "The $4.8B African Language AI Market",
+    "sectionTitle": "African Languages: The Missing AI Layer",
     "sectionDescription": "Africa has 2,000+ languages. Less than 5% have any NLP tools. We're building the infrastructure to change that.",
     "languages": "African Languages",
     "languagesSub": "Massively underserved by AI",
@@ -66,16 +66,16 @@
     "speakersSub": "Across the continent",
     "nlpCoverage": "NLP Coverage",
     "nlpCoverageSub": "Of African languages today",
-    "tam": "Market Size",
-    "tamSub": "African language tech by 2030"
+    "tam": "Sango Speakers",
+    "tamSub": "The national language of CAR — where we start"
   },
   "techStack": {
     "sectionLabel": "What We've Built",
-    "sectionTitle": "Production-Grade AI Infrastructure",
-    "sectionDescription": "Not a research project. A production system processing real requests, serving real users, deployed on enterprise-grade infrastructure.",
+    "sectionTitle": "Infrastructure You Can Verify",
+    "sectionDescription": "Everything we claim is checkable today: message the WhatsApp bot, download the datasets, read the model evaluations — including the results that don't flatter us.",
     "api": {
       "title": "Translation API",
-      "description": "RESTful API with tiered access (Free/Startup/Business/Enterprise), quota management, usage analytics, and developer dashboard. Enterprise-grade cloud infrastructure."
+      "description": "RESTful API with quota management, usage analytics, and a developer dashboard. Currently in pilot — pricing on request."
     },
     "nlp": {
       "title": "NLP Toolkit",
@@ -118,7 +118,7 @@
     "sectionLabel": "Infrastructure",
     "title": "Built on World-Class Infrastructure",
     "cloud": "Cloud Platform",
-    "cloudSub": "Enterprise-grade compute & database",
+    "cloudSub": "Managed cloud compute & database",
     "ai": "Foundation AI",
     "aiSub": "State-of-the-art language models",
     "research": "Open Research",
@@ -134,7 +134,7 @@
   "api": {
     "label": "Developer API",
     "title": "Built for developers",
-    "description": "Integrate African language AI directly into your applications. Simple REST endpoints, predictable pricing, production-grade reliability.",
+    "description": "Integrate African language AI directly into your applications. Simple REST endpoints with clear documentation. Pilot access — pricing on request.",
     "cta": "View documentation"
   },
   "cta": {
@@ -148,12 +148,12 @@
   "products": {
     "sectionLabel": "Our Technology",
     "sectionTitle": "AI Infrastructure for African Languages",
-    "sectionDescription": "From production APIs to native speaker audio programs, we build the complete language AI stack. SangoAI is our flagship — proving the model. eNdara deploys it in the field.",
+    "sectionDescription": "From open verified datasets to a live WhatsApp deployment, we build the complete language AI stack. SangoAI is our flagship — proving the model. eNdara deploys it in the field.",
     "sangoai": {
       "tagline": "Flagship — AI Language Infrastructure",
-      "description": "The first dedicated AI infrastructure for Sango. Production REST API, real-time translation, conversational AI, and gamified learning — backed by our open-source NLP toolkit and published models.",
+      "description": "Dedicated AI infrastructure for Sango. REST API, real-time translation, conversational AI, and gamified learning — backed by our open-source NLP toolkit and published models.",
       "features": [
-        "Production REST API with tiered pricing",
+        "REST API — pilot pricing on request",
         "Real-time translation (French, English, Sango)",
         "Conversational AI with advanced models",
         "Open-source NLP toolkit"
@@ -161,9 +161,9 @@
     },
     "sangoaiFull": {
       "tagline": "Flagship — AI Language Infrastructure",
-      "description": "The most complete AI platform for Sango, the national language of the Central African Republic spoken by 5M+ people. SangoAI provides a production REST API with tiered pricing, real-time AI translation, conversational AI chat, gamified learning with XP and levels, native speaker audio, and a developer dashboard — backed by our open-source NLP toolkit and published language models.",
+      "description": "A full AI platform for Sango, the national language of the Central African Republic spoken by 5M+ people. SangoAI provides a REST API, real-time AI translation, conversational AI chat, gamified learning with XP and levels, and a developer dashboard — backed by our open-source NLP toolkit and published language models.",
       "features": [
-        "Production REST API with quota management",
+        "REST API with quota management",
         "French-Sango and English-Sango translation",
         "AI-powered conversational chat",
         "Several hundred verified trilingual vocabulary entries",
@@ -184,14 +184,14 @@
     },
     "endaraFull": {
       "tagline": "Deployment Proof — WhatsApp Learning Bot",
-      "description": "eNdara is a WhatsApp-based Sango learning bot live on Meta Platform since April 2026. Users can interact with the bot to learn Sango vocabulary through interactive lessons. Deployed on production infrastructure with high availability. Proves our language AI works in real-world, low-bandwidth environments across Central Africa.",
+      "description": "eNdara is a WhatsApp-based Sango learning bot live on Meta Platform since April 2026. Users can interact with the bot to learn Sango vocabulary through interactive lessons. Running continuously since launch — proof our language AI works in real-world, low-bandwidth environments across Central Africa.",
       "features": [
         "Live on Meta Platform since April 2026",
         "WhatsApp-native interactive lessons",
         "SMS-based vocabulary lessons via Africa's Talking",
         "Lesson engine with fuzzy matching",
         "Zero-install, works on any phone",
-        "Production-grade deployment"
+        "Live continuously since April 2026"
       ]
     },
     "visit": "Visit {name}",
@@ -211,12 +211,12 @@
     "sectionDescription": "Every resource MEYNG builds for Sango is published free under open licenses — for researchers, NGOs, and governments worldwide.",
     "model": {
       "title": "Open Sango Translation Model",
-      "description": "Fine-tuned on 500,000+ French-Sango sentence pairs. Version v2-2 beats the NLLB-200 baseline out-of-distribution on FLORES+ and SIB-200 for Sango→French; for French→Sango the baseline is still stronger, and we publish that result too. Free for non-commercial use (CC-BY-NC 4.0).",
+      "description": "Fine-tuned on a quality-filtered French-Sango corpus. Version v2-2 beats the NLLB-200 baseline out-of-distribution on FLORES+ and SIB-200 for Sango→French; for French→Sango the baseline is still stronger, and we publish that result too. Free for non-commercial use (CC-BY-NC 4.0).",
       "cta": "View on HuggingFace"
     },
     "dataset": {
       "title": "Sango Vocabulary Dataset",
-      "description": "Hundreds of Sango entries with French and English translations, pronunciation guides, and grammar context. The only structured Sango lexical dataset in any open repository.",
+      "description": "Hundreds of Sango entries with French and English translations, pronunciation guides, and grammar context. Every entry carries its source and review status — unverifiable entries are withdrawn, and the audit trail is public.",
       "cta": "View on HuggingFace"
     },
     "npm": {
@@ -227,15 +227,15 @@
   },
   "values": {
     "sectionLabel": "Why MEYNG",
-    "sectionTitle": "First-Mover in a Massive Market",
-    "sectionDescription": "We're not competing in a crowded market. We're creating a new one — AI infrastructure for the most underserved languages on Earth.",
+    "sectionTitle": "The Verification Layer",
+    "sectionDescription": "Free translation now exists for many African languages. What organizations still can't get is language AI they can verify — that is the layer we build.",
     "firstMover": {
       "title": "Beyond Translation",
       "description": "General-purpose translators handle words. SangoAI handles the language — specialized grammar rules, domain accuracy, verified vocabulary, native speaker audio, and a full learning platform. Where surface translation ends, SangoAI infrastructure begins."
     },
     "production": {
-      "title": "Production, Not Research",
-      "description": "Live API serving real requests. Published models and datasets. WhatsApp bot deployed on a global messaging platform. This isn't a paper — it's infrastructure you can integrate today."
+      "title": "Checkable, Not Claimed",
+      "description": "Message the WhatsApp bot right now. Download the datasets. Read the evaluations — including the unfavourable ones. We would rather be verified than impressive."
     },
     "scalable": {
       "title": "Built to Scale",
@@ -247,30 +247,30 @@
     "sectionTitle": "The AI Infrastructure Company for African Languages",
     "sectionDescription": "We build the translation APIs, NLP tools, and language models that enable organizations to operate in African languages at scale.",
     "missionTitle": "Our Mission",
-    "missionDescription": "To build production-grade AI infrastructure for every African language — starting with the most underserved. We believe the next billion internet users will speak languages that AI doesn't understand yet. MEYNG is building the bridge.",
+    "missionDescription": "To build verified AI infrastructure for every African language — starting with the most underserved. We believe the next billion internet users will speak languages that AI doesn't understand yet. MEYNG is building the bridge.",
     "visionTitle": "Our Vision",
-    "visionDescription": "A future where every African language has production-quality NLP tools — translation APIs, speech recognition, and language models — accessible to any developer, organization, or government that needs them.",
+    "visionDescription": "A future where every African language has dependable, verified NLP tools — translation APIs, speech recognition, and language models — accessible to any developer, organization, or government that needs them.",
     "whyTitle": "Why African Languages?",
-    "whyDescription": "Africa has 2,000+ languages spoken by 1.4 billion people. Less than 5% have basic NLP tools. Google Translate supports 134+ languages — fewer than 25 are African, and most with limited depth. The gap between basic translation coverage and production-grade language infrastructure is where MEYNG operates. This isn't a niche. It's the largest untapped market in language AI.",
+    "whyDescription": "Africa has 2,000+ languages spoken by 1.4 billion people, and only a small fraction have basic NLP tools. Free translation coverage has grown — Google added Sango in 2026, and that is genuinely good news. But coverage is not the same as usability: organizations working in these languages still cannot verify what machines generate. That verification layer is where MEYNG operates.",
     "whyPoints": [
       "2,000+ languages, <5% have NLP tools",
-      "$4.8B projected market by 2030",
       "1.4B speakers across the continent",
-      "First dedicated infrastructure for most languages"
+      "Open Sango dataset — every entry carries provenance",
+      "Native-speaker verification — the layer free translation lacks"
     ],
     "valuesLabel": "Why We Win",
     "valuesTitle": "Our Competitive Advantage",
     "technical": {
       "title": "Technical Moat",
-      "description": "Community-verified vocabulary database, published vocabulary-augmented prompting methodology, and production infrastructure that took years to build. The moat is data quality and cultural authority — not just compute."
+      "description": "Community-verified vocabulary database, published vocabulary-augmented prompting methodology, and an open verification pipeline. The moat is data quality and cultural authority — not just compute."
     },
     "cultural": {
       "title": "Cultural Authority",
       "description": "Founded by a Central African native speaker with deep linguistic expertise. Our data quality comes from cultural understanding, not just computation."
     },
     "firstMover": {
-      "title": "First-Mover Lock-In",
-      "description": "First to publish Sango NLP tools, first to deploy a Sango AI API, first to ship a WhatsApp bot for Sango learning. Network effects compound."
+      "title": "Judge, Not Just Player",
+      "description": "We publish our data with per-entry provenance and our evaluations with the failures included — building the verification standard any Sango AI, ours included, gets measured against."
     },
     "partnerships": {
       "title": "Strategic Positioning",
@@ -281,7 +281,7 @@
     "founder": {
       "name": "Michel WENEZOUI",
       "role": "Founder & CEO",
-      "bio": "Software engineer and AI entrepreneur. Native Sango speaker from the Central African Republic. Built SangoAI from zero to production — scalable cloud infrastructure, published NLP toolkit, native speaker audio program, and vocabulary-augmented prompting research. Invited by BPI France to Africa Forward Summit, Nairobi 2026. Based in Paris."
+      "bio": "Software engineer and AI entrepreneur. Native Sango speaker from the Central African Republic. Built SangoAI from zero to a live platform — published NLP toolkit, open verified datasets, and vocabulary-augmented prompting research. Invited by BPI France to Africa Forward Summit, Nairobi 2026. Based in Paris."
     },
     "founderJobTitle": "Software Engineer & AI Entrepreneur",
     "founderLocation": "Paris, France",
@@ -296,16 +296,16 @@
       "cta": "Read the feature"
     },
     "journeyLabel": "Milestones",
-    "journeyTitle": "From Idea to Production",
+    "journeyTitle": "The Road So Far",
     "founded": {
       "year": "2023",
       "title": "MEYNG Founded",
-      "description": "Incorporated in Paris. Began building the first Sango NLP pipeline and training data collection."
+      "description": "Incorporated in Paris. Began building a Sango NLP pipeline and training data collection."
     },
     "sangoaiLaunch": {
       "year": "Jan 2026",
       "title": "SangoAI Goes Live",
-      "description": "Production API deployed on cloud infrastructure. Translation, chat, and learning platform launched at sangoai.sbs with enterprise-grade scalability."
+      "description": "Translation, chat, and learning platform launched at sangoai.sbs."
     },
     "apiPublished": {
       "year": "Mar 2026",
@@ -315,7 +315,7 @@
     "metaLive": {
       "year": "Apr 2026",
       "title": "WhatsApp Bot on Meta Platform",
-      "description": "eNdara learning bot published on Meta. Any WhatsApp user can message to learn Sango. First real-world deployment proof beyond web."
+      "description": "eNdara learning bot published on Meta. Any WhatsApp user can message to learn Sango. Real-world deployment proof beyond the web."
     },
     "hfPublished": {
       "year": "May 2026",
@@ -325,7 +325,7 @@
     "nativeAudio": {
       "year": "May 2026",
       "title": "Native Speaker Audio Program",
-      "description": "First native Sango speaker recordings live in production. Phase 1: 12 words. Phase 2: 300-word recording program underway. First AI platform for Sango with authentic pronunciation — not machine-generated speech."
+      "description": "Phase 1 native-speaker recordings completed and a larger recording program begun — authentic pronunciation from native Sango speakers, not machine-generated speech."
     },
     "nairobiSummit": {
       "year": "May 2026",
@@ -333,7 +333,7 @@
       "description": "Selected by BPI France to attend Africa Forward Summit, Nairobi. Strategic conversations with government officials, NGO partners, and institutional investors across the continent. The language infrastructure story reaches decision-makers."
     },
     "ctaTitle": "Invest in African language AI",
-    "ctaDescription": "We're raising pre-seed funding to scale from 1 language to 5, hire our first NLP engineers, and close our first enterprise contracts. The market is massive, the timing is now.",
+    "ctaDescription": "We're raising pre-seed funding to scale from 1 language to 5, hire our first NLP engineers, and close our first pilot contracts. The need is vast, the timing is now.",
     "ctaButton": "Let's Talk"
   },
   "contact": {
