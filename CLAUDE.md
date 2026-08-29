@@ -13,7 +13,7 @@ Corporate website for MEYNG — an African language AI infrastructure company.
 - **UI**: React 19, TailwindCSS 4 (`@theme inline` custom tokens), Framer Motion 12
 - **i18n**: next-intl 4.8.3 (EN/FR bilingual)
 - **Analytics**: Google Analytics 4 (G-FFEZSWMXDJ)
-- **Forms**: Formspree (contact form)
+- **Forms**: contact form posts to `/api/contact` (own route handler), which forwards server-side to `CONTACT_FORM_ENDPOINT`
 - **Hosting**: Vercel
 
 ## User-level standards
@@ -108,3 +108,13 @@ Custom TailwindCSS 4 tokens defined via `@theme inline`:
 - **Always `.trim()` env vars** before interpolating into inline `<script>` tags
 - **`Providers.tsx` is a client component** — server context (like locale) must be passed as explicit props
 - **WebFetch has a 15-min cache** — when verifying a fresh deploy, fetch a page not previously accessed in the session
+- **Never give the contact form a hardcoded fallback endpoint.** Aug 2026: `page.tsx` had
+  `process.env.NEXT_PUBLIC_FORMSPREE_URL || "https://formspree.io/f/xdkodznp"`, the env var was
+  never set in Vercel, and the fallback ID 404'd (`FORM_NOT_FOUND`). Every lead was dropped, for
+  an unknown period, while the daily smoke test ran green — the page rendered fine. A plausible
+  default turns "misconfigured" into "confidently broken". `CONTACT_FORM_ENDPOINT` is now
+  server-side only (no `NEXT_PUBLIC_`, so bots can't scrape it from the bundle), unset = loud 503,
+  and every lead is logged before delivery is attempted so an outage costs latency, not a lead.
+- **Instrument the revenue path, not just the HTML.** The smoke test asserted hero copy and OPSEC
+  strings on a page whose only lead channel was dead. It now checks `GET /api/contact` for
+  `"configured":true` daily and posts a real canary lead weekly (Mondays — free-tier quota).

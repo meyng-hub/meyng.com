@@ -369,7 +369,7 @@
     "formSending": "Envoi en cours...",
     "formResponseTime": "Nous répondons généralement sous 24 heures.",
     "formSuccess": "Merci ! Votre message a été envoyé. Nous vous répondrons sous 24 heures.",
-    "formError": "Une erreur s'est produite. Veuillez réessayer ou nous écrire directement à contact@meyng.com.",
+    "formError": "Une erreur s'est produite. Veuillez réessayer ou nous écrire directement à <mail>contact@meyng.com</mail>.",
     "validationNameRequired": "Veuillez entrer votre nom",
     "validationEmailRequired": "Veuillez entrer votre adresse email",
     "validationEmailInvalid": "Veuillez entrer une adresse email valide",
