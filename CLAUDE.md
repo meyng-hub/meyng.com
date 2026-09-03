@@ -139,11 +139,14 @@ score history stays comparable.
   reasonable change, just not one to make as a side effect of adding a test.
 
   Coverage today is one file: `src/app/api/contact/route.test.ts`, covering
-  the misconfigured-delivery path. Everything else is still untested, and
-  **nothing runs `npm test` in CI yet** — so it does not gate a merge until a
-  workflow calls it. The live gates remain `production-smoke-test.yml` (daily,
-  curls the live site) and `scripts/pre-deploy-check.sh`, both of which check
-  production *after* a merge.
+  the misconfigured-delivery path. Everything else is still untested.
+
+  `.github/workflows/test.yml` runs `npm test` on every pull request to `main`
+  (and on push to `main`), so the suite now runs *before* a change lands — but
+  it is **not a required status check** until someone sets it as one in branch
+  protection, so a red run does not block the merge button on its own. The
+  post-merge gates remain `production-smoke-test.yml` (daily, curls the live
+  site) and `scripts/pre-deploy-check.sh`.
 
   Writing tests for `route.ts` has one trap: it reads `RESEND_API_KEY` and
   friends into module-level consts at **import** time, and keeps the rate
