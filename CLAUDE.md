@@ -123,3 +123,26 @@ Custom TailwindCSS 4 tokens defined via `@theme inline`:
 - **Instrument the revenue path, not just the HTML.** The smoke test asserted hero copy and OPSEC
   strings on a page whose only lead channel was dead. It now checks `GET /api/contact` for
   `"configured":true` daily and posts a real canary lead weekly (Mondays — free-tier quota).
+
+## Health Stack
+
+Used by `/gstack-health`. Pinned so every run measures the same thing and the
+score history stays comparable.
+
+- typecheck: `npx tsc --noEmit`
+- lint: `npx eslint src next.config.ts`
+- build: `npm run build`
+- test: **none configured** — no test runner, no test files. The only gates are
+  the daily `production-smoke-test.yml` (curls the live site) and
+  `scripts/pre-deploy-check.sh`. Both test production *after* a merge; nothing
+  tests a change before it lands.
+- deadcode: knip not installed
+- shell: shellcheck not installed (`scripts/pre-deploy-check.sh` would be checked)
+
+**Lint must be scoped to `src`, not `npm run lint`.** Bare `eslint` walks the
+repo root, and `.claude/worktrees/` can hold a second full copy of the app.
+Measured 2026-09-03: `npm run lint` reported **7,126 problems in 81s**, of which
+110 of the 117 affected files were a stale worktree; the real number was
+**8 problems in 6-15s**. `.claude/**` is now in `globalIgnores` and `.claude/` is
+in `.gitignore`, but keep the scoped command — a lint total large enough to
+scroll past is a lint total nobody reads.
