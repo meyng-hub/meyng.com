@@ -1,0 +1,44 @@
+name: Test
+
+# Runs the unit suite before a change can land, which is the gap this repo had:
+# production-smoke-test.yml only checks the live site, after the merge. The
+# contact-route tests assert the misconfigured-delivery contract (Aug 2026:
+# every lead 503'd for five days), so they are worth having at PR time.
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: test-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: npm test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          # Matches the Node 22.x runtime the site is deployed on.
+          node-version: '22'
+          cache: npm
+
+      - name: Install dependencies
+        env:
+          # puppeteer is a devDependency used only by linkedin-visuals/export-pngs.mjs.
+          # Its postinstall pulls a ~150 MB Chrome build that no test needs.
+          PUPPETEER_SKIP_DOWNLOAD: 'true'
+        run: npm ci
+
+      - name: Run tests
+        run: npm test
