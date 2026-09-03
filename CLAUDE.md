@@ -135,8 +135,15 @@ score history stays comparable.
 - test: `npm test` (vitest 3, `environment: node`, matches `src/**/*.test.ts`)
 
   Pinned to vitest **3**, not 5: vitest 5 requires `@types/node ^22 || >=24`
-  and this repo pins `^20`. Bumping it to match the Node 22.19 runtime is a
-  reasonable change, just not one to make as a side effect of adding a test.
+  and this repo pins `^20`. Bumping it is a reasonable change, just not one to
+  make as a side effect of adding a test.
+
+  Node versions here differ on purpose, and an earlier version of this file got
+  it wrong by naming only one. **Vercel builds and runs production on 24.x**
+  (`vercel project inspect meyng-website` → `Node.js Version 24.x`); the dev
+  laptop runs 22.19. CI follows the deploy runtime, so
+  `.github/workflows/test.yml` pins **24**. Read a Node version off the Vercel
+  project, never off `node -v`.
 
   Coverage today is one file: `src/app/api/contact/route.test.ts`, covering
   the misconfigured-delivery path. Everything else is still untested.
