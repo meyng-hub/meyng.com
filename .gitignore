@@ -40,3 +40,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# claude code (local worktrees, session state, local settings)
+.claude/
+SESSION-STATE.md

@@ -12,6 +12,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Local Claude Code worktrees hold a second full copy of the app;
+    // linting them reported 7,126 problems instead of 8.
+    ".claude/**",
   ]),
 ]);
 
