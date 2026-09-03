@@ -1,6 +1,11 @@
 import { ImageResponse } from "next/og";
 
-export const runtime = "edge";
+// No `runtime = "edge"` here, deliberately. On Vercel the edge wrapper throws
+// `process.env.NEXT_DEPLOYMENT_ID is missing but runtimeServerDeploymentId is
+// enabled` — the builder turns that experimental flag on, which stops Next
+// inlining the deployment id at build time, and the edge runtime never receives
+// it at runtime. Every social preview image 500ed. The Node runtime has the
+// variable, and next/og works there since Next 15.
 export const alt = "MEYNG — AI That Matters";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
@@ -56,8 +61,20 @@ export default async function OGImage({
           marginBottom: "24px",
         }}
       >
+        {/* Drawn, not typed. The badge used a ✦ (U+2726) glyph, which the
+            satori fallback font has no coverage for, so the card rendered a tofu
+            box. A div needs no font. */}
+        <div
+          style={{
+            width: "8px",
+            height: "8px",
+            borderRadius: "50%",
+            background: "#a78bfa",
+            display: "flex",
+          }}
+        />
         <span style={{ fontSize: "16px", color: "#a78bfa", fontWeight: 600 }}>
-          ✦ {isEn ? "AI That Matters" : "L'IA qui compte"}
+          {isEn ? "AI That Matters" : "L'IA qui compte"}
         </span>
       </div>
 
