@@ -132,10 +132,25 @@ score history stays comparable.
 - typecheck: `npx tsc --noEmit`
 - lint: `npx eslint src next.config.ts`
 - build: `npm run build`
-- test: **none configured** — no test runner, no test files. The only gates are
-  the daily `production-smoke-test.yml` (curls the live site) and
-  `scripts/pre-deploy-check.sh`. Both test production *after* a merge; nothing
-  tests a change before it lands.
+- test: `npm test` (vitest 3, `environment: node`, matches `src/**/*.test.ts`)
+
+  Pinned to vitest **3**, not 5: vitest 5 requires `@types/node ^22 || >=24`
+  and this repo pins `^20`. Bumping it to match the Node 22.19 runtime is a
+  reasonable change, just not one to make as a side effect of adding a test.
+
+  Coverage today is one file: `src/app/api/contact/route.test.ts`, covering
+  the misconfigured-delivery path. Everything else is still untested, and
+  **nothing runs `npm test` in CI yet** — so it does not gate a merge until a
+  workflow calls it. The live gates remain `production-smoke-test.yml` (daily,
+  curls the live site) and `scripts/pre-deploy-check.sh`, both of which check
+  production *after* a merge.
+
+  Writing tests for `route.ts` has one trap: it reads `RESEND_API_KEY` and
+  friends into module-level consts at **import** time, and keeps the rate
+  limiter's `hits` Map at module scope too. A test that varies config must set
+  env, then `vi.resetModules()`, then `await import("./route")` — in that
+  order. Give each request a distinct `x-forwarded-for`; the route drops the
+  6th hit from one IP inside 60s with a 429.
 - deadcode: knip not installed
 - shell: shellcheck not installed (`scripts/pre-deploy-check.sh` would be checked)
 
